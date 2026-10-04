@@ -73,7 +73,7 @@ export function scanTweens(file: ProjectFile): Tween[] {
         duration: numberOption(args, "duration"),
         stagger: numberOption(args, "stagger") ?? numberOption(args, "each"),
         staggerAmount: numberOption(args, "amount"),
-        fromHidden: /\b(opacity|autoAlpha)\s*:\s*0(\.0+)?\b/.test(fromVars),
+        fromHidden: /\b(opacity|autoAlpha)\s*:\s*0(\.0+)?(?![\d.])/.test(fromVars),
       });
     }
   }

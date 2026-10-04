@@ -286,3 +286,25 @@ test("framework source is unreadable even inside the read roots", async () => {
   assert.match(out("a"), /framework source code is not/);
   assert.match(out("b"), /1\tskill/);
 });
+
+test("a tool call with missing arguments is an error for the model, never a crash", async () => {
+  const mock = await mockProvider([
+    { role: "assistant", content: null, tool_calls: [call("a", "read_file", {}), call("b", "edit_file", { old_string: "x" }), call("c", "list_files", { path: 42 })] },
+    { role: "assistant", content: null, tool_calls: [call("d", "finish", { summary: "ok" })] },
+  ]);
+  const result = await runAgent({
+    client: mock.client,
+    model: "mock",
+    system: "s",
+    prompt: "p",
+    cwd: mkdtempSync(join(tmpdir(), "hf-agent-")),
+    readRoots: [],
+    maxTurns: 5,
+    signal: new AbortController().signal,
+    log: () => {},
+  });
+  mock.close();
+  assert.equal(result.status, "finished");
+  const out = (id: string) => mock.requests[1].messages.find((m: any) => m.tool_call_id === id).content;
+  for (const id of ["a", "b", "c"]) assert.match(out(id), /^error: \w+ needs a "path" string argument/);
+});

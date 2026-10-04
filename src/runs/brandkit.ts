@@ -1,7 +1,7 @@
 // Brand kit: the captured site's fonts and logo, resolved once per run by the harness.
 // Without it every builder rediscovers them on its own: an undeclared brand font hard-fails
 // HyperFrames lint, and a logo the capture missed sends builders cropping screenshots.
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { HF_ROOT } from "../config.ts";
 import { readMeta } from "../assets/meta.ts";
@@ -13,13 +13,19 @@ export interface BrandFont {
   // google: load it with the kit's @import; substitute: unavailable, use `use` instead.
   source: "captured" | "auto" | "google" | "substitute";
   use: string;
+  // Captured font files (capture-relative), declared with @font-face by whoever uses the family.
+  files?: { file: string; weight: string; style: string }[];
 }
 
 export interface BrandKit {
   fonts: BrandFont[];
   fontImport?: string;
-  logos: { path: string; width?: number; height?: number; from: string }[];
+  logos: { path: string; width?: number; height?: number; from: string; currentColor?: boolean }[];
+  version?: number;
 }
+
+// Bump when the kit gains fields, so kits cached next to older captures are rebuilt.
+const KIT_VERSION = 2;
 
 const KIT_FILE = "brand-kit.json";
 const FETCH_TIMEOUT_MS = 10_000;
@@ -30,13 +36,14 @@ export function readBrandKit(captureDir: string): BrandKit | null {
 
 export async function ensureBrandKit(captureDir: string, siteUrl: string): Promise<BrandKit> {
   const existing = readBrandKit(captureDir);
-  if (existing) return existing;
+  if (existing && existing.version === KIT_VERSION) return existing;
   const [fonts, logos] = await Promise.all([resolveFonts(captureDir), resolveLogos(captureDir, siteUrl)]);
   const google = fonts.filter((f) => f.source === "google");
   const kit: BrandKit = {
     fonts: fonts.map(({ query: _q, ...f }) => f),
     fontImport: google.length ? `https://fonts.googleapis.com/css2?${google.map((f) => `family=${f.query}`).join("&")}&display=block` : undefined,
     logos,
+    version: KIT_VERSION,
   };
   writeJson(join(captureDir, KIT_FILE), kit);
   return kit;
@@ -65,7 +72,16 @@ async function resolveFonts(captureDir: string): Promise<(BrandFont & { query?: 
   return Promise.all(
     families.map(async ({ family, weights }) => {
       const key = family.toLowerCase();
-      if ([...captured].some((c) => c.includes(key))) return { family, source: "captured" as const, use: family };
+      if ([...captured].some((c) => c.includes(key))) {
+        const files = (manifest.files ?? [])
+          .filter((f: any) => f?.file && String(f.family ?? "").toLowerCase().includes(key))
+          .map((f: any) => ({
+            file: `assets/fonts/${f.file}`,
+            weight: (f.variationAxes ?? []).includes("wght") ? "100 900" : String(f.weight ?? 400),
+            style: f.style === "italic" ? "italic" : "normal",
+          }));
+        return { family, source: "captured" as const, use: family, files };
+      }
       if (autoResolvedFonts().has(key)) return { family, source: "auto" as const, use: family };
       const name = family.trim().replace(/\s+/g, "+");
       const ws = (weights ?? []).filter((w) => w >= 100 && w <= 900).sort((a, b) => a - b);
@@ -102,7 +118,7 @@ async function resolveLogos(captureDir: string, siteUrl: string): Promise<BrandK
     if (url && !urls.includes(url)) urls.push(url);
     if (urls.length >= 2) break;
   }
-  const out: BrandKit["logos"] = [];
+  const out: BrandKit["logos"] = svgLogos(captureDir, brand);
   for (const [i, url] of urls.entries()) {
     try {
       const r = await fetch(url, { signal: AbortSignal.timeout(FETCH_TIMEOUT_MS), headers: { "user-agent": "Mozilla/5.0" } });
@@ -120,6 +136,26 @@ async function resolveLogos(captureDir: string, siteUrl: string): Promise<BrandK
     } catch {}
   }
   return out;
+}
+
+// Captured inline-SVG logos (assets/svgs/logo-*.svg): the brand's own mark is the one whose label names
+// the brand; a wide wordmark beats a square symbol. Logo walls of customers never match the label.
+function svgLogos(captureDir: string, brand: string): BrandKit["logos"] {
+  const dir = join(captureDir, "assets", "svgs");
+  if (!existsSync(dir)) return [];
+  const scored = readdirSync(dir)
+    .filter((f) => /^logo-.*\.svg$/i.test(f))
+    .map((f) => {
+      const svg = readFileSync(join(dir, f), "utf8");
+      const label = (svg.match(/aria-label="([^"]*)"/i)?.[1] ?? svg.match(/<title>([^<]*)/i)?.[1] ?? "").toLowerCase();
+      const vb = svg.match(/viewBox="[\d.\s-]*?([\d.]+)\s+([\d.]+)"/);
+      const [w, h] = vb ? [Number(vb[1]), Number(vb[2])] : [0, 0];
+      const score = (label && label.replace(/[^a-z0-9]/g, "").includes(brand) ? 4 : 0) + (w && h && w / h >= 2 ? 1 : 0);
+      return { f, score, w, h, currentColor: /currentColor/i.test(svg) };
+    })
+    .filter((x) => x.score >= 4)
+    .sort((a, b) => b.score - a.score);
+  return scored.slice(0, 1).map((x) => ({ path: `capture/assets/svgs/${x.f}`, width: x.w, height: x.h, from: "inline svg in the page", currentColor: x.currentColor }));
 }
 
 function attr(tag: string, name: string): string | undefined {

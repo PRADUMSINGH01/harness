@@ -6,3 +6,4 @@ runs/*
 .harness/
 # Provider keys.
 .env
+quick/

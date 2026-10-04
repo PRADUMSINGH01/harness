@@ -1,0 +1,35 @@
+# One command to run the harness:   docker compose up -d --build
+# Launch page: http://localhost:8100/launch    API docs: http://localhost:8100/docs
+# Keys and settings come from .env (copy .env.example). Videos, clones and memory live in volumes.
+services:
+  harness:
+    build: .
+    image: hf-harness:latest
+    container_name: hf-harness
+    init: true # reaps the Chrome processes that gates and renders leave behind
+    shm_size: "1gb" # Chrome needs more shared memory than Docker's 64 MB default
+    ports:
+      - "${HARNESS_HOST_PORT:-8100}:8100"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      HARNESS_PORT: "8100" # inside the container; change the host side with HARNESS_HOST_PORT
+    volumes:
+      - runs:/app/runs
+      - quick:/app/quick
+      - memory:/app/memory
+      - uploads:/app/assets/custom
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:8100/health').then((r) => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 30s
+      timeout: 60s
+      start_period: 30s
+      retries: 3
+
+volumes:
+  runs:
+  quick:
+  memory:
+  uploads:

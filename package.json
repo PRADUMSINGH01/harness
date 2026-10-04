@@ -17,12 +17,13 @@
     "@anthropic-ai/claude-agent-sdk": "^0.3.288",
     "express": "^5.2.1",
     "hyperframes": "0.8.114",
-    "openai": "^7.27.0"
+    "openai": "^7.27.0",
+    "puppeteer-core": "25.12.0",
+    "tsx": "^4.23.15"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^26.6.4",
-    "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   }
 }

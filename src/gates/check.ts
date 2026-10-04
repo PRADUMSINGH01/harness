@@ -19,6 +19,7 @@ export function checkArgs(project: Project, genre: Genre): string[] {
   if (genre.check.captionZone && project.hasCaptions) args.push(`--caption-zone=${genre.check.captionZone}`);
   if (genre.check.layout) args.push(`--layout=${genre.check.layout}`);
   if (genre.check.strict) args.push("--strict");
+  if (genre.check.samples) args.push(`--samples=${genre.check.samples}`);
   return args;
 }
 

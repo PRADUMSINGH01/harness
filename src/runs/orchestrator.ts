@@ -607,6 +607,16 @@ export function cancelRun(runId: string) {
 // Reopen a decided run, e.g. after late scorecards or a manual fix.
 export function reopen(runId: string) {
   const run = mustRun(runId);
+  // A build that died with the run (cancel, crash) is not running any more. Gate what it left if
+  // there is a film, so the repair loop picks up from there; otherwise start the variant over.
+  for (const v of run.variants) {
+    if ((v.status === "building" || v.status === "repairing") && !aborts.has(`${run.id}/${v.id}`)) {
+      const html = join(v.dir, "index.html");
+      v.status = existsSync(html) && !/>\s*Title\s*<\/h1>/i.test(readFileSync(html, "utf8")) ? "built" : "initialized";
+    }
+    if (v.status === "gating") v.status = "built";
+  }
+  run.paused = undefined;
   run.status = run.variants.every((v) => v.status === "gated" || v.status === "failed") ? "judging" : "building";
   run.decision = undefined;
   saveRun(run);

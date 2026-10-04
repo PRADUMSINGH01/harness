@@ -32,13 +32,14 @@ export default [
     w: 1600,
     h: 1000,
     tags: ["browser", "window", "web", "website", "frame", "saas", "screenshot", stem.endsWith("dark") ? "dark" : "light"],
-    description: `Generic browser window (no vendor branding) with traffic lights and an address bar (<text id="url">, set it to the real domain). Content area #viewport starts ${pct(88, 1000)} from the top and fills the rest (1600x912 units): position the real screenshot there with top:${pct(88, 1000)}; left:0; width:100%; height:${pct(912, 1000)}; object-fit:cover; object-position:top, inside a wrapper with the same rounded corners. Scroll the screenshot (translateY) to tour the page.`,
+    description: `Generic browser window (no vendor branding) with traffic lights and an address bar (<text id="url">, set it to the real domain). Content area #viewport is a transparent opening starting ${pct(88, 1000)} from the top (1600x912 units): place the real screenshot behind the frame there with top:${pct(88, 1000)}; left:0; width:100%; height:${pct(912, 1000)}; object-fit:cover; object-position:top, inside a wrapper with the same rounded corners. Scroll the screenshot (translateY) to tour the page.`,
     svg: () =>
       svg({
         w: 1600,
         h: 1000,
         title: name,
-        body: `<path d="${roundRect(0, 0, 1600, 1000, 22)}" style="fill:${k.body}"/>
+        body: `<path fill-rule="evenodd" d="${roundRect(0, 0, 1600, 1000, 22)} M0 88 V1000 H1600 V88Z" style="fill:${k.body}"/>
+<path d="${roundRect(1, 1, 1598, 998, 21)}" style="fill:none;stroke:${k.bar};stroke-width:2"/>
 <path d="M0 22 A22 22 0 0 1 22 0 H1578 A22 22 0 0 1 1600 22 V88 H0Z" style="fill:${k.bar}"/>
 ${dots(40, 44)}
 <rect x="420" y="22" width="760" height="44" rx="22" style="fill:${k.pill}"/>

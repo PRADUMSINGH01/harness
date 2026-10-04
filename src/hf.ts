@@ -56,6 +56,9 @@ export function runCmd(
       cwd,
       shell: true,
       windowsHide: true,
+      // On Linux/macOS the child leads its own process group, so killTree can take the shell and
+      // everything under it (Chrome included) with one signal.
+      detached: GROUPS,
       env: { ...process.env, NO_COLOR: "1", FORCE_COLOR: "0", ...env },
     });
     let stdout = "";
@@ -84,6 +87,8 @@ export function runCmd(
   });
 }
 
+const GROUPS = process.platform !== "win32";
+
 // `shell: true` puts a shell between us and the CLI; kill the whole tree or Chrome outlives the job.
 export function killTree(pid?: number) {
   if (!pid) return;
@@ -101,7 +106,7 @@ export function runNode(
 ): Promise<CmdResult & { pid?: number }> {
   const started = Date.now();
   return new Promise((resolve) => {
-    const child = spawn(process.execPath, [script, ...args], { cwd, windowsHide: true, env: { ...process.env, NO_COLOR: "1", ...env } });
+    const child = spawn(process.execPath, [script, ...args], { cwd, windowsHide: true, detached: GROUPS, env: { ...process.env, NO_COLOR: "1", ...env } });
     let stdout = "";
     let stderr = "";
     let timedOut = false;
@@ -148,7 +153,7 @@ export async function startPreview(cwd: string): Promise<{ url: string; stop: ()
   const port = await freePort();
   const env = { ...process.env, NO_COLOR: "1" } as Record<string, string>;
   delete env.HYPERFRAME_RUNTIME_URL; // a wrong value fails silently as 200 HTML
-  const child = spawn(`${hfCli()} preview --foreground --no-open --port ${port}`, { cwd, shell: true, windowsHide: true, env });
+  const child = spawn(`${hfCli()} preview --foreground --no-open --port ${port}`, { cwd, shell: true, windowsHide: true, detached: GROUPS, env });
   child.stdout?.resume();
   child.stderr?.resume();
   const url = `http://localhost:${port}`;

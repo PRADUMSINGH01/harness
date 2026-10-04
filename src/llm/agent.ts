@@ -151,8 +151,13 @@ function runShell(command: string, cwd: string, timeoutMs: number, signal: Abort
 
 const clip = (s: string) => (s.length <= MAX_TOOL_OUTPUT ? s : `${s.slice(0, MAX_TOOL_OUTPUT / 2)}\n…[${s.length - MAX_TOOL_OUTPUT} chars truncated]…\n${s.slice(-MAX_TOOL_OUTPUT / 2)}`);
 
+class ToolArgError extends Error {}
+
 async function runTool(name: string, args: any, opts: AgentOptions): Promise<{ output: string; finish?: string }> {
-  const abs = (p: string) => (isAbsolute(p) ? p : resolve(opts.cwd, p));
+  const abs = (p: unknown) => {
+    if (typeof p !== "string" || !p.trim()) throw new ToolArgError(`${name} needs a "path" string argument`);
+    return isAbsolute(p) ? p : resolve(opts.cwd, p);
+  };
   const readable = (p: string) =>
     [opts.cwd, ...opts.readRoots].some((r) => inside(r, p)) && !(opts.denyReadRoots ?? []).some((r) => inside(r, p));
   const writable = (p: string) => inside(opts.cwd, p);
@@ -335,7 +340,8 @@ export async function runAgent(opts: AgentOptions): Promise<AgentResult> {
       trace({ kind: "tool_call", turn, id: call.id, name: call.function.name, args });
       opts.log(`${call.function.name} ${String(args.command ?? args.path ?? "").replace(/\s+/g, " ").slice(0, 160)}`);
       const t0 = Date.now();
-      const out = await runTool(call.function.name, args, opts);
+      // A bad call (missing argument, unreadable file, ...) is the model's to fix, never a server crash.
+      const out = await runTool(call.function.name, args ?? {}, opts).catch((e: Error) => ({ output: `error: ${e.message}`, finish: undefined }));
       trace({ kind: "tool_result", turn, id: call.id, name: call.function.name, output: out.output, ms: Date.now() - t0 });
       messages.push({ role: "tool", tool_call_id: call.id, content: out.output });
       if (out.finish !== undefined) return end("finished", out.finish, turn);

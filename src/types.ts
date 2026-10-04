@@ -56,7 +56,8 @@ export interface Genre {
   motion?: Record<string, number>;
   density?: Record<string, number>;
   ledger?: Record<string, any>;
-  check: { atTransitions?: boolean; frameCheck?: string | boolean; captionZone?: string; strict?: boolean; layout?: string };
+  // samples: midpoint samples across the duration (hyperframes check --samples; its default is 9).
+  check: { atTransitions?: boolean; samples?: number; frameCheck?: string | boolean; captionZone?: string; strict?: boolean; layout?: string };
   seam: { enabled: boolean; hard: boolean; note?: string };
   proofTimes: number[];
   gates: Record<string, GateWeights>;

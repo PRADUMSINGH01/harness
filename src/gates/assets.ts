@@ -41,7 +41,7 @@ export function collectRefs(project: Project): Ref[] {
   for (const r of refs) {
     if (isLocal(r.value)) {
       const clean = r.value.split(/[?#]/)[0];
-      const abs = clean.startsWith("/") ? join(project.root, clean) : resolve(dirname(r.file.path), clean);
+      const abs = resolveRef(project, r.file.path, clean);
       r.rel = relative(project.root, abs).split("\\").join("/");
     }
   }
@@ -98,6 +98,16 @@ export function run(project: Project, _genre?: Genre): GateResult {
   return { status: "ran", findings, data: { references: refs.length, staged: staged.length, required: staged.filter((s) => s.required).length } };
 }
 
+// HyperFrames serves every composition, sub-compositions included, with the project root as its base
+// URL, so a path inside compositions/*.html resolves from the root. File-relative stays as a fallback
+// for older projects whose sub-compositions still use ../ paths.
+function resolveRef(project: Project, filePath: string, clean: string): string {
+  if (clean.startsWith("/")) return join(project.root, clean);
+  const fromRoot = resolve(project.root, clean);
+  const fromFile = resolve(dirname(filePath), clean);
+  return dirname(filePath) !== project.root && existsSync(fromRoot) && !existsSync(fromFile) ? fromRoot : fromFile;
+}
+
 // Static sizing checks on <img> with explicit pixel sizes: distortion and upscaling.
 function sizeFindings(project: Project, file: ProjectFile, byFile: Map<string, StagedAsset>): Finding[] {
   const out: Finding[] = [];
@@ -105,7 +115,7 @@ function sizeFindings(project: Project, file: ProjectFile, byFile: Map<string, S
     const tag = m[0];
     const src = tag.match(/\ssrc\s*=\s*["']([^"']+)["']/i)?.[1];
     if (!src || !isLocal(src)) continue;
-    const rel = relative(project.root, resolve(dirname(file.path), src.split(/[?#]/)[0])).split("\\").join("/");
+    const rel = relative(project.root, resolveRef(project, file.path, src.split(/[?#]/)[0])).split("\\").join("/");
     const asset = byFile.get(rel);
     if (!asset?.width || !asset.height) continue;
     const style = tag.match(/\sstyle\s*=\s*["']([^"']*)["']/i)?.[1] ?? "";

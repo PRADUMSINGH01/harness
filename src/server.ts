@@ -2,9 +2,8 @@
 import express, { type NextFunction, type Request, type Response } from "express";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join, relative, resolve } from "node:path";
-import { HF_ROOT, HARNESS_ROOT, PORT, RUNS_DIR, BROWSER_CONCURRENCY, BUILD_CONCURRENCY } from "./config.ts";
+import { API_KEY, HF_ROOT, HARNESS_ROOT, PORT, PUBLIC_URL, RUNS_DIR, BROWSER_CONCURRENCY, BUILD_CONCURRENCY } from "./config.ts";
 import { axisValues, getGenre, HttpError, loadGenres } from "./genres.ts";
-import { isInside } from "./util.ts";
 import { chromePath, hasBinary, hfCli, hfVersion, runHf } from "./hf.ts";
 import { GATES, runGates } from "./gates/index.ts";
 import { axisStats, readLessons } from "./memory.ts";
@@ -15,6 +14,8 @@ import { getRun, listRuns, runDir, variantOf } from "./runs/store.ts";
 import { addAsset, catalog, getAsset, reindex, searchAssets, summary } from "./assets/catalog.ts";
 import { fetchLogo, useAsset } from "./assets/tools.ts";
 import { renderJudgePacket } from "./runs/packets.ts";
+import { getQuick, quickDir, renderQuick, startQuick } from "./templates/quick.ts";
+import { apiKeyGuard, dataDir, mountApi } from "./api.ts";
 import {
   acceptScorecards,
   advance,
@@ -34,6 +35,8 @@ import {
 
 const app = express();
 app.use(express.json({ limit: "20mb" }));
+app.use(apiKeyGuard());
+const publicUrl = PUBLIC_URL;
 
 const asyncRoute = (fn: (req: Request, res: Response) => Promise<unknown> | unknown) => (req: Request, res: Response, next: NextFunction) =>
   Promise.resolve(fn(req, res)).catch(next);
@@ -43,7 +46,16 @@ app.get("/", (_req, res) => {
     service: "hf-harness",
     status: "ok",
     hyperframes: hfVersion(),
+    docs: `${publicUrl}/docs`,
+    openapi: `${publicUrl}/openapi.json`,
     endpoints: {
+      launch: "GET /launch (paste a URL, get a website trailer)",
+      quick: "POST /quick {url, mode: trailer|launch|templates, aspects?} -> 202 {id}; GET /quick, GET /quick/:id, DELETE /quick/:id",
+      quickRender: "POST /quick/:id/render {template}; GET /quick/:id/download/:template",
+      frames: "POST /frames {at:[s], quickId+template | projectDir}",
+      sites: "POST /sites {url, refresh?}, GET /sites, GET /sites/:site, GET /sites/:site/preview, GET /sites/:site/parts/:name, DELETE /sites/:site",
+      pageAnalysis: "POST /capture {url}, POST /brandkit {url}, POST /extract {url}",
+      catalog: "GET /gates, GET /templates, GET /providers",
       ui: "GET /ui",
       health: "GET /health",
       genres: "GET /genres",
@@ -128,7 +140,7 @@ app.post(
   asyncRoute(async (req, res) => {
     const { projectDir, genre, browser, only, quick } = req.body ?? {};
     if (!projectDir || !genre) throw new HttpError(400, "projectDir and genre are required");
-    const dir = resolve(projectDir);
+    const dir = dataDir(projectDir);
     if (!existsSync(join(dir, "hyperframes.json"))) throw new HttpError(400, `not a HyperFrames project: ${dir}`);
     // quick: everything except the two slowest browser gates (proof snapshots, seam measurement).
     // Builders use it while iterating; the harness runs the full gate once the build is done.
@@ -243,7 +255,10 @@ app.get("/assets/file", (req, res) => {
 
 // Upload: { filename, dataBase64, name?, kind?, tags?, description?, brand?, license? }
 app.post("/assets", (req, res) => {
-  const a = addAsset(req.body ?? {});
+  // fromPath reads a file on this machine: only files inside the harness data folders.
+  const body = { ...(req.body ?? {}) };
+  if (body.fromPath) body.fromPath = dataDir(body.fromPath, "fromPath");
+  const a = addAsset(body);
   res.status(201).json({ ...summary(a), url: `/assets/file?id=${encodeURIComponent(a.id)}` });
 });
 
@@ -253,8 +268,7 @@ app.post("/assets/reindex", (_req, res) => {
 
 // Builders without in-process tools (Claude Agent SDK, external) use these from their project.
 function projectDirFrom(body: any): string {
-  const dir = resolve(String(body?.projectDir ?? ""));
-  if (!isInside(HARNESS_ROOT, dir)) throw new HttpError(400, "projectDir must be inside the harness folder");
+  const dir = dataDir(body?.projectDir);
   if (!existsSync(join(dir, "hyperframes.json"))) throw new HttpError(400, `not a HyperFrames project: ${dir}`);
   return dir;
 }
@@ -375,21 +389,116 @@ app.use("/files", express.static(RUNS_DIR, { dotfiles: "allow", fallthrough: fal
 // parse time, as Studio does. Compositions write window.__timelines[...] at load, so the
 // player's own late runtime injection comes too late for them.
 const RUNTIME_URL = `https://cdn.jsdelivr.net/npm/@hyperframes/core@${hfVersion()}/dist/hyperframe.runtime.iife.js`;
-app.use("/play/:id/:v", (req, res) => {
-  const v = variantOf(mustRun(String(req.params.id)), String(req.params.v));
+// Serve a composition with the HyperFrames runtime injected at parse time, so the player can seek it.
+function serveComposition(dir: string, label: string, req: Request, res: Response) {
   const rel = decodeURIComponent(req.path === "/" ? "/index.html" : req.path);
-  const file = resolve(v.dir, `.${rel}`);
-  if (!file.startsWith(resolve(v.dir)) || !existsSync(file)) throw new HttpError(404, `no ${rel} in ${v.id}`);
+  const file = resolve(dir, `.${rel}`);
+  if (!file.startsWith(resolve(dir)) || !existsSync(file)) throw new HttpError(404, `no ${rel} in ${label}`);
   if (!file.toLowerCase().endsWith(".html")) return res.sendFile(file, { dotfiles: "allow" });
   const html = readFileSync(file, "utf8");
   const tag = `<script src="${RUNTIME_URL}"></script>`;
   const injected = /<head[^>]*>/i.test(html) ? html.replace(/<head[^>]*>/i, (m) => `${m}\n${tag}`) : `${tag}\n${html}`;
   res.type("html").set("cache-control", "no-store").send(injected);
+}
+
+app.use("/play/:id/:v", (req, res) => {
+  const v = variantOf(mustRun(String(req.params.id)), String(req.params.v));
+  serveComposition(v.dir, v.id, req, res);
+});
+
+// Quick mode (templates, option C): POST starts a job, GET polls it, /quick-play serves a result.
+app.post("/quick", (req, res) => {
+  res.status(202).json(startQuick(req.body ?? {}));
+});
+app.post("/quick/:id/render", async (req, res) => {
+  if (!(await hasBinary("ffmpeg"))) throw new HttpError(409, "MP4 render needs FFmpeg on PATH (winget install --id Gyan.FFmpeg -e). Gates and the player work without it.");
+  res.status(202).json(await renderQuick(String(req.params.id), String(req.body?.template ?? "")));
+});
+app.get("/quick/:id", (req, res) => {
+  const q = getQuick(String(req.params.id));
+  if (!q) throw new HttpError(404, `no quick job ${req.params.id}`);
+  res.json({ ...q, play: q.results.map((r) => `${publicUrl}/quick-play/${q.id}/${r.template}/`) });
+});
+// A plain page with every video of a quick job, playable side by side.
+const esc = (x: string) => String(x).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+// Launch page: paste a URL, choose formats, get launch films. No commands needed.
+const PAGE_CSS = `body{margin:0;padding:28px;background:#0b0c0e;color:#eee;font:16px system-ui,sans-serif}h1{font-size:22px;margin:0 0 6px}p{color:#9a9a9a;margin:0 0 20px}
+main{display:grid;grid-template-columns:repeat(auto-fill,minmax(560px,1fr));gap:22px;align-items:start}figure{margin:0}
+hyperframes-player{display:block;width:100%;aspect-ratio:16 / 9;background:#000;border-radius:10px;overflow:hidden}.tall hyperframes-player{aspect-ratio:9 / 16;max-width:400px}
+a{color:#ff9b7a}figcaption{margin-top:8px}form{display:grid;gap:14px;max-width:640px}input[type=url],textarea{width:100%;box-sizing:border-box;padding:12px 14px;border-radius:10px;border:1px solid #333;background:#15161a;color:#eee;font:16px system-ui}
+button{padding:12px 22px;border:0;border-radius:999px;background:#ff5a36;color:#111;font:600 16px system-ui;cursor:pointer;justify-self:start}label{color:#bbb}.err{color:#ff7a7a}`;
+
+app.get("/launch", (_req, res) => {
+  res.type("html").send(`<!doctype html><html><head><meta charset="utf-8"><title>Launch film</title><style>${PAGE_CSS}</style></head><body>
+<h1>Make a website trailer</h1><p>Paste a landing page. The harness clones its real components as code (header, hero, feature cards, sections, buttons, fonts, icons) and films them as a trailer of up to 60 seconds, in the site's own theme.</p>
+<form id="f"><input type="url" name="url" placeholder="https://yourproduct.com" required>
+<textarea name="brief" rows="3" placeholder="Optional: anything the film must say (offer, audience, launch date)"></textarea>
+<label><input type="checkbox" name="landscape" checked> Landscape 16:9 (YouTube, website)</label>
+<label><input type="checkbox" name="vertical"> Vertical 9:16 (Reels, Shorts, TikTok)</label>
+<button>Make the trailer</button><div class="err" id="err"></div></form>
+<script>
+document.getElementById("f").onsubmit = async (e) => {
+  e.preventDefault();
+  const d = new FormData(e.target);
+  const aspects = [d.get("landscape") && "16:9", d.get("vertical") && "9:16"].filter(Boolean);
+  if (!aspects.length) aspects.push("16:9");
+  const r = await fetch("/quick", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ url: d.get("url"), brief: d.get("brief") || undefined, mode: "trailer", aspect: aspects[0], aspects }) });
+  const j = await r.json();
+  if (!r.ok) return (document.getElementById("err").textContent = j.error || "failed");
+  location.href = "/quick-view/" + j.id;
+};
+</script></body></html>`);
+});
+
+app.get("/quick-view/:id", (req, res) => {
+  const q = getQuick(String(req.params.id));
+  if (!q) throw new HttpError(404, `no quick job ${req.params.id}`);
+  const phases = Object.entries(q.phases).map(([k, v]) => `${k} ${v}s`).join(" · ");
+  if (q.status !== "done") {
+    // Still working (or failed): a status page that refreshes itself.
+    return res.type("html").send(`<!doctype html><html><head><meta charset="utf-8"><title>Working: ${q.id}</title>${q.status === "running" ? '<meta http-equiv="refresh" content="4">' : ""}<style>${PAGE_CSS}</style></head>
+<body><h1>${esc(q.request.url)}</h1><p>${q.status === "running" ? "Reading the site and building the film… this page refreshes by itself." : `<span class="err">Failed: ${esc(q.error ?? "unknown error")}</span>`}</p><p>${phases || "starting"}</p></body></html>`);
+  }
+  const cards = q.results
+    .filter((r) => !r.error)
+    .map((r) => {
+      const tall = /vertical/.test(r.template) || (!/landscape/.test(r.template) && q.request.aspect === "9:16");
+      const mp4 = r.render?.file
+        ? ` · <a href="/quick-play/${q.id}/${r.template}/${r.render.file}" download>Download MP4</a>`
+        : r.render?.status === "rendering"
+          ? " · rendering MP4…"
+          : r.hardFail
+            ? ""
+            : ` · <a href="#" data-render="${r.template}">Render MP4</a>`;
+      return `<figure class="${tall ? "tall" : ""}"><hyperframes-player src="/quick-play/${q.id}/${r.template}/" controls muted autoplay loop></hyperframes-player><figcaption>${r.template.replace(/-/g, " ")} · ${r.durationSec ? `${r.durationSec}s · ` : ""}quality ${r.technical ?? "?"}/100${r.hardFail ? " · <span class=err>failed checks</span>" : ""}${mp4}</figcaption></figure>`;
+    })
+    .join("");
+  res.type("html").send(`<!doctype html><html><head><meta charset="utf-8"><title>Videos: ${q.id}</title>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@hyperframes/player@${hfVersion()}/dist/hyperframes-player.js"></script>
+<style>${PAGE_CSS}</style></head>
+<body><h1>${esc(q.request.url)}</h1><p>${q.results.length} video${q.results.length === 1 ? "" : "s"} made in ${q.totalSec ?? "?"} seconds (${phases}) · <a href="/launch">make another</a></p><main>${cards}</main><p class="err" id="err"></p>
+<script>
+for (const a of document.querySelectorAll("[data-render]")) a.onclick = async (e) => {
+  e.preventDefault();
+  const r = await fetch("/quick/${q.id}/render", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ template: a.dataset.render }) });
+  if (!r.ok) return (document.getElementById("err").textContent = (await r.json()).error);
+  setTimeout(() => location.reload(), 1500);
+};
+</script></body></html>`);
+});
+
+app.use("/quick-play/:id/:t", (req, res) => {
+  const dir = resolve(quickDir(String(req.params.id)), String(req.params.t));
+  if (!dir.startsWith(resolve(quickDir(String(req.params.id)))) || !existsSync(dir)) throw new HttpError(404, "no such quick result");
+  serveComposition(dir, String(req.params.t), req, res);
 });
 
 app.get("/ui", (_req, res) => {
   res.sendFile(join(HARNESS_ROOT, "public", "index.html"));
 });
+
+mountApi(app);
 
 app.use((req, res) => {
   res.status(404).json({ error: `no route ${req.method} ${req.originalUrl}` });
@@ -401,7 +510,6 @@ app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
   res.status(status).json({ error: err.message ?? String(err) });
 });
 
-const publicUrl = process.env.HARNESS_PUBLIC_URL ?? `http://localhost:${PORT}`;
 setServerUrl(publicUrl);
 // Express 5 calls this even when listen fails. A server that can't bind must exit before
 // resumeAll(): two processes resuming the same runs race each other's builds.
@@ -410,6 +518,6 @@ app.listen(PORT, (err?: Error) => {
     console.error(`hf-harness could not listen on ${PORT}: ${err.message}. Is another harness server running? Not resuming runs.`);
     process.exit(1);
   }
-  console.log(`hf-harness on ${publicUrl} (hyperframes ${hfVersion()}, vendored at ${HF_ROOT})`);
+  console.log(`hf-harness on ${publicUrl} (hyperframes ${hfVersion()}, vendored at ${HF_ROOT}; API docs at ${publicUrl}/docs${API_KEY ? "; API key required" : ""})`);
   resumeAll();
 });

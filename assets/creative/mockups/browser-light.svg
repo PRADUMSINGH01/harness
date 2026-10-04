@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Browser window (light)">
-<path d="M22 0 H1578 A22 22 0 0 1 1600 22 V978 A22 22 0 0 1 1578 1000 H22 A22 22 0 0 1 0 978 V22 A22 22 0 0 1 22 0Z" style="fill:#FFFFFF"/>
+<path fill-rule="evenodd" d="M22 0 H1578 A22 22 0 0 1 1600 22 V978 A22 22 0 0 1 1578 1000 H22 A22 22 0 0 1 0 978 V22 A22 22 0 0 1 22 0Z M0 88 V1000 H1600 V88Z" style="fill:#FFFFFF"/>
+<path d="M22 1 H1578 A21 21 0 0 1 1599 22 V978 A21 21 0 0 1 1578 999 H22 A21 21 0 0 1 1 978 V22 A21 21 0 0 1 22 1Z" style="fill:none;stroke:#ECEDEF;stroke-width:2"/>
 <path d="M0 22 A22 22 0 0 1 22 0 H1578 A22 22 0 0 1 1600 22 V88 H0Z" style="fill:#ECEDEF"/>
 <circle cx="40" cy="44" r="9" style="fill:#FF5F57"/><circle cx="70" cy="44" r="9" style="fill:#FEBC2E"/><circle cx="100" cy="44" r="9" style="fill:#28C840"/>
 <rect x="420" y="22" width="760" height="44" rx="22" style="fill:#FFFFFF"/>

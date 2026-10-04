@@ -20,6 +20,10 @@ export const MEMORY_DIR = process.env.HF_HARNESS_MEMORY ? resolve(process.env.HF
 export const RUNS_DIR = process.env.HF_HARNESS_RUNS ? resolve(process.env.HF_HARNESS_RUNS) : join(HARNESS_ROOT, "runs");
 export const PROMPTS_DIR = join(HARNESS_ROOT, "prompts");
 export const PORT = Number(process.env.HARNESS_PORT ?? 8100);
+// The address clients reach the server at; links in API responses (players, frames, downloads) use it.
+export const PUBLIC_URL = (process.env.HARNESS_PUBLIC_URL ?? `http://localhost:${PORT}`).replace(/\/+$/, "");
+// Optional shared secret. When set, every route except health and the API docs requires it.
+export const API_KEY = process.env.HARNESS_API_KEY?.trim() || undefined;
 // Browser gates (check, snapshot, seam) each launch Chrome; keep them few on a laptop.
 export const BROWSER_CONCURRENCY = Number(process.env.HARNESS_BROWSER_CONCURRENCY ?? 1);
 export const BUILD_CONCURRENCY = Number(process.env.HARNESS_BUILD_CONCURRENCY ?? 3);

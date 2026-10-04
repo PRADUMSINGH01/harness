@@ -1,0 +1,24 @@
+# Installed fresh in the image, or run output, secrets and tooling the server never reads.
+**/node_modules
+.git
+**/.git
+.env
+.env.*
+!.env.example
+runs/*
+!runs/.gitkeep
+quick
+**/.harness
+.claude
+
+# Vendored HyperFrames (1.8 GB): only what the harness reads at runtime —
+# its version (plugin.json), skills, doctrine (.claude) and font aliases (packages/parsers/src).
+hyperframes/*
+!hyperframes/plugin.json
+!hyperframes/skills
+!hyperframes/.claude
+!hyperframes/packages
+hyperframes/packages/*
+!hyperframes/packages/parsers
+hyperframes/packages/parsers/*
+!hyperframes/packages/parsers/src

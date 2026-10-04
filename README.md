@@ -14,6 +14,20 @@ brief ─► seeds (diverse, learned) ─► N variant projects ─► build (ag
                          DECISION.md + memory/lessons.jsonl ◄── 0.35 × technical + 0.65 × judge, vetoes
 ```
 
+## Website trailers in about two minutes
+
+Open **http://localhost:8100/launch**, paste a landing page, choose landscape (16:9), vertical (9:16) or both, and press **Make the trailer**. The page refreshes itself until the videos are ready, then plays them with their quality score and a **Render MP4** link.
+
+What happens (`mode: "trailer"`):
+
+1. **Clone** (`src/launch/clone.ts`, cached per URL in `quick/_sites/`): Chrome opens the page, scrolls every component into view so scroll-reveal animations finish, and copies it as code: computed styles inlined, headings split into maskable words, numbers marked for count-ups, buttons marked as cursor targets, images and fonts downloaded, WebGL canvases kept as rasters. Each part keeps the ground the site paints behind it. Parts: logo, headline, subline, buttons, header, hero, feature cards, the four most visual sections (each with its title and its hero visual), the customer-logo strip, pricing.
+2. **Trailer** (`src/launch/trailer.ts`): logo sting, the real headline with a cursor click on the real button, a 3D flyover of the page, the feature cards, feature beats (title and visual land from depth, then the camera dives into one real card until its copy fills the frame; wide strips pan at reading size), social proof, pricing, an end card. Whip and zoom seams; `ledger.json` written to match; never over 60 seconds.
+3. **Gates** as a product launch: lint, runtime, layout, contrast, motion, and a proof frame per scene.
+
+A fresh site takes about 1 minute to clone and 1 minute to gate; a cloned site skips the first minute. Sites that block automated browsers can't be cloned.
+
+Other modes on the same endpoint: `mode: "launch"` builds a launch film from the captured page structure and screenshots (`src/launch/extract.ts`, `film.ts`); the default `mode: "templates"` makes four 10-second template films (`src/templates/library.ts`).
+
 ## Why a harness on top of the skills
 
 The HyperFrames workflows (`motion-graphics`, `product-launch-video`, `general-video`) are excellent pipelines, but each produces **one** take and verifies it with `lint`, `check`, and `snapshot`. The repo's own taste law (`.claude/skills/motion-doctrine`, `cut-the-curve`, `seam-craft`) and its numeric seam gate are wired into only one internal workflow. The harness closes those gaps:
@@ -31,14 +45,33 @@ The HyperFrames workflows (`motion-graphics`, `product-launch-video`, `general-v
 
 ## Run it
 
+### With Docker (recommended for deploying)
+
+```bash
+cp .env.example .env        # add ZAI_API_KEY (and any other provider keys)
+docker compose up -d --build
+```
+
+Then open **http://localhost:8100/launch** (videos) or **http://localhost:8100/docs** (API). The image carries everything: Node 24, HyperFrames' pinned `chrome-headless-shell`, FFmpeg (so MP4 render works), fonts, and the slice of the vendored HyperFrames the harness reads. Videos, site clones, memory and uploads live in Docker volumes (`runs`, `quick`, `memory`, `uploads`) and survive rebuilds.
+
+| Setting (in `.env`) | |
+| --- | --- |
+| `HARNESS_API_KEY` | Require a key on every route except `/health` and `/docs`. Machines send `x-api-key: <key>` or `Authorization: Bearer <key>`; in a browser open any page once with `?key=<key>` (stored as a cookie). |
+| `HARNESS_PUBLIC_URL` | The address clients use (e.g. `https://video.example.com`); player, frame and download links are built from it. |
+| `HARNESS_HOST_PORT` | Host port (default 8100). |
+
+Operations: `docker compose logs -f`, `docker compose restart`, `docker compose down` (volumes kept; add `-v` to delete them). Chrome needs memory: give Docker at least 4 GB for comfortable gating (Docker Desktop → Settings → Resources).
+
+### Without Docker
+
 ```bash
 npm install
-npm run server          # http://localhost:8100, dashboard at /ui
-npm test                # unit tests for gates, seeding, judging, decisions
+npm run server          # http://localhost:8100, launch page at /launch, API docs at /docs
+npm test                # unit tests for gates, seeding, judging, decisions, API coverage
 npm run typecheck
 ```
 
-Requirements: Node 22 or newer and Chrome, which HyperFrames finds via `npx hyperframes browser path`. **ffmpeg is needed only for rendering**: without it every gate and snapshot still works, and `POST /runs/:id/render` returns 409 with the command to run elsewhere.
+Requirements: Node 22 or newer and Chrome, which HyperFrames finds via `npx hyperframes browser path`. The HyperFrames CLI is a pinned dependency (`node_modules/hyperframes`), so nothing runs through `npx` at request time. **FFmpeg is needed only for MP4 output** (`winget install --id Gyan.FFmpeg -e` on Windows): without it every gate, snapshot and the player still work, and the render endpoints return 409 with that command.
 
 ## Drivers and LLM providers
 
@@ -105,35 +138,38 @@ The harness is self-contained: its asset library is `harness/assets/` (261 asset
 
 ## API
 
-| Method | Path | |
-| --- | --- | --- |
-| GET | `/health` | Chrome, ffmpeg, HyperFrames version, driver availability |
-| GET | `/genres`, `/genres/:id` | Genre profiles with resolved seed axes |
-| POST | `/gate` | `{projectDir, genre, browser?, only?}`: gate any HyperFrames project (workers' self-gate loop) |
-| POST | `/runs` | `{genre, brief:{message, subject?, url?, length?, aspect?, audience?, style_preset?, intent?}, n?, builder?, judge?, judges?, builderModel?, judgeModel?, locks?}` |
-| GET | `/runs`, `/runs/:id` | Run state |
-| GET | `/runs/:id/events` | Server-sent events (`?format=json` for history) |
-| GET | `/runs/:id/variants/:v/packet` | Latest worker packet, or the repair packet after a hard fail |
-| POST | `/runs/:id/variants/:v/built` | External builder finished |
-| POST | `/runs/:id/variants/:v/gate` | Re-gate after a manual fix |
-| GET | `/runs/:id/variants/:v/gates` | Full gate report |
-| GET | `/runs/:id/judge-packet?judge=j1` | Blind judge prompt |
-| POST | `/runs/:id/scorecards` | Array of scorecards |
-| GET | `/runs/:id/decision` | `DECISION.md` (or JSON with `accept: application/json`) |
-| POST | `/runs/:id/advance`, `/reopen`, `/cancel`, `/render` | Lifecycle |
-| GET | `/files/<runId>/<path>` | Snapshots, contact sheets, compare sheets |
-| GET | `/play/<runId>/<variant>/` | A variant with the HyperFrames runtime injected, for `<hyperframes-player>` |
-| GET | `/assets?q=&kind=&limit=` | Search the asset library |
-| GET | `/assets/item?id=`, `/assets/file?id=` | One asset's metadata, or the file itself |
-| POST | `/assets` | Upload `{filename, dataBase64, name?, kind?, tags?, description?, brand?, license?}` |
-| POST | `/assets/reindex` | Re-scan `harness/assets` |
-| POST | `/projects/assets/use` | `{projectDir, id, role?, required?}`: copy a library asset into a project |
-| POST | `/projects/assets/logo` | `{projectDir, brand, role?}`: fetch an official logo into a project |
+Every function has an HTTP route. The full, interactive reference is **`/docs`** (Swagger UI) and the machine-readable one is **`/openapi.json`**; `test/api.test.ts` fails if a route is added without documenting it.
+
+**Make a website trailer, wait for it, download the MP4:**
+
+```bash
+curl -X POST localhost:8100/quick -H "content-type: application/json" -d '{"url":"https://resend.com","mode":"trailer","aspects":["16:9","9:16"]}'
+curl localhost:8100/quick/<id>                                   # poll until "status": "done"
+curl -X POST localhost:8100/quick/<id>/render -H "content-type: application/json" -d '{"template":"trailer-landscape"}'
+curl -OJ localhost:8100/quick/<id>/download/trailer-landscape    # once the render is done
+```
+
+| Area | Routes |
+| --- | --- |
+| Website trailers | `POST /quick` {url, mode: trailer\|launch\|templates, aspects?, brief?} → 202 {id}; `GET /quick`; `GET /quick/:id`; `DELETE /quick/:id`; `POST /quick/:id/render` {template}; `GET /quick/:id/download/:template`; `GET /quick-view/:id` (watch); `GET /quick-play/:id/:t/` (player source); `POST /frames` {at:[s], quickId+template \| projectDir} (still frames) |
+| Sites (code clones) | `POST /sites` {url, refresh?}; `GET /sites`; `GET /sites/:site`; `GET /sites/:site/preview`; `GET /sites/:site/parts/:name` (?format=json); `GET /sites/:site/clone/<file>`; `DELETE /sites/:site` |
+| Page analysis | `POST /capture` {url} (screenshots, HTML, fonts, logos); `GET /captures/:site/<file>`; `POST /brandkit` {url}; `POST /extract` {url} (navbar, hero, features, pricing as data) |
+| Runs (agent best-of-N) | `POST /runs` {genre, brief:{message, ...}, n?, builder?, judge?, ...}; `GET /runs`; `GET /runs/:id`; `GET /runs/:id/events` (SSE); `GET\|POST /runs/:id/variants/:v/...` (packet, built, gate, gates, agent-log); `GET /runs/:id/judge-packet`; `GET /runs/:id/judge-log/:judge`; `POST /runs/:id/scorecards`; `GET /runs/:id/decision`; `POST /runs/:id/advance\|reopen\|pause\|resume\|cancel\|render`; `GET /files/<runId>/<path>`; `GET /play/<runId>/<variant>/` |
+| Gates | `POST /gate` {projectDir, genre, browser?, only?, quick?}; `GET /gates` |
+| Assets | `GET /assets` (?q, kind, limit); `GET /assets/item`, `/assets/file` (?id); `POST /assets` {filename, dataBase64, ...}; `POST /assets/reindex`; `POST /projects/assets/use`; `POST /projects/assets/logo` |
+| System | `GET /health`; `GET /providers`; `GET /templates`; `GET /genres`, `/genres/:id`; `GET /memory`; `GET /ui`; `GET /launch`; `GET /docs`; `GET /openapi.json` |
+
+Project paths in request bodies (`projectDir`, `fromPath`) must sit inside the harness data folders (`runs/`, `quick/`), so a deployed server can't be pointed at other files on its host.
 
 ## Layout
 
 ```
-src/server.ts            Express routes
+src/server.ts            Express routes (runs, gates, assets, quick jobs, pages)
+src/api.ts               sites, captures, brand kits, frames, catalogs, the API key, /docs
+src/openapi.ts           the OpenAPI document (one table of every route)
+src/launch/clone.ts      landing page → components cloned as code
+src/launch/trailer.ts    cloned components → website trailer
+Dockerfile, docker-compose.yml, docker/   the container image and its entrypoint
 src/runs/orchestrator.ts the run state machine (init → build → gate/repair → compare → judge → decide)
 src/runs/seeds.ts        diverse, reproducible, memory-informed variant seeds
 src/runs/decide.ts       scorecard validation and the winner decision
@@ -156,4 +192,4 @@ runs/<id>/               run.json, events.jsonl, packets/, variants/<v>/ (HyperF
 - **Seam gate on product launches is advisory.** `product-launch-video` injects push-slide, zoom-through, and crossfade transitions, which overlap scene wrappers by design, so the seam gate's zero-overlap rule fails on every cut. Direction and continuity findings still count, as warnings.
 - **The seam gate runs a HyperFrames preview server**, and Studio stamps stable `data-hf-id` attributes into the project's HTML. The harness owns that server and Chrome's lifetime; the vendored script's own cleanup relies on POSIX process groups and leaks both on Windows.
 - **Model defaults are the ones `agent/` already uses** (`glm-5.3-flash`, `gemini-3.1-flash-lite`). Flash-class models are cheap but weaker at long, tool-heavy workflows and at taste judgments; set stronger models for the builder and judge when quality matters most.
-- Environment: `HARNESS_PORT`, `HARNESS_PUBLIC_URL`, `HARNESS_ENV_FILE`, `HARNESS_BUILDER`, `HARNESS_JUDGE`, `HARNESS_BUILDER_MODEL`, `HARNESS_JUDGE_MODEL`, `HARNESS_BUILDER_MAX_TURNS` (300), `HARNESS_AGENT_CONTEXT_CHARS`, `HARNESS_JUDGE_MAX_IMAGES` (20), `HARNESS_JUDGE_MAX_BYTES` (10 MB), `HARNESS_BASH`, `HARNESS_BROWSER_CONCURRENCY` (1), `HARNESS_BUILD_CONCURRENCY` (3), `HARNESS_CLAUDE_MODEL`, `HARNESS_BUILDER_EFFORT`, `HARNESS_BUILDER_MAX_USD`, `HF_ROOT`, `HF_HARNESS_RUNS`, `HF_HARNESS_MEMORY`.
+- Environment: `HARNESS_PORT`, `HARNESS_PUBLIC_URL`, `HARNESS_API_KEY`, `HARNESS_ENV_FILE`, `HARNESS_BUILDER`, `HARNESS_JUDGE`, `HARNESS_BUILDER_MODEL`, `HARNESS_JUDGE_MODEL`, `HARNESS_BUILDER_MAX_TURNS` (300), `HARNESS_AGENT_CONTEXT_CHARS`, `HARNESS_JUDGE_MAX_IMAGES` (20), `HARNESS_JUDGE_MAX_BYTES` (10 MB), `HARNESS_BASH`, `HARNESS_BROWSER_CONCURRENCY` (1), `HARNESS_BUILD_CONCURRENCY` (3), `HARNESS_CLAUDE_MODEL`, `HARNESS_BUILDER_EFFORT`, `HARNESS_BUILDER_MAX_USD`, `HF_ROOT`, `HF_HARNESS_RUNS`, `HF_HARNESS_MEMORY`.

@@ -236,10 +236,14 @@ export function searchAssets(query: string, { kind, limit = 12 }: { kind?: strin
         for (const [toks, weight] of fields) if (toks.some((t) => t === w || (w.length > 3 && t.startsWith(w)))) best = Math.max(best, weight);
         score += best;
       }
+      // The whole query as one phrase in the name or a tag beats the same words scattered.
+      const phrase = q.join(" ");
+      if (q.length > 1 && [a.name, ...a.tags].some((t) => tokenize(t).join(" ").includes(phrase))) score += 3;
       return { a, score };
     })
     .filter((x) => !q.length || x.score > 0)
-    .sort((x, y) => y.score - x.score || x.a.id.localeCompare(y.a.id));
+    // Ties go to the more specific (shorter) name: "Film grain" over a scene whose caption mentions grain.
+    .sort((x, y) => y.score - x.score || x.a.name.length - y.a.name.length || x.a.id.localeCompare(y.a.id));
   return scored.slice(0, limit).map((x) => ({ ...summary(x.a), score: x.score }));
 }
 
