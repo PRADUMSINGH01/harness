@@ -251,7 +251,14 @@ export async function runAgent(opts: AgentOptions): Promise<AgentResult> {
   const usage = { prompt: 0, completion: 0 };
   const started = Date.now();
   const minutes = () => Math.round(((Date.now() - started) / 60000) * 10) / 10;
+  // The minutes limit is a wall-clock deadline: a model call or command still running when it
+  // passes is cut off, not waited for. Checking only between turns let one slow turn overrun by minutes.
+  const deadline = new AbortController();
+  const deadlineTimer = opts.budget?.maxMinutes ? setTimeout(() => deadline.abort(), opts.budget.maxMinutes * 60_000) : undefined;
+  const signal = AbortSignal.any([opts.signal, deadline.signal]);
+  const toolOpts = { ...opts, signal };
   const end = (status: AgentResult["status"], summary: string, turns: number): AgentResult => {
+    clearTimeout(deadlineTimer);
     trace({ kind: "end", turn: turns, status, summary, usage });
     return { status, summary, turns, usage, minutes: minutes() };
   };
@@ -264,8 +271,10 @@ export async function runAgent(opts: AgentOptions): Promise<AgentResult> {
     );
   let warned = false;
   let nudges = 0;
+  const overtime = (turn: number) => end("budget", `${opts.budget!.maxMinutes}-minute budget reached on turn ${turn}, ${usage.prompt} input tokens`, turn);
   for (let turn = 1; turn <= opts.maxTurns; turn++) {
     if (opts.signal.aborted) return end("stopped", "aborted", turn);
+    if (deadline.signal.aborted) return overtime(turn - 1);
     const share = spent(turn);
     if (share >= 1 && turn > 1) {
       return end("budget", `budget spent after ${turn - 1} turns, ${usage.prompt} input tokens, ${minutes()} min`, turn - 1);
@@ -288,10 +297,11 @@ export async function runAgent(opts: AgentOptions): Promise<AgentResult> {
         res = await streamChat(
           opts.client,
           { model: opts.model, messages, tools: [...TOOLS, ...(opts.extraTools ?? []).map((t) => t.tool)], tool_choice: "auto", ...(opts.extraBody ?? {}) },
-          { signal: opts.signal, onProgress: (p) => trace({ kind: "progress", turn, ...p }) },
+          { signal, onProgress: (p) => trace({ kind: "progress", turn, ...p }) },
         );
       } catch (e) {
         if (opts.signal.aborted) return end("stopped", "aborted", turn);
+        if (deadline.signal.aborted) return overtime(turn);
         const error = (e as Error).message;
         trace({ kind: "retry", turn, attempt, error });
         opts.log(`model call failed (attempt ${attempt}/${CALL_ATTEMPTS}): ${error}`);
@@ -322,6 +332,8 @@ export async function runAgent(opts: AgentOptions): Promise<AgentResult> {
     }
     nudges = 0;
     for (const call of calls) {
+      // Past the deadline: skip the rest of the batch; the loop ends the build next.
+      if (signal.aborted) break;
       let args: any = {};
       try {
         args = JSON.parse(call.function.arguments || "{}");
@@ -335,11 +347,13 @@ export async function runAgent(opts: AgentOptions): Promise<AgentResult> {
       trace({ kind: "tool_call", turn, id: call.id, name: call.function.name, args });
       opts.log(`${call.function.name} ${String(args.command ?? args.path ?? "").replace(/\s+/g, " ").slice(0, 160)}`);
       const t0 = Date.now();
-      const out = await runTool(call.function.name, args, opts);
+      const out = await runTool(call.function.name, args, toolOpts);
       trace({ kind: "tool_result", turn, id: call.id, name: call.function.name, output: out.output, ms: Date.now() - t0 });
       messages.push({ role: "tool", tool_call_id: call.id, content: out.output });
       if (out.finish !== undefined) return end("finished", out.finish, turn);
     }
   }
+  if (opts.signal.aborted) return end("stopped", "aborted", opts.maxTurns);
+  if (deadline.signal.aborted) return overtime(opts.maxTurns);
   return end("budget", `hit the ${opts.maxTurns}-turn limit`, opts.maxTurns);
 }

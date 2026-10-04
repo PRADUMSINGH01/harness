@@ -260,6 +260,35 @@ test("a build that never finishes is warned at 80% of its budget, then stopped",
   assert.ok(mock.requests.at(-1).messages.some((m: any) => m.role === "user" && /Wrap up now/.test(m.content)));
 });
 
+test("the minutes budget cuts off a command still running when it passes", { skip: process.platform === "win32" }, async () => {
+  const mock = await mockProvider([{ role: "assistant", content: null, tool_calls: [call("x", "run_command", { command: "sleep 30" })] }]);
+  const t0 = Date.now();
+  const result = await runAgent({
+    client: mock.client,
+    model: "mock",
+    system: "s",
+    prompt: "p",
+    cwd: mkdtempSync(join(tmpdir(), "hf-agent-")),
+    readRoots: [],
+    maxTurns: 100,
+    budget: { maxMinutes: 0.01 },
+    signal: new AbortController().signal,
+    log: () => {},
+  });
+  mock.close();
+  assert.equal(result.status, "budget");
+  assert.ok(Date.now() - t0 < 10_000, `stopped at the deadline, not after the command (${Date.now() - t0} ms)`);
+});
+
+test("a command timeout kills the whole process tree", { skip: process.platform === "win32" }, async () => {
+  const { runCmd } = await import("../src/hf.ts");
+  const t0 = Date.now();
+  const r = await runCmd("sleep 30; echo done", { timeoutMs: 500 });
+  assert.equal(r.timedOut, true);
+  assert.ok(Date.now() - t0 < 10_000, `returned after ${Date.now() - t0} ms`);
+  assert.doesNotMatch(r.stdout, /done/);
+});
+
 test("framework source is unreadable even inside the read roots", async () => {
   const root = mkdtempSync(join(tmpdir(), "hf-root-"));
   mkdirSync(join(root, "packages"));

@@ -32,6 +32,7 @@ The HyperFrames workflows (`motion-graphics`, `product-launch-video`, `general-v
 ## Run it
 
 ```bash
+git submodule update --init   # the vendored HyperFrames clone in ./hyperframes (or clone with --recurse-submodules)
 npm install
 npm run server          # http://localhost:8100, dashboard at /ui
 npm test                # unit tests for gates, seeding, judging, decisions
@@ -61,7 +62,7 @@ Choose per run (`"builder": "zai", "judge": "gemini"`) or set defaults with `HAR
 - **Commands:** run in bash (Git Bash on Windows). Commands that would break the run (`hyperframes render`, `preview`, `publish`, `skills update`, git, recursive deletes outside the variant) are refused.
 - **Workflows that dispatch sub-agents:** the loop has no sub-agent tool, so the model does that work itself, one unit at a time, following the workflows' documented no-delegation fallback.
 - **Gemini 3:** tool calls are echoed back verbatim, which keeps its thought signatures intact.
-- **Long runs:** old tool output is elided once the transcript passes `HARNESS_AGENT_CONTEXT_CHARS` (default 400k characters).
+- **Long runs:** old tool output is elided once the transcript passes `HARNESS_AGENT_CONTEXT_CHARS` (default 150k characters).
 
 It is scoped by working directory and a denylist, **not a sandbox**: commands run with the server's own permissions.
 

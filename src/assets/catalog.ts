@@ -236,6 +236,9 @@ export function searchAssets(query: string, { kind, limit = 12 }: { kind?: strin
         for (const [toks, weight] of fields) if (toks.some((t) => t === w || (w.length > 3 && t.startsWith(w)))) best = Math.max(best, weight);
         score += best;
       }
+      // The whole phrase in the curated id ("film grain" -> overlays/film-grain) beats the same
+      // words scattered through a long generated name.
+      if (q.length > 1 && a.id.toLowerCase().replace(/[_\s]+/g, "-").includes(q.join("-"))) score += 2;
       return { a, score };
     })
     .filter((x) => !q.length || x.score > 0)

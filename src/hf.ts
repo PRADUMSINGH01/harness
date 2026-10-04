@@ -1,5 +1,5 @@
 // Async wrapper over the HyperFrames CLI, pinned to the vendored clone's version.
-import { spawn } from "node:child_process";
+import { execFileSync, spawn } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { createServer } from "node:net";
 import { join } from "node:path";
@@ -35,7 +35,17 @@ export function hfCli(): string {
   try {
     local = JSON.parse(readFileSync(join(HARNESS_ROOT, "node_modules", "hyperframes", "package.json"), "utf8")).version;
   } catch {}
-  cachedCli = existsSync(bin) && local === hfVersion() ? `node ${quote(bin.replace(/\\/g, "/"))}` : `npx --yes hyperframes@${hfVersion()}`;
+  // No vendored clone means no pin ("latest"): the installed copy beats an unpinned npx download.
+  const pinned = hfVersion();
+  if (existsSync(bin) && (local === pinned || pinned === "latest")) {
+    cachedCli = `node ${quote(bin.replace(/\\/g, "/"))}`;
+  } else {
+    cachedCli = `npx --yes hyperframes@${pinned}`;
+    console.warn(
+      `hf-harness: node_modules/hyperframes is ${local || "missing"} but the vendored clone is ${pinned}; every CLI call goes through npx, ` +
+        `which adds seconds per call. Run \`npm install hyperframes@${pinned}\` to match.`,
+    );
+  }
   return cachedCli;
 }
 
@@ -85,12 +95,46 @@ export function runCmd(
 }
 
 // `shell: true` puts a shell between us and the CLI; kill the whole tree or Chrome outlives the job.
+// POSIX: children are not spawned detached, so `-pid` names no process group; walk the parent
+// links instead. Collect the tree before killing: an orphan is re-parented and can't be found.
 export function killTree(pid?: number) {
   if (!pid) return;
   try {
-    if (process.platform === "win32") spawn("taskkill", ["/pid", String(pid), "/T", "/F"], { windowsHide: true });
-    else process.kill(-pid, "SIGKILL");
+    if (process.platform === "win32") {
+      spawn("taskkill", ["/pid", String(pid), "/T", "/F"], { windowsHide: true });
+      return;
+    }
+    for (const p of [pid, ...descendantsOf(pid)]) {
+      try {
+        process.kill(p, "SIGKILL");
+      } catch {}
+    }
   } catch {}
+}
+
+function descendantsOf(pid: number): number[] {
+  let table = "";
+  try {
+    table = execFileSync("ps", ["-A", "-o", "pid=,ppid="], { encoding: "utf8", timeout: 5000 });
+  } catch {
+    return [];
+  }
+  const children = new Map<number, number[]>();
+  for (const line of table.split("\n")) {
+    const [p, pp] = line.trim().split(/\s+/).map(Number);
+    if (!p || !pp) continue;
+    if (!children.has(pp)) children.set(pp, []);
+    children.get(pp)!.push(p);
+  }
+  const out: number[] = [];
+  const queue = [pid];
+  while (queue.length) {
+    for (const c of children.get(queue.shift()!) ?? []) {
+      out.push(c);
+      queue.push(c);
+    }
+  }
+  return out;
 }
 
 // Run a node script without a shell, so the caller knows the script's own PID.

@@ -107,7 +107,7 @@ test("agent tools search and stage assets into the project", async () => {
 });
 
 test("creative kit: 200+ themeable SVGs indexed under their own kinds", () => {
-  const kit = catalog().filter((a) => a.path.replace(/\/g, "/").includes("/assets/creative/"));
+  const kit = catalog().filter((a) => a.path.replace(/\\/g, "/").includes("/assets/creative/"));
   assert.ok(kit.length >= 200, `${kit.length} creative assets`);
   const kinds = new Set(kit.map((a) => a.kind));
   for (const k of ["background", "overlay", "shape", "doodle", "mockup", "chart", "title", "matte", "frame", "icon"]) assert.ok(kinds.has(k as any), `has ${k}`);
@@ -124,7 +124,7 @@ test("creative kit: 200+ themeable SVGs indexed under their own kinds", () => {
 test("use_asset returns inline markup for creative SVGs, themeable through CSS variables", async () => {
   const dir = project("");
   const tools = assetTools(dir);
-  const use = tools.find((t) => t.tool.function.name === "use_asset")!;
+  const use = tools.find((t) => (t.tool as any).function.name === "use_asset")!;
   const out = JSON.parse(await use.run({ id: "doodles/circle-scribble", role: "circle the hero word" }));
   assert.equal(out.file, "assets/doodle/circle-scribble.svg");
   assert.match(out.inline, /^<svg [^>]*viewBox="0 0 600 300"/);

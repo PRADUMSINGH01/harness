@@ -83,8 +83,8 @@ app.get(
     const check = async (drivers: Record<string, { check(): Promise<{ ok: boolean; reason?: string }> }>) =>
       Object.fromEntries(await Promise.all(Object.entries(drivers).map(async ([id, d]) => [id, await d.check()])));
     res.json({
-      ok: existsSync(HF_ROOT) && !!chrome,
-      hyperframes: { version: hfVersion(), root: HF_ROOT, present: existsSync(HF_ROOT) },
+      ok: existsSync(join(HF_ROOT, "plugin.json")) && !!chrome,
+      hyperframes: { version: hfVersion(), root: HF_ROOT, present: existsSync(join(HF_ROOT, "plugin.json")), cli: hfCli() },
       node: process.version,
       chrome,
       ffmpeg,
@@ -411,5 +411,9 @@ app.listen(PORT, (err?: Error) => {
     process.exit(1);
   }
   console.log(`hf-harness on ${publicUrl} (hyperframes ${hfVersion()}, vendored at ${HF_ROOT})`);
+  // An empty hyperframes/ (cloned without submodules) leaves builders with no skills and no doctrine.
+  if (!existsSync(join(HF_ROOT, "plugin.json"))) {
+    console.warn(`hf-harness: no HyperFrames clone at ${HF_ROOT}. Run \`git submodule update --init\` (or set HF_ROOT): without it builders get no workflow skills and the seam gate is skipped.`);
+  }
   resumeAll();
 });
