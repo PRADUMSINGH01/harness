@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glassBg" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#16181d"/>
+      <stop offset="70%" stop-color="#0A0A0A"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF3C4"/>
+      <stop offset="35%" stop-color="#F5C542"/>
+      <stop offset="70%" stop-color="#D99A1F"/>
+      <stop offset="100%" stop-color="#8A5A0B"/>
+    </linearGradient>
+    <linearGradient id="goldEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFEFAF"/>
+      <stop offset="100%" stop-color="#B7791F"/>
+    </linearGradient>
+    <linearGradient id="glassCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A84FF"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="goldGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softBlur"><feGaussianBlur stdDeviation="1.2"/></filter>
+    <filter id="tinyBlur"><feGaussianBlur stdDeviation="0.5"/></filter>
+  </defs>
+
+  <rect width="200" height="200" fill="url(#glassBg)"/>
+
+  <!-- glass panel -->
+  <rect x="18" y="18" width="164" height="164" rx="26" fill="url(#glassCard)" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1"/>
+  <!-- corner brackets -->
+  <g stroke="#8E8E93" stroke-opacity="0.7" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M30 40 v-8 a4 4 0 0 1 4-4 h8"/>
+    <path d="M170 40 v-8 a4 4 0 0 0 -4-4 h-8"/>
+    <path d="M30 160 v8 a4 4 0 0 0 4 4 h8"/>
+    <path d="M170 160 v8 a4 4 0 0 1 -4 4 h-8"/>
+  </g>
+
+  <!-- flowing streaks -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M40 150 C 70 130, 130 130, 165 92" stroke="url(#goldEdge)" stroke-width="2.4" opacity="0.75" filter="url(#tinyBlur)"/>
+    <path d="M34 160 C 70 142, 128 140, 170 102" stroke="#F5C542" stroke-width="1.2" opacity="0.5"/>
+    <path d="M46 142 C 76 124, 126 122, 158 84" stroke="url(#blueGlow)" stroke-width="1.6" opacity="0.55"/>
+  </g>
+
+  <!-- particle burst -->
+  <g filter="url(#softBlur)">
+    <circle cx="152" cy="48" r="2.6" fill="#F5C542" opacity="0.9"/>
+    <circle cx="168" cy="66" r="1.8" fill="#FFF3C4" opacity="0.8"/>
+    <circle cx="44" cy="52" r="2" fill="#0A84FF" opacity="0.8"/>
+    <circle cx="58" cy="38" r="1.4" fill="#8E8E93" opacity="0.7"/>
+    <circle cx="162" cy="128" r="2.2" fill="#F5C542" opacity="0.85"/>
+    <circle cx="38" cy="120" r="1.6" fill="#0A84FF" opacity="0.65"/>
+    <circle cx="100" cy="30" r="1.6" fill="#FFF3C4" opacity="0.6"/>
+    <circle cx="128" cy="176" r="1.5" fill="#F5C542" opacity="0.6"/>
+    <circle cx="70" cy="172" r="1.8" fill="#0A84FF" opacity="0.55"/>
+  </g>
+  <g fill="#F5C542" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700">
+    <text x="140" y="36" font-size="9" opacity="0.85" filter="url(#tinyBlur)">$</text>
+    <text x="170" y="92" font-size="7" opacity="0.6">$</text>
+    <text x="24" y="86" font-size="7" opacity="0.55">$</text>
+    <text x="60" y="26" font-size="6" fill="#FFF3C4" opacity="0.6">$</text>
+    <text x="176" y="150" font-size="6" opacity="0.5">$</text>
+    <text x="20" y="146" font-size="6" fill="#8E8E93" opacity="0.5">$</text>
+  </g>
+
+  <!-- coin -->
+  <g transform="translate(100 100)" filter="url(#goldGlow)">
+    <circle r="40" fill="none" stroke="#8E8E93" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="3 5"/>
+    <circle r="34" fill="url(#goldEdge)"/>
+    <circle r="30" fill="url(#gold)"/>
+    <circle r="30" fill="none" stroke="#FFF3C4" stroke-opacity="0.6" stroke-width="1"/>
+    <circle r="24.5" fill="none" stroke="#8A5A0B" stroke-opacity="0.55" stroke-width="1.2" stroke-dasharray="1.5 3"/>
+    <!-- dollar sign -->
+    <text x="0" y="2" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" fill="#5C3A06">$</text>
+    <text x="-1" y="1" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" fill="#FFF3C4" opacity="0.85">$</text>
+    <!-- sheen -->
+    <path d="M-26 -14 A30 30 0 0 1 -6 -29 C-14 -20 -20 -16 -26 -14 Z" fill="#FFFFFF" opacity="0.35"/>
+  </g>
+
+  <!-- technical ticks -->
+  <g stroke="#8E8E93" stroke-opacity="0.5" stroke-width="1">
+    <path d="M100 12 v4"/><path d="M100 184 v4"/>
+    <path d="M12 100 h4"/><path d="M184 100 h4"/>
+  </g>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 150" width="560" height="150" role="img" aria-label="Subscribe button">
+<rect id="pill" x="5" y="5" width="550" height="140" rx="70" style="fill:var(--subscribe,#FF2D2D)"/>
+<text id="label" x="232" y="94" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:50px;font-weight:800;fill:#fff">Subscribe</text>
+<g id="bell" style="fill:none;stroke:#fff;stroke-width:6;stroke-linecap:round;stroke-linejoin:round"><path d="M440 98 V74 a30 30 0 0 1 60 0 V98 l8 10 H432Z"/><path d="M462 118 a10 10 0 0 0 16 0"/></g>
+</svg>

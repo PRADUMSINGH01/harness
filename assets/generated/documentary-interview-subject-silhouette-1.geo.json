@@ -1,0 +1,35 @@
+{
+  "id": "generated_documentary-interview-subject-silhouette-1",
+  "name": "documentary interview subject silhouette at desk with laptop, hard single-source interrogation light, film grain",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/documentary-interview-subject-silhouette-1.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M78,94 C74,80 80,66 94,64 C108,62 118,72 118,86 C118,96 112,104 102,106 C90,108 80,104 78,94 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "documentary",
+    "interview",
+    "subject",
+    "silhouette",
+    "desk",
+    "laptop",
+    "illustration",
+    "generated-svg"
+  ]
+}

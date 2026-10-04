@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200" role="img" aria-label="Tablet frame">
+<path fill-rule="evenodd" d="M60 0 H840 A60 60 0 0 1 900 60 V1140 A60 60 0 0 1 840 1200 H60 A60 60 0 0 1 0 1140 V60 A60 60 0 0 1 60 0Z M62 36 H838 A26 26 0 0 1 864 62 V1138 A26 26 0 0 1 838 1164 H62 A26 26 0 0 1 36 1138 V62 A26 26 0 0 1 62 36Z" style="fill:var(--device,#0B0C0F)"/>
+<path d="M60 1.5 H840 A58.5 58.5 0 0 1 898.5 60 V1140 A58.5 58.5 0 0 1 840 1198.5 H60 A58.5 58.5 0 0 1 1.5 1140 V60 A58.5 58.5 0 0 1 60 1.5Z" style="fill:none;stroke:var(--device-edge,#3A3D45);stroke-width:3"/>
+<circle cx="450" cy="18" r="5" style="fill:#2A2C31"/>
+</svg>

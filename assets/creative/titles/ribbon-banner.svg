@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="1000" height="240" role="img" aria-label="Ribbon banner">
+<path id="left-tail" d="M20 70 H170 V210 H20 L70 140Z" style="fill:var(--ribbon-shade,#B8341A)"/>
+<path id="right-tail" d="M980 70 H830 V210 H980 L930 140Z" style="fill:var(--ribbon-shade,#B8341A)"/>
+<path d="M130 190 L170 210 V190Z M870 190 L830 210 V190Z" style="fill:#5A1408"/>
+<rect id="band" x="130" y="30" width="740" height="160" style="fill:var(--accent,#FF5A36);transform-box:fill-box;transform-origin:center"/>
+<text id="label" x="500" y="132" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:56px;font-weight:800;fill:#fff">Product of the Day</text>
+</svg>

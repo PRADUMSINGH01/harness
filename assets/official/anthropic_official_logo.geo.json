@@ -1,0 +1,33 @@
+{
+  "id": "anthropic_official_logo",
+  "name": "Official Anthropic Logo",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/official/anthropic_official_logo.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 240 240",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 240,
+      "height": 240
+    },
+    "closed_svg_path": "M 91.5 38 L 34 202 L 66.5 202 L 119.5 51 L 120.5 51 L 173.5 202 L 206 202 L 148.5 38 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "anthropic",
+    "claude",
+    "ai",
+    "official",
+    "logo",
+    "brand"
+  ]
+}

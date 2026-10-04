@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 130" width="240" height="130" role="img" aria-label="Toggle switch">
+<rect id="track" x="5" y="5" width="230" height="120" rx="60" style="fill:var(--accent,#FF5A36)"/><circle id="knob" cx="175" cy="65" r="48" style="fill:#fff"/>
+</svg>

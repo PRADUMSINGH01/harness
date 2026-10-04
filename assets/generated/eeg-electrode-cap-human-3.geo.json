@@ -1,0 +1,35 @@
+{
+  "id": "generated_eeg-electrode-cap-human-3",
+  "name": "EEG electrode cap on a human head silhouette with wires",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/eeg-electrode-cap-human-3.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M62 158 V128 C50 116 44 100 44 84 C44 52 68 30 100 30 C130 30 152 50 154 78 C154.5 84 158 90 164 97 C167 101 166 106 161 108 L154 111 V126 C154 134 148 138 140 138 H128 V158 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "eeg",
+    "electrode",
+    "cap",
+    "human",
+    "head",
+    "silhouette",
+    "icon",
+    "generated-svg"
+  ]
+}

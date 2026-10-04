@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="headG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="capG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="nodeG" cx="0.35" cy="0.3" r="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.5" stop-color="#8FD4FF"/>
+      <stop offset="1" stop-color="#0A84FF"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0A84FF" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- corner brackets -->
+  <g stroke="#8E8E93" stroke-width="1.5" fill="none" opacity="0.5">
+    <path d="M10 22 V10 H22"/>
+    <path d="M178 10 H190 V22"/>
+    <path d="M190 178 V190 H178"/>
+    <path d="M22 190 H10 V178"/>
+  </g>
+
+  <!-- head silhouette: profile facing right -->
+  <g filter="url(#soft)">
+    <path d="M62 158 V128 C50 116 44 100 44 84 C44 52 68 30 100 30 C130 30 152 50 154 78 C154.5 84 158 90 164 97 C167 101 166 106 161 108 L154 111 V126 C154 134 148 138 140 138 H128 V158 Z"
+          fill="url(#headG)" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+
+  <!-- cap over skull top -->
+  <g filter="url(#glow)">
+    <path d="M52 92 C50 58 72 38 100 38 C128 38 150 58 148 92 L138 90 C139 62 122 48 100 48 C78 48 61 62 62 90 Z"
+          fill="url(#capG)" stroke="#8FD4FF" stroke-width="1" stroke-opacity="0.6"/>
+    <path d="M56 88 H144" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2"/>
+    <path d="M60 74 H140" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1"/>
+  </g>
+
+  <!-- electrodes on cap -->
+  <g filter="url(#glow)">
+    <circle cx="72" cy="62" r="4.5" fill="url(#nodeG)"/>
+    <circle cx="100" cy="56" r="4.5" fill="url(#nodeG)"/>
+    <circle cx="128" cy="62" r="4.5" fill="url(#nodeG)"/>
+    <circle cx="64" cy="82" r="4" fill="url(#nodeG)"/>
+    <circle cx="100" cy="80" r="4" fill="url(#nodeG)"/>
+    <circle cx="136" cy="82" r="4" fill="url(#nodeG)"/>
+  </g>
+  <g stroke="#0A84FF" stroke-width="1" stroke-opacity="0.5" fill="none">
+    <path d="M72 62 L100 56 L128 62"/>
+    <path d="M64 82 L100 80 L136 82"/>
+    <path d="M72 62 L64 82 M128 62 L136 82 M100 56 L100 80"/>
+  </g>
+
+  <!-- wires trailing down-left -->
+  <g fill="none" stroke="#8E8E93" stroke-width="2" stroke-linecap="round" opacity="0.85">
+    <path d="M72 66 C60 84 56 100 40 112 C30 120 28 132 32 144"/>
+    <path d="M100 84 C96 104 92 116 78 126 C70 132 68 142 72 152"/>
+    <path d="M64 86 C56 100 48 108 46 122 C45 132 48 140 54 148"/>
+  </g>
+  <g fill="#8E8E93">
+    <circle cx="32" cy="146" r="2.5"/>
+    <circle cx="72" cy="154" r="2.5"/>
+    <circle cx="54" cy="150" r="2.5"/>
+  </g>
+
+  <!-- sparkline accent -->
+  <polyline points="150,150 158,142 164,154 172,136 180,148" fill="none" stroke="#0A84FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+</svg>

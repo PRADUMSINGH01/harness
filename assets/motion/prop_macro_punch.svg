@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fistGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd98a"/>
+      <stop offset="0.5" stop-color="#ff9d3f"/>
+      <stop offset="1" stop-color="#e8541f"/>
+    </linearGradient>
+    <linearGradient id="sleeveGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a4bd8"/>
+      <stop offset="1" stop-color="#1b2470"/>
+    </linearGradient>
+    <radialGradient id="burstGrad" cx="0.38" cy="0.62" r="0.7">
+      <stop offset="0" stop-color="#fff8d0" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#ffb63f" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ff7b2f" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- shockwave rings -->
+  <g fill="none" stroke-linecap="round">
+    <circle cx="86" cy="150" r="70" stroke="#ffb63f" stroke-opacity="0.28" stroke-width="5"/>
+    <circle cx="86" cy="150" r="52" stroke="#ffc95e" stroke-opacity="0.45" stroke-width="4"/>
+    <circle cx="86" cy="150" r="36" stroke="#ffe6a0" stroke-opacity="0.65" stroke-width="3"/>
+  </g>
+
+  <!-- radial burst glow -->
+  <circle cx="86" cy="150" r="86" fill="url(#burstGrad)"/>
+
+  <!-- impact shards -->
+  <g fill="#ffe6a0" filter="url(#glow)">
+    <path d="M20 150 L52 142 L48 154 Z"/>
+    <path d="M28 96 L58 116 L48 126 Z"/>
+    <path d="M40 206 L62 178 L70 190 Z"/>
+    <path d="M112 62 L108 96 L96 90 Z"/>
+    <path d="M150 78 L128 104 L120 94 Z"/>
+  </g>
+
+  <!-- speed streaks behind fist -->
+  <g stroke="#ffd98a" stroke-width="6" stroke-linecap="round" opacity="0.7">
+    <path d="M156 96 L224 78"/>
+    <path d="M160 120 L232 118"/>
+    <path d="M156 144 L224 158"/>
+  </g>
+
+  <!-- fist -->
+  <g filter="url(#glow)">
+    <!-- forearm/sleeve -->
+    <path d="M150 108 L232 92 L236 150 L152 152 Z" fill="url(#sleeveGrad)"/>
+    <path d="M150 108 L232 92 L233 104 L152 120 Z" fill="#5a6df0" opacity="0.7"/>
+    <!-- wrist -->
+    <rect x="128" y="104" width="30" height="52" rx="8" fill="#e8794a"/>
+    <!-- fist mass -->
+    <path d="M58 96 Q52 88 60 82 L118 68 Q146 64 150 92 L152 148 Q152 168 128 168 L76 168 Q58 168 56 148 Z" fill="url(#fistGrad)"/>
+    <!-- knuckle ridges -->
+    <path d="M58 92 Q66 78 84 76 L132 70" fill="none" stroke="#fff0c2" stroke-width="6" stroke-linecap="round" stroke-opacity="0.85"/>
+    <!-- fingers compressed -->
+    <path d="M62 112 Q84 104 116 104 L146 106 Q150 108 150 118 L148 130 Q118 136 88 132 L64 126 Q58 122 62 112 Z" fill="#f2a055"/>
+    <g stroke="#b6521a" stroke-width="2.5" stroke-linecap="round" opacity="0.7">
+      <path d="M66 106 Q92 100 124 102"/>
+      <path d="M64 122 Q94 128 146 124"/>
+      <path d="M70 118 L72 122 M92 120 L92 124 M116 122 L116 126 M136 122 L136 126"/>
+    </g>
+    <!-- thumb -->
+    <path d="M60 118 Q48 122 50 138 Q52 152 68 152 L76 150 Q64 138 66 122 Z" fill="#ffb057"/>
+    <!-- highlight -->
+    <path d="M70 84 Q96 74 128 74" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-opacity="0.5"/>
+  </g>
+</svg>

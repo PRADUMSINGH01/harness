@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Cool light leak">
+<defs><filter id="cx-ove-light-leak-cool-b" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="120"/></filter></defs>
+<g style="filter:url(#cx-ove-light-leak-cool-b)">
+  <ellipse cx="1820" cy="160" rx="460" ry="420" style="fill:#2BD9FE;opacity:0.7"/>
+  <ellipse cx="1560" cy="80" rx="360" ry="260" style="fill:#7B61FF;opacity:0.75"/>
+  <ellipse cx="1880" cy="520" rx="240" ry="380" style="fill:#18C29C;opacity:0.45"/>
+</g>
+</svg>

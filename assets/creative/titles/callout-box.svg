@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img" aria-label="Callout box">
+<path d="M32 4 H608 A28 28 0 0 1 636 32 V196 A28 28 0 0 1 608 224 H32 A28 28 0 0 1 4 196 V32 A28 28 0 0 1 32 4Z" style="fill:var(--accent,#FF5A36)"/><path d="M70 222 L90 288 L150 222Z" style="fill:var(--accent,#FF5A36)"/>
+<text id="title" x="44" y="100" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:48px;font-weight:800;fill:#fff">New in v2</text>
+<text id="body" x="44" y="168" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:32px;font-weight:500;fill:#fff">Brand kits sync automatically.</text>
+</svg>

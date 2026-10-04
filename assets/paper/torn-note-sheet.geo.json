@@ -1,0 +1,58 @@
+{
+  "id": "paper_torn_note_sheet_01",
+  "name": "Torn Legal Pad / Note Sheet",
+  "type": "svg_vector",
+  "category": "paper_craft",
+  "asset": {
+    "src": "assets/paper/torn-note-sheet.svg",
+    "format": "svg",
+    "transparent_background": true,
+    "fit": "contain",
+    "preserve_aspect_ratio": true
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 800 1000",
+    "anchor": "center",
+    "bounds": {
+      "x": 40,
+      "y": 65,
+      "width": 720,
+      "height": 885
+    },
+    "closed_svg_path": "M 40,80 L 70,68 100,85 135,72 170,88 205,65 240,82 280,70 320,86 360,68 400,84 440,70 480,88 520,72 560,86 600,68 640,85 680,72 720,86 760,74 L 760,940 Q 760,950 750,950 L 50,950 Q 40,950 40,940 Z",
+    "edge_style": "torn_top_clean_sides",
+    "content_safe_area": {
+      "x": 160,
+      "y": 140,
+      "width": 560,
+      "height": 760
+    }
+  },
+  "render": {
+    "position": "absolute",
+    "default_width": "75%",
+    "z_index": 2,
+    "shadow": {
+      "enabled": true,
+      "x": 0,
+      "y": 16,
+      "blur": 22,
+      "color": "rgba(7,6,5,0.28)"
+    }
+  },
+  "animation": {
+    "recommended_entrance": "paper-lift",
+    "duration_seconds": 0.8,
+    "suggested_ease": "back.out(1.2)"
+  },
+  "tags": [
+    "note-pad",
+    "paper-sheet",
+    "torn-edge",
+    "memo",
+    "editorial",
+    "card",
+    "grid-paper"
+  ]
+}

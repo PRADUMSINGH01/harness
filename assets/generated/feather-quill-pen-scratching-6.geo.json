@@ -1,0 +1,35 @@
+{
+  "id": "generated_feather-quill-pen-scratching-6",
+  "name": "feather quill pen scratching an ink line on parchment",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/feather-quill-pen-scratching-6.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M52 158 L60 96 Q61 90 67 90 L136 96 Q142 97 142 103 L140 148 Q140 154 134 154 L58 164 Q52 165 52 158 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "feather",
+    "quill",
+    "pen",
+    "scratching",
+    "ink",
+    "line",
+    "icon",
+    "generated-svg"
+  ]
+}

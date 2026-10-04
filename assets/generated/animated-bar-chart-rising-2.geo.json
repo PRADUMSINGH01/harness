@@ -1,0 +1,35 @@
+{
+  "id": "generated_animated-bar-chart-rising-2",
+  "name": "animated bar chart rising in code block",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/animated-bar-chart-rising-2.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M172 38 v-4 h-4"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "animated",
+    "bar",
+    "chart",
+    "rising",
+    "code",
+    "block",
+    "chart",
+    "generated-svg"
+  ]
+}

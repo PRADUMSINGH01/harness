@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 76" width="100%" height="100%">
+  <defs>
+    <linearGradient id="growth-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#064E3B" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#022C22" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="spark-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container Base Pill -->
+  <rect x="2" y="2" width="336" height="72" rx="20" fill="url(#growth-bg)" stroke="#10B981" stroke-width="1.8"/>
+
+  <!-- Upward Trend Triangle -->
+  <path d="M26 44 L38 24 L50 44 Z" fill="#10B981"/>
+
+  <!-- Metric Stat Value -->
+  <text x="60" y="48" fill="#34D399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="28" letter-spacing="-0.5">+847%</text>
+
+  <!-- Sparkline Trend Chart -->
+  <path d="M195 50 L220 42 L240 48 L265 26 L290 32 L315 16" fill="none" stroke="url(#spark-line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="315" cy="16" r="4" fill="#34D399"/>
+</svg>

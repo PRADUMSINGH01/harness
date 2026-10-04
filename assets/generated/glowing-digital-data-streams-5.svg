@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#0A0A0A" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="streamMain" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#0A84FF"/>
+      <stop offset="75%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="streamFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8E8E93" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#8E8E93" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="streamVert" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#0A84FF"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/><feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" fill="#0A0A0A"/>
+  <rect width="200" height="200" fill="url(#bgGlow)"/>
+
+  <!-- faint grid -->
+  <g stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="0.5">
+    <path d="M0 40 H200 M0 80 H200 M0 120 H200 M0 160 H200"/>
+    <path d="M40 0 V200 M80 0 V200 M120 0 V200 M160 0 V200"/>
+  </g>
+
+  <!-- ambient glows -->
+  <g filter="url(#softGlow)" opacity="0.55">
+    <ellipse cx="60" cy="70" rx="55" ry="18" fill="#0A84FF" opacity="0.35"/>
+    <ellipse cx="150" cy="140" rx="50" ry="14" fill="#0A84FF" opacity="0.3"/>
+    <ellipse cx="110" cy="40" rx="35" ry="10" fill="#FFFFFF" opacity="0.12"/>
+  </g>
+
+  <!-- main data streams -->
+  <g filter="url(#glow)" stroke-linecap="round">
+    <path d="M-5 60 C 45 52, 80 70, 120 58 S 190 48, 205 55" fill="none" stroke="url(#streamMain)" stroke-width="2.2"/>
+    <path d="M-5 95 C 40 100, 90 88, 130 96 S 185 104, 205 98" fill="none" stroke="url(#streamMain)" stroke-width="1.6" opacity="0.9"/>
+    <path d="M-5 130 C 50 124, 95 140, 140 128 S 190 122, 205 128" fill="none" stroke="url(#streamFade)" stroke-width="3" opacity="0.7"/>
+    <path d="M-5 162 C 55 168, 100 156, 150 164 S 195 170, 205 166" fill="none" stroke="url(#streamMain)" stroke-width="1.1" opacity="0.65"/>
+    <path d="M70 205 C 74 165, 62 130, 72 95 S 66 45, 74 -5" fill="none" stroke="url(#streamVert)" stroke-width="1.2" opacity="0.55"/>
+    <path d="M140 205 C 136 170, 146 135, 138 100 S 144 50, 138 -5" fill="none" stroke="url(#streamVert)" stroke-width="0.9" opacity="0.4"/>
+  </g>
+
+  <!-- code dash packets along streams -->
+  <g filter="url(#glow)">
+    <g fill="#FFFFFF" opacity="0.95">
+      <rect x="34" y="56.5" width="7" height="2" rx="1"/>
+      <rect x="86" y="63.5" width="4" height="2" rx="1"/>
+      <rect x="112" y="58.5" width="9" height="2.2" rx="1.1"/>
+      <rect x="158" y="51.5" width="5" height="2" rx="1"/>
+    </g>
+    <g fill="#0A84FF">
+      <rect x="52" y="95" width="6" height="1.6" rx="0.8"/>
+      <rect x="104" y="92.5" width="8" height="1.8" rx="0.9"/>
+      <rect x="150" y="99.5" width="4.5" height="1.6" rx="0.8"/>
+      <rect x="76" y="127.5" width="7" height="2" rx="1" opacity="0.9"/>
+      <rect x="120" y="131" width="4" height="1.8" rx="0.9" opacity="0.9"/>
+    </g>
+    <g fill="#8E8E93">
+      <rect x="28" y="130.5" width="5" height="1.6" rx="0.8"/>
+      <rect x="160" y="127" width="7" height="1.6" rx="0.8"/>
+      <rect x="60" y="163" width="6" height="1.2" rx="0.6" opacity="0.8"/>
+      <rect x="118" y="160.5" width="4" height="1.2" rx="0.6" opacity="0.8"/>
+    </g>
+    <!-- particles -->
+    <g fill="#FFFFFF">
+      <circle cx="44" cy="58.7" r="1.3"/>
+      <circle cx="128" cy="59.4" r="1.6"/>
+      <circle cx="176" cy="52.3" r="1.1"/>
+      <circle cx="90" cy="93.3" r="1.4"/>
+      <circle cx="166" cy="100" r="1"/>
+      <circle cx="100" cy="128.8" r="1.2" opacity="0.9"/>
+    </g>
+    <g fill="#0A84FF">
+      <circle cx="66" cy="61" r="1.7"/>
+      <circle cx="142" cy="96.6" r="1.5"/>
+      <circle cx="20" cy="94.5" r="1.1"/>
+      <circle cx="52" cy="130.2" r="1.3" opacity="0.85"/>
+    </g>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <path d="M8 20 V10 H18"/>
+    <path d="M182 10 H192 V20"/>
+    <path d="M192 180 V190 H182"/>
+    <path d="M18 190 H8 V180"/>
+  </g>
+</svg>

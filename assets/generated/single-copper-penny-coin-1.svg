@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="copperFace" cx="38%" cy="32%" r="80%">
+      <stop offset="0%" stop-color="#F2B27A"/>
+      <stop offset="35%" stop-color="#C87A44"/>
+      <stop offset="70%" stop-color="#9A5228"/>
+      <stop offset="100%" stop-color="#5E2E14"/>
+    </radialGradient>
+    <linearGradient id="bustGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8A86B"/>
+      <stop offset="55%" stop-color="#B06A34"/>
+      <stop offset="100%" stop-color="#7A401D"/>
+    </linearGradient>
+    <linearGradient id="rimGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E7A96C"/>
+      <stop offset="45%" stop-color="#A65E2C"/>
+      <stop offset="100%" stop-color="#6B3416"/>
+    </linearGradient>
+    <linearGradient id="shineGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glassBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="innerShade" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.4"/>
+    </filter>
+    <clipPath id="coinClip"><circle cx="100" cy="100" r="80"/></clipPath>
+  </defs>
+
+  <!-- drop shadow under coin -->
+  <ellipse cx="100" cy="182" rx="62" ry="9" fill="#0A0A0A" opacity="0.35"/>
+
+  <!-- coin body -->
+  <circle cx="100" cy="100" r="82" fill="url(#rimGrad)"/>
+  <circle cx="100" cy="100" r="80" fill="url(#copperFace)"/>
+
+  <!-- beaded rim -->
+  <g clip-path="url(#coinClip)" fill="#E9B276" opacity="0.9">
+    <g id="beads"></g>
+  </g>
+  <g clip-path="url(#coinClip)">
+    <!-- generated bead dots around rim -->
+    <g fill="#EFBE82" opacity="0.95">
+      <circle cx="100" cy="16" r="1.6"/><circle cx="108" cy="16.4" r="1.6"/><circle cx="116" cy="17.6" r="1.6"/><circle cx="123.9" cy="19.6" r="1.6"/><circle cx="131.5" cy="22.4" r="1.6"/><circle cx="138.8" cy="25.9" r="1.6"/><circle cx="145.7" cy="30.1" r="1.6"/><circle cx="152.1" cy="35" r="1.6"/><circle cx="157.9" cy="40.5" r="1.6"/><circle cx="163" cy="46.5" r="1.6"/><circle cx="167.5" cy="53" r="1.6"/><circle cx="171.2" cy="60" r="1.6"/><circle cx="174.1" cy="67.3" r="1.6"/><circle cx="176.2" cy="74.8" r="1.6"/><circle cx="177.4" cy="82.5" r="1.6"/><circle cx="177.7" cy="90.3" r="1.6"/><circle cx="177.1" cy="98.1" r="1.6"/><circle cx="175.6" cy="105.8" r="1.6"/><circle cx="173.2" cy="113.3" r="1.6"/><circle cx="170" cy="120.5" r="1.6"/><circle cx="165.9" cy="127.3" r="1.6"/><circle cx="161" cy="133.7" r="1.6"/><circle cx="155.4" cy="139.5" r="1.6"/><circle cx="149.1" cy="144.6" r="1.6"/><circle cx="142.4" cy="148.9" r="1.6"/><circle cx="135.2" cy="152.5" r="1.6"/><circle cx="127.7" cy="155.3" r="1.6"/><circle cx="119.9" cy="157.2" r="1.6"/><circle cx="112" cy="158.3" r="1.6"/><circle cx="104" cy="158.4" r="1.6"/><circle cx="96" cy="157.6" r="1.6"/><circle cx="88.2" cy="156" r="1.6"/><circle cx="80.5" cy="153.4" r="1.6"/><circle cx="73.2" cy="150" r="1.6"/><circle cx="66.3" cy="145.8" r="1.6"/><circle cx="59.9" cy="140.9" r="1.6"/><circle cx="54.1" cy="135.3" r="1.6"/><circle cx="49" cy="129.2" r="1.6"/><circle cx="44.6" cy="122.6" r="1.6"/><circle cx="40.9" cy="115.6" r="1.6"/><circle cx="38" cy="108.3" r="1.6"/><circle cx="35.9" cy="100.7" r="1.6"/><circle cx="34.6" cy="93" r="1.6"/><circle cx="34.2" cy="85.2" r="1.6"/><circle cx="34.7" cy="77.4" r="1.6"/><circle cx="36.1" cy="69.7" r="1.6"/><circle cx="38.4" cy="62.2" r="1.6"/><circle cx="41.5" cy="55" r="1.6"/><circle cx="45.4" cy="48.2" r="1.6"/><circle cx="50.1" cy="41.9" r="1.6"/><circle cx="55.4" cy="36.2" r="1.6"/><circle cx="61.4" cy="31.2" r="1.6"/><circle cx="67.8" cy="26.9" r="1.6"/><circle cx="74.7" cy="23.4" r="1.6"/><circle cx="81.9" cy="20.7" r="1.6"/><circle cx="89.4" cy="18.8" r="1.6"/><circle cx="97" cy="17.7" r="1.6"/>
+    </g>
+  </g>
+
+  <!-- engraved face details -->
+  <g clip-path="url(#coinClip)">
+    <!-- inner recessed ring -->
+    <circle cx="100" cy="100" r="70" fill="none" stroke="#6B3416" stroke-width="2.5" opacity="0.55" filter="url(#innerShade)"/>
+    <circle cx="100" cy="100" r="70" fill="none" stroke="#F0BD86" stroke-width="1" opacity="0.5"/>
+
+    <!-- engraved profile bust (simplified Lincoln silhouette, facing right) -->
+    <g filter="url(#softGlow)">
+      <path d="M58 150 C54 132 55 112 62 96 C70 78 84 64 100 60 C110 57 119 58 124 63 C127 66 128 71 126 74 C124 77 120 78 118 82 C116 85 118 88 116 92 C114 95 110 95 108 98 C106 101 108 105 105 108 C101 112 94 111 90 115 C86 119 88 124 84 128 C80 132 74 132 70 136 C66 140 68 146 66 150 Z"
+            fill="url(#bustGrad)" stroke="#5E2E14" stroke-width="1.2"/>
+      <!-- shoulder base -->
+      <path d="M52 152 C60 140 72 133 86 131 C96 130 104 133 110 138 C114 142 116 148 117 154 L52 154 Z"
+            fill="url(#bustGrad)" stroke="#5E2E14" stroke-width="1.2"/>
+    </g>
+    <!-- engraving hatch lines on bust -->
+    <g stroke="#5E2E14" stroke-width="0.7" opacity="0.35">
+      <path d="M72 84 C78 76 86 70 94 66" fill="none"/>
+      <path d="M70 92 C78 82 88 74 98 70" fill="none"/>
+      <path d="M70 102 C80 90 92 82 102 77" fill="none"/>
+      <path d="M64 118 C76 104 92 94 106 89" fill="none"/>
+      <path d="M60 132 C74 116 94 105 110 99" fill="none"/>
+      <path d="M58 146 C72 128 96 116 114 110" fill="none"/>
+    </g>
+    <!-- engraved highlights -->
+    <g stroke="#F5C48C" stroke-width="0.9" opacity="0.7" fill="none">
+      <path d="M100 62 C109 59 117 60 122 64"/>
+      <path d="M96 70 C104 66 112 65 118 68"/>
+      <path d="M84 84 C90 77 98 72 105 69"/>
+    </g>
+
+    <!-- text engravings -->
+    <text x="100" y="44" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#4E2510" opacity="0.9">IN GOD WE TRUST</text>
+    <text x="30" y="105" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#4E2510" opacity="0.9" transform="rotate(-90 30 105)">LIBERTY</text>
+    <text x="172" y="100" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#4E2510" opacity="0.9" transform="rotate(90 172 100)">2025</text>
+
+    <!-- engraved shine sweep -->
+    <g>
+      <path d="M100 20 A80 80 0 0 1 180 100 L160 100 A60 60 0 0 0 100 40 Z" fill="url(#shineGrad)" opacity="0.5"/>
+      <path d="M100 34 A66 66 0 0 1 166 100 L150 100 A50 50 0 0 0 100 50 Z" fill="url(#shineGrad)" opacity="0.35"/>
+    </g>
+
+    <!-- dark-glass blue specular highlight -->
+    <ellipse cx="64" cy="56" rx="34" ry="20" fill="url(#glassBlue)" opacity="0.45" transform="rotate(-35 64 56)"/>
+    <path d="M44 44 C52 34 66 27 80 25" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" fill="none" opacity="0.8" filter="url(#softGlow)"/>
+    <path d="M50 50 C58 41 70 34 82 31" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+    <!-- glass reflection arc bottom -->
+    <path d="M44 148 A80 80 0 0 0 156 148" stroke="#8E8E93" stroke-width="1.6" fill="none" opacity="0.35"/>
+  </g>
+
+  <!-- outer edge shine -->
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#F5C48C" stroke-width="1" opacity="0.55"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#FFFFFF" stroke-width="0.8" opacity="0.18" transform="translate(-0.6 -0.8)"/>
+</svg>

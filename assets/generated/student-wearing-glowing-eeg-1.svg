@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="42%" r="70%">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#0A84FF" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="capShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8E8E93" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#3A3A3E" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="figure" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2A2A2E"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+
+  <!-- ambient lab glow -->
+  <rect x="0" y="0" width="200" height="200" fill="#0A0A0A"/>
+  <rect x="0" y="0" width="200" height="200" fill="url(#bgGlow)"/>
+
+  <!-- lab backdrop: monitor + shelf hints -->
+  <g opacity="0.5">
+    <rect x="16" y="30" width="42" height="28" rx="2" fill="none" stroke="#8E8E93" stroke-width="1" opacity="0.6"/>
+    <polyline points="20,50 28,42 34,47 42,36 50,44" fill="none" stroke="#0A84FF" stroke-width="1" opacity="0.7"/>
+    <line x1="150" y1="24" x2="186" y2="24" stroke="#8E8E93" stroke-width="1" opacity="0.4"/>
+    <line x1="155" y1="30" x2="186" y2="30" stroke="#8E8E93" stroke-width="1" opacity="0.3"/>
+    <circle cx="172" cy="46" r="6" fill="none" stroke="#8E8E93" stroke-width="1" opacity="0.4"/>
+    <circle cx="172" cy="46" r="2.5" fill="#0A84FF" opacity="0.5"/>
+    <line x1="10" y1="176" x2="190" y2="176" stroke="#8E8E93" stroke-width="1" opacity="0.35"/>
+  </g>
+
+  <!-- documentary corner brackets -->
+  <g stroke="#8E8E93" stroke-width="1.2" fill="none" opacity="0.7">
+    <path d="M8 16 V8 H16"/><path d="M184 8 H192 V16"/>
+    <path d="M192 184 V192 H184"/><path d="M16 192 H8 V184"/>
+  </g>
+  <text x="14" y="27" font-family="ui-monospace, Menlo, monospace" font-size="5.5" fill="#8E8E93" opacity="0.75">EEG-02 · LAB REC</text>
+  <circle cx="186" cy="25" r="2" fill="#F43F5E" opacity="0.9"/>
+
+  <!-- shoulders / torso -->
+  <path d="M42 200 C44 156 66 140 100 140 C134 140 156 156 158 200 Z" fill="url(#figure)"/>
+  <path d="M42 200 C44 156 66 140 100 140 C134 140 156 156 158 200" fill="none" stroke="#8E8E93" stroke-width="0.8" opacity="0.35"/>
+
+  <!-- neck -->
+  <rect x="88" y="122" width="24" height="24" rx="8" fill="#141416"/>
+
+  <!-- head -->
+  <ellipse cx="100" cy="96" rx="34" ry="38" fill="url(#figure)"/>
+
+  <!-- glass visor -->
+  <path d="M68 96 Q100 82 132 96 Q130 118 100 122 Q70 118 68 96 Z" fill="url(#glass)" stroke="#0A84FF" stroke-width="1" opacity="0.9"/>
+  <path d="M74 100 Q100 90 126 100" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.35"/>
+
+  <!-- EEG cap dome -->
+  <path d="M66 96 C66 62 82 50 100 50 C118 50 134 62 134 96 C134 90 120 84 100 84 C80 84 66 90 66 96 Z" fill="url(#capShade)" stroke="#8E8E93" stroke-width="1" opacity="0.95"/>
+  <path d="M70 90 C78 72 90 64 100 63" fill="none" stroke="#FFFFFF" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- electrode nodes on cap -->
+  <g filter="url(#glow)">
+    <g fill="#0A84FF" stroke="#FFFFFF" stroke-width="0.6">
+      <circle cx="78" cy="78" r="3.4"/>
+      <circle cx="100" cy="70" r="3.6"/>
+      <circle cx="122" cy="78" r="3.4"/>
+      <circle cx="70" cy="93" r="3"/>
+      <circle cx="130" cy="93" r="3"/>
+      <circle cx="88" cy="64" r="2.6"/>
+      <circle cx="112" cy="64" r="2.6"/>
+    </g>
+  </g>
+  <!-- halo bloom -->
+  <g fill="#0A84FF" opacity="0.35" filter="url(#softGlow)">
+    <circle cx="78" cy="78" r="6"/><circle cx="100" cy="70" r="7"/>
+    <circle cx="122" cy="78" r="6"/><circle cx="70" cy="93" r="5"/>
+    <circle cx="130" cy="93" r="5"/><circle cx="88" cy="64" r="4"/><circle cx="112" cy="64" r="4"/>
+  </g>
+
+  <!-- wiring traces from electrodes to lab harness -->
+  <g fill="none" stroke="#0A84FF" stroke-width="1.1" opacity="0.85" stroke-linecap="round">
+    <path d="M78 78 C66 108 52 128 44 148"/>
+    <path d="M122 78 C134 108 148 128 156 148"/>
+    <path d="M70 93 C60 118 54 134 50 150"/>
+    <path d="M130 93 C140 118 146 134 150 150"/>
+  </g>
+  <rect x="38" y="148" width="20" height="12" rx="2" fill="#141416" stroke="#0A84FF" stroke-width="1"/>
+  <rect x="142" y="148" width="20" height="12" rx="2" fill="#141416" stroke="#0A84FF" stroke-width="1"/>
+  <circle cx="48" cy="154" r="1.6" fill="#0A84FF"/>
+  <circle cx="152" cy="154" r="1.6" fill="#0A84FF"/>
+
+  <!-- brainwave readout line -->
+  <polyline points="60,168 72,168 77,160 83,176 89,164 95,170 102,158 109,172 115,166 122,168 140,168"
+            fill="none" stroke="#0A84FF" stroke-width="1.4" stroke-linejoin="round" filter="url(#glow)"/>
+
+  <!-- glass sweep highlight -->
+  <path d="M56 60 Q100 34 144 60" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.15"/>
+</svg>

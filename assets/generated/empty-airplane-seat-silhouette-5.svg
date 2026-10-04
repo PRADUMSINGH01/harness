@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16181D"/>
+      <stop offset="0.55" stop-color="#0A0A0A"/>
+      <stop offset="1" stop-color="#121418"/>
+    </linearGradient>
+    <linearGradient id="glassSheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="0.35" stop-color="#FFFFFF" stop-opacity="0.02"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="redStroke" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF5A5F"/>
+      <stop offset="1" stop-color="#E11D48"/>
+    </linearGradient>
+    <filter id="redGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="b"/>
+      <feComposite in="b" in2="SourceAlpha" operator="over"/>
+    </filter>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- Dark glass tile -->
+  <g filter="url(#softShadow)">
+    <rect x="8" y="8" width="184" height="184" rx="34" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1.5"/>
+    <rect x="8" y="8" width="184" height="184" rx="34" fill="url(#glassSheen)"/>
+  </g>
+
+  <!-- Corner brackets -->
+  <g stroke="#8E8E93" stroke-opacity="0.7" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M22 38 v-10 a6 6 0 0 1 6 -6 h10"/>
+    <path d="M162 22 h10 a6 6 0 0 1 6 6 v10"/>
+    <path d="M178 162 v10 a6 6 0 0 1 -6 6 h-10"/>
+    <path d="M38 178 h-10 a6 6 0 0 1 -6 -6 v-10"/>
+  </g>
+
+  <!-- Technical ticks -->
+  <g stroke="#8E8E93" stroke-opacity="0.35" stroke-width="1.5" stroke-linecap="round">
+    <line x1="60" y1="24" x2="60" y2="30"/>
+    <line x1="100" y1="24" x2="100" y2="30"/>
+    <line x1="140" y1="24" x2="140" y2="30"/>
+    <line x1="24" y1="100" x2="30" y2="100"/>
+    <line x1="170" y1="100" x2="176" y2="100"/>
+  </g>
+
+  <!-- Crosshair accent -->
+  <g stroke="#0A84FF" stroke-opacity="0.45" stroke-width="1.2">
+    <line x1="100" y1="40" x2="100" y2="48"/>
+    <line x1="100" y1="152" x2="100" y2="160"/>
+  </g>
+
+  <!-- Seat silhouette: red outline -->
+  <g fill="none" stroke="url(#redStroke)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" filter="url(#redGlow)">
+    <!-- backrest -->
+    <path d="M76 48 q0 -8 8 -8 h20 q8 0 8 8 v52 h-36 z"/>
+    <!-- headrest -->
+    <path d="M84 40 h28"/>
+    <!-- seat cushion -->
+    <path d="M70 100 h60 q6 0 6 6 v10 q0 6 -6 6 h-60 q-6 0 -6 -6 v-10 q0 -6 6 -6 z"/>
+    <!-- armrest left -->
+    <path d="M64 100 v-16 q0 -4 4 -4 h8"/>
+    <!-- armrest right -->
+    <path d="M136 100 v-16 q0 -4 -4 -4 h-8"/>
+    <!-- support / base -->
+    <path d="M100 122 v18"/>
+    <!-- base legs -->
+    <path d="M74 152 q10 -12 26 -12 q16 0 26 12"/>
+  </g>
+
+  <!-- "empty" indicator: small tick on cushion -->
+  <circle cx="100" cy="111" r="3" fill="#0A84FF" fill-opacity="0.9"/>
+</svg>

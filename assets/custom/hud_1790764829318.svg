@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="shieldFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A0D14" stop-opacity="0.92"/>
+      <stop offset="0.55" stop-color="#0F2A22" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#0A0D14" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="edgeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10B981"/>
+      <stop offset="0.5" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="0.5" cy="0.42" r="0.5">
+      <stop offset="0" stop-color="#10B981" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#10B981" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coreDot" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.35" stop-color="#6EE7B7"/>
+      <stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <clipPath id="shieldClip">
+      <path d="M100 14 L166 40 V96 C166 138 138 166 100 186 C62 166 34 138 34 96 V40 Z"/>
+    </clipPath>
+    <pattern id="hexGrid" width="22" height="19.05" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="#10B981" stroke-width="1.1" stroke-opacity="0.55">
+        <path d="M5.5 0 L16.5 0 L22 9.53 L16.5 19.05 L5.5 19.05 L0 9.53 Z"/>
+        <path d="M16.5 9.53 L22 0 M16.5 9.53 L22 19.05" transform="translate(-11,0)"/>
+      </g>
+      <circle cx="11" cy="9.53" r="1" fill="#38BDF8" fill-opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- outer aura -->
+  <path d="M100 14 L166 40 V96 C166 138 138 166 100 186 C62 166 34 138 34 96 V40 Z"
+        fill="none" stroke="#10B981" stroke-width="6" opacity="0.35" filter="url(#softGlow)"/>
+
+  <!-- shield body -->
+  <path d="M100 14 L166 40 V96 C166 138 138 166 100 186 C62 166 34 138 34 96 V40 Z"
+        fill="url(#shieldFill)" stroke="url(#edgeGrad)" stroke-width="2.2" filter="url(#glow)"/>
+
+  <!-- hex grid inside shield -->
+  <g clip-path="url(#shieldClip)">
+    <rect x="30" y="10" width="140" height="180" fill="url(#hexGrid)" opacity="0.9"/>
+    <rect x="30" y="10" width="140" height="180" fill="url(#coreGlow)"/>
+    <!-- scan line -->
+    <rect x="30" y="30" width="140" height="10" fill="#38BDF8" opacity="0.14"/>
+    <rect x="30" y="30" width="140" height="2" fill="#38BDF8" opacity="0.55" filter="url(#glow)"/>
+  </g>
+
+  <!-- inner shield outline -->
+  <path d="M100 26 L156 49 V94 C156 129 132 153 100 171 C68 153 44 129 44 94 V49 Z"
+        fill="none" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.6" stroke-dasharray="6 4"/>
+
+  <!-- energy arcs -->
+  <path d="M52 108 C64 92 84 84 100 86 C120 88 138 100 148 116" fill="none" stroke="#8B5CF6" stroke-width="1.6" stroke-opacity="0.75" filter="url(#glow)"/>
+  <path d="M56 122 C70 104 86 98 102 100 C120 102 134 112 144 126" fill="none" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.6"/>
+
+  <!-- central core -->
+  <g filter="url(#glow)">
+    <circle cx="100" cy="88" r="17" fill="none" stroke="#10B981" stroke-width="1.4" stroke-opacity="0.9"/>
+    <circle cx="100" cy="88" r="11" fill="none" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.7" stroke-dasharray="4 3"/>
+    <circle cx="100" cy="88" r="14" fill="url(#coreDot)"/>
+    <!-- hexagon around core -->
+    <path d="M100 66 L118.2 76.5 L118.2 97.5 L100 108 L81.8 97.5 L81.8 76.5 Z" fill="none" stroke="#10B981" stroke-width="1.2" stroke-opacity="0.7"/>
+  </g>
+
+  <!-- crosshair ticks -->
+  <g stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.55">
+    <path d="M100 62 V70 M100 106 V114 M74 88 H82 M118 88 H126"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#10B981" stroke-width="2" fill="none" filter="url(#glow)">
+    <path d="M8 30 V12 H26"/>
+    <path d="M192 30 V12 H174"/>
+    <path d="M8 158 V176 H26"/>
+    <path d="M192 158 V176 H174"/>
+  </g>
+  <g stroke="#8B5CF6" stroke-width="1" fill="none" stroke-opacity="0.8">
+    <path d="M14 24 V18 H20"/>
+    <path d="M186 24 V18 H180"/>
+    <path d="M14 164 V170 H20"/>
+    <path d="M186 164 V170 H180"/>
+  </g>
+
+  <!-- tech markers -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace" fill="#10B981" font-size="6" opacity="0.85">
+    <text x="34" y="196" letter-spacing="1">SHLD-07 // HEX-GRID ONLINE</text>
+    <text x="166" y="196" text-anchor="end" fill="#38BDF8">PWR 98%</text>
+  </g>
+  <g fill="#38BDF8" opacity="0.8">
+    <circle cx="8" cy="96" r="1.4"/><circle cx="192" cy="96" r="1.4"/>
+  </g>
+  <path d="M4 60 H12 M188 60 H196 M4 132 H12 M188 132 H196" stroke="#10B981" stroke-width="1" opacity="0.5"/>
+</svg>

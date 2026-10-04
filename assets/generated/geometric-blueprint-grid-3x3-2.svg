@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glassTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="glassLeft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#0A0A0A" stop-opacity="0.60"/>
+    </linearGradient>
+    <linearGradient id="glassRight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="200" height="200" fill="#0A0A0A"/>
+
+  <!-- blueprint grid -->
+  <g stroke="#8E8E93" stroke-opacity="0.16" stroke-width="0.5">
+    <path d="M0 20H200 M0 40H200 M0 60H200 M0 80H200 M0 100H200 M0 120H200 M0 140H200 M0 160H200 M0 180H200"/>
+    <path d="M20 0V200 M40 0V200 M60 0V200 M80 0V200 M100 0V200 M120 0V200 M140 0V200 M160 0V200 M180 0V200"/>
+  </g>
+  <g stroke="#8E8E93" stroke-opacity="0.35" stroke-width="0.7">
+    <path d="M100 0V200 M0 100H200"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-opacity="0.7" stroke-width="1.5" fill="none" filter="url(#glow)">
+    <path d="M8 20V8H20 M180 8H192V20 M192 180V192H180 M20 192H8V180"/>
+  </g>
+
+  <!-- cube geometry: isometric 3x3x3 -->
+  <g filter="url(#glow)">
+    <!-- cube vertices: C=(100,42) top apex, front corner F=(100,96) -->
+    <!-- edges length 48, angle 30deg: dx=24, dy=41.57 -->
+    <!-- top face center (100,66.8); top face spans -->
+    <polygon points="100,42 148,67.7 100,93.4 52,67.7" fill="url(#glassTop)" stroke="#0A84FF" stroke-width="1.2"/>
+    <polygon points="52,67.7 100,93.4 100,171 52,145.3" fill="url(#glassLeft)" stroke="#FFFFFF" stroke-width="1.1" stroke-opacity="0.6"/>
+    <polygon points="148,67.7 100,93.4 100,171 148,145.3" fill="url(#glassRight)" stroke="#FFFFFF" stroke-width="1.1" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- top face internal grid lines (2 internal each direction) -->
+  <g stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="0.7" fill="none">
+    <!-- direction A: parallel to (100,42)->(52,67.7) i.e. (-24,+25.7) per unit; trisect -->
+    <path d="M82.7 50.6L130.7 76.3 M65.3 59.1L113.3 84.9"/>
+    <path d="M117.3 50.6L69.3 76.3 M134.7 59.1L86.7 84.9"/>
+  </g>
+
+  <!-- left face internal grid -->
+  <g stroke="#8E8E93" stroke-width="0.7" fill="none">
+    <!-- horizontal trisection of vertical edges: left edge 52,67.7->52,145.3 -->
+    <path d="M52 93.6H100 M52 119.5H100"/>
+    <!-- vertical division along top edge direction -->
+    <path d="M68 75.2V153 M84 82.8V160.6"/>
+  </g>
+
+  <!-- right face internal grid -->
+  <g stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="0.7" fill="none">
+    <path d="M100 93.6V171 M100 119.5V171"/>
+    <path d="M100 93.6H148 M100 119.5H148" transform="translate(0,0)"/>
+    <path d="M148 93.6H100 M148 119.5H100"/>
+    <path d="M116 101.2V178.9 M132 108.8V186.5"/>
+  </g>
+
+  <!-- vertex markers -->
+  <g fill="#0A84FF">
+    <circle cx="100" cy="42" r="2.4" filter="url(#glow)"/>
+    <circle cx="148" cy="67.7" r="1.8"/>
+    <circle cx="52" cy="67.7" r="1.8"/>
+    <circle cx="100" cy="171" r="2.4" filter="url(#glow)"/>
+  </g>
+  <g fill="#FFFFFF" opacity="0.9">
+    <circle cx="100" cy="93.4" r="1.6"/>
+    <circle cx="148" cy="145.3" r="1.6"/>
+    <circle cx="52" cy="145.3" r="1.6"/>
+  </g>
+
+  <!-- technical annotations -->
+  <g font-family="monospace" fill="#8E8E93" font-size="7">
+    <text x="156" y="66">P₁(148,67.7)</text>
+    <text x="14" y="152">3×3 GRID</text>
+    <text x="14" y="162" fill="#0A84FF" opacity="0.8">ISO 30°</text>
+  </g>
+  <!-- crosshair on apex -->
+  <g stroke="#0A84FF" stroke-opacity="0.6" stroke-width="0.6">
+    <path d="M100 34V38 M100 46V50 M92 42H96 M104 42H108"/>
+  </g>
+</svg>

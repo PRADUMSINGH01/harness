@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Diagonal two-tone split">
+<path id="side-a" d="M0 0 H1100 L820 1080 H0Z" style="fill:var(--surface,#111216)"/>
+<path id="side-b" d="M1100 0 H1920 V1080 H820Z" style="fill:var(--accent,#FF5A36)"/>
+<path d="M1100 0 L820 1080" style="fill:none;stroke:var(--ink,#F5F3EE);stroke-width:6"/>
+</svg>

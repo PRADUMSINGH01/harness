@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 170" width="760" height="170" role="img" aria-label="Notification toast">
+<defs><linearGradient id="cx-moc-notification-toast-tile" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent,#FF5A36);stop-opacity:1"/><stop offset="1" style="stop-color:var(--accent-2,#7B61FF);stop-opacity:1"/></linearGradient><filter id="cx-moc-notification-toast-sh" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter></defs>
+<rect x="16" y="24" width="728" height="134" rx="30" style="fill:#000;opacity:0.35;filter:url(#cx-moc-notification-toast-sh)"/>
+<rect x="8" y="8" width="744" height="148" rx="30" style="fill:var(--ui-panel,#1E2027);fill-opacity:0.96;stroke:var(--ui-line,#2C2F38);stroke-width:2"/>
+<rect id="app-icon" x="34" y="34" width="96" height="96" rx="24" style="fill:url(#cx-moc-notification-toast-tile)"/>
+<path d="M82 52 C86 72 92 78 112 82 C92 86 86 92 82 112 C78 92 72 86 52 82 C72 78 78 72 82 52Z" style="fill:#fff"/>
+<text id="title" x="156" y="74" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:30px;font-weight:700;fill:var(--ink,#F5F3EE)">New message</text>
+<text id="body" x="156" y="116" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:26px;font-weight:400;fill:var(--muted,#8B8F98)">Your video is ready to share.</text>
+<text id="time" x="716" y="72" text-anchor="end" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:22px;font-weight:500;fill:var(--muted,#8B8F98)">now</text>
+</svg>

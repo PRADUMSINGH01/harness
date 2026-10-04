@@ -1,0 +1,35 @@
+{
+  "id": "generated_student-wearing-glowing-eeg-1",
+  "name": "student wearing glowing EEG electrode cap in neuroscience lab, documentary photography",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/student-wearing-glowing-eeg-1.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M66 96 C66 62 82 50 100 50 C118 50 134 62 134 96 C134 90 120 84 100 84 C80 84 66 90 66 96 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "student",
+    "wearing",
+    "glowing",
+    "eeg",
+    "electrode",
+    "cap",
+    "illustration",
+    "generated-svg"
+  ]
+}

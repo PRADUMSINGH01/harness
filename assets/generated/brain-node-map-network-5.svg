@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glassBg" cx="50%" cy="42%" r="70%">
+      <stop offset="0%" stop-color="#16181D"/>
+      <stop offset="60%" stop-color="#0E1014"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="edgeActive" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#0A84FF"/>
+      <stop offset="100%" stop-color="#7FC4FF"/>
+    </linearGradient>
+    <filter id="glowBlue" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowSoft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- glass card backdrop -->
+  <rect x="8" y="8" width="184" height="184" rx="28" fill="url(#glassBg)" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <rect x="8" y="8" width="184" height="184" rx="28" fill="#FFFFFF" fill-opacity="0.03"/>
+
+  <!-- corner brackets -->
+  <g stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M22 34 v-8 a4 4 0 0 1 4-4 h8"/>
+    <path d="M178 34 v-8 a4 4 0 0 0 -4-4 h-8"/>
+    <path d="M22 166 v8 a4 4 0 0 0 4 4 h8"/>
+    <path d="M178 166 v8 a4 4 0 0 1 -4 4 h-8"/>
+  </g>
+
+  <!-- dim connection lines -->
+  <g stroke="#8E8E93" stroke-opacity="0.35" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <path d="M100 62 C 78 56 62 66 58 84"/>
+    <path d="M100 62 C 96 84 84 96 70 108"/>
+    <path d="M100 62 C 118 58 130 66 136 80"/>
+    <path d="M70 108 C 74 124 86 134 96 146"/>
+    <path d="M136 80 C 138 102 130 118 118 126"/>
+    <path d="M58 84 C 46 96 44 112 52 126"/>
+    <path d="M118 126 C 112 138 104 142 96 146"/>
+    <path d="M136 80 C 150 88 154 104 148 120"/>
+  </g>
+
+  <!-- active snapped connection (glowing) -->
+  <g filter="url(#glowBlue)">
+    <path d="M70 108 C 96 112 116 100 136 80" stroke="url(#edgeActive)" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- snap tick marks along active edge -->
+  <g stroke="#0A84FF" stroke-opacity="0.7" stroke-width="1">
+    <path d="M92 106 v5"/>
+    <path d="M104 104 v5"/>
+    <path d="M116 100 v5"/>
+  </g>
+
+  <!-- dim nodes -->
+  <g filter="url(#glowSoft)">
+    <circle cx="58" cy="84" r="4" fill="#8E8E93"/>
+    <circle cx="100" cy="62" r="4.5" fill="#8E8E93"/>
+    <circle cx="52" cy="126" r="3.5" fill="#8E8E93"/>
+    <circle cx="148" cy="120" r="3.5" fill="#8E8E93"/>
+    <circle cx="96" cy="146" r="4" fill="#8E8E93"/>
+    <circle cx="118" cy="126" r="3.5" fill="#8E8E93"/>
+  </g>
+
+  <!-- active nodes -->
+  <g filter="url(#glowBlue)">
+    <circle cx="70" cy="108" r="5.5" fill="#0A0A0A" stroke="#0A84FF" stroke-width="2"/>
+    <circle cx="70" cy="108" r="2" fill="#7FC4FF"/>
+    <circle cx="136" cy="80" r="5.5" fill="#0A0A0A" stroke="#0A84FF" stroke-width="2"/>
+    <circle cx="136" cy="80" r="2" fill="#7FC4FF"/>
+  </g>
+
+  <!-- brain silhouette hint: outer arcs -->
+  <g stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="1.4" fill="none" stroke-linecap="round">
+    <path d="M64 44 C 56 40 48 46 48 56 C 38 58 34 70 40 80"/>
+    <path d="M136 44 C 144 40 152 46 152 56 C 162 58 166 70 160 80"/>
+    <path d="M64 44 C 78 36 96 34 108 40"/>
+    <path d="M136 44 C 122 36 108 36 108 40"/>
+    <path d="M40 80 C 36 96 40 112 52 126 C 64 146 84 156 100 156 C 122 156 142 142 148 120"/>
+  </g>
+
+  <!-- central crosshair micro-detail -->
+  <g stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="1">
+    <path d="M100 22 v8 M100 170 v8 M22 100 h8 M170 100 h8"/>
+  </g>
+  <circle cx="100" cy="100" r="2" fill="none" stroke="#FFFFFF" stroke-opacity="0.18"/>
+</svg>

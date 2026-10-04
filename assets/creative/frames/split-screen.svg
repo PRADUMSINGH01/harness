@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Split-screen divider">
+<rect id="divider" x="954" y="0" width="12" height="1080" style="fill:var(--ink,#F5F3EE)"/>
+<g id="chip-a"><rect x="60" y="60" width="240" height="72" rx="36" style="fill:#000;opacity:0.6"/><text id="label-a" x="180" y="108" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:32px;font-weight:800;fill:#fff;letter-spacing:3px">BEFORE</text></g>
+<g id="chip-b"><rect x="1620" y="60" width="240" height="72" rx="36" style="fill:var(--accent,#FF5A36)"/><text id="label-b" x="1740" y="108" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:32px;font-weight:800;fill:#fff;letter-spacing:3px">AFTER</text></g>
+<circle cx="960" cy="540" r="44" style="fill:var(--ink,#F5F3EE)"/><path d="M944 524 L928 540 L944 556 M976 524 L992 540 L976 556" style="fill:none;stroke:var(--surface,#111216);stroke-width:6;stroke-linecap:round;stroke-linejoin:round"/>
+</svg>

@@ -1,0 +1,35 @@
+{
+  "id": "generated_brain-node-map-network-5",
+  "name": "brain node-map network diagram with connection lines snapping and dimming",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/brain-node-map-network-5.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M40 80 C 36 96 40 112 52 126 C 64 146 84 156 100 156 C 122 156 142 142 148 120"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "brain",
+    "node",
+    "map",
+    "network",
+    "diagram",
+    "connection",
+    "icon",
+    "generated-svg"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "fps": 30,
+  "seams": [
+    { "id": "a→b", "cut": 5, "technique": "cut-the-curve LEFT", "exit": { "selector": "#el-a", "axis": "x", "dir": -1 }, "entry": { "selector": "#el-b", "axis": "x", "dir": 1 } },
+    { "id": "b→c", "cut": 10, "technique": "push-slide RIGHT", "exit": { "selector": "#el-b", "axis": "x", "dir": 1 }, "entry": { "selector": "#el-c", "axis": "x", "dir": 1 } },
+    { "id": "c→d", "cut": 25, "technique": "whip", "exit": { "selector": "#el-c", "axis": "x", "dir": -1 }, "entry": { "selector": "#el-d", "axis": "x", "dir": -1 } }
+  ]
+}

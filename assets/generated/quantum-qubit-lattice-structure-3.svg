@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16181d"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.7"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#8E8E93" stop-opacity="0.3"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.4" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="clip"><rect x="10" y="10" width="180" height="180" rx="44"/></clipPath>
+  </defs>
+
+  <!-- glass tile -->
+  <rect x="10" y="10" width="180" height="180" rx="44" fill="url(#tile)"/>
+  <rect x="10.75" y="10.75" width="178.5" height="178.5" rx="43.25" fill="none" stroke="url(#edge)" stroke-width="1.5" opacity="0.9"/>
+  <rect x="24" y="14" width="152" height="60" rx="30" fill="#FFFFFF" opacity="0.04"/>
+
+  <!-- faint grid -->
+  <g clip-path="url(#clip)" stroke="#8E8E93" stroke-width="0.5" opacity="0.12">
+    <path d="M40 10V190M70 10V190M130 10V190M160 10V190M10 40H190M10 70H190M10 130H190M10 160H190"/>
+  </g>
+
+  <!-- lattice links -->
+  <g stroke="#8E8E93" stroke-width="1.6" stroke-linecap="round" opacity="0.75">
+    <line x1="100" y1="100" x2="60" y2="62"/>
+    <line x1="100" y1="100" x2="140" y2="62"/>
+    <line x1="100" y1="100" x2="60" y2="140"/>
+    <line x1="100" y1="100" x2="140" y2="140"/>
+    <line x1="100" y1="100" x2="100" y2="46"/>
+    <line x1="100" y1="100" x2="46" y2="100"/>
+    <line x1="100" y1="100" x2="154" y2="100"/>
+    <line x1="100" y1="100" x2="100" y2="156"/>
+    <line x1="60" y1="62" x2="140" y2="62" stroke-dasharray="3 5" opacity="0.5"/>
+    <line x1="60" y1="140" x2="140" y2="140" stroke-dasharray="3 5" opacity="0.5"/>
+    <line x1="60" y1="62" x2="60" y2="140" stroke-dasharray="3 5" opacity="0.5"/>
+    <line x1="140" y1="62" x2="140" y2="140" stroke-dasharray="3 5" opacity="0.5"/>
+  </g>
+
+  <!-- core halo -->
+  <circle cx="100" cy="100" r="34" fill="url(#halo)"/>
+
+  <!-- satellite nodes -->
+  <g filter="url(#glow)">
+    <g fill="#FFFFFF">
+      <circle cx="60" cy="62" r="6"/>
+      <circle cx="140" cy="62" r="6"/>
+      <circle cx="60" cy="140" r="6"/>
+      <circle cx="140" cy="140" r="6"/>
+      <circle cx="100" cy="46" r="5"/>
+      <circle cx="46" cy="100" r="5"/>
+      <circle cx="154" cy="100" r="5"/>
+      <circle cx="100" cy="156" r="5"/>
+    </g>
+    <g fill="none" stroke="#0A84FF" stroke-width="1.2" opacity="0.85">
+      <circle cx="60" cy="62" r="11"/>
+      <circle cx="140" cy="62" r="11"/>
+      <circle cx="60" cy="140" r="11"/>
+      <circle cx="140" cy="140" r="11"/>
+    </g>
+  </g>
+
+  <!-- central qubit -->
+  <g filter="url(#glow)">
+    <circle cx="100" cy="100" r="17" fill="#0A0A0A" stroke="#0A84FF" stroke-width="2"/>
+    <circle cx="100" cy="100" r="11" fill="url(#core)"/>
+  </g>
+  <!-- orbit ring -->
+  <ellipse cx="100" cy="100" rx="28" ry="11" fill="none" stroke="#0A84FF" stroke-width="1.2" opacity="0.6" transform="rotate(-30 100 100)"/>
+
+  <!-- corner brackets -->
+  <g stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.55" fill="none">
+    <path d="M30 44V34Q30 30 34 30H44"/>
+    <path d="M156 30H166Q170 30 170 34V44"/>
+    <path d="M170 156V166Q170 170 166 170H156"/>
+    <path d="M44 170H34Q30 170 30 166V156"/>
+  </g>
+
+  <!-- ticks -->
+  <g stroke="#8E8E93" stroke-width="1" opacity="0.4">
+    <line x1="97" y1="182" x2="103" y2="182"/>
+    <line x1="18" y1="100" x2="18" y2="106"/>
+    <line x1="182" y1="94" x2="182" y2="100"/>
+  </g>
+</svg>

@@ -1,0 +1,261 @@
+{
+  "id": "product-launch",
+  "label": "Product launch video",
+  "workflow": "product-launch-video",
+  "description": "Market, launch, or showcase a product, app, site, or company from a URL, script, or brief. SaaS promos, feature reveals, demos. Strongest at 30-90s.",
+  "defaultVariants": 2,
+  "repairRounds": 2,
+  "duration": {
+    "band": [
+      12,
+      180
+    ],
+    "tolerance": 0.2
+  },
+  "motion": {
+    "maxSingleEntrySec": 1,
+    "maxStaggerEachSec": 0.2,
+    "maxStaggerTotalSec": 0.6,
+    "maxDistinctEases": 6
+  },
+  "density": {
+    "maxWordsPerSecond": 3.5,
+    "maxWordsPerBlock": 14,
+    "minFontPx": 28
+  },
+  "ledger": {
+    "requireAtScenes": 2,
+    "missingSeverity": "error",
+    "maxTransitionTypes": 3,
+    "maxReservedShare": 0.4,
+    "flagCrossfades": true
+  },
+  "check": {
+    "atTransitions": true,
+    "frameCheck": true,
+    "captionZone": "x0=0;y0=.82;x1=1;y1=1;severity=error;seek=.25,.5,.75"
+  },
+  "seam": {
+    "enabled": true,
+    "hard": false,
+    "note": "product-launch-video injects push-slide/zoom-through/crossfade, which overlap wrappers by design, so zero-overlap fails on every cut. Advisory here; direction and continuity findings still matter."
+  },
+  "proofTimes": [
+    0.03,
+    0.97
+  ],
+  "gates": {
+    "entry": {
+      "hard": true,
+      "error": 40,
+      "warning": 5,
+      "cap": 40
+    },
+    "assets": {
+      "hard": true,
+      "error": 15,
+      "warning": 3,
+      "cap": 40
+    },
+    "duration": {
+      "hard": true,
+      "error": 15,
+      "warning": 4,
+      "cap": 20
+    },
+    "motion": {
+      "hard": true,
+      "error": 10,
+      "warning": 2,
+      "cap": 30
+    },
+    "determinism": {
+      "hard": true,
+      "error": 20,
+      "warning": 4,
+      "cap": 30
+    },
+    "density": {
+      "hard": false,
+      "error": 5,
+      "warning": 2,
+      "cap": 15
+    },
+    "ledger": {
+      "hard": false,
+      "error": 8,
+      "warning": 3,
+      "cap": 25
+    },
+    "check": {
+      "hard": true,
+      "error": 6,
+      "warning": 1,
+      "cap": 40
+    },
+    "seam": {
+      "hard": false,
+      "error": 4,
+      "warning": 1,
+      "cap": 15
+    },
+    "snapshot": {
+      "hard": true,
+      "error": 30,
+      "warning": 5,
+      "cap": 30
+    }
+  },
+  "blend": {
+    "technical": 0.35,
+    "judge": 0.65
+  },
+  "axes": [
+    {
+      "id": "arc",
+      "label": "Story arc",
+      "values": [
+        "PAS",
+        "Future Pacing",
+        "Demo Loop",
+        "BAB",
+        "Feature-Benefit Cascade"
+      ],
+      "guidance": "Fixes the beat order. Read product-launch-video/references/story-design.md § 2. If the product truth cannot support this arc (e.g. Demo Loop with no capturable UI), take the nearest arc that can and record why in NOTES.md."
+    },
+    {
+      "id": "hook",
+      "label": "Hook",
+      "values": [
+        "shocking stat",
+        "pain validation",
+        "rhetorical question",
+        "direct address",
+        "imagine / future-pace",
+        "category announcement",
+        "visual spectacle"
+      ],
+      "guidance": "The opening 3-5s. Speaks the viewer's outcome language, never a feature list (story-design.md § 3, HOOK script bank)."
+    },
+    {
+      "id": "frame_preset",
+      "label": "Frame preset",
+      "fromDir": "hyperframes-creative/frame-presets",
+      "guidance": "Pass to build-frame.mjs --preset. A BRIEF.md style_preset always wins over this axis.",
+      "file": "skills/hyperframes-creative/frame-presets/{value}/FRAME.md"
+    },
+    {
+      "id": "tempo",
+      "label": "Tempo",
+      "values": [
+        "punchy: beats of 2-3s, hard cuts on VO phrase boundaries, bold/launch voice",
+        "measured: beats of 3-5s, one reveal per VO cue, restrained B2B voice",
+        "cinematic: fewer, longer beats, camera with intent, stillness before every climax"
+      ]
+    }
+  ],
+  "judge": {
+    "dimensions": [
+      {
+        "id": "hook",
+        "weight": 0.15,
+        "question": "Do the first 3 seconds create tension, curiosity, or desire in the viewer's outcome language, before any company description?",
+        "anchors": {
+          "2": "opens on a logo or a company description",
+          "5": "states a benefit plainly",
+          "8": "a real hook that makes you keep watching",
+          "10": "you would screenshot the opening"
+        }
+      },
+      {
+        "id": "product_truth",
+        "weight": 0.18,
+        "question": "Is the product shown as it really is (captured UI and assets, traceable claims), with no invented features or fake UI?",
+        "anchors": {
+          "2": "invented UI or claims",
+          "5": "generic stand-ins for the product",
+          "8": "the real product, clearly shown working",
+          "10": "the product's best moment, shown better than its own site does"
+        }
+      },
+      {
+        "id": "message",
+        "weight": 0.14,
+        "question": "Does the brief's promise land by beat 2, with every later beat as evidence and a clear CTA?",
+        "anchors": {
+          "2": "feature list with no thesis",
+          "5": "thesis arrives late or blurry",
+          "8": "promise early, evidence after, crisp CTA",
+          "10": "you could repeat the pitch after one watch"
+        }
+      },
+      {
+        "id": "motion_craft",
+        "weight": 0.17,
+        "question": "Do cuts carry momentum in one dominant direction, reveals land on VO cues, and frames keep developing instead of front-loading then freezing?",
+        "anchors": {
+          "2": "slideshow of static cards",
+          "5": "every frame animates in, then waits",
+          "8": "continuous, VO-paced development, clean seams",
+          "10": "one continuous camera move"
+        }
+      },
+      {
+        "id": "composition",
+        "weight": 0.14,
+        "question": "Hierarchy, focal element, caption keep-out respected, contrast, phone readability in every proof frame?",
+        "anchors": {
+          "2": "clipped, overlapping, unreadable",
+          "5": "tidy template layout",
+          "8": "deliberate, varied, readable layouts",
+          "10": "every frame could be a key visual"
+        }
+      },
+      {
+        "id": "brand_fidelity",
+        "weight": 0.1,
+        "question": "Does it look and sound like this brand (colors, type, voice), not a generic launch template?",
+        "anchors": {
+          "2": "off-brand",
+          "5": "brand colors on a generic template",
+          "8": "unmistakably this brand",
+          "10": "feels made by the brand's own studio"
+        }
+      },
+      {
+        "id": "pacing",
+        "weight": 0.12,
+        "question": "Does the length feel earned, with no dead holds and no rushed reads?",
+        "anchors": {
+          "2": "drags or rushes badly",
+          "5": "uneven",
+          "8": "tight",
+          "10": "you want it longer"
+        }
+      }
+    ],
+    "fatal": [
+      "product or claims misrepresented",
+      "visible glitch: white flash, pop, blank or black frame",
+      "captions collide with content or are missing while VO plays",
+      "text unreadable in a key beat",
+      "wrong deliverable (aspect, length)",
+      "required brand asset missing, distorted, or recolored"
+    ]
+  },
+  "doctrine": [
+    ".claude/skills/motion-doctrine/SKILL.md",
+    ".claude/skills/seam-craft/SKILL.md",
+    ".claude/skills/oversized-cursor/SKILL.md"
+  ],
+  "essentials": [
+    "skills/product-launch-video/SKILL.md",
+    "skills/hyperframes-core/references/minimal-composition.md",
+    ".claude/skills/motion-doctrine/SKILL.md"
+  ],
+  "budget": {
+    "maxTurns": 40,
+    "maxInputTokens": 600000,
+    "maxMinutes": 12
+  }
+}

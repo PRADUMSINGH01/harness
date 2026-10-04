@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A0A0A"/>
+      <stop offset="1" stop-color="#111318"/>
+    </linearGradient>
+    <linearGradient id="streak" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#0A84FF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ghost" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#8E8E93" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="aisleGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/><feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="tiny" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="0.7"/>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" rx="16" fill="url(#bg)"/>
+
+  <!-- cabin aisle perspective -->
+  <g opacity="0.9">
+    <polygon points="88,28 112,28 132,190 68,190" fill="url(#aisleGlow)"/>
+    <path d="M88,28 68,190" stroke="#8E8E93" stroke-opacity="0.25" stroke-width="0.7"/>
+    <path d="M112,28 132,190" stroke="#8E8E93" stroke-opacity="0.25" stroke-width="0.7"/>
+  </g>
+
+  <!-- overhead aisle light streaks -->
+  <g filter="url(#glow)">
+    <rect x="30" y="52" width="140" height="2.4" rx="1.2" fill="url(#streak)" opacity="0.85"/>
+    <rect x="20" y="92" width="160" height="3" rx="1.5" fill="url(#streak)" opacity="0.7"/>
+    <rect x="38" y="130" width="124" height="2" rx="1" fill="url(#streak)" opacity="0.5"/>
+  </g>
+  <g filter="url(#soft)" opacity="0.5">
+    <rect x="30" y="55" width="140" height="6" rx="3" fill="#0A84FF"/>
+    <rect x="20" y="96" width="160" height="7" rx="3.5" fill="#0A84FF"/>
+    <rect x="38" y="133" width="124" height="5" rx="2.5" fill="#0A84FF"/>
+  </g>
+
+  <!-- ghost seat silhouettes left/right -->
+  <g fill="url(#ghost)" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="0.6">
+    <!-- left column -->
+    <g opacity="0.85">
+      <path d="M20,40 q-6,0 -6,8 v20 h16 v-20 q0,-8 -6,-8 z M14,70 h16 v8 h-16 z"/>
+      <path d="M20,86 q-6,0 -6,8 v20 h16 v-20 q0,-8 -6,-8 z M14,116 h16 v8 h-16 z"/>
+    </g>
+    <!-- right column -->
+    <g opacity="0.65">
+      <path d="M180,46 q6,0 6,8 v18 h-16 v-18 q0,-8 6,-8 z M170,74 h16 v8 h-16 z"/>
+      <path d="M180,94 q6,0 6,8 v18 h-16 v-18 q0,-8 6,-8 z M170,122 h16 v8 h-16 z"/>
+    </g>
+    <!-- far ghosted seats, more transparent -->
+    <g opacity="0.35">
+      <path d="M38,58 q-5,0 -5,7 v14 h14 v-14 q0,-7 -5,-7 z M33,81 h14 v6 h-14 z"/>
+      <path d="M162,66 q5,0 5,7 v14 h-14 v-14 q0,-7 5,-7 z M153,89 h14 v6 h-14 z"/>
+    </g>
+  </g>
+
+  <!-- flickering ghost particles -->
+  <g fill="#FFFFFF" filter="url(#tiny)">
+    <circle cx="86" cy="60" r="1.4" opacity="0.9"/>
+    <circle cx="114" cy="74" r="1.1" opacity="0.6"/>
+    <circle cx="97" cy="98" r="1.7" opacity="0.85"/>
+    <circle cx="108" cy="118" r="1.2" opacity="0.5"/>
+    <circle cx="90" cy="140" r="1.5" opacity="0.75"/>
+    <circle cx="102" cy="160" r="1.0" opacity="0.45"/>
+    <circle cx="94" cy="176" r="1.3" opacity="0.65"/>
+  </g>
+  <g fill="#0A84FF" filter="url(#tiny)">
+    <circle cx="106" cy="52" r="1.2" opacity="0.8"/>
+    <circle cx="92" cy="82" r="1.0" opacity="0.55"/>
+    <circle cx="112" cy="106" r="1.5" opacity="0.7"/>
+    <circle cx="96" cy="128" r="1.1" opacity="0.5"/>
+    <circle cx="104" cy="150" r="1.4" opacity="0.6"/>
+  </g>
+
+  <!-- faint ghosted duplicate seats (flicker echoes) -->
+  <g stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="0.5" fill="none" stroke-dasharray="2 3">
+    <path d="M20,40 q-6,0 -6,8 v20 h16 v-20 q0,-8 -6,-8 z" transform="translate(3,-4)"/>
+    <path d="M180,46 q6,0 6,8 v18 h-16 v-18 q0,-8 6,-8 z" transform="translate(-3,5)"/>
+  </g>
+
+  <!-- technical corner brackets -->
+  <g stroke="#8E8E93" stroke-opacity="0.5" stroke-width="1" fill="none">
+    <path d="M8,20 v-8 h8"/>
+    <path d="M192,20 v-8 h-8"/>
+    <path d="M8,180 v8 h8"/>
+    <path d="M192,180 v8 h-8"/>
+  </g>
+  <g fill="#8E8E93" font-family="ui-monospace, Menlo, monospace" font-size="4.5" opacity="0.7">
+    <text x="10" y="14">AISLE//GHOST</text>
+    <text x="152" y="14">FLICK-04</text>
+  </g>
+</svg>

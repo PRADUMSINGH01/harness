@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400" role="img" aria-label="Ticket">
+<path d="M30 0 H970 a30 30 0 0 0 30 30 V160 a40 40 0 0 0 0 80 V370 a30 30 0 0 0 -30 30 H30 a30 30 0 0 0 -30 -30 V240 a40 40 0 0 0 0 -80 V30 a30 30 0 0 0 30 -30Z" style="fill:var(--accent,#FF5A36)"/>
+<path d="M740 30 V370" style="stroke:#fff;stroke-width:4;stroke-dasharray:4 14;stroke-linecap:round;opacity:0.7"/>
+<text id="title" x="70" y="170" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:64px;font-weight:900;fill:#fff;letter-spacing:2px">LAUNCH PARTY</text>
+<text id="subtitle" x="72" y="240" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:36px;font-weight:500;fill:#fff;opacity:0.85">Oct 12 · Online · 6 PM</text>
+<text id="stub" x="870" y="200" text-anchor="middle" transform="rotate(-90 870 200)" style="font-family:var(--font-mono,'JetBrains Mono',ui-monospace,monospace);font-size:34px;font-weight:700;fill:#fff;letter-spacing:4px">ADMIT ONE</text>
+</svg>

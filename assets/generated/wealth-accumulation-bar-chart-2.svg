@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.15" stop-color="#7FC4FF"/>
+      <stop offset="1" stop-color="#0A84FF"/>
+    </linearGradient>
+    <linearGradient id="barGradTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#0A84FF"/>
+    </linearGradient>
+    <radialGradient id="bgGlow" cx="0.5" cy="0.15" r="0.9">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#0A0A0A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glassCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="cardClip">
+      <rect x="14" y="34" width="172" height="132" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- backdrop -->
+  <rect x="0" y="0" width="200" height="200" rx="24" fill="#0A0A0A"/>
+  <rect x="0" y="0" width="200" height="200" rx="24" fill="url(#bgGlow)"/>
+
+  <!-- header -->
+  <text x="18" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" letter-spacing="2" fill="#FFFFFF">WEALTH ACCUMULATION</text>
+  <circle cx="182" cy="17" r="3" fill="#0A84FF" filter="url(#glow)"/>
+  <line x1="18" y1="27" x2="182" y2="27" stroke="#8E8E93" stroke-opacity="0.35" stroke-width="0.75"/>
+
+  <!-- glass card -->
+  <rect x="14" y="34" width="172" height="132" rx="12" fill="url(#glassCard)" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="0.8"/>
+
+  <!-- grid -->
+  <g stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="0.6">
+    <line x1="30" y1="150" x2="172" y2="150"/>
+    <line x1="30" y1="122" x2="172" y2="122"/>
+    <line x1="30" y1="94" x2="172" y2="94"/>
+    <line x1="30" y1="66" x2="172" y2="66"/>
+  </g>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="5" fill="#8E8E93">
+    <text x="24" y="152" text-anchor="end">$0</text>
+    <text x="24" y="124" text-anchor="end">50K</text>
+    <text x="24" y="96" text-anchor="end">100K</text>
+    <text x="24" y="68" text-anchor="end">150K</text>
+  </g>
+
+  <!-- bars: chart area y 44..150, baseline 150, scale: 150K=84px -->
+  <g clip-path="url(#cardClip)">
+    <!-- Y1 12K -->
+    <rect x="36" y="143.3" width="12" height="6.7" rx="2" fill="url(#barGrad)"/>
+    <!-- Y2 32K -->
+    <rect x="58" y="132.1" width="12" height="17.9" rx="2" fill="url(#barGrad)"/>
+    <!-- Y3 58K -->
+    <rect x="80" y="117.5" width="12" height="32.5" rx="2" fill="url(#barGrad)"/>
+    <!-- Y4 86K -->
+    <rect x="102" y="101.8" width="12" height="48.2" rx="2" fill="url(#barGrad)"/>
+    <!-- Y5 124K -->
+    <rect x="124" y="80.6" width="12" height="69.4" rx="2" fill="url(#barGradTop)" filter="url(#glow)"/>
+    <!-- Y6 152K cap -->
+    <rect x="146" y="55.8" width="12" height="94.2" rx="2" fill="url(#barGradTop)" filter="url(#glow)"/>
+
+    <!-- trend line -->
+    <path d="M42 141 L64 130 L86 114 L108 98 L130 76 L152 50" fill="none" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="1.1" stroke-dasharray="3 2.5" stroke-linecap="round"/>
+    <g fill="#FFFFFF">
+      <circle cx="42" cy="141" r="1.3"/>
+      <circle cx="64" cy="130" r="1.3"/>
+      <circle cx="86" cy="114" r="1.3"/>
+      <circle cx="108" cy="98" r="1.3"/>
+      <circle cx="130" cy="76" r="1.3"/>
+      <circle cx="152" cy="50" r="2" filter="url(#glow)"/>
+    </g>
+
+    <!-- delta badge -->
+    <g>
+      <rect x="128" y="42" width="40" height="11" rx="5.5" fill="#0A84FF" fill-opacity="0.22" stroke="#0A84FF" stroke-width="0.7"/>
+      <path d="M134 49 l3 -3.5 l2 2 l4 -4.5" fill="none" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="147" y="49.7" font-family="ui-monospace, Menlo, monospace" font-size="6" font-weight="700" fill="#FFFFFF">+92%</text>
+    </g>
+  </g>
+
+  <!-- baseline & ticks -->
+  <line x1="30" y1="150" x2="172" y2="150" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1"/>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="5" fill="#8E8E93" text-anchor="middle">
+    <text x="42" y="159">Y1</text>
+    <text x="64" y="159">Y2</text>
+    <text x="86" y="159">Y3</text>
+    <text x="108" y="159">Y4</text>
+    <text x="130" y="159">Y5</text>
+    <text x="152" y="159">Y6</text>
+  </g>
+
+  <!-- footer total -->
+  <text x="18" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" fill="#8E8E93">TOTAL NET WORTH</text>
+  <text x="182" y="184" font-family="ui-monospace, Menlo, monospace" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="end">$464K</text>
+  <rect x="152" y="175" width="2.5" height="11" rx="1.25" fill="#0A84FF" filter="url(#glow)"/>
+
+  <!-- corner brackets -->
+  <g stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <path d="M8 22 v-10 a4 4 0 0 1 4 -4 h10"/>
+    <path d="M192 178 v10 a4 4 0 0 1 -4 4 h-10"/>
+  </g>
+</svg>

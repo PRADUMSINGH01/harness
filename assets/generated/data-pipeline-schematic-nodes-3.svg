@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.15"/>
+      <stop offset="0.5" stop-color="#0A84FF" stop-opacity="1"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="coreGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1C1C1E"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.03"/>
+    </linearGradient>
+    <radialGradient id="ambient" cx="0.5" cy="0.45" r="0.65">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#0A0A0A" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" fill="#0A0A0A"/>
+  <rect width="200" height="200" fill="url(#ambient)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="0.4">
+    <path d="M0 50H200 M0 100H200 M0 150H200 M50 0V200 M100 0V200 M150 0V200"/>
+  </g>
+
+  <!-- pipeline paths -->
+  <g fill="none" stroke-linecap="round" filter="url(#glow)">
+    <path d="M8 60 H42 C54 60 54 84 66 84 H104" stroke="url(#lineGrad)" stroke-width="2.5"/>
+    <path d="M8 140 H42 C54 140 54 116 66 116 H104" stroke="url(#lineGrad)" stroke-width="2.5"/>
+    <path d="M130 100 H164 C176 100 176 70 188 70" stroke="url(#lineGrad)" stroke-width="2.5"/>
+    <path d="M130 100 H164 C176 100 176 130 188 130" stroke="url(#lineGrad)" stroke-width="2.5"/>
+    <!-- dashed overlay for flow feel -->
+    <path d="M8 60 H42 C54 60 54 84 66 84 H104" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="0.8" stroke-dasharray="3 6"/>
+    <path d="M8 140 H42 C54 140 54 116 66 116 H104" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="0.8" stroke-dasharray="3 6"/>
+    <path d="M130 100 H164 C176 100 176 70 188 70" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="0.8" stroke-dasharray="3 6"/>
+    <path d="M130 100 H164 C176 100 176 130 188 130" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="0.8" stroke-dasharray="3 6"/>
+  </g>
+
+  <!-- input nodes -->
+  <g filter="url(#softShadow)">
+    <rect x="10" y="50" width="28" height="20" rx="5" fill="url(#cardGrad)" stroke="#FFFFFF" stroke-opacity="0.18"/>
+    <rect x="10" y="130" width="28" height="20" rx="5" fill="url(#cardGrad)" stroke="#FFFFFF" stroke-opacity="0.18"/>
+  </g>
+  <circle cx="24" cy="60" r="2.6" fill="#0A84FF" filter="url(#glow)"/>
+  <circle cx="24" cy="140" r="2.6" fill="#0A84FF" filter="url(#glow)"/>
+  <g fill="#8E8E93">
+    <rect x="30" y="57" width="5" height="2" rx="1"/>
+    <rect x="30" y="61" width="3.5" height="2" rx="1"/>
+    <rect x="30" y="137" width="5" height="2" rx="1"/>
+    <rect x="30" y="141" width="3.5" height="2" rx="1"/>
+  </g>
+
+  <!-- central core -->
+  <g filter="url(#softShadow)">
+    <rect x="104" y="76" width="26" height="48" rx="7" fill="url(#coreGrad)" stroke="#0A84FF" stroke-opacity="0.55"/>
+    <rect x="104" y="76" width="26" height="48" rx="7" fill="url(#cardGrad)"/>
+  </g>
+  <circle cx="117" cy="92" r="6" fill="none" stroke="#0A84FF" stroke-width="1.6" filter="url(#glow)"/>
+  <circle cx="117" cy="92" r="2" fill="#0A84FF"/>
+  <circle cx="117" cy="110" r="3.4" fill="none" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.2"/>
+  <g stroke="#0A84FF" stroke-opacity="0.5" stroke-width="0.8">
+    <path d="M110 103 H124"/>
+  </g>
+
+  <!-- output nodes -->
+  <g filter="url(#softShadow)">
+    <rect x="166" y="60" width="26" height="20" rx="5" fill="url(#cardGrad)" stroke="#FFFFFF" stroke-opacity="0.18"/>
+    <rect x="166" y="120" width="26" height="20" rx="5" fill="url(#cardGrad)" stroke="#FFFFFF" stroke-opacity="0.18"/>
+  </g>
+  <circle cx="179" cy="70" r="2.6" fill="#FFFFFF" filter="url(#glow)"/>
+  <circle cx="179" cy="130" r="2.6" fill="#FFFFFF" filter="url(#glow)"/>
+  <g stroke="#8E8E93" stroke-width="1.1" stroke-linecap="round">
+    <path d="M172 76 H186 M172 136 H186"/>
+  </g>
+
+  <!-- connector ticks on lines -->
+  <g fill="#0A84FF">
+    <circle cx="66" cy="84" r="1.8"/>
+    <circle cx="66" cy="116" r="1.8"/>
+    <circle cx="164" cy="100" r="1.8" fill="#8E8E93"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#8E8E93" stroke-opacity="0.6" stroke-width="1.2" fill="none">
+    <path d="M6 16 V8 H14"/>
+    <path d="M186 16 V8 H178"/>
+    <path d="M6 184 V192 H14"/>
+    <path d="M186 184 V192 H178"/>
+  </g>
+
+  <!-- micro caption ticks -->
+  <g fill="#8E8E93" opacity="0.8">
+    <rect x="88" y="30" width="24" height="1.6" rx="0.8"/>
+    <rect x="94" y="166" width="12" height="1.6" rx="0.8"/>
+  </g>
+  <circle cx="86" cy="30.8" r="1.4" fill="#0A84FF"/>
+  <circle cx="92" cy="166.8" r="1.4" fill="#0A84FF"/>
+</svg>

@@ -1,0 +1,35 @@
+{
+  "id": "generated_logarithmic-time-scale-bar-2",
+  "name": "logarithmic time scale bar graph with infinite icon",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/logarithmic-time-scale-bar-2.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M78 52 C70 44 58 44 54 52 C50 60 58 68 66 68 C70 68 74 66 78 60 C82 54 86 52 90 52 C98 52 106 52 110 52 C118 52 126 44 122 36 C118 28 106 28 102 36 C98 42 94 44 90 44 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "logarithmic",
+    "time",
+    "scale",
+    "bar",
+    "graph",
+    "infinite",
+    "chart",
+    "generated-svg"
+  ]
+}

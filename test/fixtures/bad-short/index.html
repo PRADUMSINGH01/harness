@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      html, body { width: 1920px; height: 1080px; background: #000; }
+      .tiny { font-size: 14px; }
+      .glow { animation: glow-pulse 2s ease-in-out infinite; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="20" data-width="1920" data-height="1080">
+      <h1 id="title" class="clip glow" data-start="0" data-duration="20" data-track-index="0">Welcome</h1>
+      <p class="clip tiny" data-start="0" data-duration="20" data-track-index="1">This paragraph has far too many words on screen at once for anyone to read while the video keeps moving along quickly</p>
+    </div>
+    <script>
+      // tl.to("#ignored", { repeat: -1, yoyo: true }) inside a comment must not count
+      const tl = gsap.timeline({ paused: true });
+      tl.to("#title", { scale: 1.05, duration: 1.2, yoyo: true, repeat: -1, ease: "sine.inOut" }, 0)
+        .from("#title", { opacity: 0, y: 40, duration: 1.8, ease: "bounce.out" }, 0);
+      const jitter = Math.random() * 10;
+      const started = Date.now();
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

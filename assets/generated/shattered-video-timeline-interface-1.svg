@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glassA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1B1F27" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#0A0D14" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="glassB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16202E" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#0A0D14" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="clipBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#2E9BFF" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="clipGray" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8E8E93" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#3A3A3F" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.1" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="edgeLight" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="0.8" flood-color="#0A84FF" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+
+  <!-- backdrop glow -->
+  <circle cx="100" cy="100" r="78" fill="#0A84FF" opacity="0.06"/>
+  <circle cx="100" cy="100" r="52" fill="#0A84FF" opacity="0.05"/>
+
+  <!-- main shard: big timeline fragment -->
+  <g filter="url(#edgeLight)">
+    <path d="M34 42 L108 30 L118 74 L84 108 L44 96 Z" fill="url(#glassA)" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="1"/>
+  </g>
+  <g clip-path="url(#none)">
+    <!-- clips inside main shard -->
+    <path d="M44 56 h58 v12 h-58 z" fill="url(#clipBlue)" opacity="0.95"/>
+    <path d="M48 74 h44 v12 h-44 z" fill="url(#clipGray)" opacity="0.9"/>
+    <!-- playhead -->
+    <line x1="88" y1="46" x2="88" y2="100" stroke="#FFFFFF" stroke-width="1.4" filter="url(#softGlow)"/>
+    <path d="M85 42 h6 l-3 6 z" fill="#FFFFFF"/>
+    <!-- waveform ticks -->
+    <g stroke="#0A84FF" stroke-width="1.2" opacity="0.9">
+      <line x1="50" y1="93" x2="50" y2="97"/><line x1="56" y1="90" x2="56" y2="100"/>
+      <line x1="62" y1="92" x2="62" y2="98"/><line x1="68" y1="88" x2="68" y2="102"/>
+      <line x1="74" y1="91" x2="74" y2="99"/><line x1="80" y1="89" x2="80" y2="101"/>
+    </g>
+  </g>
+
+  <!-- right shard: vertical clip stack -->
+  <g filter="url(#edgeLight)">
+    <path d="M126 34 L172 44 L166 92 L128 96 Z" fill="url(#glassB)" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1"/>
+  </g>
+  <path d="M134 50 h30 v9 h-30 z" fill="url(#clipBlue)" opacity="0.85"/>
+  <path d="M134 63 h26 v9 h-26 z" fill="url(#clipGray)" opacity="0.85"/>
+  <g stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="1">
+    <line x1="136" y1="79" x2="136" y2="86"/><line x1="142" y1="76" x2="142" y2="89"/>
+    <line x1="148" y1="79" x2="148" y2="86"/><line x1="154" y1="77" x2="154" y2="88"/>
+    <line x1="160" y1="80" x2="160" y2="85"/>
+  </g>
+  <circle cx="152" cy="82" r="6" fill="none" stroke="#0A84FF" stroke-width="1.4" filter="url(#glow)"/>
+  <path d="M150 79 l5 3 -5 3 z" fill="#0A84FF"/>
+
+  <!-- bottom-left shard: scrubber -->
+  <g filter="url(#edgeLight)">
+    <path d="M40 116 L92 112 L98 152 L58 168 L38 148 Z" fill="url(#glassB)" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="1"/>
+  </g>
+  <path d="M48 134 h40 v10 h-40 z" fill="url(#clipGray)" opacity="0.9"/>
+  <path d="M48 134 h22 v10 h-22 z" fill="url(#clipBlue)" opacity="0.95"/>
+  <g stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="0.8">
+    <line x1="52" y1="152" x2="52" y2="158"/><line x1="60" y1="152" x2="60" y2="158"/>
+    <line x1="68" y1="152" x2="68" y2="158"/><line x1="76" y1="152" x2="76" y2="158"/>
+    <line x1="84" y1="152" x2="84" y2="158"/>
+  </g>
+  <circle cx="62" cy="155" r="2.4" fill="#0A84FF" filter="url(#softGlow)"/>
+
+  <!-- bottom-right shard: small fragment -->
+  <g filter="url(#edgeLight)">
+    <path d="M112 116 L158 110 L170 140 L134 162 L108 146 Z" fill="url(#glassA)" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="1"/>
+  </g>
+  <path d="M120 128 h36 v8 h-36 z" fill="url(#clipBlue)" opacity="0.8"/>
+  <path d="M124 142 h24 v8 h-24 z" fill="url(#clipGray)" opacity="0.8"/>
+  <g stroke="#8E8E93" stroke-width="1" opacity="0.9">
+    <line x1="130" y1="140" x2="130" y2="152"/><line x1="136" y1="139" x2="136" y2="153"/>
+    <line x1="142" y1="141" x2="142" y2="151"/>
+  </g>
+
+  <!-- flying splinters -->
+  <g stroke="#FFFFFF" stroke-opacity="0.6" fill="none" stroke-width="0.9">
+    <path d="M96 108 L104 122 L92 126 Z" fill="url(#glassA)"/>
+    <path d="M110 102 L120 106 L114 116 Z" fill="url(#glassB)"/>
+    <path d="M88 166 L98 170 L90 178 Z" fill="url(#glassB)"/>
+    <line x1="104" y1="130" x2="112" y2="142"/>
+    <line x1="118" y1="98" x2="126" y2="104"/>
+    <line x1="76" y1="174" x2="86" y2="180"/>
+  </g>
+
+  <!-- technical markers -->
+  <g stroke="#0A84FF" stroke-width="1.2" fill="none" opacity="0.85">
+    <path d="M18 26 h10 M18 26 v10"/>
+    <path d="M172 174 h10 M182 164 v10"/>
+  </g>
+  <g fill="#8E8E93" font-family="ui-monospace, Menlo, monospace" font-size="4.5" opacity="0.8">
+    <text x="14" y="192">TL.FRAG_04</text>
+    <text x="160" y="24">00:12:08</text>
+  </g>
+  <circle cx="14" cy="186" r="1.4" fill="#0A84FF" filter="url(#softGlow)"/>
+</svg>

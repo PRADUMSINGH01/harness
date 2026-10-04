@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.92"/>
+      <stop offset="0.5" stop-color="#dfe9ff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#aebfff" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="streakGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#6c8cff" stop-opacity="0"/>
+      <stop offset="0.6" stop-color="#6c8cff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#a8c6ff" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7f6cff"/>
+      <stop offset="1" stop-color="#3fd8ff"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="cardShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="-6" dy="10" stdDeviation="8" flood-color="#1b2a6b" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Diagonal motion streaks (parallel to drift direction) -->
+  <g stroke-linecap="round" fill="none">
+    <line x1="24" y1="216" x2="96" y2="144" stroke="url(#streakGrad)" stroke-width="5"/>
+    <line x1="40" y1="224" x2="128" y2="136" stroke="url(#streakGrad)" stroke-width="3" opacity="0.8"/>
+    <line x1="12" y1="188" x2="60" y2="140" stroke="url(#streakGrad)" stroke-width="3.5" opacity="0.7"/>
+    <line x1="150" y1="60" x2="220" y2="-10" stroke="url(#streakGrad)" stroke-width="5" opacity="0.9"/>
+    <line x1="170" y1="46" x2="226" y2="-10" stroke="url(#streakGrad)" stroke-width="3" opacity="0.6"/>
+    <line x1="120" y1="96" x2="150" y2="66" stroke="url(#streakGrad)" stroke-width="2.5" opacity="0.6"/>
+  </g>
+
+  <!-- Speed chevrons pointing along the drift axis (-45 deg) -->
+  <g filter="url(#softGlow)" opacity="0.9">
+    <path d="M52 172 l14 -14 l6 6 l-14 14 z" fill="url(#accentGrad)"/>
+    <path d="M38 190 l14 -14 l6 6 l-14 14 z" fill="url(#accentGrad)" opacity="0.7"/>
+    <path d="M196 34 l14 -14 l6 6 l-14 14 z" fill="url(#accentGrad)" opacity="0.8"/>
+  </g>
+
+  <!-- Central tilted card, rotated -18 degrees -->
+  <g transform="rotate(-18 120 120)">
+    <rect x="62" y="72" width="116" height="96" rx="16" fill="url(#cardGrad)" filter="url(#cardShadow)"/>
+    <rect x="62" y="72" width="116" height="96" rx="16" fill="none" stroke="#ffffff" stroke-opacity="0.9" stroke-width="1.5"/>
+    <!-- Accent bar + content lines -->
+    <rect x="78" y="92" width="34" height="8" rx="4" fill="url(#accentGrad)"/>
+    <rect x="78" y="112" width="84" height="6" rx="3" fill="#5b6b9e" opacity="0.55"/>
+    <rect x="78" y="126" width="64" height="6" rx="3" fill="#5b6b9e" opacity="0.4"/>
+    <rect x="78" y="140" width="74" height="6" rx="3" fill="#5b6b9e" opacity="0.3"/>
+    <!-- Motion arrow across card, angled with drift -->
+    <path d="M116 156 h34" stroke="url(#accentGrad)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M150 156 l-7 -5 v10 z" fill="#3fd8ff"/>
+  </g>
+
+  <!-- Orbital accent dots -->
+  <circle cx="52" cy="60" r="4" fill="#7f6cff" opacity="0.85" filter="url(#softGlow)"/>
+  <circle cx="204" cy="176" r="3" fill="#3fd8ff" opacity="0.8" filter="url(#softGlow)"/>
+  <circle cx="188" cy="208" r="2" fill="#a8c6ff" opacity="0.7"/>
+</svg>

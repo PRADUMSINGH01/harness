@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glassSphere" cx="38%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#2A2F3A" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#14171F" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0.95"/>
+    </radialGradient>
+    <linearGradient id="markerGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5EB8FF"/>
+      <stop offset="100%" stop-color="#0A84FF"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <clipPath id="globeClip">
+      <circle cx="100" cy="104" r="62"/>
+    </clipPath>
+  </defs>
+
+  <!-- Globe body -->
+  <g filter="url(#softShadow)">
+    <circle cx="100" cy="104" r="62" fill="url(#glassSphere)" stroke="#8E8E93" stroke-opacity="0.45" stroke-width="1.2"/>
+  </g>
+
+  <!-- Wireframe graticule -->
+  <g clip-path="url(#globeClip)" stroke="#8E8E93" stroke-opacity="0.4" fill="none" stroke-width="0.8">
+    <!-- meridians (ellipses) -->
+    <ellipse cx="100" cy="104" rx="62" ry="62"/>
+    <ellipse cx="100" cy="104" rx="42" ry="62"/>
+    <ellipse cx="100" cy="104" rx="18" ry="62"/>
+    <line x1="100" y1="42" x2="100" y2="166"/>
+    <!-- parallels -->
+    <ellipse cx="100" cy="104" rx="62" ry="62"/>
+    <ellipse cx="100" cy="104" rx="62" ry="44"/>
+    <ellipse cx="100" cy="104" rx="62" ry="21"/>
+    <line x1="38" y1="104" x2="162" y2="104"/>
+  </g>
+
+  <!-- Specular highlight -->
+  <ellipse cx="80" cy="82" rx="26" ry="16" fill="#FFFFFF" opacity="0.07" transform="rotate(-24 80 82)"/>
+
+  <!-- Crosshair corner brackets -->
+  <g stroke="#8E8E93" stroke-opacity="0.7" stroke-width="1.2" fill="none">
+    <path d="M14 26 h10 M14 26 v10"/>
+    <path d="M186 26 h-10 M186 26 v10"/>
+    <path d="M14 180 h10 M14 180 v-10"/>
+    <path d="M186 180 h-10 M186 180 v-10"/>
+  </g>
+
+  <!-- SWEDEN marker (~ lat 62N, lon 15E) -->
+  <g>
+    <circle cx="128" cy="72" r="12" fill="none" stroke="#0A84FF" stroke-opacity="0.35" stroke-width="1">
+      <animate attributeName="r" values="6;14" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.6;0" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="128" cy="72" r="3.4" fill="url(#markerGrad)" filter="url(#glow)"/>
+    <circle cx="128" cy="72" r="1.3" fill="#FFFFFF"/>
+    <line x1="132" y1="66" x2="146" y2="48" stroke="#0A84FF" stroke-opacity="0.7" stroke-width="0.8"/>
+    <text x="149" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" font-weight="600" fill="#FFFFFF" letter-spacing="1">SWEDEN</text>
+  </g>
+
+  <!-- CHINA marker (~ lat 35N, lon 105E) -->
+  <g>
+    <circle cx="146" cy="94" r="12" fill="none" stroke="#0A84FF" stroke-opacity="0.35" stroke-width="1">
+      <animate attributeName="r" values="6;14" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.6;0" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="146" cy="94" r="3.4" fill="url(#markerGrad)" filter="url(#glow)"/>
+    <circle cx="146" cy="94" r="1.3" fill="#FFFFFF"/>
+    <line x1="150" y1="99" x2="162" y2="112" stroke="#0A84FF" stroke-opacity="0.7" stroke-width="0.8"/>
+    <text x="140" y="122" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" font-weight="600" fill="#FFFFFF" letter-spacing="1">CHINA</text>
+  </g>
+
+  <!-- NIGERIA marker (~ lat 9N, lon 8E) -->
+  <g>
+    <circle cx="116" cy="116" r="12" fill="none" stroke="#0A84FF" stroke-opacity="0.35" stroke-width="1">
+      <animate attributeName="r" values="6;14" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.6;0" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="116" cy="116" r="3.4" fill="url(#markerGrad)" filter="url(#glow)"/>
+    <circle cx="116" cy="116" r="1.3" fill="#FFFFFF"/>
+    <line x1="111" y1="121" x2="100" y2="136" stroke="#0A84FF" stroke-opacity="0.7" stroke-width="0.8"/>
+    <text x="66" y="144" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8" font-weight="600" fill="#FFFFFF" letter-spacing="1">NIGERIA</text>
+  </g>
+</svg>

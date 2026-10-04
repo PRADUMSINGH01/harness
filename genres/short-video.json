@@ -1,0 +1,247 @@
+{
+  "id": "short-video",
+  "label": "Short video",
+  "workflow": "general-video",
+  "description": "A custom short film of several scenes: social short, explainer-style short, brand or sizzle piece, montage. 8-90s, narrated or not.",
+  "defaultVariants": 2,
+  "repairRounds": 2,
+  "duration": {
+    "band": [
+      6,
+      120
+    ],
+    "tolerance": 0.2
+  },
+  "motion": {
+    "maxSingleEntrySec": 0.9,
+    "maxStaggerEachSec": 0.15,
+    "maxStaggerTotalSec": 0.5,
+    "maxDistinctEases": 5
+  },
+  "density": {
+    "maxWordsPerSecond": 3,
+    "maxWordsPerBlock": 12,
+    "minFontPx": 30
+  },
+  "ledger": {
+    "requireAtScenes": 2,
+    "missingSeverity": "error",
+    "maxTransitionTypes": 3,
+    "maxReservedShare": 0.4
+  },
+  "check": {
+    "atTransitions": true,
+    "frameCheck": true,
+    "captionZone": "x0=0;y0=.82;x1=1;y1=1;severity=error;seek=.25,.5,.75"
+  },
+  "seam": {
+    "enabled": true,
+    "hard": true
+  },
+  "proofTimes": [
+    0.05,
+    0.5,
+    0.95
+  ],
+  "gates": {
+    "entry": {
+      "hard": true,
+      "error": 40,
+      "warning": 5,
+      "cap": 40
+    },
+    "assets": {
+      "hard": true,
+      "error": 15,
+      "warning": 3,
+      "cap": 40
+    },
+    "duration": {
+      "hard": true,
+      "error": 15,
+      "warning": 4,
+      "cap": 20
+    },
+    "motion": {
+      "hard": true,
+      "error": 12,
+      "warning": 3,
+      "cap": 35
+    },
+    "determinism": {
+      "hard": true,
+      "error": 20,
+      "warning": 4,
+      "cap": 30
+    },
+    "density": {
+      "hard": false,
+      "error": 5,
+      "warning": 2,
+      "cap": 15
+    },
+    "ledger": {
+      "hard": true,
+      "error": 10,
+      "warning": 3,
+      "cap": 25
+    },
+    "check": {
+      "hard": true,
+      "error": 6,
+      "warning": 1,
+      "cap": 40
+    },
+    "seam": {
+      "hard": true,
+      "error": 6,
+      "warning": 1.5,
+      "cap": 30
+    },
+    "snapshot": {
+      "hard": true,
+      "error": 30,
+      "warning": 5,
+      "cap": 30
+    }
+  },
+  "blend": {
+    "technical": 0.35,
+    "judge": 0.65
+  },
+  "axes": [
+    {
+      "id": "spine",
+      "label": "Story spine",
+      "values": [
+        "problem -> turn -> payoff",
+        "three escalating examples, then the rule",
+        "myth -> evidence -> truth",
+        "before -> after -> how",
+        "question -> investigation -> answer"
+      ],
+      "guidance": "Read hyperframes-creative/references/story-spine.md. Story truth decides which scenes exist; the spine orders them."
+    },
+    {
+      "id": "frame_preset",
+      "label": "Frame preset",
+      "fromDir": "hyperframes-creative/frame-presets",
+      "guidance": "Read hyperframes-creative/frame-presets/<id>/FRAME.md and adopt it as frame.md. A BRIEF.md style_preset always wins.",
+      "file": "skills/hyperframes-creative/frame-presets/{value}/FRAME.md"
+    },
+    {
+      "id": "signature_transition",
+      "label": "Signature seam",
+      "values": [
+        "cut-the-curve in the current (house default)",
+        "zoom-through on every chapter turn, cut-the-curve inside chapters",
+        "match-cut on a carrier element at every seam that has one"
+      ],
+      "guidance": "Implementation in cut-the-curve and seam-craft. Stamp ordinary seams from ledger.json with seam-stamp.mjs."
+    },
+    {
+      "id": "tempo",
+      "label": "Tempo",
+      "values": [
+        "punchy: 1.5-3s beats, hard hits, captions as rhythm",
+        "measured: 3-5s beats, staged reveals on VO cues",
+        "cinematic: fewer, longer shots, camera with intent, stillness before climax"
+      ]
+    }
+  ],
+  "judge": {
+    "dimensions": [
+      {
+        "id": "hook",
+        "weight": 0.16,
+        "question": "Do the first 2 seconds stop the scroll?",
+        "anchors": {
+          "2": "slow title card",
+          "5": "clear but unremarkable opener",
+          "8": "you keep watching",
+          "10": "you'd send it to someone for the opening alone"
+        }
+      },
+      {
+        "id": "story",
+        "weight": 0.18,
+        "question": "Does the spine land: each scene earns the next, and the ending pays off the opening?",
+        "anchors": {
+          "2": "a list of scenes",
+          "5": "coherent but flat",
+          "8": "builds to a payoff",
+          "10": "the ending reframes the opening"
+        }
+      },
+      {
+        "id": "motion_craft",
+        "weight": 0.2,
+        "question": "One continuous camera feel across cuts (vector law), causal motion, no idle wobble, stillness before climaxes?",
+        "anchors": {
+          "2": "slideshow with fades",
+          "5": "each scene animates in isolation",
+          "8": "seams carry momentum",
+          "10": "feels like one camera move"
+        }
+      },
+      {
+        "id": "composition",
+        "weight": 0.16,
+        "question": "Hierarchy, focal element, safe zones, contrast, phone readability in every proof frame?",
+        "anchors": {
+          "2": "cramped or unreadable",
+          "5": "template layouts",
+          "8": "deliberate and varied",
+          "10": "every frame is a key visual"
+        }
+      },
+      {
+        "id": "pacing",
+        "weight": 0.14,
+        "question": "Does every second earn its place, with reads neither rushed nor held?",
+        "anchors": {
+          "2": "drags",
+          "5": "uneven",
+          "8": "tight",
+          "10": "you want it longer"
+        }
+      },
+      {
+        "id": "originality",
+        "weight": 0.16,
+        "question": "Would a designer mistake this for default AI or template output?",
+        "anchors": {
+          "2": "obvious template",
+          "5": "clean but generic",
+          "8": "has a point of view",
+          "10": "distinctive"
+        }
+      }
+    ],
+    "fatal": [
+      "visible glitch: white flash, pop, blank or black frame",
+      "message missing",
+      "text unreadable in a key beat",
+      "captions collide with content or are missing while VO plays",
+      "wrong deliverable (aspect, length)",
+      "required brand asset missing, distorted, or recolored"
+    ]
+  },
+  "doctrine": [
+    ".claude/skills/motion-doctrine/SKILL.md",
+    ".claude/skills/cut-the-curve/SKILL.md",
+    ".claude/skills/seam-craft/SKILL.md",
+    ".claude/skills/oversized-cursor/SKILL.md"
+  ],
+  "essentials": [
+    "skills/general-video/SKILL.md",
+    "skills/hyperframes-core/references/minimal-composition.md",
+    ".claude/skills/motion-doctrine/SKILL.md",
+    ".claude/skills/cut-the-curve/SKILL.md"
+  ],
+  "budget": {
+    "maxTurns": 40,
+    "maxInputTokens": 600000,
+    "maxMinutes": 12
+  }
+}

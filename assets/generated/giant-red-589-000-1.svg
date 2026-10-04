@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14161C"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <radialGradient id="redGlow" cx="0.5" cy="0.45" r="0.65">
+      <stop offset="0" stop-color="#FF3B30" stop-opacity="0.35"/>
+      <stop offset="0.6" stop-color="#FF3B30" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#FF3B30" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="numGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF6B5E"/>
+      <stop offset="0.55" stop-color="#FF2D20"/>
+      <stop offset="1" stop-color="#C81E12"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M10 0H0V10" fill="none" stroke="#8E8E93" stroke-opacity="0.10" stroke-width="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- glass card -->
+  <g filter="url(#softShadow)">
+    <rect x="6" y="6" width="188" height="188" rx="14" fill="url(#glass)" stroke="#8E8E93" stroke-opacity="0.28" stroke-width="0.8"/>
+  </g>
+  <rect x="6" y="6" width="188" height="188" rx="14" fill="url(#grid)"/>
+  <rect x="6" y="6" width="188" height="188" rx="14" fill="url(#redGlow)"/>
+
+  <!-- red glow bloom -->
+  <circle cx="100" cy="100" r="70" fill="url(#redGlow)"/>
+
+  <!-- shatter cracks radiating from digits -->
+  <g stroke="#FFFFFF" stroke-opacity="0.55" fill="none" stroke-linecap="round">
+    <g stroke-width="0.9">
+      <path d="M100 96 L64 40 L58 22"/>
+      <path d="M64 40 L52 48 L40 46"/>
+      <path d="M100 96 L146 34 L166 26"/>
+      <path d="M146 34 L152 52 L170 58"/>
+      <path d="M100 108 L58 150 L36 160"/>
+      <path d="M58 150 L60 168 L50 178"/>
+      <path d="M100 110 L148 158 L172 170"/>
+      <path d="M148 158 L156 172 L150 184"/>
+      <path d="M78 60 L46 66"/>
+      <path d="M126 140 L160 138"/>
+    </g>
+    <g stroke-width="0.4" stroke-opacity="0.35">
+      <path d="M100 102 L84 70 L76 58"/>
+      <path d="M100 102 L118 66 L128 54"/>
+      <path d="M100 104 L86 132 L80 144"/>
+      <path d="M100 104 L120 138 L134 148"/>
+      <path d="M64 40 L70 60"/>
+      <path d="M146 34 L138 54"/>
+      <path d="M58 150 L74 138"/>
+      <path d="M148 158 L134 146"/>
+    </g>
+  </g>
+
+  <!-- shatter shard glints -->
+  <g fill="#0A84FF" opacity="0.7">
+    <polygon points="64,40 58,22 70,34"/>
+    <polygon points="146,34 166,26 152,44"/>
+    <polygon points="58,150 50,178 68,164"/>
+    <polygon points="148,158 172,170 158,174"/>
+  </g>
+
+  <!-- giant number -->
+  <g filter="url(#glow)">
+    <text x="100" y="112" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="52" letter-spacing="-2" fill="url(#numGrad)" stroke="#7A0E06" stroke-width="0.5">$589</text>
+  </g>
+  <text x="100" y="134" text-anchor="middle" font-family="'SF Mono','Roboto Mono',monospace" font-size="9.5" letter-spacing="6" fill="#FFFFFF" fill-opacity="0.92">BILLION LOST</text>
+  <text x="100" y="147" text-anchor="middle" font-family="'SF Mono','Roboto Mono',monospace" font-size="6.5" letter-spacing="2.5" fill="#8E8E93">$589,000,000,000 MARKET CAPITALIZATION WIPED</text>
+
+  <!-- down indicator -->
+  <g transform="translate(100 62)">
+    <circle r="9" fill="#0A0A0A" fill-opacity="0.5" stroke="#FF3B30" stroke-width="0.7"/>
+    <path d="M0 -3.5 V3.5 M-3.5 0.5 L0 4 L3.5 0.5" stroke="#FF3B30" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <path d="M14 26 V16 H26"/>
+    <path d="M174 16 H186 V26"/>
+    <path d="M186 174 V184 H174"/>
+    <path d="M26 184 H14 V174"/>
+  </g>
+
+  <!-- technical ticks -->
+  <g stroke="#8E8E93" stroke-opacity="0.5" stroke-width="0.6">
+    <path d="M6 100 h4 M190 100 h4"/>
+    <path d="M100 6 v4 M100 190 v4"/>
+  </g>
+  <text x="16" y="30" font-family="'SF Mono','Roboto Mono',monospace" font-size="5" fill="#8E8E93">MKT.DROP</text>
+  <text x="150" y="194" font-family="'SF Mono','Roboto Mono',monospace" font-size="5" fill="#8E8E93">LIVE ▼</text>
+</svg>

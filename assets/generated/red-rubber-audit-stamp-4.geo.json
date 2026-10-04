@@ -1,0 +1,35 @@
+{
+  "id": "generated_red-rubber-audit-stamp-4",
+  "name": "red rubber audit stamp reading THROWN AWAY with grunge ink texture",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/red-rubber-audit-stamp-4.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M100 149 l3 6 6.5 1 -4.7 4.6 1.1 6.4 -5.9 -3.1 -5.9 3.1 1.1 -6.4 -4.7 -4.6 6.5 -1 z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "red",
+    "rubber",
+    "audit",
+    "stamp",
+    "reading",
+    "thrown",
+    "illustration",
+    "generated-svg"
+  ]
+}

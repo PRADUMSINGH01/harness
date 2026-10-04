@@ -1,0 +1,35 @@
+{
+  "id": "generated_single-copper-penny-coin-1",
+  "name": "single copper penny coin, front face, engraved shine, isolated",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/single-copper-penny-coin-1.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M58 150 C54 132 55 112 62 96 C70 78 84 64 100 60 C110 57 119 58 124 63 C127 66 128 71 126 74 C124 77 120 78 118 82 C116 85 118 88 116 92 C114 95 110 95 108 98 C106 101 108 105 105 108 C101 112 94 111 90 115 C86 119 88 124 84 128 C80 132 74 132 70 136 C66 140 68 146 66 150 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "single",
+    "copper",
+    "penny",
+    "coin",
+    "front",
+    "face",
+    "illustration",
+    "generated-svg"
+  ]
+}

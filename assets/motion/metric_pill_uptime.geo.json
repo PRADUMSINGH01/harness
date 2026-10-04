@@ -1,0 +1,32 @@
+{
+  "id": "metric_pill_uptime_999",
+  "name": "Uptime 99.99% Metric Pill",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/motion/metric_pill_uptime.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 300 100",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 300,
+      "height": 100
+    },
+    "closed_svg_path": "M50 26 L64 31 C64 43 58 52 50 56 C42 52 36 43 36 31 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "metric",
+    "uptime",
+    "stat-pill",
+    "emerald",
+    "overlay"
+  ]
+}

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0A0A"/>
+      <stop offset="1" stop-color="#12151C"/>
+    </linearGradient>
+    <linearGradient id="coin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.45" stop-color="#7CC0FF"/>
+      <stop offset="1" stop-color="#0A84FF"/>
+    </linearGradient>
+    <linearGradient id="coinEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#0A4FA8"/>
+    </linearGradient>
+    <linearGradient id="ticket" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#C9CDD4"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0A84FF" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- dark glass background card -->
+  <rect x="4" y="4" width="192" height="192" rx="24" fill="url(#glass)" opacity="0.92"/>
+  <rect x="4" y="4" width="192" height="192" rx="24" fill="none" stroke="#FFFFFF" stroke-opacity="0.10"/>
+
+  <!-- corner brackets -->
+  <g stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <path d="M14 26 v-8 a4 4 0 0 1 4-4 h8"/>
+    <path d="M186 26 v-8 a4 4 0 0 0-4-4 h-8"/>
+    <path d="M14 174 v8 a4 4 0 0 0 4 4 h8"/>
+    <path d="M186 174 v8 a4 4 0 0 1-4 4 h-8"/>
+  </g>
+
+  <!-- subtle grid ticks -->
+  <g stroke="#8E8E93" stroke-opacity="0.25" stroke-width="1">
+    <path d="M20 100 h6 M174 100 h6 M100 20 v6 M100 174 v6"/>
+  </g>
+
+  <!-- paper ticket stream (S-curve ribbon) -->
+  <g filter="url(#soft)">
+    <path d="M150 168
+             C 128 150, 160 136, 140 120
+             C 122 106, 148 96, 132 82
+             C 120 71, 132 62, 124 52"
+          fill="none" stroke="url(#ticket)" stroke-width="12" stroke-linecap="round" opacity="0.95"/>
+    <path d="M150 168
+             C 128 150, 160 136, 140 120
+             C 122 106, 148 96, 132 82
+             C 120 71, 132 62, 124 52"
+          fill="none" stroke="#0A0A0A" stroke-opacity="0.18" stroke-width="12" stroke-linecap="round" stroke-dasharray="2 7"/>
+    <!-- ticket stub with perforation -->
+    <g transform="rotate(-18 124 44)">
+      <rect x="106" y="34" width="36" height="22" rx="4" fill="url(#ticket)"/>
+      <line x1="130" y1="36" x2="130" y2="54" stroke="#8E8E93" stroke-width="1" stroke-dasharray="2 2"/>
+      <rect x="110" y="40" width="14" height="3" rx="1.5" fill="#0A84FF" opacity="0.85"/>
+      <rect x="110" y="47" width="10" height="2.5" rx="1.25" fill="#8E8E93" opacity="0.7"/>
+      <text x="133" y="49" font-family="'SF Mono', ui-monospace, monospace" font-size="7" fill="#0A0A0A" opacity="0.7">$1</text>
+    </g>
+  </g>
+
+  <!-- falling dollar coins -->
+  <g filter="url(#soft)">
+    <!-- big hero coin -->
+    <g transform="rotate(-14 78 84)">
+      <circle cx="78" cy="84" r="24" fill="url(#coinEdge)"/>
+      <circle cx="78" cy="82" r="22" fill="url(#coin)"/>
+      <circle cx="78" cy="82" r="18" fill="none" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="1"/>
+      <text x="78" y="92" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="26" fill="#0A0A0A" opacity="0.85">$</text>
+      <path d="M62 70 a20 20 0 0 1 14 -6" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </g>
+    <!-- medium coin -->
+    <g transform="rotate(18 132 74)">
+      <circle cx="132" cy="74" r="13" fill="#0A4FA8"/>
+      <circle cx="132" cy="73" r="12" fill="url(#coin)"/>
+      <text x="132" y="78" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="14" fill="#0A0A0A" opacity="0.8">$</text>
+    </g>
+    <!-- small coin -->
+    <g transform="rotate(-30 54 136)">
+      <circle cx="54" cy="136" r="9" fill="#0A4FA8"/>
+      <circle cx="54" cy="135" r="8" fill="url(#coin)"/>
+      <text x="54" y="139" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="10" fill="#0A0A0A" opacity="0.8">$</text>
+    </g>
+  </g>
+
+  <!-- particle trails: falling dots -->
+  <g fill="#0A84FF" filter="url(#glow)">
+    <circle cx="34" cy="46" r="2.4"/>
+    <circle cx="98" cy="34" r="1.8"/>
+    <circle cx="164" cy="42" r="2"/>
+    <circle cx="112" cy="118" r="2.2"/>
+    <circle cx="42" cy="92" r="1.6" fill="#FFFFFF"/>
+    <circle cx="160" cy="146" r="1.6" fill="#FFFFFF"/>
+    <circle cx="76" cy="164" r="2.2"/>
+  </g>
+  <!-- motion streaks -->
+  <g stroke="#8E8E93" stroke-opacity="0.45" stroke-width="1.4" stroke-linecap="round">
+    <path d="M34 52 v10 M164 48 v9 M112 124 v9 M76 170 v8"/>
+  </g>
+</svg>

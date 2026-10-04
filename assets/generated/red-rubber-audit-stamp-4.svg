@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="inkRed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E11D2E"/>
+      <stop offset="0.55" stop-color="#C21525"/>
+      <stop offset="1" stop-color="#8F0C18"/>
+    </linearGradient>
+    <radialGradient id="glassBg" cx="0.5" cy="0.4" r="0.75">
+      <stop offset="0" stop-color="#141821" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#0A0A0A" stop-opacity="0.96"/>
+    </radialGradient>
+    <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="7" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1.4 1.4 1.4 -0.6 0" result="mask"/>
+      <feComposite operator="in" in="SourceGraphic" in2="mask"/>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clipAll"><rect x="0" y="0" width="200" height="200"/></clipPath>
+  </defs>
+
+  <!-- dark glass backdrop -->
+  <rect x="0" y="0" width="200" height="200" rx="22" fill="url(#glassBg)"/>
+  <rect x="0.75" y="0.75" width="198.5" height="198.5" rx="21.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.08"/>
+
+  <g clip-path="url(#clipAll)">
+    <!-- stamp group: slight rotation for authenticity -->
+    <g transform="rotate(-8 100 100)" filter="url(#grain)">
+      <!-- outer ring -->
+      <circle cx="100" cy="100" r="80" fill="none" stroke="url(#inkRed)" stroke-width="7"/>
+      <circle cx="100" cy="100" r="71" fill="none" stroke="url(#inkRed)" stroke-width="2"/>
+      <!-- inner ring -->
+      <circle cx="100" cy="100" r="55" fill="none" stroke="url(#inkRed)" stroke-width="4.5"/>
+      <!-- curved top text -->
+      <path id="arcTop" d="M 100 100 m -63 0 a 63 63 0 1 1 126 0" fill="none"/>
+      <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17.5" font-weight="800" letter-spacing="5" fill="url(#inkRed)">
+        <textPath href="#arcTop" startOffset="50%" text-anchor="middle">THROWN</textPath>
+      </text>
+      <!-- curved bottom text -->
+      <path id="arcBot" d="M 100 100 m -63 0 a 63 63 0 1 0 126 0" fill="none"/>
+      <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17.5" font-weight="800" letter-spacing="4" fill="url(#inkRed)">
+        <textPath href="#arcBot" startOffset="50%" text-anchor="middle">AWAY</textPath>
+      </text>
+      <!-- divider stars -->
+      <g fill="url(#inkRed)">
+        <path d="M100 33 l3 6 6.5 1 -4.7 4.6 1.1 6.4 -5.9 -3.1 -5.9 3.1 1.1 -6.4 -4.7 -4.6 6.5 -1 z"/>
+        <path d="M100 149 l3 6 6.5 1 -4.7 4.6 1.1 6.4 -5.9 -3.1 -5.9 3.1 1.1 -6.4 -4.7 -4.6 6.5 -1 z"/>
+      </g>
+      <!-- center big text, two lines with rule -->
+      <g filter="url(#softGlow)">
+        <text x="100" y="93" text-anchor="middle" font-family="Arial Black, Arial, -apple-system, sans-serif" font-size="21" font-weight="900" letter-spacing="1.5" fill="url(#inkRed)">THROWN</text>
+        <rect x="58" y="100" width="84" height="3" fill="url(#inkRed)"/>
+        <text x="100" y="124" text-anchor="middle" font-family="Arial Black, Arial, -apple-system, sans-serif" font-size="21" font-weight="900" letter-spacing="1.5" fill="url(#inkRed)">AWAY</text>
+      </g>
+    </g>
+
+    <!-- technical corner brackets accent -->
+    <g stroke="#0A84FF" stroke-width="1.4" fill="none" stroke-opacity="0.55">
+      <path d="M14 26 v-9 a3 3 0 0 1 3 -3 h9"/>
+      <path d="M186 26 v-9 a3 3 0 0 0 -3 -3 h-9"/>
+      <path d="M14 174 v9 a3 3 0 0 0 3 3 h9"/>
+      <path d="M186 174 v9 a3 3 0 0 1 -3 3 h-9"/>
+    </g>
+    <g stroke="#8E8E93" stroke-width="1" stroke-opacity="0.35">
+      <line x1="30" y1="10" x2="34" y2="10"/><line x1="166" y1="190" x2="170" y2="190"/>
+    </g>
+    <text x="100" y="193" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="5.5" letter-spacing="2" fill="#8E8E93" fill-opacity="0.55">AUDIT · QC-04 · VOID</text>
+  </g>
+</svg>

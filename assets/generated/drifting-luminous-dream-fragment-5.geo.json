@@ -1,0 +1,35 @@
+{
+  "id": "generated_drifting-luminous-dream-fragment-5",
+  "name": "drifting luminous dream-fragment shards dissolving upward like smoke",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/drifting-luminous-dream-fragment-5.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M112 176 C 118 150, 100 128, 112 104 C 122 84, 110 66, 118 46 C 122 34, 118 26, 122 16"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "drifting",
+    "luminous",
+    "dream",
+    "fragment",
+    "shards",
+    "dissolving",
+    "illustration",
+    "generated-svg"
+  ]
+}

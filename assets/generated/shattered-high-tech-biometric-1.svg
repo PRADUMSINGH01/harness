@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#101418"/>
+      <stop offset="60%" stop-color="#0A0A0A"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <linearGradient id="bodyGlass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1C1F26"/>
+      <stop offset="45%" stop-color="#11131A"/>
+      <stop offset="100%" stop-color="#07080C"/>
+    </linearGradient>
+    <linearGradient id="shackleSteel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5A5F66"/>
+      <stop offset="35%" stop-color="#B8BDC4"/>
+      <stop offset="60%" stop-color="#8E8E93"/>
+      <stop offset="100%" stop-color="#3E434A"/>
+    </linearGradient>
+    <linearGradient id="scanPanel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0.06"/>
+    </linearGradient>
+    <radialGradient id="fingerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4DA8FF"/>
+      <stop offset="60%" stop-color="#0A84FF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#8E8E93" stop-opacity="0.25"/>
+    </linearGradient>
+    <filter id="blueGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+    <clipPath id="bodyClip">
+      <path d="M62 86 L138 86 L144 150 Q144 160 134 160 L66 160 Q56 160 56 150 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- background -->
+  <rect width="200" height="200" fill="url(#bgGlow)"/>
+
+  <!-- faint tech grid -->
+  <g stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="0.5">
+    <path d="M0 40 H200 M0 80 H200 M0 120 H200 M0 160 H200"/>
+    <path d="M40 0 V200 M80 0 V200 M120 0 V200 M160 0 V200"/>
+  </g>
+  <g stroke="#0A84FF" stroke-opacity="0.25" stroke-width="0.8">
+    <path d="M14 14 h10 M14 14 v10 M186 14 h-10 M186 14 v10"/>
+    <path d="M14 186 h10 M14 186 v-10 M186 186 h-10 M186 186 v-10"/>
+  </g>
+
+  <!-- shackle (broken on right side) -->
+  <g filter="url(#softShadow)">
+    <path d="M70 84 V56 A30 30 0 0 1 130 56 V84" fill="none" stroke="url(#shackleSteel)" stroke-width="9" stroke-linecap="round"/>
+    <!-- break gap in shackle -->
+    <path d="M130 66 V84" fill="none" stroke="#0A0A0A" stroke-width="13" stroke-linecap="round"/>
+    <path d="M128 62 l6 -4 M126 74 l7 3 M128 80 l6 4" stroke="#8E8E93" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- padlock body -->
+  <g filter="url(#softShadow)">
+    <path d="M62 86 L138 86 L144 150 Q144 160 134 160 L66 160 Q56 160 56 150 Z" fill="url(#bodyGlass)" stroke="#3A3F47" stroke-width="1.2"/>
+    <path d="M62 86 L138 86 L139.2 98 L60.8 98 Z" fill="#FFFFFF" opacity="0.06"/>
+    <!-- top edge highlight -->
+    <line x1="63" y1="86.6" x2="137" y2="86.6" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1"/>
+  </g>
+
+  <!-- fingerprint scanner panel -->
+  <g clip-path="url(#bodyClip)">
+    <rect x="76" y="100" width="48" height="44" rx="8" fill="url(#scanPanel)" stroke="#0A84FF" stroke-opacity="0.45" stroke-width="1"/>
+  </g>
+
+  <!-- fingerprint -->
+  <g transform="translate(100 122)" filter="url(#blueGlow)">
+    <circle r="15" fill="url(#fingerGlow)" opacity="0.5"/>
+    <g fill="none" stroke="#4DA8FF" stroke-width="1.7" stroke-linecap="round">
+      <path d="M0 -9 A9 9 0 0 1 9 0 A9 9 0 0 1 0 9"/>
+      <path d="M0 -5.5 A5.5 5.5 0 0 1 5.5 0 A5.5 5.5 0 0 1 0 5.5 A5.5 5.5 0 0 1 -3 5"/>
+      <path d="M-6.5 1 A6.5 6.5 0 0 1 0 -6.5"/>
+      <path d="M-2.5 6.5 A8 8 0 0 1 -9 0"/>
+    </g>
+    <g fill="none" stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="round" opacity="0.8">
+      <path d="M0 -1.5 a1.5 1.5 0 0 1 1.5 1.5"/>
+    </g>
+  </g>
+
+  <!-- shatter cracks across body -->
+  <g stroke="#FFFFFF" stroke-opacity="0.85" fill="none" stroke-linecap="round">
+    <path d="M100 90 L88 104 L72 110 L64 122" stroke-width="1.4"/>
+    <path d="M88 104 L96 122 L92 138 L80 150" stroke-width="1.1"/>
+    <path d="M88 104 L110 96 L126 104 L136 116" stroke-width="1.2"/>
+    <path d="M110 96 L118 112 L132 122" stroke-width="1"/>
+    <path d="M96 122 L114 128 L124 142 L120 156" stroke-width="1.2"/>
+    <path d="M114 128 L104 140 L108 154" stroke-width="0.9"/>
+    <path d="M72 110 L78 126 L70 136" stroke-width="0.8"/>
+    <path d="M126 104 L134 96" stroke-width="0.8"/>
+  </g>
+  <!-- crack fracture accents -->
+  <g stroke="#0A84FF" stroke-opacity="0.55" fill="none" stroke-linecap="round">
+    <path d="M88 104 l-5 -6 M88 104 l7 -3 M96 122 l6 2 M114 128 l3 7 M110 96 l3 -7 M118 112 l6 3"/>
+  </g>
+
+  <!-- floating shards -->
+  <g fill="url(#shardGrad)" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="0.5">
+    <path d="M44 96 L52 90 L54 99 Z"/>
+    <path d="M150 100 L158 94 L160 103 L153 105 Z"/>
+    <path d="M46 138 L54 132 L56 142 Z"/>
+    <path d="M148 140 L155 136 L158 145 L150 147 Z"/>
+    <path d="M100 170 L107 166 L110 175 L102 177 Z"/>
+    <path d="M84 168 L89 165 L91 171 L85 173 Z"/>
+    <path d="M140 74 L146 70 L148 77 Z"/>
+    <path d="M62 72 L68 68 L70 75 Z"/>
+  </g>
+
+  <!-- scanner fail glyphs -->
+  <g filter="url(#blueGlow)" stroke="#0A84FF" stroke-width="1.6" stroke-linecap="round">
+    <path d="M150 158 l6 6 M156 158 l-6 6" opacity="0.9"/>
+  </g>
+  <g fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace" font-size="6" letter-spacing="1.5" opacity="0.55">
+    <text x="100" y="181" text-anchor="middle">SCAN FAILED // BREACH</text>
+  </g>
+  <g stroke="#8E8E93" stroke-width="1" opacity="0.7">
+    <line x1="70" y1="175" x2="80" y2="175"/>
+    <line x1="120" y1="175" x2="130" y2="175"/>
+  </g>
+</svg>

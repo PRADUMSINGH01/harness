@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 240" width="1100" height="240" role="img" aria-label="Lower third, stacked blocks">
+<rect id="block-name" x="0" y="10" width="740" height="120" style="fill:var(--accent,#FF5A36);transform-box:fill-box;transform-origin:left"/>
+<text id="name" x="36" y="92" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:64px;font-weight:900;fill:#fff;letter-spacing:2px">ALEX RIVERA</text>
+<rect id="block-role" x="0" y="130" width="560" height="90" style="fill:var(--surface,#111216);transform-box:fill-box;transform-origin:left"/>
+<text id="role" x="36" y="189" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:38px;font-weight:600;fill:var(--ink,#F5F3EE)">Head of Product</text>
+</svg>

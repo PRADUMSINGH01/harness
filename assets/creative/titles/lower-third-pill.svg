@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 170" width="1000" height="170" role="img" aria-label="Lower third, avatar pill">
+<defs><linearGradient id="cx-tit-lower-third-pill-av" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent,#FF5A36);stop-opacity:1"/><stop offset="1" style="stop-color:var(--accent-2,#7B61FF);stop-opacity:1"/></linearGradient></defs>
+<rect id="pill" x="5" y="5" width="990" height="160" rx="80" style="fill:var(--ui-panel,#16181D);fill-opacity:0.92;stroke:var(--ui-line,#2C2F38);stroke-width:2;transform-box:fill-box;transform-origin:left"/>
+<circle id="avatar" cx="85" cy="85" r="60" style="fill:url(#cx-tit-lower-third-pill-av)"/>
+<text id="name" x="176" y="78" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:48px;font-weight:800;fill:var(--ink,#F5F3EE)">Alex Rivera</text>
+<text id="role" x="178" y="128" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:32px;font-weight:500;fill:var(--muted,#8B8F98)">Motion designer</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 70" fill="none">
+  <defs>
+    <linearGradient id="astra-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1435"/>
+      <stop offset="100%" stop-color="#100C24"/>
+    </linearGradient>
+  </defs>
+  <rect width="260" height="70" rx="16" fill="url(#astra-grad)" stroke="rgba(139,92,246,0.4)" stroke-width="1.8"/>
+  <circle cx="36" cy="35" r="14" fill="rgba(139,92,246,0.2)"/>
+  <!-- Astra Star Glyph -->
+  <path d="M36 26 L38 33 L45 35 L38 37 L36 44 L34 37 L27 35 L34 33 Z" fill="#A78BFA"/>
+  <text x="62" y="32" font-family="'Sora', sans-serif" font-size="16" font-weight="800" fill="#FFFFFF" letter-spacing="0.04em">GPT-6 ASTRA</text>
+  <text x="62" y="52" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#A78BFA" letter-spacing="0.12em">REASONING CORE</text>
+</svg>

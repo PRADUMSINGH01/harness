@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12151c"/>
+      <stop offset="1" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#e8eaf0" stop-opacity="0.88"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A0A0A" stop-opacity="1"/>
+      <stop offset="0.75" stop-color="#0A0A0A" stop-opacity="1"/>
+      <stop offset="1" stop-color="#0A0A0A" stop-opacity="0.15"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- dark glass backdrop -->
+  <rect x="0" y="0" width="200" height="200" rx="16" fill="url(#glass)"/>
+  <rect x="0.75" y="0.75" width="198.5" height="198.5" rx="15.5" fill="none" stroke="#8E8E93" stroke-opacity="0.28" stroke-width="1.5"/>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-opacity="0.8" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M10 20 v-6 a4 4 0 0 1 4-4 h6"/>
+    <path d="M190 20 v-6 a4 4 0 0 0-4-4 h-6"/>
+    <path d="M10 180 v6 a4 4 0 0 0 4 4 h6"/>
+    <path d="M190 180 v6 a4 4 0 0 1-4 4 h-6"/>
+  </g>
+
+  <!-- paper sheet -->
+  <g filter="url(#soft)">
+    <rect x="46" y="26" width="108" height="148" rx="5" fill="url(#paper)"/>
+    <!-- subtle ruled lines -->
+    <g stroke="#8E8E93" stroke-opacity="0.22" stroke-width="0.8">
+      <path d="M54 48 h92"/><path d="M54 66 h92"/><path d="M54 84 h92"/>
+      <path d="M54 102 h92"/><path d="M54 120 h92"/><path d="M54 138 h92"/>
+    </g>
+    <!-- blue margin line -->
+    <path d="M64 32 v136" stroke="#0A84FF" stroke-opacity="0.35" stroke-width="1"/>
+  </g>
+
+  <!-- handwritten essay lines (top) -->
+  <g stroke="#0A0A0A" stroke-linecap="round" fill="none" opacity="0.9">
+    <path d="M54 44 q4 -3 7 0 q3 3 6 0 q4 -3 7 1 q3 3 7 0 q4 -3 8 1 q3 3 7 0 q4 -3 8 1 q3 3 7 0 q4 -3 8 0" stroke-width="1.6"/>
+    <path d="M54 52 q3 -3 6 0 q4 3 7 0 q3 -2 7 0 q4 2 8 -1 q4 -2 8 1 q4 2 8 -1 q4 -2 7 1 q4 2 8 0" stroke-width="1.4" opacity="0.85"/>
+    <path d="M54 60 q4 -3 7 0 q3 2 7 0 q4 -2 8 1 q3 2 7 -1 q4 -2 8 1 q4 2 7 -1 q4 -2 8 1 q3 2 6 0" stroke-width="1.6" opacity="0.9"/>
+    <path d="M54 76 q3 -2 6 0 q4 2 8 -1 q3 -2 7 1 q4 2 7 -1 q4 -2 8 1 q4 2 7 0 q4 -2 8 0" stroke-width="1.5" opacity="0.85"/>
+    <path d="M54 84 q4 -3 7 0 q3 2 6 0 q4 -2 8 1 q4 2 7 -1 q4 -2 8 1 q4 2 7 0" stroke-width="1.6" opacity="0.9"/>
+  </g>
+
+  <!-- dissolving typed sentences (middle): letters scattering -->
+  <g fill="#0A0A0A" font-family="'Courier New', monospace" font-weight="bold">
+    <text x="54" y="108" font-size="6.5" letter-spacing="1.2" opacity="0.95">ANALYSIS OF THE DATA</text>
+    <text x="54" y="118" font-size="6" letter-spacing="1" opacity="0.75" transform="rotate(-0.6 54 118)">INDICATES A STEADY RI</text>
+    <text x="54" y="127" font-size="5.5" letter-spacing="0.8" opacity="0.5" transform="rotate(-1.2 54 127)">SE IN OBSERVED PATTE</text>
+    <text x="54" y="135" font-size="5" letter-spacing="0.6" opacity="0.3" transform="rotate(-2 54 135)">RNS ACROSS ALL TRIA</text>
+  </g>
+
+  <!-- redaction bars (bottom) -->
+  <g>
+    <rect x="54" y="142" width="92" height="5.5" rx="1.5" fill="url(#fade)"/>
+    <rect x="54" y="152" width="84" height="5.5" rx="1.5" fill="url(#fade)"/>
+    <rect x="54" y="162" width="60" height="5.5" rx="1.5" fill="url(#fade)"/>
+  </g>
+  <!-- trailing particles from last bar -->
+  <g fill="#0A84FF" filter="url(#glow)">
+    <circle cx="116" cy="164.5" r="1.2" opacity="0.9"/>
+    <circle cx="120" cy="163" r="0.9" opacity="0.7"/>
+    <circle cx="123.5" cy="165" r="0.7" opacity="0.5"/>
+  </g>
+
+  <!-- page fold shadow -->
+  <path d="M46 26 l8 8 v-8 z" fill="#8E8E93" opacity="0.35"/>
+
+  <!-- micro detail: page ticks -->
+  <g stroke="#8E8E93" stroke-opacity="0.4" stroke-width="0.7">
+    <path d="M46 52 h-3"/><path d="M46 90 h-3"/><path d="M46 128 h-3"/><path d="M46 164 h-3"/>
+  </g>
+</svg>

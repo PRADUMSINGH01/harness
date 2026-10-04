@@ -1,0 +1,35 @@
+{
+  "id": "generated_airline-boarding-pass-ticket-1",
+  "name": "airline boarding pass ticket with seat 14A barcode and gate stamp",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/airline-boarding-pass-ticket-1.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M104 88 L98 84.5 L98 91.5 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "airline",
+    "boarding",
+    "pass",
+    "ticket",
+    "seat",
+    "14a",
+    "illustration",
+    "generated-svg"
+  ]
+}

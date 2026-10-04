@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0A0A"/>
+      <stop offset="1" stop-color="#101318"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.01"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M10 0H0V10" fill="none" stroke="#8E8E93" stroke-opacity="0.12" stroke-width="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="200" height="200" fill="url(#bg)"/>
+  <rect width="200" height="200" fill="url(#grid)"/>
+
+  <!-- glass card -->
+  <rect x="14" y="14" width="172" height="172" rx="10" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="0.6"/>
+  <rect x="14" y="14" width="172" height="172" rx="10" fill="none" stroke="#0A84FF" stroke-opacity="0.25" stroke-width="0.4"/>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-width="1.4" fill="none" stroke-linecap="round">
+    <path d="M20 30V20H30"/><path d="M170 20H180V30"/>
+    <path d="M180 170V180H170"/><path d="M30 180H20V170"/>
+  </g>
+
+  <!-- title block -->
+  <g font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#8E8E93">
+    <text x="26" y="30" font-size="7" letter-spacing="2" fill="#0A84FF">STRUCT-01 / BLUEPRINT</text>
+    <text x="26" y="40" font-size="5" letter-spacing="1.5">SCALE 1:100 · REV C</text>
+  </g>
+  <line x1="26" y1="45" x2="174" y2="45" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="0.5"/>
+
+  <!-- isometric frame structure -->
+  <g stroke-linecap="round" fill="none">
+    <!-- ground plan -->
+    <g stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="1">
+      <rect x="52" y="118" width="76" height="46"/>
+      <line x1="90" y1="118" x2="128" y2="100"/>
+      <line x1="128" y1="164" x2="166" y2="146"/>
+      <line x1="128" y1="100" x2="166" y2="146"/>
+      <line x1="52" y1="118" x2="90" y2="100"/>
+      <line x1="90" y1="100" x2="90" y2="118"/>
+    </g>
+    <!-- vertical columns -->
+    <g stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="1.2">
+      <line x1="52" y1="118" x2="52" y2="58"/>
+      <line x1="90" y1="118" x2="90" y2="58"/>
+      <line x1="128" y1="164" x2="128" y2="104"/>
+      <line x1="90" y1="100" x2="90" y2="40"/>
+    </g>
+    <!-- top beams -->
+    <g stroke="#0A84FF" stroke-width="1.4" filter="url(#glow)">
+      <line x1="52" y1="58" x2="90" y2="58"/>
+      <line x1="90" y1="40" x2="128" y2="104" stroke-opacity="0.9"/>
+      <line x1="52" y1="58" x2="90" y2="40"/>
+      <line x1="90" y1="58" x2="128" y2="122" stroke-opacity="0.5"/>
+    </g>
+    <!-- bracing -->
+    <g stroke="#8E8E93" stroke-width="0.7" stroke-opacity="0.8" stroke-dasharray="3 2">
+      <line x1="52" y1="58" x2="90" y2="118"/>
+      <line x1="90" y1="40" x2="128" y2="104"/>
+      <line x1="52" y1="118" x2="90" y2="58"/>
+    </g>
+    <!-- nodes -->
+    <g fill="#0A84FF">
+      <circle cx="52" cy="58" r="2.2"/><circle cx="90" cy="58" r="2.2"/>
+      <circle cx="90" cy="40" r="2.2"/><circle cx="128" cy="104" r="2.2"/>
+    </g>
+  </g>
+
+  <!-- dimension line -->
+  <g stroke="#8E8E93" stroke-width="0.6">
+    <line x1="52" y1="172" x2="128" y2="172"/>
+    <line x1="52" y1="169" x2="52" y2="175"/>
+    <line x1="128" y1="169" x2="128" y2="175"/>
+    <line x1="90" y1="34" x2="110" y2="34"/>
+  </g>
+  <g font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#8E8E93" font-size="5">
+    <text x="82" y="180">7600</text>
+    <text x="112" y="32">H=4200</text>
+  </g>
+
+  <!-- crosshair marker -->
+  <g stroke="#0A84FF" stroke-width="0.7" stroke-opacity="0.8">
+    <line x1="154" y1="56" x2="166" y2="56"/><line x1="160" y1="50" x2="160" y2="62"/>
+    <circle cx="160" cy="56" r="4" fill="none"/>
+  </g>
+
+  <!-- legend ticks -->
+  <g stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="0.6">
+    <line x1="26" y1="52" x2="34" y2="52"/><line x1="26" y1="56" x2="30" y2="56"/><line x1="26" y1="60" x2="32" y2="60"/>
+  </g>
+</svg>

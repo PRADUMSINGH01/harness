@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="42%" r="70%">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.10"/>
+      <stop offset="55%" stop-color="#0A0A0A" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <radialGradient id="moteBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#7FB8FF"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="moteWhite" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="moteGray" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E5E5EA"/>
+      <stop offset="100%" stop-color="#8E8E93" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.015"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.04"/>
+    </linearGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="blurBig" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="0.9"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="200" height="200" rx="16" fill="#0A0A0A"/>
+  <rect x="0" y="0" width="200" height="200" rx="16" fill="url(#bgGlow)"/>
+
+  <!-- glass panels -->
+  <g opacity="0.9">
+    <rect x="26" y="30" width="148" height="140" rx="12" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="0.8"/>
+    <rect x="26" y="30" width="148" height="140" rx="12" fill="none" stroke="#0A84FF" stroke-opacity="0.15" stroke-width="0.6" transform="translate(0.8,0.8)"/>
+    <!-- corner brackets -->
+    <g stroke="#0A84FF" stroke-opacity="0.55" stroke-width="1" fill="none" stroke-linecap="round">
+      <path d="M30 38 v-4 a4 4 0 0 1 4 -4 h4"/>
+      <path d="M170 38 v-4 a-4 -4 0 0 0 -4 -4 h-4" transform="translate(0,0)"/>
+      <path d="M30 162 v4 a4 4 0 0 0 4 4 h4"/>
+      <path d="M170 162 v4 a4 4 0 0 1 -4 4 h-4"/>
+    </g>
+    <!-- crosshair accents -->
+    <g stroke="#8E8E93" stroke-opacity="0.35" stroke-width="0.7">
+      <path d="M40 52 h8 M44 48 v8"/>
+      <path d="M158 148 h8 M162 144 v8"/>
+    </g>
+    <!-- coordinate ticks -->
+    <g stroke="#8E8E93" stroke-opacity="0.25" stroke-width="0.6">
+      <path d="M40 174 v3 M70 174 v3 M100 174 v3 M130 174 v3 M160 174 v3"/>
+      <path d="M22 50 h3 M22 80 h3 M22 110 h3 M22 140 h3"/>
+    </g>
+  </g>
+
+  <!-- trailing motion streaks -->
+  <g stroke-linecap="round" filter="url(#softGlow)">
+    <line x1="128" y1="58" x2="120" y2="52" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="0.8"/>
+    <line x1="70" y1="120" x2="76" y2="126" stroke="#0A84FF" stroke-opacity="0.4" stroke-width="0.8"/>
+    <line x1="150" y1="110" x2="144" y2="104" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="0.7"/>
+  </g>
+
+  <!-- large luminous motes -->
+  <g filter="url(#softGlow)">
+    <circle cx="128" cy="58" r="3.2" fill="url(#moteBlue)"/>
+    <circle cx="70" cy="120" r="2.8" fill="url(#moteBlue)"/>
+    <circle cx="150" cy="110" r="2.4" fill="url(#moteWhite)"/>
+    <circle cx="52" cy="66" r="2.2" fill="url(#moteWhite)"/>
+    <circle cx="104" cy="146" r="2.6" fill="url(#moteBlue)"/>
+  </g>
+
+  <!-- mid motes -->
+  <g filter="url(#blurBig)">
+    <circle cx="88" cy="84" r="1.6" fill="url(#moteWhite)"/>
+    <circle cx="142" cy="78" r="1.4" fill="url(#moteGray)"/>
+    <circle cx="62" cy="98" r="1.3" fill="url(#moteGray)"/>
+    <circle cx="118" cy="126" r="1.5" fill="url(#moteWhite)"/>
+    <circle cx="42" cy="132" r="1.3" fill="url(#moteBlue)"/>
+    <circle cx="160" cy="52" r="1.4" fill="url(#moteWhite)"/>
+    <circle cx="100" cy="46" r="1.2" fill="url(#moteGray)"/>
+  </g>
+
+  <!-- fine dust specks -->
+  <g fill="#FFFFFF">
+    <circle cx="58" cy="150" r="0.7" opacity="0.7"/>
+    <circle cx="132" cy="92" r="0.6" opacity="0.55"/>
+    <circle cx="76" cy="56" r="0.6" opacity="0.6"/>
+    <circle cx="94" cy="112" r="0.5" opacity="0.5"/>
+    <circle cx="112" cy="68" r="0.7" opacity="0.65"/>
+    <circle cx="150" cy="138" r="0.6" opacity="0.5"/>
+    <circle cx="46" cy="90" r="0.5" opacity="0.45"/>
+    <circle cx="166" cy="126" r="0.6" opacity="0.55"/>
+    <circle cx="84" cy="140" r="0.6" opacity="0.6"/>
+    <circle cx="120" cy="40" r="0.5" opacity="0.5"/>
+    <circle cx="70" cy="72" r="0.5" opacity="0.45"/>
+    <circle cx="140" cy="156" r="0.6" opacity="0.5"/>
+  </g>
+  <g fill="#0A84FF">
+    <circle cx="156" cy="90" r="0.7" opacity="0.7"/>
+    <circle cx="52" cy="112" r="0.6" opacity="0.6"/>
+    <circle cx="106" cy="94" r="0.6" opacity="0.65"/>
+    <circle cx="90" cy="128" r="0.6" opacity="0.55"/>
+    <circle cx="134" cy="140" r="0.5" opacity="0.5"/>
+  </g>
+</svg>

@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Isometric cube">
+<path id="top" d="M256 70 L436 160 L256 250 L76 160Z" style="fill:var(--cube-top,#FFB199)"/><path id="left" d="M76 160 L256 250 L256 450 L76 360Z" style="fill:var(--accent,#FF5A36)"/><path id="right" d="M436 160 L256 250 L256 450 L436 360Z" style="fill:var(--cube-shade,#B8341A)"/>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="deep" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#12121A"/>
+      <stop offset="55%" stop-color="#0A0A0A"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <radialGradient id="nebula" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.16"/>
+      <stop offset="60%" stop-color="#0A84FF" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nebula2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8E8E93" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#8E8E93" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="blurBig" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="0.7"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="200" height="200" fill="url(#deep)"/>
+  <ellipse cx="130" cy="70" rx="70" ry="55" fill="url(#nebula)"/>
+  <ellipse cx="55" cy="150" rx="55" ry="45" fill="url(#nebula2)"/>
+
+  <!-- large blurred foreground bokeh motes -->
+  <g opacity="0.20" filter="url(#blurBig)">
+    <circle cx="42" cy="58" r="3.2" fill="#FFFFFF"/>
+    <circle cx="150" cy="118" r="2.6" fill="#0A84FF"/>
+    <circle cx="96" cy="168" r="2.2" fill="#FFFFFF"/>
+    <circle cx="178" cy="40" r="1.8" fill="#8E8E93"/>
+  </g>
+
+  <!-- mid dust field -->
+  <g filter="url(#softGlow)">
+    <circle cx="70" cy="90" r="1.1" fill="#FFFFFF" opacity="0.85"/>
+    <circle cx="118" cy="42" r="0.9" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="160" cy="86" r="1.2" fill="#0A84FF" opacity="0.8"/>
+    <circle cx="34" cy="130" r="0.8" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="88" cy="124" r="1.0" fill="#0A84FF" opacity="0.65"/>
+    <circle cx="140" cy="152" r="0.9" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="184" cy="140" r="0.8" fill="#8E8E93" opacity="0.6"/>
+    <circle cx="22" cy="34" r="0.9" fill="#FFFFFF" opacity="0.55"/>
+  </g>
+
+  <!-- fine far dust -->
+  <g fill="#FFFFFF">
+    <circle cx="56" cy="20" r="0.5" opacity="0.45"/>
+    <circle cx="104" cy="78" r="0.5" opacity="0.4"/>
+    <circle cx="12" cy="92" r="0.45" opacity="0.35"/>
+    <circle cx="128" cy="104" r="0.5" opacity="0.4"/>
+    <circle cx="74" cy="150" r="0.45" opacity="0.35"/>
+    <circle cx="166" cy="172" r="0.5" opacity="0.4"/>
+    <circle cx="46" cy="178" r="0.45" opacity="0.3"/>
+    <circle cx="192" cy="98" r="0.45" opacity="0.35"/>
+    <circle cx="150" cy="26" r="0.5" opacity="0.4"/>
+    <circle cx="90" cy="196" r="0.45" opacity="0.3"/>
+  </g>
+
+  <!-- technical accents -->
+  <g stroke="#8E8E93" stroke-width="0.4" fill="none" opacity="0.35">
+    <path d="M8 8 h6 M8 8 v6"/>
+    <path d="M192 192 h-6 M192 192 v-6"/>
+    <circle cx="118" cy="42" r="4.5" opacity="0.6"/>
+    <line x1="126" y1="42" x2="134" y2="42"/>
+    <line x1="160" y1="86" x2="160" y2="80" opacity="0.8"/>
+  </g>
+  <text x="138" y="44.5" font-family="monospace" font-size="3.4" fill="#8E8E93" opacity="0.5" letter-spacing="0.6">M-0427</text>
+</svg>

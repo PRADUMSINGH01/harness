@@ -1,0 +1,35 @@
+{
+  "id": "generated_half-eaten-salami-sandwich-4",
+  "name": "half-eaten salami sandwich on forensic tray",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/half-eaten-salami-sandwich-4.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M46 128 Q44 120 54 119 L128 117 Q140 117 141 126 L142 134 Q142 139 133 139 L52 141 Q45 141 46 128 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "half",
+    "eaten",
+    "salami",
+    "sandwich",
+    "forensic",
+    "tray",
+    "illustration",
+    "generated-svg"
+  ]
+}

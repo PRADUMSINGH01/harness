@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Anamorphic lens flare">
+<defs><filter id="cx-ove-lens-flare-b" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter><filter id="cx-ove-lens-flare-b2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="30"/></filter><linearGradient id="cx-ove-lens-flare-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" style="stop-color:#4FB3FF;stop-opacity:0"/><stop offset="0.5" style="stop-color:#CFF0FF;stop-opacity:1"/><stop offset="1" style="stop-color:#4FB3FF;stop-opacity:0"/></linearGradient><radialGradient id="cx-ove-lens-flare-core" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:#FFFFFF;stop-opacity:1"/><stop offset="0.3" style="stop-color:#BDE7FF;stop-opacity:0.7"/><stop offset="1" style="stop-color:#4FB3FF;stop-opacity:0"/></radialGradient></defs>
+<g id="streak">
+  <rect x="0" y="532" width="1920" height="16" style="fill:url(#cx-ove-lens-flare-s);filter:url(#cx-ove-lens-flare-b)"/>
+  <ellipse cx="960" cy="540" rx="260" ry="160" style="fill:url(#cx-ove-lens-flare-core);filter:url(#cx-ove-lens-flare-b2)"/>
+</g>
+<g style="fill:#8FD3FF;filter:url(#cx-ove-lens-flare-b)">
+  <circle cx="1240" cy="600" r="46" style="opacity:0.18"/>
+  <circle cx="1420" cy="640" r="22" style="opacity:0.25"/>
+  <circle cx="1640" cy="690" r="80" style="opacity:0.1"/>
+  <circle cx="700" cy="480" r="30" style="opacity:0.16"/>
+</g>
+</svg>

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="curveStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.35"/>
+      <stop offset="0.55" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="fillUnder" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- dark glass card -->
+  <rect x="4" y="4" width="192" height="192" rx="18" fill="#0A0A0A"/>
+  <rect x="4" y="4" width="192" height="192" rx="18" fill="#FFFFFF" fill-opacity="0.03"/>
+  <rect x="4.5" y="4.5" width="191" height="191" rx="17.5" fill="none" stroke="#8E8E93" stroke-opacity="0.25"/>
+
+  <!-- grid -->
+  <g stroke="#8E8E93" stroke-opacity="0.14" stroke-width="0.6">
+    <line x1="24" y1="30" x2="24" y2="164"/>
+    <line x1="60" y1="30" x2="60" y2="164"/>
+    <line x1="96" y1="30" x2="96" y2="164"/>
+    <line x1="132" y1="30" x2="132" y2="164"/>
+    <line x1="168" y1="30" x2="168" y2="164"/>
+    <line x1="24" y1="40" x2="176" y2="40"/>
+    <line x1="24" y1="71" x2="176" y2="71"/>
+    <line x1="24" y1="102" x2="176" y2="102"/>
+    <line x1="24" y1="133" x2="176" y2="133"/>
+    <line x1="24" y1="164" x2="176" y2="164"/>
+  </g>
+
+  <!-- axes -->
+  <g stroke="#8E8E93" stroke-width="1.2" stroke-opacity="0.6">
+    <line x1="24" y1="24" x2="24" y2="164"/>
+    <line x1="24" y1="164" x2="176" y2="164"/>
+  </g>
+  <!-- tick marks -->
+  <g stroke="#8E8E93" stroke-width="1">
+    <line x1="21" y1="40" x2="27" y2="40"/>
+    <line x1="21" y1="71" x2="27" y2="71"/>
+    <line x1="21" y1="102" x2="27" y2="102"/>
+    <line x1="21" y1="133" x2="27" y2="133"/>
+    <line x1="60" y1="161" x2="60" y2="167"/>
+    <line x1="96" y1="161" x2="96" y2="167"/>
+    <line x1="132" y1="161" x2="132" y2="167"/>
+    <line x1="168" y1="161" x2="168" y2="167"/>
+  </g>
+
+  <!-- fill under exponential curve -->
+  <path d="M24,158 C70,156 100,150 118,128 C134,108 150,72 168,36 L168,164 L24,164 Z" fill="url(#fillUnder)"/>
+
+  <!-- exponential growth curve -->
+  <path d="M24,158 C70,156 100,150 118,128 C134,108 150,72 168,36" fill="none" stroke="url(#curveStroke)" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)"/>
+
+  <!-- glow echo -->
+  <path d="M24,158 C70,156 100,150 118,128 C134,108 150,72 168,36" fill="none" stroke="#0A84FF" stroke-width="8" stroke-opacity="0.25" stroke-linecap="round" filter="url(#softGlow)"/>
+
+  <!-- data nodes -->
+  <g fill="#0A0A0A" stroke="#0A84FF" stroke-width="1.5">
+    <circle cx="60" cy="156" r="3"/>
+    <circle cx="96" cy="148" r="3"/>
+    <circle cx="132" cy="101" r="3"/>
+  </g>
+  <!-- apex marker -->
+  <circle cx="168" cy="36" r="8" fill="none" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="1"/>
+  <circle cx="168" cy="36" r="4" fill="#FFFFFF" filter="url(#glow)"/>
+
+  <!-- mini sparkline accent -->
+  <polyline points="140,182 148,178 156,180 164,172 172,174 180,166" fill="none" stroke="#0A84FF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+  <circle cx="180" cy="166" r="1.8" fill="#0A84FF"/>
+
+  <!-- corner brackets -->
+  <g stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <path d="M12,22 L12,12 L22,12"/>
+    <path d="M188,22 L188,12 L178,12"/>
+    <path d="M12,178 L12,188 L22,188"/>
+    <path d="M188,178 L188,188 L178,188"/>
+  </g>
+
+  <!-- crosshair detail -->
+  <g stroke="#8E8E93" stroke-width="0.8" stroke-opacity="0.7">
+    <line x1="132" y1="94" x2="132" y2="108"/>
+    <line x1="125" y1="101" x2="139" y2="101"/>
+  </g>
+
+  <!-- geometric accents -->
+  <g fill="#0A84FF">
+    <circle cx="40" cy="40" r="1.4" fill-opacity="0.6"/>
+    <circle cx="160" cy="152" r="1.4" fill-opacity="0.6"/>
+  </g>
+</svg>

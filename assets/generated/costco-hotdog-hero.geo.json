@@ -1,0 +1,35 @@
+{
+  "id": "generated_costco-hotdog-hero",
+  "name": "Costco $1.50 Hot Dog Combo — Hero Illustration",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/costco-hotdog-hero.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M-48 0 Q-42 -8 -36 0 Q-30 8 -24 0 Q-18 -8 -12 0 Q-6 8 0 0 Q6 -8 12 0 Q18 8 24 0 Q30 -8 36 0 Q42 8 48 -1"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "create",
+    "business",
+    "economics",
+    "short",
+    "why",
+    "costco",
+    "illustration",
+    "generated-svg"
+  ]
+}

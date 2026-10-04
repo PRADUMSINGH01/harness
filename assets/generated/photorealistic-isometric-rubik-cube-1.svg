@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="blueSticker" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4DA6FF"/>
+      <stop offset="1" stop-color="#0A84FF"/>
+    </linearGradient>
+    <linearGradient id="blueStickerDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2B8FE8"/>
+      <stop offset="1" stop-color="#0866C6"/>
+    </linearGradient>
+    <linearGradient id="whiteSticker" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D9DDE3"/>
+    </linearGradient>
+    <linearGradient id="graySticker" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B9BDC4"/>
+      <stop offset="1" stop-color="#8E8E93"/>
+    </linearGradient>
+    <linearGradient id="darkGlass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1B1F27"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="faceShadeL" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.30"/>
+    </linearGradient>
+    <linearGradient id="faceShadeR" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.45"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+    <filter id="cubeShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#0A84FF" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#cubeShadow)">
+    <!-- ================= TOP FACE (blue) ================= -->
+    <g transform="matrix(20,10,-20,10,100,50)">
+      <rect x="0" y="0" width="60" height="60" fill="#053B78"/>
+      <rect x="1.5" y="1.5" width="17" height="17" rx="2.5" fill="url(#blueSticker)"/>
+      <rect x="21.5" y="1.5" width="17" height="17" rx="2.5" fill="url(#blueStickerDark)"/>
+      <rect x="41.5" y="1.5" width="17" height="17" rx="2.5" fill="url(#blueSticker)"/>
+      <rect x="1.5" y="21.5" width="17" height="17" rx="2.5" fill="url(#blueStickerDark)"/>
+      <rect x="21.5" y="21.5" width="17" height="17" rx="2.5" fill="url(#darkGlass)"/>
+      <rect x="41.5" y="21.5" width="17" height="17" rx="2.5" fill="url(#blueSticker)"/>
+      <rect x="1.5" y="41.5" width="17" height="17" rx="2.5" fill="url(#blueSticker)"/>
+      <rect x="21.5" y="41.5" width="17" height="17" rx="2.5" fill="url(#blueStickerDark)"/>
+      <rect x="41.5" y="41.5" width="17" height="17" rx="2.5" fill="url(#blueSticker)"/>
+      <rect x="0" y="0" width="60" height="60" fill="url(#faceShadeL)" opacity="0.35" style="mix-blend-mode:screen"/>
+    </g>
+
+    <!-- ================= LEFT FACE (white) ================= -->
+    <g transform="matrix(20,10,0,20,40,80)">
+      <rect x="0" y="0" width="60" height="60" fill="#8E8E93"/>
+      <rect x="1.5" y="1.5" width="17" height="17" rx="2.5" fill="url(#whiteSticker)"/>
+      <rect x="21.5" y="1.5" width="17" height="17" rx="2.5" fill="url(#graySticker)"/>
+      <rect x="41.5" y="1.5" width="17" height="17" rx="2.5" fill="url(#darkGlass)"/>
+      <rect x="1.5" y="21.5" width="17" height="17" rx="2.5" fill="url(#graySticker)"/>
+      <rect x="21.5" y="21.5" width="17" height="17" rx="2.5" fill="url(#whiteSticker)"/>
+      <rect x="41.5" y="21.5" width="17" height="17" rx="2.5" fill="url(#graySticker)"/>
+      <rect x="1.5" y="41.5" width="17" height="17" rx="2.5" fill="url(#whiteSticker)"/>
+      <rect x="21.5" y="41.5" width="17" height="17" rx="2.5" fill="url(#graySticker)"/>
+      <rect x="41.5" y="41.5" width="17" height="17" rx="2.5" fill="url(#whiteSticker)"/>
+      <rect x="0" y="0" width="60" height="60" fill="url(#faceShadeL)" opacity="0.5"/>
+    </g>
+
+    <!-- ================= RIGHT FACE (dark glass + accents) ================= -->
+    <g transform="matrix(20,-10,0,20,100,110)">
+      <rect x="0" y="0" width="60" height="60" fill="#14161C"/>
+      <rect x="1.5" y="1.5" width="17" height="17" rx="2.5" fill="url(#blueStickerDark)"/>
+      <rect x="21.5" y="1.5" width="17" height="17" rx="2.5" fill="url(#darkGlass)"/>
+      <rect x="41.5" y="1.5" width="17" height="17" rx="2.5" fill="url(#graySticker)"/>
+      <rect x="1.5" y="21.5" width="17" height="17" rx="2.5" fill="url(#darkGlass)"/>
+      <rect x="21.5" y="21.5" width="17" height="17" rx="2.5" fill="url(#blueStickerDark)"/>
+      <rect x="41.5" y="21.5" width="17" height="17" rx="2.5" fill="url(#darkGlass)"/>
+      <rect x="1.5" y="41.5" width="17" height="17" rx="2.5" fill="url(#graySticker)"/>
+      <rect x="21.5" y="41.5" width="17" height="17" rx="2.5" fill="url(#darkGlass)"/>
+      <rect x="41.5" y="41.5" width="17" height="17" rx="2.5" fill="url(#blueStickerDark)"/>
+      <rect x="0" y="0" width="60" height="60" fill="url(#faceShadeR)" opacity="0.55"/>
+    </g>
+
+    <!-- Edge highlights -->
+    <g fill="none" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="0.8" stroke-linejoin="round">
+      <path d="M100 50 L160 80 L160 140 L100 170 L40 140 L40 80 Z"/>
+      <path d="M40 80 L100 50 L160 80 L100 110 Z" stroke-opacity="0.8"/>
+      <path d="M100 110 L160 80 M100 110 L40 80 M100 110 L100 170" stroke-opacity="0.35"/>
+    </g>
+    <!-- Specular top bevel -->
+    <path d="M100 51.5 L156 79.5 L100 107.5 L44 79.5 Z" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1"/>
+  </g>
+
+  <!-- Glow accent on front edge -->
+  <path d="M100 110 L160 80" stroke="#0A84FF" stroke-width="1.4" stroke-opacity="0.8" fill="none" filter="url(#glow)" stroke-linecap="round"/>
+
+  <!-- Technical corner brackets -->
+  <g stroke="#8E8E93" stroke-width="1" fill="none" opacity="0.6">
+    <path d="M12 24 L12 12 L24 12"/>
+    <path d="M188 176 L188 188 L176 188"/>
+  </g>
+</svg>

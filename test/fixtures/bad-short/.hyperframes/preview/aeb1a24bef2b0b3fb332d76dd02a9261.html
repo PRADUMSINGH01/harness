@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script data-hf-gsap-fallback>
+(function(){
+  var cdnBase="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/";
+  var loaded={};
+  function loadFallback(file){
+    if(loaded[file])return loaded[file];
+    return loaded[file]=new Promise(function(ok,fail){
+      var s=document.createElement("script");
+      s.src=cdnBase+file;s.onload=ok;s.onerror=fail;
+      document.head.appendChild(s);
+    });
+  }
+  document.addEventListener("error",function(e){
+    var t=e.target;
+    if(!t||t.tagName!=="SCRIPT"||!t.src)return;
+    var m=t.src.match(/gsap[^/]*\/dist\/(.+\.js)/);
+    if(m)loadFallback(m[1]);
+  },true);
+})();
+</script>
+<meta name="hyperframes-studio-preview">
+<base href="/api/projects/harness/preview/"><style data-hyperframes-text-rendering="true">html,body,*{text-rendering:geometricPrecision}</style>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      html, body { width: 1920px; height: 1080px; background: #000; }
+      .tiny { font-size: 14px; }
+      .glow { animation: glow-pulse 2s ease-in-out infinite; }
+    </style>
+  <script data-hyperframes-preview-runtime="1" src="/api/runtime.js"></script>
+<meta name="hyperframes-project-signature" content="58680d9fba9fa3236c14a73e">
+</head>
+  <body>
+    <div data-hf-id="hf-at0g" id="root" data-composition-id="main" data-start="0" data-duration="20" data-width="1920" data-height="1080">
+      <h1 data-hf-id="hf-453v" id="title" class="clip glow" data-start="0" data-duration="20" data-track-index="0">Welcome</h1>
+      <p data-hf-id="hf-zg7q" class="clip tiny" data-start="0" data-duration="20" data-track-index="1">This paragraph has far too many words on screen at once for anyone to read while the video keeps moving along quickly</p>
+    </div>
+    
+  <script>const tl = gsap.timeline({ paused: true });
+tl.to("#title", { scale: 1.05, duration: 1.2, yoyo: true, repeat: -1, ease: "sine.inOut" }, 0).from("#title", { opacity: 0, y: 40, duration: 1.8, ease: "bounce.out" }, 0);
+const jitter = Math.random() * 10;
+const started = Date.now();
+window.__timelines["main"] = tl;</script></body>
+</html>

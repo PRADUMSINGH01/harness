@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500" role="img" aria-label="Modal dialog">
+<defs><filter id="cx-moc-modal-sh" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="24"/></filter></defs>
+<rect x="30" y="40" width="760" height="440" rx="32" style="fill:#000;opacity:0.45;filter:url(#cx-moc-modal-sh)"/>
+<rect x="10" y="10" width="800" height="460" rx="32" style="fill:var(--ui-panel,#1C1E25);stroke:var(--ui-line,#2C2F38);stroke-width:2"/>
+<text id="title" x="60" y="100" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:42px;font-weight:700;fill:var(--ink,#F5F3EE)">Publish this video?</text>
+<text id="body" x="60" y="160" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:28px;font-weight:400;fill:var(--muted,#8B8F98)">It will be visible to everyone with the link.</text>
+<rect id="btn-secondary" x="330" y="350" width="200" height="76" rx="38" style="fill:none;stroke:var(--ui-line,#2C2F38);stroke-width:3"/><text x="430" y="399" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:28px;font-weight:600;fill:var(--ink,#F5F3EE)">Cancel</text>
+<rect id="btn-primary" x="550" y="350" width="210" height="76" rx="38" style="fill:var(--accent,#FF5A36)"/><text id="primary-label" x="655" y="399" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:28px;font-weight:700;fill:#fff">Publish</text>
+</svg>

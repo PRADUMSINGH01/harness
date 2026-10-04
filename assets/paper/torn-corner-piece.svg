@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360">
+  <defs>
+    <filter id="corner-shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.26" />
+    </filter>
+    <filter id="corner-grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06 0.06" numOctaves="3" result="noise" seed="66" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.94  0 0 0 0 0.92  0 0 0 0 0.88  0 0 0 0.25 0" in="noise" result="grain" />
+      <feBlend mode="multiply" in="SourceGraphic" in2="grain" />
+    </filter>
+
+    <path id="corner-path" d="M 30,30
+      L 330,30
+      L 330,85 305,95 320,118 290,135 305,160 275,178 290,205 260,225 275,250 240,270 252,295 215,312 180,318 145,305 110,325 80,308 55,320 30,295 Z" />
+  </defs>
+
+  <g filter="url(#corner-shadow)">
+    <!-- Main scrap fill -->
+    <use href="#corner-path" fill="#F4EFE6" />
+    <!-- White torn paper core edge -->
+    <path d="M 330,83 L 305,93 320,116 290,133 305,158 275,176 290,203 260,223 275,248 240,268 252,293 215,310 180,316 145,303 110,323 80,306 55,318 30,293 L 45,280 L 175,295 L 295,190 Z" fill="#FFFFFF" opacity="0.8" />
+    <use href="#corner-path" fill="#EAE4D6" filter="url(#corner-grain)" opacity="0.6" />
+  </g>
+</svg>

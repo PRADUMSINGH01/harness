@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Soft 3D orb">
+<defs><radialGradient id="cx-sha-orb-3d-body" cx="38%" cy="32%" r="75%"><stop offset="0" style="stop-color:var(--orb-light,#B9A8FF);stop-opacity:1"/><stop offset="0.55" style="stop-color:var(--accent-2,#7B61FF);stop-opacity:1"/><stop offset="1" style="stop-color:var(--orb-dark,#1E1550);stop-opacity:1"/></radialGradient><radialGradient id="cx-sha-orb-3d-rim" cx="62%" cy="70%" r="60%"><stop offset="0.7" style="stop-color:var(--accent,#FF5A36);stop-opacity:0"/><stop offset="1" style="stop-color:var(--accent,#FF5A36);stop-opacity:0.85"/></radialGradient><radialGradient id="cx-sha-orb-3d-gloss" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:#fff;stop-opacity:0.9"/><stop offset="1" style="stop-color:#fff;stop-opacity:0"/></radialGradient><filter id="cx-sha-orb-3d-sh" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter></defs>
+<ellipse cx="256" cy="478" rx="150" ry="18" style="fill:#000;opacity:0.35;filter:url(#cx-sha-orb-3d-sh)"/>
+<circle id="body" cx="256" cy="246" r="200" style="fill:url(#cx-sha-orb-3d-body)"/>
+<circle id="rim" cx="256" cy="246" r="200" style="fill:url(#cx-sha-orb-3d-rim)"/>
+<ellipse id="gloss" cx="196" cy="160" rx="78" ry="48" transform="rotate(-30 196 160)" style="fill:url(#cx-sha-orb-3d-gloss)"/>
+</svg>

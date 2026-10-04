@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300" role="img" aria-label="Emphasis pop lines">
+<path class="draw" pathLength="1" d="M151.7 118.8 C146.1 105.9 123.7 54.4 118.1 41.5" style="fill:none;stroke:var(--accent,#FF5A36);stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 1.05;stroke-dashoffset:0"/>
+<path class="draw" pathLength="1" d="M181.3 160.1 C194.5 151.9 247.4 119.2 260.6 111" style="fill:none;stroke:var(--accent,#FF5A36);stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 1.05;stroke-dashoffset:0"/>
+<path class="draw" pathLength="1" d="M119.3 168.4 C105.9 163.3 52.3 143.2 38.8 138.1" style="fill:none;stroke:var(--accent,#FF5A36);stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 1.05;stroke-dashoffset:0"/>
+</svg>

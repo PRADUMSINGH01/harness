@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5AB0FF"/>
+      <stop offset="1" stop-color="#0A84FF"/>
+    </linearGradient>
+    <linearGradient id="barGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9E9EA6"/>
+      <stop offset="1" stop-color="#8E8E93" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- dark glass background -->
+  <rect x="4" y="4" width="192" height="192" rx="16" fill="#0A0A0A" stroke="#FFFFFF" stroke-opacity="0.1"/>
+  <rect x="4" y="4" width="192" height="192" rx="16" fill="url(#glass)"/>
+  <rect x="7.5" y="7.5" width="185" height="185" rx="13" fill="none" stroke="#FFFFFF" stroke-opacity="0.06"/>
+
+  <!-- title -->
+  <text x="16" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#FFFFFF" fill-opacity="0.9" letter-spacing="1.5">EMPTY SEATS / FLIGHT</text>
+
+  <!-- gridlines -->
+  <g stroke="#FFFFFF" stroke-opacity="0.08">
+    <line x1="24" y1="168" x2="188" y2="168"/>
+    <line x1="24" y1="132" x2="188" y2="132"/>
+    <line x1="24" y1="96" x2="188" y2="96"/>
+    <line x1="24" y1="60" x2="188" y2="60"/>
+  </g>
+  <g font-family="'SF Mono', Menlo, monospace" font-size="6" fill="#8E8E93">
+    <text x="18" y="170" text-anchor="end">0</text>
+    <text x="18" y="134" text-anchor="end">40</text>
+    <text x="18" y="98" text-anchor="end">80</text>
+    <text x="18" y="62" text-anchor="end">120</text>
+  </g>
+
+  <!-- bars: filled seats (grey) + empty seats (blue, growing) -->
+  <g filter="url(#softShadow)">
+    <!-- flight 1 -->
+    <rect x="30" y="76" width="22" height="92" fill="url(#barGrad2)" rx="3"/>
+    <rect x="30" y="146" width="22" height="22" fill="url(#barGrad)" rx="3" filter="url(#glow)"/>
+    <!-- flight 2 -->
+    <rect x="60" y="70" width="22" height="98" fill="url(#barGrad2)" rx="3"/>
+    <rect x="60" y="136" width="22" height="32" fill="url(#barGrad)" rx="3" filter="url(#glow)"/>
+    <!-- flight 3 -->
+    <rect x="90" y="66" width="22" height="102" fill="url(#barGrad2)" rx="3"/>
+    <rect x="90" y="124" width="22" height="44" fill="url(#barGrad)" rx="3" filter="url(#glow)"/>
+    <!-- flight 4 -->
+    <rect x="120" y="62" width="22" height="106" fill="url(#barGrad2)" rx="3"/>
+    <rect x="120" y="110" width="22" height="58" fill="url(#barGrad)" rx="3" filter="url(#glow)"/>
+    <!-- flight 5 -->
+    <rect x="150" y="58" width="22" height="110" fill="url(#barGrad2)" rx="3"/>
+    <rect x="150" y="94" width="22" height="74" fill="url(#barGrad)" rx="3" filter="url(#glow)"/>
+  </g>
+
+  <!-- glossy top highlights on blue segments -->
+  <g fill="#FFFFFF" fill-opacity="0.25">
+    <rect x="32.5" y="148" width="17" height="2.5" rx="1.2"/>
+    <rect x="62.5" y="138" width="17" height="2.5" rx="1.2"/>
+    <rect x="92.5" y="126" width="17" height="2.5" rx="1.2"/>
+    <rect x="122.5" y="112" width="17" height="2.5" rx="1.2"/>
+    <rect x="152.5" y="96" width="17" height="2.5" rx="1.2"/>
+  </g>
+
+  <!-- growth trend line over blue tops -->
+  <polyline points="41,146 71,136 101,124 131,110 161,94" fill="none" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="1" stroke-dasharray="3 2.5"/>
+  <g fill="#FFFFFF">
+    <circle cx="41" cy="146" r="1.6"/>
+    <circle cx="71" cy="136" r="1.6"/>
+    <circle cx="101" cy="124" r="1.6"/>
+    <circle cx="131" cy="110" r="1.6"/>
+    <circle cx="161" cy="94" r="1.6"/>
+  </g>
+
+  <!-- x labels -->
+  <g font-family="'SF Mono', Menlo, monospace" font-size="7" fill="#8E8E93" text-anchor="middle">
+    <text x="41" y="180">F1</text>
+    <text x="71" y="180">F2</text>
+    <text x="101" y="180">F3</text>
+    <text x="131" y="180">F4</text>
+    <text x="161" y="180">F5</text>
+  </g>
+
+  <!-- legend -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="6.5" fill="#8E8E93">
+    <rect x="16" y="40" width="6" height="6" rx="1.5" fill="url(#barGrad)"/>
+    <text x="25" y="45.5" fill="#FFFFFF" fill-opacity="0.8">EMPTY</text>
+    <rect x="55" y="40" width="6" height="6" rx="1.5" fill="url(#barGrad2)"/>
+    <text x="64" y="45.5" fill="#FFFFFF" fill-opacity="0.8">OCCUPIED</text>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-opacity="0.6" stroke-width="1.2" fill="none">
+    <path d="M12 18 v-6 a4 4 0 0 1 4 -4 h6"/>
+    <path d="M188 182 v6 a4 4 0 0 1 -4 4 h-6"/>
+  </g>
+</svg>

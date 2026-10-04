@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1A1C22" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#0A0A0A" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="blueBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4DA3FF"/>
+      <stop offset="1" stop-color="#0A84FF"/>
+    </linearGradient>
+    <linearGradient id="redBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF6B6B"/>
+      <stop offset="1" stop-color="#E5484D"/>
+    </linearGradient>
+    <linearGradient id="redFlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF6B6B" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#E5484D" stop-opacity="0.15"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- dark glass container -->
+  <rect x="4" y="4" width="192" height="192" rx="18" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <rect x="4" y="4" width="192" height="192" rx="18" fill="none" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="3"/>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-width="1.5" opacity="0.8" fill="none">
+    <path d="M12 22 V12 H22"/>
+    <path d="M178 12 H188 V22"/>
+    <path d="M12 178 V188 H22"/>
+    <path d="M188 178 V188 H178"/>
+  </g>
+
+  <!-- title -->
+  <text x="22" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#FFFFFF" opacity="0.9" letter-spacing="1">SEAT REVENUE</text>
+  <circle cx="176" cy="26" r="3" fill="#0A84FF" filter="url(#glow)"/>
+
+  <!-- gridlines -->
+  <g stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1">
+    <line x1="26" y1="60" x2="174" y2="60"/>
+    <line x1="26" y1="90" x2="174" y2="90"/>
+    <line x1="26" y1="120" x2="174" y2="120"/>
+  </g>
+  <!-- baseline -->
+  <line x1="22" y1="150" x2="178" y2="150" stroke="#8E8E93" stroke-opacity="0.5" stroke-width="1.5"/>
+
+  <!-- bars -->
+  <g filter="url(#softShadow)">
+    <rect x="32" y="82" width="18" height="68" rx="3" fill="url(#blueBar)"/>
+    <rect x="60" y="100" width="18" height="50" rx="3" fill="url(#blueBar)" opacity="0.75"/>
+    <rect x="88" y="70" width="18" height="80" rx="3" fill="url(#redBar)" filter="url(#glow)"/>
+    <rect x="116" y="112" width="18" height="38" rx="3" fill="url(#blueBar)" opacity="0.6"/>
+    <rect x="144" y="128" width="18" height="22" rx="3" fill="url(#blueBar)" opacity="0.45"/>
+  </g>
+
+  <!-- red drain: stream from red bar into boarding pass stack -->
+  <path d="M93 150 C93 160, 152 158, 152 168 L152 178 L148 178 L148 169 C148 164, 97 165, 97 178 L93 178 Z" fill="url(#redFlow)" opacity="0.85"/>
+  <circle cx="150" cy="158" r="1.6" fill="#FF6B6B"/>
+  <circle cx="146" cy="163" r="1.2" fill="#FF6B6B" opacity="0.7"/>
+  <circle cx="154" cy="162" r="1.1" fill="#FF6B6B" opacity="0.6"/>
+
+  <!-- stacked boarding passes -->
+  <g filter="url(#softShadow)">
+    <g transform="rotate(-6 151 183)">
+      <rect x="132" y="178" width="40" height="12" rx="2.5" fill="#2A2D33" stroke="#FFFFFF" stroke-opacity="0.18"/>
+      <line x1="156" y1="179" x2="156" y2="189" stroke="#FFFFFF" stroke-opacity="0.25" stroke-dasharray="1.5 1.5"/>
+    </g>
+    <g transform="rotate(3 151 189)">
+      <rect x="130" y="185" width="42" height="12" rx="2.5" fill="#3A3D44" stroke="#FFFFFF" stroke-opacity="0.2"/>
+      <line x1="157" y1="186" x2="157" y2="196" stroke="#FFFFFF" stroke-opacity="0.25" stroke-dasharray="1.5 1.5"/>
+      <circle cx="137" cy="191" r="1.5" fill="#E5484D"/>
+    </g>
+    <rect x="128" y="192" width="45" height="0.1" fill="none"/>
+    <g transform="rotate(-2 152 195)">
+      <rect x="128" y="192" width="46" height="0" fill="none"/>
+    </g>
+  </g>
+  <!-- top pass, red-tinted -->
+  <g transform="rotate(2 151 177)" filter="url(#softShadow)">
+    <rect x="134" y="170" width="38" height="13" rx="2.5" fill="#E5484D" opacity="0.9"/>
+    <line x1="158" y1="171" x2="158" y2="182" stroke="#FFFFFF" stroke-opacity="0.4" stroke-dasharray="1.5 1.5"/>
+    <circle cx="141" cy="176.5" r="2" fill="#FFFFFF" opacity="0.85"/>
+  </g>
+
+  <!-- axis labels -->
+  <g font-family="ui-monospace, Menlo, monospace" font-size="6" fill="#8E8E93">
+    <text x="37" y="160">M</text>
+    <text x="65" y="160">T</text>
+    <text x="93" y="160">W</text>
+    <text x="121" y="160">T</text>
+    <text x="149" y="160">F</text>
+  </g>
+</svg>

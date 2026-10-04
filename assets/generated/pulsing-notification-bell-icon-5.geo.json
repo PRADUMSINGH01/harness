@@ -1,0 +1,34 @@
+{
+  "id": "generated_pulsing-notification-bell-icon-5",
+  "name": "pulsing notification bell icon",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/pulsing-notification-bell-icon-5.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M100 52 c-17 0 -28 13 -28 31 v16 c0 8 -4 13 -9 17 -2.5 2 -1.5 6 2 6 h70 c3.5 0 4.5 -4 2 -6 -5 -4 -9 -9 -9 -17 v-16 c0 -18 -11 -31 -28 -31 z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "pulsing",
+    "notification",
+    "bell",
+    "icon",
+    "icon",
+    "icon",
+    "generated-svg"
+  ]
+}

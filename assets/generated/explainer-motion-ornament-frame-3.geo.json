@@ -1,0 +1,35 @@
+{
+  "id": "generated_explainer-motion-ornament-frame-3",
+  "name": "explainer motion ornament frame or ambient pattern",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/explainer-motion-ornament-frame-3.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M170 152 V166 a4 4 0 0 1 -4 4 H152"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "explainer",
+    "motion",
+    "ornament",
+    "frame",
+    "ambient",
+    "pattern",
+    "illustration",
+    "generated-svg"
+  ]
+}

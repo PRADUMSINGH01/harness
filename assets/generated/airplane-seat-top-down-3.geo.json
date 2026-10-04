@@ -1,0 +1,35 @@
+{
+  "id": "generated_airplane-seat-top-down-3",
+  "name": "airplane seat top-down icon in row grid, aircraft cabin layout",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/airplane-seat-top-down-3.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M100 8 C 146 8 168 34 170 74 L 170 150 C 170 168 158 178 140 178 L 60 178 C 42 178 30 168 30 150 L 30 74 C 32 34 54 8 100 8 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "airplane",
+    "seat",
+    "top",
+    "down",
+    "icon",
+    "row",
+    "icon",
+    "generated-svg"
+  ]
+}

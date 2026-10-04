@@ -1,0 +1,35 @@
+{
+  "id": "generated_letterpress-wood-type-printing-1",
+  "name": "letterpress wood type printing block with reversed carved slab-serif letters",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/letterpress-wood-type-printing-1.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M62 138 V62 H110 Q124 62 124 78 Q124 90 112 93 Q126 96 126 112 V138 H110 V114 Q110 106 100 106 H78 V138 Z M78 74 V92 H98 Q104 92 104 83 Q104 74 98 74 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "letterpress",
+    "wood",
+    "type",
+    "printing",
+    "block",
+    "reversed",
+    "illustration",
+    "generated-svg"
+  ]
+}

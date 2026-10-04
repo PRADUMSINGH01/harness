@@ -1,0 +1,4108 @@
+{
+  "catalog": "general-shorts",
+  "version": "1.0.0",
+  "items": [
+    {
+      "id": "breaking_news_banner",
+      "name": "Live Breaking News Ticker Banner",
+      "type": "svg",
+      "src": "assets/general/breaking_news_banner.svg",
+      "format": "svg",
+      "tags": [
+        "breaking",
+        "news",
+        "hook",
+        "banner",
+        "alert",
+        "headline",
+        "ticker"
+      ],
+      "description": "High-impact red/black live news ticker banner with glowing pulsing strobe dot for 0.0s-2.0s hook retention."
+    },
+    {
+      "id": "versus_badge",
+      "name": "Electric Neon Gradient VS Emblem",
+      "type": "svg",
+      "src": "assets/general/versus_badge.svg",
+      "format": "svg",
+      "tags": [
+        "versus",
+        "vs",
+        "comparison",
+        "clash",
+        "badge",
+        "emblem"
+      ],
+      "description": "Electric neon gradient VS emblem for comparison shorts (e.g. Claude vs Copilot, ChatGPT vs Gemini)."
+    },
+    {
+      "id": "warning_alert_hud",
+      "name": "Amber Hazard Warning Alert Callout",
+      "type": "svg",
+      "src": "assets/general/warning_alert_hud.svg",
+      "format": "svg",
+      "tags": [
+        "warning",
+        "alert",
+        "hazard",
+        "callout",
+        "hud",
+        "critical"
+      ],
+      "description": "High-contrast amber hazard alert HUD badge with diagonal hazard stripes and critical protocol indicator."
+    },
+    {
+      "id": "curved_kinetic_arrow",
+      "name": "Neon Curved Kinetic Pointer Arrow",
+      "type": "svg",
+      "src": "assets/general/curved_kinetic_arrow.svg",
+      "format": "svg",
+      "tags": [
+        "arrow",
+        "pointer",
+        "callout",
+        "kinetic",
+        "neon",
+        "direction"
+      ],
+      "description": "Sweeping curved neon pointer arrow with ambient glow to guide viewer gaze to key metrics or UI callouts."
+    },
+    {
+      "id": "highlight_marker_loop",
+      "name": "Highlighter Emphasis Circle Loop",
+      "type": "svg",
+      "src": "assets/general/highlight_marker_loop.svg",
+      "format": "svg",
+      "tags": [
+        "highlight",
+        "loop",
+        "circle",
+        "marker",
+        "emphasis",
+        "keyword"
+      ],
+      "description": "Dynamic organic highlighter marker loop for circling keywords, phrases, or critical numbers in video shorts."
+    },
+    {
+      "id": "verified_badge_gold",
+      "name": "Scalloped Gold Verified Creator Badge",
+      "type": "svg",
+      "src": "assets/general/verified_badge_gold.svg",
+      "format": "svg",
+      "tags": [
+        "verified",
+        "gold",
+        "check",
+        "badge",
+        "authority",
+        "elite"
+      ],
+      "description": "8-point scalloped gold verified badge with crisp white checkmark for authority and trust callouts."
+    },
+    {
+      "id": "verified_badge_blue",
+      "name": "Scalloped Cyan-Blue Verified Badge",
+      "type": "svg",
+      "src": "assets/general/verified_badge_blue.svg",
+      "format": "svg",
+      "tags": [
+        "verified",
+        "blue",
+        "check",
+        "badge",
+        "twitter",
+        "meta"
+      ],
+      "description": "Official style cyan-blue verified checkmark badge for social proof."
+    },
+    {
+      "id": "metric_pill_growth",
+      "name": "Neon Emerald Growth Stat Pill (+847%)",
+      "type": "svg",
+      "src": "assets/general/metric_pill_growth.svg",
+      "format": "svg",
+      "tags": [
+        "growth",
+        "metric",
+        "stat",
+        "pill",
+        "surge",
+        "sparkline",
+        "trending"
+      ],
+      "description": "Neon green '+847% SURGE' stat pill with integrated upward trending sparkline chart."
+    },
+    {
+      "id": "metric_pill_speed",
+      "name": "Supersonic Speed Metric Pill (100x FASTER)",
+      "type": "svg",
+      "src": "assets/general/metric_pill_speed.svg",
+      "format": "svg",
+      "tags": [
+        "speed",
+        "faster",
+        "lightning",
+        "metric",
+        "stat",
+        "latency"
+      ],
+      "description": "Cyan supersonic speed metric pill badge displaying '100x FASTER · 0.01ms LATENCY'."
+    },
+    {
+      "id": "star_rating_5star",
+      "name": "Five Gleaming Gold Stars Rating",
+      "type": "svg",
+      "src": "assets/general/star_rating_5star.svg",
+      "format": "svg",
+      "tags": [
+        "stars",
+        "rating",
+        "review",
+        "gold",
+        "social-proof"
+      ],
+      "description": "Five gleaming gold stars for social proof, product reviews, and app satisfaction metrics."
+    },
+    {
+      "id": "youtube_official_logo",
+      "name": "Official YouTube Vector Logo",
+      "type": "svg",
+      "src": "assets/general/youtube_official_logo.svg",
+      "format": "svg",
+      "tags": [
+        "youtube",
+        "video",
+        "social",
+        "logo",
+        "google"
+      ],
+      "description": "Exact official YouTube red play button emblem from Simple Icons."
+    },
+    {
+      "id": "x_twitter_official_logo",
+      "name": "Official X (Twitter) Vector Logo",
+      "type": "svg",
+      "src": "assets/general/x_twitter_official_logo.svg",
+      "format": "svg",
+      "tags": [
+        "x",
+        "twitter",
+        "social",
+        "logo"
+      ],
+      "description": "Exact official X (Twitter) black/white geometric vector from Simple Icons."
+    },
+    {
+      "id": "instagram_official_logo",
+      "name": "Official Instagram Camera Sunset Gradient Logo",
+      "type": "svg",
+      "src": "assets/general/instagram_official_logo.svg",
+      "format": "svg",
+      "tags": [
+        "instagram",
+        "reels",
+        "social",
+        "logo",
+        "meta"
+      ],
+      "description": "Exact official Instagram camera vector with signature sunset gradient from Simple Icons."
+    },
+    {
+      "id": "tiktok_official_logo",
+      "name": "Official TikTok Chromatic Vector Logo",
+      "type": "svg",
+      "src": "assets/general/tiktok_official_logo.svg",
+      "format": "svg",
+      "tags": [
+        "tiktok",
+        "shorts",
+        "reels",
+        "social",
+        "logo"
+      ],
+      "description": "Exact official TikTok chromatic shift musical note logo from Simple Icons."
+    },
+    {
+      "id": "discord_official_logo",
+      "name": "Official Discord Clyde Vector Logo",
+      "type": "svg",
+      "src": "assets/general/discord_official_logo.svg",
+      "format": "svg",
+      "tags": [
+        "discord",
+        "community",
+        "chat",
+        "logo"
+      ],
+      "description": "Exact official Discord Clyde vector logo in brand Blurple (#5865F2) from Simple Icons."
+    },
+    {
+      "id": "reddit_official_logo",
+      "name": "Official Reddit Snoo Vector Logo",
+      "type": "svg",
+      "src": "assets/general/reddit_official_logo.svg",
+      "format": "svg",
+      "tags": [
+        "reddit",
+        "community",
+        "forum",
+        "logo"
+      ],
+      "description": "Exact official Reddit Snoo alien vector logo in Orangered (#FF4500) from Simple Icons."
+    },
+    {
+      "id": "linkedin_official_logo",
+      "name": "Official LinkedIn Vector Logo",
+      "type": "svg",
+      "src": "assets/general/linkedin_official_logo.svg",
+      "format": "svg",
+      "tags": [
+        "linkedin",
+        "career",
+        "b2b",
+        "social",
+        "logo"
+      ],
+      "description": "Exact official LinkedIn vector logo in brand blue (#0A66C2) from Bootstrap Icons."
+    },
+    {
+      "id": "ios_dynamic_island_toast",
+      "name": "iPhone Dynamic Island Toast Notification",
+      "type": "svg",
+      "src": "assets/general/ios_dynamic_island_toast.svg",
+      "format": "svg",
+      "tags": [
+        "ios",
+        "apple",
+        "dynamic-island",
+        "toast",
+        "notification",
+        "mobile"
+      ],
+      "description": "Apple iPhone Dynamic Island black pill toast notification with glowing sync status and completion badge."
+    },
+    {
+      "id": "audio_waveform_bars",
+      "name": "Multi-Bar Audio Equalizer Waveform",
+      "type": "svg",
+      "src": "assets/general/audio_waveform_bars.svg",
+      "format": "svg",
+      "tags": [
+        "audio",
+        "waveform",
+        "equalizer",
+        "voice",
+        "podcast",
+        "sound"
+      ],
+      "description": "9-bar pulsing audio equalizer visualizer with cyan-to-emerald gradient for audio/voice shorts."
+    },
+    {
+      "id": "code_snippet_window",
+      "name": "Syntax-Highlighted Code Editor Window",
+      "type": "svg",
+      "src": "assets/general/code_snippet_window.svg",
+      "format": "svg",
+      "tags": [
+        "code",
+        "ide",
+        "syntax",
+        "window",
+        "typescript",
+        "terminal"
+      ],
+      "description": "Dark mode code editor window frame with macOS traffic lights, title tab, line numbers, and TypeScript code."
+    },
+    {
+      "id": "radar_scanner_reticle",
+      "name": "Cyberpunk HUD Radar Targeting Reticle",
+      "type": "svg",
+      "src": "assets/general/radar_scanner_reticle.svg",
+      "format": "svg",
+      "tags": [
+        "radar",
+        "reticle",
+        "hud",
+        "crosshair",
+        "scanner",
+        "tech"
+      ],
+      "description": "Concentric cyberpunk targeting crosshair and scanner reticle with coordinates."
+    },
+    {
+      "id": "sparkle_burst_4pt",
+      "name": "Cinematic 4-Point Light Burst Sparkle",
+      "type": "svg",
+      "src": "assets/general/sparkle_burst_4pt.svg",
+      "format": "svg",
+      "tags": [
+        "sparkle",
+        "star",
+        "burst",
+        "glint",
+        "light"
+      ],
+      "description": "Cinematic 4-point light glint sparkle with cyan-to-violet gradient for visual accents."
+    },
+    {
+      "id": "bg_dark_cyber_mesh",
+      "name": "9:16 Dark Cyber Hexagonal Mesh Studio Backdrop",
+      "type": "image",
+      "src": "assets/general/bg_dark_cyber_mesh.jpg",
+      "format": "jpg",
+      "tags": [
+        "background",
+        "backdrop",
+        "9:16",
+        "cyber",
+        "mesh",
+        "hexagonal",
+        "dark"
+      ],
+      "description": "Vertical 9:16 dark obsidian and titanium hexagonal carbon micro-mesh background with volumetric cyan edge lighting."
+    },
+    {
+      "id": "bg_studio_glow_bokeh",
+      "name": "9:16 Minimalist Studio Glow with Bokeh Backdrop",
+      "type": "image",
+      "src": "assets/general/bg_studio_glow_bokeh.jpg",
+      "format": "jpg",
+      "tags": [
+        "background",
+        "backdrop",
+        "9:16",
+        "studio",
+        "glow",
+        "bokeh",
+        "violet",
+        "emerald"
+      ],
+      "description": "Vertical 9:16 dark charcoal luxury backdrop with ethereal radial glow blending violet purple, mint emerald, and floating motes."
+    },
+    {
+      "id": "bg_neon_grid_floor",
+      "name": "9:16 Synthwave Perspective Grid Floor Backdrop",
+      "type": "image",
+      "src": "assets/general/bg_neon_grid_floor.jpg",
+      "format": "jpg",
+      "tags": [
+        "background",
+        "backdrop",
+        "9:16",
+        "synthwave",
+        "grid",
+        "perspective",
+        "neon"
+      ],
+      "description": "Vertical 9:16 perspective neon grid floor vanishing to an infinite starry nebula horizon."
+    },
+    {
+      "id": "custom_quantum_processor_chip",
+      "name": "Quantum Processor Chip HUD",
+      "type": "svg",
+      "src": "assets/custom/quantum_processor_chip.svg",
+      "format": "svg",
+      "tags": [
+        "quantum",
+        "processor",
+        "chip",
+        "hud",
+        "neon",
+        "cyber",
+        "hud",
+        "generated-svg"
+      ],
+      "description": "Futuristic holographic quantum processor chip HUD with glowing neon circuit tracks, luminous center core, radial rings, and pinout connectors. Palette emerald/sapphire/violet on dark glass.",
+      "geo": "assets/custom/quantum_processor_chip.geo.json"
+    },
+    {
+      "id": "custom_hud_1790764829318",
+      "name": "Cyberpunk Holographic Shield with Glowing Green Hexagonal Grid",
+      "type": "svg",
+      "src": "assets/custom/hud_1790764829318.svg",
+      "format": "svg",
+      "tags": [
+        "hud",
+        "generated-svg"
+      ],
+      "description": "HUD-style cyberpunk holographic shield emblem: layered shield silhouette with dark glass fill, glowing emerald hexagonal grid pattern, sapphire and violet energy arcs, scanning reticle corner brackets, and luminous center core. Designed for motion graphics overlays and sci-fi shorts.",
+      "geo": "assets/custom/hud_1790764829318.geo.json"
+    },
+    {
+      "id": "custom_hud_1790764911138",
+      "name": "cyberpunk holographic shield with glowing green hexagonal grid",
+      "type": "svg",
+      "src": "assets/custom/hud_1790764911138.svg",
+      "format": "svg",
+      "tags": [
+        "hud",
+        "generated-svg"
+      ],
+      "description": "A cyberpunk HUD shield icon: a pointed-bottom holographic shield silhouette filled with a glowing emerald hexagonal grid, cyan/violet accent rings, corner brackets, tick marks, and an inner luminous emblem core. Designed for video shorts and futuristic interfaces.",
+      "geo": "assets/custom/hud_1790764911138.geo.json"
+    },
+    {
+      "id": "custom_overlay_1790765024425",
+      "name": "bold black and white kinetic arrow pointer for video callouts",
+      "type": "svg",
+      "src": "assets/custom/overlay_1790765024425.svg",
+      "format": "svg",
+      "tags": [
+        "overlay",
+        "generated-svg"
+      ],
+      "description": "Bold minimal black-and-white kinetic arrow pointer overlay for video callouts. Chunky rounded arrow with drop shadow, motion speed lines, dashed accent trail and corner ticks. High contrast, transparent background, animation-ready.",
+      "geo": "assets/custom/overlay_1790765024425.geo.json"
+    },
+    {
+      "id": "custom_overlay_1790765076328",
+      "name": "curved black and white hand drawn kinetic marker arrow for mobile shorts",
+      "type": "svg",
+      "src": "assets/custom/overlay_1790765076328.svg",
+      "format": "svg",
+      "tags": [
+        "overlay",
+        "generated-svg"
+      ],
+      "description": "Hand-drawn style curved marker arrow overlay with white highlighted stroke and black ink outline, ideal as kinetic emphasis arrow for mobile shorts and vertical video. Transparent background.",
+      "geo": "assets/custom/overlay_1790765076328.geo.json"
+    },
+    {
+      "id": "custom_overlay_curved_marker_arrow",
+      "name": "curved black and white hand drawn kinetic marker arrow for mobile shorts",
+      "type": "svg",
+      "src": "assets/custom/overlay_curved_marker_arrow.svg",
+      "format": "svg",
+      "tags": [
+        "overlay",
+        "generated-svg"
+      ],
+      "description": "Hand-drawn curved marker arrow overlay with white outline and black fill for mobile short videos. Transparent background, clean minimal kinetic style.",
+      "geo": "assets/custom/overlay_curved_marker_arrow.geo.json"
+    },
+    {
+      "id": "anthropic_official_logo",
+      "name": "Official Anthropic Logo",
+      "type": "svg",
+      "src": "assets/official/anthropic_official_logo.svg",
+      "format": "svg",
+      "tags": [
+        "anthropic",
+        "claude",
+        "ai",
+        "official",
+        "logo",
+        "brand"
+      ],
+      "description": "Exact official Anthropic logo. Sharp geometric constructivist capital 'A' monogram, minimalist luxury finish in warm clay/charcoal #191919 with subtle ambient warm glow.",
+      "geo": "assets/official/anthropic_official_logo.geo.json"
+    },
+    {
+      "id": "claude_ai_official_logo",
+      "name": "Official Claude AI Starburst Emblem",
+      "type": "svg",
+      "src": "assets/official/claude_ai_official_logo.svg",
+      "format": "svg",
+      "tags": [
+        "claude",
+        "anthropic",
+        "ai",
+        "official",
+        "star",
+        "logo"
+      ],
+      "description": "Exact official Claude AI sparklet star logo. Eight-pointed asymmetrical organic starburst emblem in signature terracotta orange #D97706 and cream, crisp vector geometry with warm radiant aura.",
+      "geo": "assets/official/claude_ai_official_logo.geo.json"
+    },
+    {
+      "id": "lottie_pulsing_live_beacon",
+      "name": "Pulsing Live Recording Beacon (Lottie)",
+      "type": "lottie",
+      "src": "assets/lottie/pulsing_live_beacon.json",
+      "format": "json",
+      "width": 500,
+      "height": 500,
+      "fps": 60,
+      "duration_frames": 120,
+      "tags": [
+        "lottie",
+        "recording",
+        "live",
+        "pulse",
+        "beacon",
+        "loop"
+      ],
+      "description": "Create a valid Bodymovin Lottie JSON animation: A red recording dot in the center with 2 radiating concentric circle rings that continuously expand and fade to opacity 0 on a 60fps, 120-frame seamless loop."
+    },
+    {
+      "id": "prop_countdown_clock",
+      "name": "Countdown Clock",
+      "type": "lottie",
+      "src": "assets/lottie/prop_countdown_clock.json",
+      "format": "json",
+      "width": 500,
+      "height": 500,
+      "fps": 60,
+      "duration_frames": 120,
+      "tags": [
+        "storyboard-prop",
+        "countdown-clock",
+        "motion"
+      ],
+      "description": "Production visual prop: countdown-clock for video storyboard. High-end motion graphics vector conforming to HyperFrames design standards."
+    },
+    {
+      "id": "prop_scan_card",
+      "name": "Scan Card",
+      "type": "svg",
+      "src": "assets/motion/prop_scan_card.svg",
+      "format": "svg",
+      "tags": [
+        "storyboard-prop",
+        "scan-card",
+        "motion"
+      ],
+      "description": "Production visual prop: scan-card for video storyboard. High-end motion graphics vector conforming to HyperFrames design standards.",
+      "geo": "assets/motion/prop_scan_card.geo.json"
+    },
+    {
+      "id": "prop_slam_cut",
+      "name": "Slam Cut",
+      "type": "svg",
+      "src": "assets/motion/prop_slam_cut.svg",
+      "format": "svg",
+      "tags": [
+        "storyboard-prop",
+        "slam-cut",
+        "motion"
+      ],
+      "description": "Production visual prop: slam-cut for video storyboard. High-end motion graphics vector conforming to HyperFrames design standards.",
+      "geo": "assets/motion/prop_slam_cut.geo.json"
+    },
+    {
+      "id": "prop_macro_punch",
+      "name": "Macro Punch",
+      "type": "svg",
+      "src": "assets/motion/prop_macro_punch.svg",
+      "format": "svg",
+      "tags": [
+        "storyboard-prop",
+        "macro-punch",
+        "motion"
+      ],
+      "description": "Production visual prop: macro-punch for video storyboard. High-end motion graphics vector conforming to HyperFrames design standards.",
+      "geo": "assets/motion/prop_macro_punch.geo.json"
+    },
+    {
+      "id": "prop_settle_out",
+      "name": "Settle Out",
+      "type": "svg",
+      "src": "assets/motion/prop_settle_out.svg",
+      "format": "svg",
+      "tags": [
+        "storyboard-prop",
+        "settle-out",
+        "motion"
+      ],
+      "description": "Production visual prop: settle-out for video storyboard. High-end motion graphics vector conforming to HyperFrames design standards.",
+      "geo": "assets/motion/prop_settle_out.geo.json"
+    },
+    {
+      "id": "prop_angled_drift",
+      "name": "Angled Drift",
+      "type": "svg",
+      "src": "assets/motion/prop_angled_drift.svg",
+      "format": "svg",
+      "tags": [
+        "storyboard-prop",
+        "angled-drift",
+        "motion"
+      ],
+      "description": "Production visual prop: angled-drift for video storyboard. High-end motion graphics vector conforming to HyperFrames design standards.",
+      "geo": "assets/motion/prop_angled_drift.geo.json"
+    },
+    {
+      "id": "huggingface_official_logo",
+      "name": "Hugging Face Official Logo",
+      "type": "svg",
+      "src": "assets/official/huggingface_official_logo.svg",
+      "format": "svg",
+      "tags": [
+        "ai-labs",
+        "open-source",
+        "brand",
+        "mascot"
+      ],
+      "description": "The official Hugging Face logo: a friendly yellow smiling face emoji with two hands raised to its sides. Circular face in warm amber-yellow (#FFD21E) with subtle darker yellow outline, two simple black dot eyes, wide open smiling mouth with tongue detail, and two small rounded hands (#FF9D0B) positioned at lower left and right edges as if waving. Clean vector paths, no text, flat design with minimal shading.",
+      "geo": "assets/official/huggingface_official_logo.geo.json"
+    },
+    {
+      "id": "stripe_official_logo",
+      "name": "Stripe Official Logo Mark",
+      "type": "svg",
+      "src": "assets/official/stripe_official_logo.svg",
+      "format": "svg",
+      "tags": [
+        "fintech",
+        "payments",
+        "brand",
+        "wordmark"
+      ],
+      "description": "The official Stripe wordmark as a clean vector: the word 'stripe' in its signature custom lowercase sans-serif letterforms, rendered in Stripe blurple (#635BFF) on transparent background. Geometric, slightly rounded strokes, optically kerned. If a mark-only variant is preferred, use a rounded-square container with an indigo-to-violet gradient (#635BFF to #7A73FF) containing a stylized white 'S' path. Crisp edges, fintech-grade polish.",
+      "geo": "assets/official/stripe_official_logo.geo.json"
+    },
+    {
+      "id": "metric_pill_throughput_fps",
+      "name": "Throughput FPS Metric Pill",
+      "type": "svg",
+      "src": "assets/motion/metric_pill_throughput_fps.svg",
+      "format": "svg",
+      "tags": [
+        "stat-pill",
+        "performance",
+        "high-contrast",
+        "lower-third"
+      ],
+      "description": "High-contrast horizontal stat pill: dark charcoal (#0D1117) rounded capsule with 1.5px neon lime (#39FF14) border and soft outer glow. Left side shows a small upward-trending bar-chart glyph in lime. Bold white tabular numerals read '14,200' with a small superscript up-arrow, followed by a lime uppercase label 'FPS'. Subtle inner top-edge highlight line for glassmorphism. Designed to scale cleanly for lower-thirds.",
+      "geo": "assets/motion/metric_pill_throughput_fps.geo.json"
+    },
+    {
+      "id": "lottie_triple_dot_orbit_loader",
+      "name": "Triple Dot Orbit Loader",
+      "type": "lottie",
+      "src": "assets/lottie/lottie_triple_dot_orbit_loader.json",
+      "format": "json",
+      "width": 500,
+      "height": 500,
+      "fps": 60,
+      "duration_frames": 72,
+      "tags": [
+        "loader",
+        "micro-loop",
+        "orbit",
+        "chasing-dots",
+        "seamless"
+      ],
+      "description": "Continuous seamless loader loop: three solid white dots (radius 8) orbit a center point on a 60px radius circular path, spaced 120 degrees apart, completing one full revolution per 1.2 seconds with ease-in-out. Each dot scales from 0.6 to 1.3 and back in a phase-shifted wave (staggered 0.13s) creating a flowing chase effect. Add a faint static track ring (#2A2F3A, 2px stroke) at the orbit radius. Background transparent, perfect loop, 60fps."
+    },
+    {
+      "id": "openai_official_logo",
+      "name": "OpenAI Official Logo",
+      "type": "svg",
+      "src": "assets/official/openai_logo.svg",
+      "format": "svg",
+      "tags": [
+        "openai",
+        "ai-lab",
+        "logo",
+        "white",
+        "brand"
+      ],
+      "description": "Official OpenAI hexagonal knot logo, six interlocking geometric loop segments forming a radial blossom, stroke-based geometry with precise rotational symmetry, monochrome white on transparent background, crisp vector paths, no gradients.",
+      "geo": "assets/official/openai_logo.geo.json"
+    },
+    {
+      "id": "lottie_progress_ring_loader",
+      "name": "Indeterminate Progress Ring Loader",
+      "type": "lottie",
+      "src": "assets/lottie/progress_ring_loader.json",
+      "format": "json",
+      "width": 500,
+      "height": 500,
+      "fps": 60,
+      "duration_frames": 90,
+      "tags": [
+        "loader",
+        "spinner",
+        "progress-ring",
+        "micro-loop",
+        "dark-ui"
+      ],
+      "description": "Continuous circular loader: 270-degree arc stroke rotating around center with a gradient sweep from teal to violet, rounded line caps, subtle trailing fade on the arc tail, seamless 1.5s loop, 60fps, minimal and high-contrast for dark backgrounds."
+    },
+    {
+      "id": "metric_pill_uptime_999",
+      "name": "Uptime 99.99% Metric Pill",
+      "type": "svg",
+      "src": "assets/motion/metric_pill_uptime.svg",
+      "format": "svg",
+      "tags": [
+        "metric",
+        "uptime",
+        "stat-pill",
+        "emerald",
+        "overlay"
+      ],
+      "description": "Horizontal stat pill, rounded rectangle with 2px emerald-green border and subtle inner glow, small shield-check icon left, label 'UPTIME' in small tracking-wide sans-serif, large bold '99.99%' value in emerald, dark glassmorphic fill, high contrast for video overlays.",
+      "geo": "assets/motion/metric_pill_uptime.geo.json"
+    },
+    {
+      "id": "lottie_soundwave_equalizer_loop",
+      "name": "Harmonic Soundwave Equalizer Loop",
+      "type": "lottie",
+      "src": "assets/lottie/soundwave_equalizer_loop.json",
+      "format": "json",
+      "width": 500,
+      "height": 500,
+      "fps": 60,
+      "duration_frames": 120,
+      "tags": [
+        "audio",
+        "soundwave",
+        "equalizer",
+        "loop",
+        "voice-ai"
+      ],
+      "description": "Row of 7 vertical rounded bars centered on a shared baseline, each bar scaling up/down with staggered sine-wave phase offsets creating a flowing audio visualization, cyan-to-blue gradient fill, seamless 2s loop, smooth easing, optimized for AI voice/audio demo segments."
+    },
+    {
+      "id": "generated_costco-hot-dog-hero",
+      "name": "Costco $1.50 Hot Dog Combo — Hero Illustration",
+      "type": "svg",
+      "src": "assets/generated/costco-hot-dog-hero.svg",
+      "format": "svg",
+      "tags": [
+        "create",
+        "business",
+        "economics",
+        "short",
+        "why",
+        "costco",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass hero illustration of a hot dog and soda combo with a $1.50 price badge and \"SINCE 1985\" tagline, evoking Costco's iconic unchanging food court deal. Palette: charcoal #14100c, cream #f2e8d5, ketchup red #e63b2e. Use as the central hero visual for a business-economics short.",
+      "geo": "assets/generated/costco-hot-dog-hero.geo.json"
+    },
+    {
+      "id": "generated_costco-hotdog-price-chart",
+      "name": "Costco $1.50 Hot Dog Combo — 1985 vs Today Price Chart",
+      "type": "svg",
+      "src": "assets/generated/costco-hotdog-price-chart.svg",
+      "format": "svg",
+      "tags": [
+        "create",
+        "business",
+        "economics",
+        "short",
+        "why",
+        "costco",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass economics chart showing Costco's $1.50 hot dog combo price flat since 1985 versus rising inflation-adjusted equivalent (~$4.40). Cream line for inflation, bold red flat line for Costco price, with $1.50 metric callout.",
+      "geo": "assets/generated/costco-hotdog-price-chart.geo.json"
+    },
+    {
+      "id": "generated_giant-red-589-000-1",
+      "name": "giant red $589,000,000,000 market loss number with shatter cracks",
+      "type": "svg",
+      "src": "assets/generated/giant-red-589-000-1.svg",
+      "format": "svg",
+      "tags": [
+        "giant",
+        "red",
+        "589",
+        "000",
+        "000",
+        "000",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of a giant glowing red $589 billion market loss figure, with shatter cracks radiating from the digits, blue sapphire corner brackets, grid backdrop, and ticker details. Suitable for finance/market-crash motion graphics.",
+      "geo": "assets/generated/giant-red-589-000-1.geo.json"
+    },
+    {
+      "id": "generated_split-comparison-racing-bar-2",
+      "name": "split comparison racing bar chart five point six million versus one hundred million dollars",
+      "type": "svg",
+      "src": "assets/generated/split-comparison-racing-bar-2.svg",
+      "format": "svg",
+      "tags": [
+        "split",
+        "comparison",
+        "racing",
+        "bar",
+        "chart",
+        "five",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass split comparison racing bar chart contrasting $5.6M against $100M, with a dramatic ~5.6% proportional blue bar versus a full-width gray bar, glow accents, corner brackets and monospace value labels. Ideal for finance shorts and motion graphics.",
+      "geo": "assets/generated/split-comparison-racing-bar-2.geo.json"
+    },
+    {
+      "id": "generated_swiss-grid-faint-dot-matrix-red-streak",
+      "name": "swiss grid faint dot matrix with red ticker tape streak texture",
+      "type": "svg",
+      "src": "assets/generated/swiss-grid-faint-dot-matrix-red-streak.svg",
+      "format": "svg",
+      "tags": [
+        "swiss",
+        "grid",
+        "faint",
+        "dot",
+        "matrix",
+        "red",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass Swiss-style illustration: faint dot matrix grid with thin crosshair grid lines, horizontal red ticker tape motion streaks, blue accent data ticks and corner brackets. Ideal for fintech/motion graphics backdrops at 1:1.",
+      "geo": "assets/generated/swiss-grid-faint-dot-matrix-red-streak.geo.json"
+    },
+    {
+      "id": "generated_costco-hot-dog-150-hero",
+      "name": "Costco $1.50 Hot Dog Combo Hero Illustration",
+      "type": "svg",
+      "src": "assets/generated/costco-hot-dog-150-hero.svg",
+      "format": "svg",
+      "tags": [
+        "create",
+        "business",
+        "economics",
+        "short",
+        "why",
+        "costco",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass hero illustration of a hot dog and soda cup with a price tag reading $1.50 and \"SINCE 1985\", framed by a glassmorphic rounded card. Warm palette on dark cocoa background, red accent.",
+      "geo": "assets/generated/costco-hot-dog-150-hero.geo.json"
+    },
+    {
+      "id": "generated_create-business-economics-short-2",
+      "name": "Costco $1.50 Hot Dog Combo — Price Flatline Chart",
+      "type": "svg",
+      "src": "assets/generated/create-business-economics-short-2.svg",
+      "format": "svg",
+      "tags": [
+        "create",
+        "business",
+        "economics",
+        "short",
+        "why",
+        "costco",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass data visualization for a business economics short: Costco's $1.50 hot dog combo price held flat since 1985 vs. a rising inflation line. Warm cream (#f2e8d5) and red (#e63b2e) palette on deep brown (#14100c) glass. Use as a chart insert in finance shorts.",
+      "geo": "assets/generated/create-business-economics-short-2.geo.json"
+    },
+    {
+      "id": "generated_costco-hotdog-hero",
+      "name": "Costco $1.50 Hot Dog Combo — Hero Illustration",
+      "type": "svg",
+      "src": "assets/generated/costco-hotdog-hero.svg",
+      "format": "svg",
+      "tags": [
+        "create",
+        "business",
+        "economics",
+        "short",
+        "why",
+        "costco",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Hero illustration of a Costco-style hot dog combo on a dark-glass rounded card: ketchup-red hot dog in bun with mustard squiggle, soda cup with straw, a bold '$1.50' price badge with 'SINCE 1985' ring, subtle grid and corner brackets.",
+      "geo": "assets/generated/costco-hotdog-hero.geo.json"
+    },
+    {
+      "id": "generated_costco-hotdog-price-lock",
+      "name": "Costco $1.50 Hot Dog Price Lock — Metric Visualization",
+      "type": "svg",
+      "src": "assets/generated/costco-hotdog-price-lock.svg",
+      "format": "svg",
+      "tags": [
+        "create",
+        "business",
+        "economics",
+        "short",
+        "why",
+        "costco",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass data chart showing Costco's $1.50 hot dog combo price flatline since 1985, with cumulative inflation comparison. Palette: #14100c, #f2e8d5, #e63b2e. ViewBox 200x200.",
+      "geo": "assets/generated/costco-hotdog-price-lock.geo.json"
+    },
+    {
+      "id": "generated_padlock-security-lock-closing-1",
+      "name": "padlock security lock closing on circuit node, green safe state",
+      "type": "svg",
+      "src": "assets/generated/padlock-security-lock-closing-1.svg",
+      "format": "svg",
+      "tags": [
+        "padlock",
+        "security",
+        "lock",
+        "closing",
+        "circuit",
+        "node",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass security icon: closed padlock seated on a circuit node, glowing green safe-state ring, blue circuit traces, white shackle. Ideal for security/encryption motion graphics on dark backgrounds.",
+      "geo": "assets/generated/padlock-security-lock-closing-1.geo.json"
+    },
+    {
+      "id": "generated_abstract-california-state-seal-2",
+      "name": "abstract California state seal star-in-ring geometry stamp",
+      "type": "svg",
+      "src": "assets/generated/abstract-california-state-seal-2.svg",
+      "format": "svg",
+      "tags": [
+        "abstract",
+        "california",
+        "state",
+        "seal",
+        "star",
+        "ring",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Abstract dark-glass illustration evoking the California state seal: a single five-pointed star centered inside concentric rings with tick marks, corner brackets, and glowing sapphire accents. Minimal, high-contrast, suitable as a stamp or badge in motion graphics.",
+      "geo": "assets/generated/abstract-california-state-seal-2.geo.json"
+    },
+    {
+      "id": "generated_wireframe-glass-cube-sandbox-3",
+      "name": "wireframe 3D glass cube sandbox with refraction rim and glowing breach point",
+      "type": "svg",
+      "src": "assets/generated/wireframe-glass-cube-sandbox-3.svg",
+      "format": "svg",
+      "tags": [
+        "wireframe",
+        "glass",
+        "cube",
+        "sandbox",
+        "refraction",
+        "rim",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass wireframe 3D isometric cube illustration on near-black background. Features crisp white edge wireframes, a soft sapphire refraction rim glow tracing the glass faces, subtle crosshair ticks at corners, and a luminous breach point at the right vertex with radial glow, fracture crack lines, and concentric pulse rings. Ideal for tech, sandbox, simulation, or cybersecurity motion graphics.",
+      "geo": "assets/generated/wireframe-glass-cube-sandbox-3.geo.json"
+    },
+    {
+      "id": "generated_student-wearing-glowing-eeg-1",
+      "name": "student wearing glowing EEG electrode cap in neuroscience lab, documentary photography",
+      "type": "svg",
+      "src": "assets/generated/student-wearing-glowing-eeg-1.svg",
+      "format": "svg",
+      "tags": [
+        "student",
+        "wearing",
+        "glowing",
+        "eeg",
+        "electrode",
+        "cap",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass documentary-style illustration of a student silhouette wearing a glowing EEG electrode cap in a neuroscience lab, with luminous blue electrode nodes, connecting traces, and subtle lab equipment brackets. Palette #0A0A0A, #FFFFFF, #0A84FF, #8E8E93.",
+      "geo": "assets/generated/student-wearing-glowing-eeg-1.geo.json"
+    },
+    {
+      "id": "generated_neural-connectivity-brain-graph-flattening",
+      "name": "neural connectivity brain graph flattening to single flatline trace, lime nodes on black",
+      "type": "svg",
+      "src": "assets/generated/neural-connectivity-brain-graph-flattening.svg",
+      "format": "svg",
+      "tags": [
+        "neural",
+        "connectivity",
+        "brain",
+        "graph",
+        "flattening",
+        "single",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass neural network visualization: a brain-shaped graph of lime-glowing nodes connected by edges that progressively converge downward into a single horizontal flatline trace at the bottom, with technical corner brackets and grid ticks.",
+      "geo": "assets/generated/neural-connectivity-brain-graph-flattening.geo.json"
+    },
+    {
+      "id": "generated_hand-writing-essay-pen-3",
+      "name": "hand writing essay with pen on paper notebook close-up",
+      "type": "svg",
+      "src": "assets/generated/hand-writing-essay-pen-3.svg",
+      "format": "svg",
+      "tags": [
+        "hand",
+        "writing",
+        "essay",
+        "pen",
+        "paper",
+        "notebook",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Close-up icon of a hand writing an essay with a pen on a ruled notebook page, dark-glass style with blue accent lines",
+      "geo": "assets/generated/hand-writing-essay-pen-3.geo.json"
+    },
+    {
+      "id": "generated_handwritten-essay-page-paper-1",
+      "name": "handwritten essay page on paper with typed sentences dissolving into black redaction bars",
+      "type": "svg",
+      "src": "assets/generated/handwritten-essay-page-paper-1.svg",
+      "format": "svg",
+      "tags": [
+        "handwritten",
+        "essay",
+        "page",
+        "paper",
+        "typed",
+        "sentences",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of a paper page with handwritten-style essay lines; lower typed lines progressively dissolve into black redaction bars. Accents in electric blue and glassy gray on a dark backdrop.",
+      "geo": "assets/generated/handwritten-essay-page-paper-1.geo.json"
+    },
+    {
+      "id": "generated_rubber-stamp-fail-verdict-2",
+      "name": "rubber stamp FAIL verdict stamps with grunge texture, quote verification seal",
+      "type": "svg",
+      "src": "assets/generated/rubber-stamp-fail-verdict-2.svg",
+      "format": "svg",
+      "tags": [
+        "rubber",
+        "stamp",
+        "fail",
+        "verdict",
+        "stamps",
+        "grunge",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass circular FAIL rubber stamp seal with double ring, bold rotated FAIL lettering, quote-mark verification accents, grunge speckle texture and dashed verification ring. Palette #0A0A0A, #FFFFFF, #0A0D14 dark glass, blue #0A84FF accent, gray #8E8E93 ticks.",
+      "geo": "assets/generated/rubber-stamp-fail-verdict-2.geo.json"
+    },
+    {
+      "id": "generated_eeg-electrode-cap-human-3",
+      "name": "EEG electrode cap on a human head silhouette with wires",
+      "type": "svg",
+      "src": "assets/generated/eeg-electrode-cap-human-3.svg",
+      "format": "svg",
+      "tags": [
+        "eeg",
+        "electrode",
+        "cap",
+        "human",
+        "head",
+        "silhouette",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass icon of a human head silhouette wearing an EEG electrode cap with nodes and flowing wires, in blue/white/gray palette on transparent background.",
+      "geo": "assets/generated/eeg-electrode-cap-human-3.geo.json"
+    },
+    {
+      "id": "generated_eeg-neural-waveform-traces-4",
+      "name": "EEG neural waveform traces in gold with collapsing connectivity bands",
+      "type": "svg",
+      "src": "assets/generated/eeg-neural-waveform-traces-4.svg",
+      "format": "svg",
+      "tags": [
+        "eeg",
+        "neural",
+        "waveform",
+        "traces",
+        "gold",
+        "collapsing",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass EEG neural chart: layered gold waveform traces with glowing spike activity, collapsing concentric connectivity bands, and technical corner brackets/coordinate ticks. Suitable for neuroscience, AI, or bio-signal motion graphics.",
+      "geo": "assets/generated/eeg-neural-waveform-traces-4.geo.json"
+    },
+    {
+      "id": "generated_brain-node-map-network-5",
+      "name": "brain node-map network diagram with connection lines snapping and dimming",
+      "type": "svg",
+      "src": "assets/generated/brain-node-map-network-5.svg",
+      "format": "svg",
+      "tags": [
+        "brain",
+        "node",
+        "map",
+        "network",
+        "diagram",
+        "connection",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass brain-shaped node-map network icon on 200x200 viewBox. Central brain silhouette built from glowing nodes connected by lines; one active snapped connection glows electric blue #0A84FF while others dim to gray #8E8E93. Includes subtle glass card backdrop, node glows, and technical crosshair micro-details. Suitable for AI/neuroscience motion graphics shorts.",
+      "geo": "assets/generated/brain-node-map-network-5.geo.json"
+    },
+    {
+      "id": "generated_grid-319-tiny-knowledge-6",
+      "name": "grid of 319 tiny knowledge-worker avatar silhouettes lighting up like a heat map",
+      "type": "svg",
+      "src": "assets/generated/grid-319-tiny-knowledge-6.svg",
+      "format": "svg",
+      "tags": [
+        "grid",
+        "319",
+        "tiny",
+        "knowledge",
+        "worker",
+        "avatar",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "A 319-cell grid (20 cols × 16 rows, minus one) of tiny person silhouettes on a dark-glass panel. Most avatars are dim gray; a clustered subset glows electric blue like a heat map, with one hot white avatar radiating light. Ideal for network/engagement/demographic analytics visuals in video shorts.",
+      "geo": "assets/generated/grid-319-tiny-knowledge-6.geo.json"
+    },
+    {
+      "id": "generated_single-copper-penny-coin-1",
+      "name": "single copper penny coin, front face, engraved shine, isolated",
+      "type": "svg",
+      "src": "assets/generated/single-copper-penny-coin-1.svg",
+      "format": "svg",
+      "tags": [
+        "single",
+        "copper",
+        "penny",
+        "coin",
+        "front",
+        "face",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A single US copper penny coin, front (obverse) face, isolated on transparent background. Features an engraved copper-brown profile bust, beaded rim, subtle engraved shine with a blue glass specular highlight and soft gray reflections. Dark-glass theme accents (blue #0A84FF, glass gray #8E8E93) against transparent dark composition.",
+      "geo": "assets/generated/single-copper-penny-coin-1.geo.json"
+    },
+    {
+      "id": "generated_rising-golden-coin-particle-2",
+      "name": "rising golden coin particle stream compounding upward",
+      "type": "svg",
+      "src": "assets/generated/rising-golden-coin-particle-2.svg",
+      "format": "svg",
+      "tags": [
+        "rising",
+        "golden",
+        "coin",
+        "particle",
+        "stream",
+        "compounding",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Rising golden coin particle stream compounding upward on a dark-glass background with cool blue accent base.",
+      "geo": "assets/generated/rising-golden-coin-particle-2.geo.json"
+    },
+    {
+      "id": "generated_two-column-bar-duel-3",
+      "name": "two-column bar duel: tiny gray bar vs towering gold money bar exploding past frame edge",
+      "type": "svg",
+      "src": "assets/generated/two-column-bar-duel-3.svg",
+      "format": "svg",
+      "tags": [
+        "two",
+        "column",
+        "bar",
+        "duel",
+        "tiny",
+        "gray",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass two-column chart duel: a tiny gray bar on the left vs a towering gold money bar on the right that explodes past the top frame edge, with glow, axis ticks, and a delta multiplier badge.",
+      "geo": "assets/generated/two-column-bar-duel-3.geo.json"
+    },
+    {
+      "id": "generated_vintage-cash-register-popping-4",
+      "name": "vintage cash register with popping drawer and coin",
+      "type": "svg",
+      "src": "assets/generated/vintage-cash-register-popping-4.svg",
+      "format": "svg",
+      "tags": [
+        "vintage",
+        "cash",
+        "register",
+        "popping",
+        "drawer",
+        "coin",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass vintage cash register icon: rounded register body with keyboard keys and display, an open drawer sliding out, and a coin popping out with motion arc. Palette #0A0A0A, #FFFFFF, #0A84FF, #8E8E93 on transparent background.",
+      "geo": "assets/generated/vintage-cash-register-popping-4.geo.json"
+    },
+    {
+      "id": "generated_archival-serif-quotation-card-5",
+      "name": "archival serif quotation card with ornate double border and Albert Einstein silhouette portrait bust",
+      "type": "svg",
+      "src": "assets/generated/archival-serif-quotation-card-5.svg",
+      "format": "svg",
+      "tags": [
+        "archival",
+        "serif",
+        "quotation",
+        "card",
+        "ornate",
+        "double",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass archival quotation card (viewBox 0 0 200 200) featuring an ornate double border, decorative corner flourishes, a white serif Einstein quote, and a right-side silhouette bust of Albert Einstein with wild hair and mustache, accented with #0A84FF glow and #8E8E93 details.",
+      "geo": "assets/generated/archival-serif-quotation-card-5.geo.json"
+    },
+    {
+      "id": "generated_aged-paper-grain-faint-6",
+      "name": "aged paper grain and faint archival ink smudge texture",
+      "type": "svg",
+      "src": "assets/generated/aged-paper-grain-faint-6.svg",
+      "format": "svg",
+      "tags": [
+        "aged",
+        "paper",
+        "grain",
+        "faint",
+        "archival",
+        "ink",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass archival illustration combining aged paper grain (fractal noise), faint archival ink smudge blotches, subtle glass panel highlights, and thin blue accent details. Ideal as a texture overlay or backdrop for documentary/vintage motion graphics.",
+      "geo": "assets/generated/aged-paper-grain-faint-6.geo.json"
+    },
+    {
+      "id": "generated_glowing-twilight-human-brain-1",
+      "name": "glowing twilight human brain with neurotransmitter nodes and chemical flood streams",
+      "type": "svg",
+      "src": "assets/generated/glowing-twilight-human-brain-1.svg",
+      "format": "svg",
+      "tags": [
+        "glowing",
+        "twilight",
+        "human",
+        "brain",
+        "neurotransmitter",
+        "nodes",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of a glowing twilight human brain silhouette with circuit-like sulci traces, luminous blue neurotransmitter nodes at neural junctions, and flowing chemical flood streams traversing the hemispheres. Designed for neuroscience/AI motion graphics, video shorts, and tech interfaces.",
+      "geo": "assets/generated/glowing-twilight-human-brain-1.geo.json"
+    },
+    {
+      "id": "generated_vertical-neurotransmitter-level-bars-2",
+      "name": "vertical neurotransmitter level bars labeled NOREPINEPHRINE and ACETYLCHOLINE dropping to near zero",
+      "type": "svg",
+      "src": "assets/generated/vertical-neurotransmitter-level-bars-2.svg",
+      "format": "svg",
+      "tags": [
+        "vertical",
+        "neurotransmitter",
+        "level",
+        "bars",
+        "labeled",
+        "norepinephrine",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass chart panel with two vertical bars (NOREPINEPHRINE blue, ACETYLCHOLINE gray) dropping to near-zero levels, drop shadows, glow, and technical micro-detail brackets.",
+      "geo": "assets/generated/vertical-neurotransmitter-level-bars-2.geo.json"
+    },
+    {
+      "id": "generated_mechanical-toggle-switch-flipping-3",
+      "name": "mechanical toggle switch flipping from MEMORY WRITE ON to OFF",
+      "type": "svg",
+      "src": "assets/generated/mechanical-toggle-switch-flipping-3.svg",
+      "format": "svg",
+      "tags": [
+        "mechanical",
+        "toggle",
+        "switch",
+        "flipping",
+        "from",
+        "memory",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass mechanical toggle switch illustration shown in the ON position, with a glowing blue actuator lever, an illuminated 'MEMORY WRITE ON' indicator label above and a dim 'OFF' label below, designed for motion graphics flip animations.",
+      "geo": "assets/generated/mechanical-toggle-switch-flipping-3.geo.json"
+    },
+    {
+      "id": "generated_hippocampus-seahorse-shaped-brain-4",
+      "name": "hippocampus seahorse-shaped brain node firing a signal toward a vault labeled LONG-TERM STORAGE",
+      "type": "svg",
+      "src": "assets/generated/hippocampus-seahorse-shaped-brain-4.svg",
+      "format": "svg",
+      "tags": [
+        "hippocampus",
+        "seahorse",
+        "shaped",
+        "brain",
+        "node",
+        "firing",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass icon: a seahorse-shaped hippocampus node glowing in sapphire blue, firing a signal beam/particles toward a secure vault labeled LONG-TERM STORAGE. Intended for memory-formation and neuroscience motion graphics.",
+      "geo": "assets/generated/hippocampus-seahorse-shaped-brain-4.geo.json"
+    },
+    {
+      "id": "generated_rem-sleep-eeg-brainwave-5",
+      "name": "REM sleep EEG brainwave waveform strip scrolling with spindle bursts",
+      "type": "svg",
+      "src": "assets/generated/rem-sleep-eeg-brainwave-5.svg",
+      "format": "svg",
+      "tags": [
+        "rem",
+        "sleep",
+        "eeg",
+        "brainwave",
+        "waveform",
+        "strip",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "A dark-glass style REM sleep EEG strip chart: glowing white/blue brainwave waveform with two highlighted sleep-spindle bursts (fast oscillation envelopes), grid ticks, corner brackets, and REM label. Ideal for sleep-science, neurotech, and health shorts.",
+      "geo": "assets/generated/rem-sleep-eeg-brainwave-5.geo.json"
+    },
+    {
+      "id": "generated_hand-reaching-toward-glowing-6",
+      "name": "hand reaching toward a glowing phone alarm clock then retracting",
+      "type": "svg",
+      "src": "assets/generated/hand-reaching-toward-glowing-6.svg",
+      "format": "svg",
+      "tags": [
+        "hand",
+        "reaching",
+        "toward",
+        "glowing",
+        "phone",
+        "alarm",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass icon of a stylized hand reaching toward a glowing smartphone alarm clock, with a dashed retraction arc back to the hand. Monochrome white/grey palette with electric blue alarm glow on near-black background.",
+      "geo": "assets/generated/hand-reaching-toward-glowing-6.geo.json"
+    },
+    {
+      "id": "generated_airline-boarding-pass-ticket-1",
+      "name": "airline boarding pass ticket with seat 14A barcode and gate stamp",
+      "type": "svg",
+      "src": "assets/generated/airline-boarding-pass-ticket-1.svg",
+      "format": "svg",
+      "tags": [
+        "airline",
+        "boarding",
+        "pass",
+        "ticket",
+        "seat",
+        "14a",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass airline boarding pass illustration: glassy ticket card with flight info, perforated stub, barcode and gate stamp, seat 14A.",
+      "geo": "assets/generated/airline-boarding-pass-ticket-1.geo.json"
+    },
+    {
+      "id": "generated_red-rubber-ink-stamp-2",
+      "name": "red rubber ink stamp reading SOLD with grunge edge",
+      "type": "svg",
+      "src": "assets/generated/red-rubber-ink-stamp-2.svg",
+      "format": "svg",
+      "tags": [
+        "red",
+        "rubber",
+        "ink",
+        "stamp",
+        "reading",
+        "sold",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "A rotated red rubber ink stamp reading SOLD with grunge-worn edges and distressed ink texture, set on a dark-glass circular container with subtle blue accent rim. Ideal for sale, discount, or auction-themed video shorts and overlays.",
+      "geo": "assets/generated/red-rubber-ink-stamp-2.geo.json"
+    },
+    {
+      "id": "generated_airplane-seat-top-down-3",
+      "name": "airplane seat top-down icon in row grid, aircraft cabin layout",
+      "type": "svg",
+      "src": "assets/generated/airplane-seat-top-down-3.svg",
+      "format": "svg",
+      "tags": [
+        "airplane",
+        "seat",
+        "top",
+        "down",
+        "icon",
+        "row",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Top-down aircraft cabin layout icon: a 3-3 seating row grid with center aisle, seat cushions, headrests, armrests, rounded aircraft cabin fuselage outline in dark-glass style. Palette #0A0A0A, #FFFFFF, #0A84FF, #8E8E93. Suited for aviation/booking UI and motion graphics.",
+      "geo": "assets/generated/airplane-seat-top-down-3.geo.json"
+    },
+    {
+      "id": "generated_ghost-seat-flicker-particles-4",
+      "name": "ghost seat flicker particles, dim cabin aisle light streaks",
+      "type": "svg",
+      "src": "assets/generated/ghost-seat-flicker-particles-4.svg",
+      "format": "svg",
+      "tags": [
+        "ghost",
+        "seat",
+        "flicker",
+        "particles",
+        "dim",
+        "cabin",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of a dim cabin aisle with ghosted seat silhouettes, flickering particle ghosts, and long streaks of aisle light. Palette: #0A0A0A background glass, white seat ghosts, #0A84FF light streaks, #8E8E93 accents. Suitable for motion graphics overlays.",
+      "geo": "assets/generated/ghost-seat-flicker-particles-4.geo.json"
+    },
+    {
+      "id": "generated_bar-chart-airline-seat-5",
+      "name": "bar chart of airline seat revenue with one bar draining red into stacked boarding passes",
+      "type": "svg",
+      "src": "assets/generated/bar-chart-airline-seat-5.svg",
+      "format": "svg",
+      "tags": [
+        "bar",
+        "chart",
+        "airline",
+        "seat",
+        "revenue",
+        "one",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass SVG bar chart of airline seat revenue; one highlighted bar drains red into a stack of boarding passes. ViewBox 0 0 200 200.",
+      "geo": "assets/generated/bar-chart-airline-seat-5.geo.json"
+    },
+    {
+      "id": "generated_falling-dollar-coin-particles-6",
+      "name": "falling dollar coin particles and paper ticket stream",
+      "type": "svg",
+      "src": "assets/generated/falling-dollar-coin-particles-6.svg",
+      "format": "svg",
+      "tags": [
+        "falling",
+        "dollar",
+        "coin",
+        "particles",
+        "paper",
+        "ticket",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of falling dollar coin particles and a curling paper ticket stream, with glowing blue dollar coins, soft glass highlights, and technical micro-detail accents.",
+      "geo": "assets/generated/falling-dollar-coin-particles-6.geo.json"
+    },
+    {
+      "id": "generated_letterpress-wood-type-printing-1",
+      "name": "letterpress wood type printing block with reversed carved slab-serif letters",
+      "type": "svg",
+      "src": "assets/generated/letterpress-wood-type-printing-1.svg",
+      "format": "svg",
+      "tags": [
+        "letterpress",
+        "wood",
+        "type",
+        "printing",
+        "block",
+        "reversed",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of a letterpress wood type printing block featuring a reversed carved slab-serif letter with subtle blue accent glow and technical corner brackets.",
+      "geo": "assets/generated/letterpress-wood-type-printing-1.geo.json"
+    },
+    {
+      "id": "generated_engraved-18th-century-portrait-2",
+      "name": "engraved 18th-century portrait plate of Benjamin Franklin with hatch-line etching style",
+      "type": "svg",
+      "src": "assets/generated/engraved-18th-century-portrait-2.svg",
+      "format": "svg",
+      "tags": [
+        "engraved",
+        "18th",
+        "century",
+        "portrait",
+        "plate",
+        "benjamin",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Engraved 18th-century style portrait plate of Benjamin Franklin rendered in hatch-line etching style on a dark-glass circular plate. Monochrome etched strokes with subtle blue accent glow, corner brackets and technical ticks for modern motion-graphics use.",
+      "geo": "assets/generated/engraved-18th-century-portrait-2.geo.json"
+    },
+    {
+      "id": "generated_red-rectangular-date-stamp-3",
+      "name": "red rectangular date stamp reading 1748 with rough inked border",
+      "type": "svg",
+      "src": "assets/generated/red-rectangular-date-stamp-3.svg",
+      "format": "svg",
+      "tags": [
+        "red",
+        "rectangular",
+        "date",
+        "stamp",
+        "reading",
+        "1748",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass styled illustration of a vintage red rectangular rubber date stamp reading \"1748\", with a rough hand-inked irregular border, slightly rotated, ink texture details and subtle distressed edges.",
+      "geo": "assets/generated/red-rectangular-date-stamp-3.geo.json"
+    },
+    {
+      "id": "generated_gold-colonial-era-coins-4",
+      "name": "gold colonial-era coins tumbling with dollar and shilling symbols",
+      "type": "svg",
+      "src": "assets/generated/gold-colonial-era-coins-4.svg",
+      "format": "svg",
+      "tags": [
+        "gold",
+        "colonial",
+        "era",
+        "coins",
+        "tumbling",
+        "dollar",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass style icon of gold colonial-era coins tumbling in mid-air, featuring embossed dollar ($) and shilling (s) symbols, with blue-white accent glows on a deep charcoal backdrop. Suited for finance/history shorts.",
+      "geo": "assets/generated/gold-colonial-era-coins-4.geo.json"
+    },
+    {
+      "id": "generated_18th-century-accounting-ledger-5",
+      "name": "18th-century accounting ledger page with ruled columns, quill totals and dollar figures",
+      "type": "svg",
+      "src": "assets/generated/18th-century-accounting-ledger-5.svg",
+      "format": "svg",
+      "tags": [
+        "18th",
+        "century",
+        "accounting",
+        "ledger",
+        "page",
+        "ruled",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass stylized 18th-century accounting ledger page: ruled columns, handwritten-style dollar figures, a quill pen with an ink flourish marking totals, plus glass card styling and corner brackets. For finance/history chart shorts.",
+      "geo": "assets/generated/18th-century-accounting-ledger-5.geo.json"
+    },
+    {
+      "id": "generated_feather-quill-pen-scratching-6",
+      "name": "feather quill pen scratching an ink line on parchment",
+      "type": "svg",
+      "src": "assets/generated/feather-quill-pen-scratching-6.svg",
+      "format": "svg",
+      "tags": [
+        "feather",
+        "quill",
+        "pen",
+        "scratching",
+        "ink",
+        "line",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass icon of a feather quill pen writing an ink line on a parchment scroll card. Palette #0A0A0A, #FFFFFF, #0A84FF, #8E8E93. Suitable for writing/authoring/storytelling visuals in video shorts.",
+      "geo": "assets/generated/feather-quill-pen-scratching-6.geo.json"
+    },
+    {
+      "id": "generated_antique-feather-quill-pen-1",
+      "name": "antique feather quill pen drawing an ink stroke",
+      "type": "svg",
+      "src": "assets/generated/antique-feather-quill-pen-1.svg",
+      "format": "svg",
+      "tags": [
+        "antique",
+        "feather",
+        "quill",
+        "pen",
+        "drawing",
+        "ink",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass icon of an antique white feather quill pen writing an elegant blue ink stroke, with glassmorphic backing, glow accents, and corner brackets.",
+      "geo": "assets/generated/antique-feather-quill-pen-1.geo.json"
+    },
+    {
+      "id": "generated_copper-sixpence-coin-profile-2",
+      "name": "copper sixpence coin with profile portrait and 'VI' engraving",
+      "type": "svg",
+      "src": "assets/generated/copper-sixpence-coin-profile-2.svg",
+      "format": "svg",
+      "tags": [
+        "copper",
+        "sixpence",
+        "coin",
+        "profile",
+        "portrait",
+        "engraving",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass styled copper sixpence coin icon: circular coin with copper gradient rim, left-facing female profile portrait in relief, 'VI' engraved at base, beaded edge, and subtle blue glass highlight. Suitable for numismatic/money-themed motion graphics.",
+      "geo": "assets/generated/copper-sixpence-coin-profile-2.geo.json"
+    },
+    {
+      "id": "generated_five-stacked-silver-shilling-3",
+      "name": "five stacked silver shilling coins cascading in a falling column",
+      "type": "svg",
+      "src": "assets/generated/five-stacked-silver-shilling-3.svg",
+      "format": "svg",
+      "tags": [
+        "five",
+        "stacked",
+        "silver",
+        "shilling",
+        "coins",
+        "cascading",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Five silver shilling coins stacked in a cascading falling column on a dark glass background, with sapphire blue accents, glow filters, and micro-technical details. Suitable for finance/currency motion graphics.",
+      "geo": "assets/generated/five-stacked-silver-shilling-3.geo.json"
+    },
+    {
+      "id": "generated_red-rubber-audit-stamp-4",
+      "name": "red rubber audit stamp reading THROWN AWAY with grunge ink texture",
+      "type": "svg",
+      "src": "assets/generated/red-rubber-audit-stamp-4.svg",
+      "format": "svg",
+      "tags": [
+        "red",
+        "rubber",
+        "audit",
+        "stamp",
+        "reading",
+        "thrown",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A grungy red rubber audit stamp reading THROWN AWAY, circular double-ring border with stars, distressed ink texture via fractal noise mask, on transparent dark-glass background. Ideal for rejection/rejected-docs motion graphics overlays.",
+      "geo": "assets/generated/red-rubber-audit-stamp-4.geo.json"
+    },
+    {
+      "id": "generated_ghosted-typeset-fine-print-5",
+      "name": "ghosted typeset fine-print column of Franklin quote 'Remember that time is money'",
+      "type": "svg",
+      "src": "assets/generated/ghosted-typeset-fine-print-5.svg",
+      "format": "svg",
+      "tags": [
+        "ghosted",
+        "typeset",
+        "fine",
+        "print",
+        "column",
+        "franklin",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass themed vertical typeset column rendering Benjamin Franklin's quote 'Remember that time is money' in ghosted fine print, with a small electric-blue accent line and hairline corner brackets, suitable for background texture or typographic overlay in shorts.",
+      "geo": "assets/generated/ghosted-typeset-fine-print-5.geo.json"
+    },
+    {
+      "id": "generated_benjamin-franklin-silhouette-portrait-6",
+      "name": "Benjamin Franklin silhouette portrait in circular copper medallion frame",
+      "type": "svg",
+      "src": "assets/generated/benjamin-franklin-silhouette-portrait-6.svg",
+      "format": "svg",
+      "tags": [
+        "benjamin",
+        "franklin",
+        "silhouette",
+        "portrait",
+        "circular",
+        "copper",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Circular copper/bronze medallion featuring a dark silhouette portrait of Benjamin Franklin with shoulder-length hair and colonial cravat, dark-glass aesthetic with blue accent glow and radial hatching rays.",
+      "geo": "assets/generated/benjamin-franklin-silhouette-portrait-6.geo.json"
+    },
+    {
+      "id": "generated_vintage-1748-parchment-engraving-1",
+      "name": "vintage 1748 parchment engraving texture with quill pen and ink well, Ben Franklin era",
+      "type": "svg",
+      "src": "assets/generated/vintage-1748-parchment-engraving-1.svg",
+      "format": "svg",
+      "tags": [
+        "vintage",
+        "1748",
+        "parchment",
+        "engraving",
+        "texture",
+        "quill",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass stylized 1748-era parchment engraving: glowing parchment panel with ornate engraved corner flourishes, a quill pen resting diagonally, an ink well with glass highlights, baroque text flourishes and date \"MDCXLVIII\"-style cartouche reading 1748.",
+      "geo": "assets/generated/vintage-1748-parchment-engraving-1.geo.json"
+    },
+    {
+      "id": "generated_wall-street-ticker-tape",
+      "name": "Wall Street ticker tape strip with scrolling stock symbols and prices",
+      "type": "svg",
+      "src": "assets/generated/wall-street-ticker-tape.svg",
+      "format": "svg",
+      "tags": [
+        "wall",
+        "street",
+        "ticker",
+        "tape",
+        "strip",
+        "scrolling",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark glassmorphic Wall Street ticker tape icon: two angled tape strips with monospace stock symbols (AAPL, TSLA, MSFT, NVDA) and prices, green up arrows and red down arrows, subtle glass sheen on dark background, 200x200 viewBox.",
+      "geo": "assets/generated/wall-street-ticker-tape.geo.json"
+    },
+    {
+      "id": "generated_two-bar-latency-comparison-3",
+      "name": "two-bar latency comparison chart 16ms vs 13ms with value callouts, fiber cable crossing",
+      "type": "svg",
+      "src": "assets/generated/two-bar-latency-comparison-3.svg",
+      "format": "svg",
+      "tags": [
+        "two",
+        "bar",
+        "latency",
+        "comparison",
+        "chart",
+        "16ms",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass two-bar latency comparison chart: 16ms vs 13ms bars with glowing value callouts, gridlines, and a decorative fiber optic cable curve crossing the panel.",
+      "geo": "assets/generated/two-bar-latency-comparison-3.geo.json"
+    },
+    {
+      "id": "generated_stopwatch-millisecond-dial-glowing-4",
+      "name": "stopwatch with millisecond dial glowing red on black",
+      "type": "svg",
+      "src": "assets/generated/stopwatch-millisecond-dial-glowing-4.svg",
+      "format": "svg",
+      "tags": [
+        "stopwatch",
+        "millisecond",
+        "dial",
+        "glowing",
+        "red",
+        "black",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass stopwatch icon on near-black background with a glowing red millisecond subdial, blue sweep hand, chrome details, and subtle glassmorphic highlights.",
+      "geo": "assets/generated/stopwatch-millisecond-dial-glowing-4.geo.json"
+    },
+    {
+      "id": "generated_flowing-golden-coin-dollar-5",
+      "name": "flowing golden coin and dollar-sign particle burst",
+      "type": "svg",
+      "src": "assets/generated/flowing-golden-coin-dollar-5.svg",
+      "format": "svg",
+      "tags": [
+        "flowing",
+        "golden",
+        "coin",
+        "dollar",
+        "sign",
+        "particle",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of a flowing golden coin with a dollar sign, surrounded by a particle burst of gold and blue sparks, dollar signs, and motion streaks. Suited for fintech shorts, crypto/cash motion graphics backgrounds.",
+      "geo": "assets/generated/flowing-golden-coin-dollar-5.geo.json"
+    },
+    {
+      "id": "generated_scrolling-ticker-tape-paper-6",
+      "name": "scrolling ticker-tape paper ribbon particles",
+      "type": "svg",
+      "src": "assets/generated/scrolling-ticker-tape-paper-6.svg",
+      "format": "svg",
+      "tags": [
+        "scrolling",
+        "ticker",
+        "tape",
+        "paper",
+        "ribbon",
+        "particles",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of a scrolling ticker-tape: a curling white paper ribbon winding diagonally with motion-blur streaks, glowing blue accent particles, and small confetti squares, on a dark glass rounded card.",
+      "geo": "assets/generated/scrolling-ticker-tape-paper-6.geo.json"
+    },
+    {
+      "id": "generated_wall-street-ticker-tape-2",
+      "name": "Wall Street ticker tape strip with scrolling stock symbols and prices",
+      "type": "svg",
+      "src": "assets/generated/wall-street-ticker-tape-2.svg",
+      "format": "svg",
+      "tags": [
+        "wall",
+        "street",
+        "ticker",
+        "tape",
+        "strip",
+        "scrolling",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "A dark-glass Wall Street ticker tape icon: two angled tape strips with stock symbols (AAPL, TSLA, MSFT, NVDA) and prices with green/red tick arrows, sapphire blue accent, glass highlight sheen, within a 200x200 viewBox.",
+      "geo": "assets/generated/wall-street-ticker-tape-2.geo.json"
+    },
+    {
+      "id": "generated_documentary-interview-subject-silhouette-1",
+      "name": "documentary interview subject silhouette at desk with laptop, hard single-source interrogation light, film grain",
+      "type": "svg",
+      "src": "assets/generated/documentary-interview-subject-silhouette-1.svg",
+      "format": "svg",
+      "tags": [
+        "documentary",
+        "interview",
+        "subject",
+        "silhouette",
+        "desk",
+        "laptop",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass documentary illustration: a faceless subject silhouette seated at a desk with an open laptop, lit by a single hard interrogation light from upper right, blue laptop glow, film grain overlay and vignette.",
+      "geo": "assets/generated/documentary-interview-subject-silhouette-1.geo.json"
+    },
+    {
+      "id": "generated_red-subject-case-file-2",
+      "name": "red SUBJECT 27 case-file interview tag with tape corners",
+      "type": "svg",
+      "src": "assets/generated/red-subject-case-file-2.svg",
+      "format": "svg",
+      "tags": [
+        "red",
+        "subject",
+        "case",
+        "file",
+        "interview",
+        "tag",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass style case-file interview tag labeled 'SUBJECT 27' with a red classification bar, barcode strip, and angled tape corners at all four edges. Designed for motion graphics overlays and video shorts.",
+      "geo": "assets/generated/red-subject-case-file-2.geo.json"
+    },
+    {
+      "id": "generated_brain-node-graph-glowing-3",
+      "name": "3D brain node-graph with glowing synapse links between neurons",
+      "type": "svg",
+      "src": "assets/generated/brain-node-graph-glowing-3.svg",
+      "format": "svg",
+      "tags": [
+        "brain",
+        "node",
+        "graph",
+        "glowing",
+        "synapse",
+        "links",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of a 3D brain-shaped node graph with glowing blue synapse links connecting white neurons, accented with sparkles, crosshairs and depth shading. Ideal for AI/neuroscience motion graphics backgrounds.",
+      "geo": "assets/generated/brain-node-graph-glowing-3.geo.json"
+    },
+    {
+      "id": "generated_mit-media-lab-stamped-4",
+      "name": "MIT Media Lab stamped dossier header card, red stamp seal",
+      "type": "svg",
+      "src": "assets/generated/mit-media-lab-stamped-4.svg",
+      "format": "svg",
+      "tags": [
+        "mit",
+        "media",
+        "lab",
+        "stamped",
+        "dossier",
+        "header",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass dossier header card for MIT Media Lab with corner brackets, technical ticks, blue accent line, and a rotated red rubber-stamp seal reading \"APPROVED / MEDIA LAB\". Suitable for motion graphics shorts and interface headers.",
+      "geo": "assets/generated/mit-media-lab-stamped-4.geo.json"
+    },
+    {
+      "id": "generated_eeg-brainwave-monitor-strip-5",
+      "name": "EEG brainwave monitor strip with peaks collapsing to flatline",
+      "type": "svg",
+      "src": "assets/generated/eeg-brainwave-monitor-strip-5.svg",
+      "format": "svg",
+      "tags": [
+        "eeg",
+        "brainwave",
+        "monitor",
+        "strip",
+        "peaks",
+        "collapsing",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass EEG monitor strip chart on 200x200 viewBox showing a brainwave that starts with large complex peaks and collapses into a flatline. Sapphire blue #0A0A0A background glass card, white/blue waveform, gray flatline segment, grid ticks and corner brackets for a medical monitor feel.",
+      "geo": "assets/generated/eeg-brainwave-monitor-strip-5.geo.json"
+    },
+    {
+      "id": "generated_research-participant-wearing-eeg-6",
+      "name": "research participant wearing EEG electrode cap in lab, macro",
+      "type": "svg",
+      "src": "assets/generated/research-participant-wearing-eeg-6.svg",
+      "format": "svg",
+      "tags": [
+        "research",
+        "participant",
+        "wearing",
+        "eeg",
+        "electrode",
+        "cap",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass macro illustration of a research participant's head in profile wearing an EEG electrode cap with glowing blue electrode nodes, connecting wires, and subtle technical HUD markers. Suitable for neuroscience/research motion graphics.",
+      "geo": "assets/generated/research-participant-wearing-eeg-6.geo.json"
+    },
+    {
+      "id": "generated_glowing-wireframe-human-brain-1",
+      "name": "glowing wireframe human brain node-graph with neural synapse connections on dark violet void",
+      "type": "svg",
+      "src": "assets/generated/glowing-wireframe-human-brain-1.svg",
+      "format": "svg",
+      "tags": [
+        "glowing",
+        "wireframe",
+        "human",
+        "brain",
+        "node",
+        "graph",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Production-grade glowing wireframe human brain made of connected node graphs and synapse lines on a dark violet void background. Dark-glass aesthetic with blue glow accents, suitable for AI/neuroscience motion graphics and video shorts.",
+      "geo": "assets/generated/glowing-wireframe-human-brain-1.geo.json"
+    },
+    {
+      "id": "generated_dream-file-document-icon-2",
+      "name": "dream-file document icon with folder tab dissolving into pixel shards",
+      "type": "svg",
+      "src": "assets/generated/dream-file-document-icon-2.svg",
+      "format": "svg",
+      "tags": [
+        "dream",
+        "file",
+        "document",
+        "icon",
+        "folder",
+        "tab",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass document icon with folder tab on the upper-left, its right edge dissolving into scattered pixel shards in blue and white. Sheet features folded corner, subtle text lines, and glow accents. Designed for video shorts and dark UI.",
+      "geo": "assets/generated/dream-file-document-icon-2.geo.json"
+    },
+    {
+      "id": "generated_hippocampus-brain-region-node-3",
+      "name": "hippocampus brain region node with pulsing activation ring and digital timer chip 00:02:14",
+      "type": "svg",
+      "src": "assets/generated/hippocampus-brain-region-node-3.svg",
+      "format": "svg",
+      "tags": [
+        "hippocampus",
+        "brain",
+        "region",
+        "node",
+        "pulsing",
+        "activation",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass neuroscience illustration: stylized hippocampus curved region shape with neural connections, glowing blue pulsing activation rings, corner brackets and a digital timer chip reading 00:02:14 in monospace.",
+      "geo": "assets/generated/hippocampus-brain-region-node-3.geo.json"
+    },
+    {
+      "id": "generated_chemical-gauge-dial-labeled-4",
+      "name": "chemical gauge dial labeled NORADRENALINE crashing from green to red flatline zero",
+      "type": "svg",
+      "src": "assets/generated/chemical-gauge-dial-labeled-4.svg",
+      "format": "svg",
+      "tags": [
+        "chemical",
+        "gauge",
+        "dial",
+        "labeled",
+        "noradrenaline",
+        "crashing",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass chemical gauge dial: NORADRENALINE label, arc gauge sweeping from green zone to red zero, glowing needle collapsed at zero, subtle glass highlights and tick marks.",
+      "geo": "assets/generated/chemical-gauge-dial-labeled-4.geo.json"
+    },
+    {
+      "id": "generated_drifting-luminous-dream-fragment-5",
+      "name": "drifting luminous dream-fragment shards dissolving upward like smoke",
+      "type": "svg",
+      "src": "assets/generated/drifting-luminous-dream-fragment-5.svg",
+      "format": "svg",
+      "tags": [
+        "drifting",
+        "luminous",
+        "dream",
+        "fragment",
+        "shards",
+        "dissolving",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of angular luminous shards drifting upward like smoke, dissolving into particles. Palette: #0A0A0A, #FFFFFF, #0A84FF, #8E8E93. Suitable for dreamy transitions or motion-graphics backgrounds.",
+      "geo": "assets/generated/drifting-luminous-dream-fragment-5.geo.json"
+    },
+    {
+      "id": "generated_faint-eeg-rem-sleep-6",
+      "name": "faint EEG REM-sleep waveform strip oscillating",
+      "type": "svg",
+      "src": "assets/generated/faint-eeg-rem-sleep-6.svg",
+      "format": "svg",
+      "tags": [
+        "faint",
+        "eeg",
+        "rem",
+        "sleep",
+        "waveform",
+        "strip",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A faint EEG REM-sleep waveform strip rendered on a dark-glass panel: white/gray trace with electric-blue REM burst clusters, subtle glow, faint grid ticks, and corner brackets. Ideal as an ambient oscillating overlay element in sleep-tech or neuro-themed motion graphics.",
+      "geo": "assets/generated/faint-eeg-rem-sleep-6.geo.json"
+    },
+    {
+      "id": "generated_red-rubber-stamp-duplicate-seat-14a",
+      "name": "red rubber stamp reading DUPLICATE SEAT 14A",
+      "type": "svg",
+      "src": "assets/generated/red-rubber-stamp-duplicate-seat-14a.svg",
+      "format": "svg",
+      "tags": [
+        "red",
+        "rubber",
+        "stamp",
+        "reading",
+        "duplicate",
+        "seat",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "A production-grade circular red rubber stamp icon reading \"DUPLICATE\" around the ring and \"SEAT 14A\" in the center, with grunge texture feel, double ring border, and dark-glass styling. Ideal for boarding-pass or travel-themed motion graphics.",
+      "geo": "assets/generated/red-rubber-stamp-duplicate-seat-14a.geo.json"
+    },
+    {
+      "id": "generated_horizontal-scan-line-shimmer-3",
+      "name": "horizontal scan-line shimmer across ticket surface",
+      "type": "svg",
+      "src": "assets/generated/horizontal-scan-line-shimmer-3.svg",
+      "format": "svg",
+      "tags": [
+        "horizontal",
+        "scan",
+        "line",
+        "shimmer",
+        "across",
+        "ticket",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of a horizontal scan-line shimmer sweeping across a ticket-shaped surface, with animated gradient band, corner brackets, and technical tick markers.",
+      "geo": "assets/generated/horizontal-scan-line-shimmer-3.geo.json"
+    },
+    {
+      "id": "generated_airline-cabin-seat-map-4",
+      "name": "airline cabin seat-map grid with rows of seats top view",
+      "type": "svg",
+      "src": "assets/generated/airline-cabin-seat-map-4.svg",
+      "format": "svg",
+      "tags": [
+        "airline",
+        "cabin",
+        "seat",
+        "map",
+        "grid",
+        "rows",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass airline cabin seat map: fuselage outline, aisle, 3-3 seat grid in top view, some seats highlighted blue (available), gray (occupied), with row numbers and title.",
+      "geo": "assets/generated/airline-cabin-seat-map-4.geo.json"
+    },
+    {
+      "id": "generated_empty-airplane-seat-silhouette-5",
+      "name": "empty airplane seat silhouette in red outline",
+      "type": "svg",
+      "src": "assets/generated/empty-airplane-seat-silhouette-5.svg",
+      "format": "svg",
+      "tags": [
+        "empty",
+        "airplane",
+        "seat",
+        "silhouette",
+        "red",
+        "outline",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Empty airplane seat icon drawn as a bold red outline silhouette (backrest, cushion, armrests, base legs) centered on a dark-glass rounded-square tile with subtle glow, corner brackets and technical tick details. Suitable for motion graphics and UI shorts.",
+      "geo": "assets/generated/empty-airplane-seat-silhouette-5.geo.json"
+    },
+    {
+      "id": "generated_stacked-bar-chart-growing-6",
+      "name": "stacked bar chart of growing empty seats per flight",
+      "type": "svg",
+      "src": "assets/generated/stacked-bar-chart-growing-6.svg",
+      "format": "svg",
+      "tags": [
+        "stacked",
+        "bar",
+        "chart",
+        "growing",
+        "empty",
+        "seats",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass stacked bar chart showing growing empty seats per flight across 5 flights, with blue glass bars, gridlines, and glossy accents.",
+      "geo": "assets/generated/stacked-bar-chart-growing-6.geo.json"
+    },
+    {
+      "id": "generated_red-forensic-rubber-stamp-1",
+      "name": "Red Forensic Rubber Stamp — 83% FAILED OWN TEST",
+      "type": "svg",
+      "src": "assets/generated/red-forensic-rubber-stamp-1.svg",
+      "format": "svg",
+      "tags": [
+        "red",
+        "forensic",
+        "rubber",
+        "stamp",
+        "reading",
+        "failed",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass styled forensic rubber stamp badge: a red double-ring stamp reading \"83%\" large with \"FAILED OWN TEST\" around a circle and grunge ink erosion texture, on a dark glass card. Suitable for verdict/failure overlays in video shorts.",
+      "geo": "assets/generated/red-forensic-rubber-stamp-1.geo.json"
+    },
+    {
+      "id": "generated_eeg-brain-cap-wired-2",
+      "name": "EEG brain cap with wired electrodes on human head, medical documentary photography style",
+      "type": "svg",
+      "src": "assets/generated/eeg-brain-cap-wired-2.svg",
+      "format": "svg",
+      "tags": [
+        "eeg",
+        "brain",
+        "cap",
+        "wired",
+        "electrodes",
+        "human",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass medical documentary style icon: human head silhouette in profile wearing an EEG cap with electrode discs and wires, EEG waveform accent, monochrome with electric blue accents on transparent dark background.",
+      "geo": "assets/generated/eeg-brain-cap-wired-2.geo.json"
+    },
+    {
+      "id": "generated_mit-media-lab-dossier-3",
+      "name": "MIT Media Lab dossier file cover, redacted classified document with black redaction bars and 54 SUBJECTS stamp",
+      "type": "svg",
+      "src": "assets/generated/mit-media-lab-dossier-3.svg",
+      "format": "svg",
+      "tags": [
+        "mit",
+        "media",
+        "lab",
+        "dossier",
+        "file",
+        "cover",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass dossier cover: classified document with redaction bars, blue 54 SUBJECTS stamp, MIT Media Lab header, corner brackets and technical ticks.",
+      "geo": "assets/generated/mit-media-lab-dossier-3.geo.json"
+    },
+    {
+      "id": "generated_three-line-brain-connectivity-4",
+      "name": "three-line brain connectivity race chart, one line dropping and flatlining in red",
+      "type": "svg",
+      "src": "assets/generated/three-line-brain-connectivity-4.svg",
+      "format": "svg",
+      "tags": [
+        "three",
+        "line",
+        "brain",
+        "connectivity",
+        "race",
+        "chart",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Three-line race chart on a dark glassmorphic grid: a blue line rises, a gray line stays flat, and a red line drops sharply then flatlines at the bottom — depicting brain connectivity decline.",
+      "geo": "assets/generated/three-line-brain-connectivity-4.geo.json"
+    },
+    {
+      "id": "generated_yellow-sticky-note-reading-5",
+      "name": "yellow sticky note reading COGNITIVE DEBT with handwritten marker font",
+      "type": "svg",
+      "src": "assets/generated/yellow-sticky-note-reading-5.svg",
+      "format": "svg",
+      "tags": [
+        "yellow",
+        "sticky",
+        "note",
+        "reading",
+        "cognitive",
+        "debt",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A yellow sticky note with slightly curled corner, handwritten-style marker text \"COGNITIVE DEBT\" in dark ink, on a dark-glass backdrop with subtle glow and a scribbled underline accent.",
+      "geo": "assets/generated/yellow-sticky-note-reading-5.geo.json"
+    },
+    {
+      "id": "generated_open-plan-office-workers-6",
+      "name": "open-plan office workers at desks half-watching screens accepting AI autocomplete suggestions",
+      "type": "svg",
+      "src": "assets/generated/open-plan-office-workers-6.svg",
+      "format": "svg",
+      "tags": [
+        "open",
+        "plan",
+        "office",
+        "workers",
+        "desks",
+        "half",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass flat illustration of two open-plan office workers at desks, glow-lit screens showing AI autocomplete ghost text being accepted (tab key hint), sparkle AI badge, coffee cups, plant accent. Palette #0A0A0A background, #FFFFFF, #0A84FF accent, #8E8E93 gray.",
+      "geo": "assets/generated/open-plan-office-workers-6.geo.json"
+    },
+    {
+      "id": "generated_photorealistic-isometric-rubik-cube-1",
+      "name": "photorealistic isometric rubik's cube",
+      "type": "svg",
+      "src": "assets/generated/photorealistic-isometric-rubik-cube-1.svg",
+      "format": "svg",
+      "tags": [
+        "photorealistic",
+        "isometric",
+        "rubik",
+        "cube",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A photorealistic isometric 3x3 Rubik's cube rendered in a dark-glass aesthetic on transparent background. Sapphire blue, white and neutral gray stickers with glow filters, edge highlights and soft drop shadow. Ideal as a hero graphic or motion-graphics anchor in tech shorts.",
+      "geo": "assets/generated/photorealistic-isometric-rubik-cube-1.geo.json"
+    },
+    {
+      "id": "generated_number-quintillion-display-chip-2",
+      "name": "number 43 quintillion display chip",
+      "type": "svg",
+      "src": "assets/generated/number-quintillion-display-chip-2.svg",
+      "format": "svg",
+      "tags": [
+        "number",
+        "quintillion",
+        "display",
+        "chip",
+        "badge",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass display chip illustration showing the number 43 with 'QUINTILLION' caption, framed in a rounded-square chip with microchip pins, corner brackets, and subtle glow accents. Palette: #0A0A0A, #FFFFFF, #0A84FF, #8E8E93.",
+      "geo": "assets/generated/number-quintillion-display-chip-2.geo.json"
+    },
+    {
+      "id": "generated_structural-architectural-blueprint-lines-3",
+      "name": "structural architectural blueprint lines",
+      "type": "svg",
+      "src": "assets/generated/structural-architectural-blueprint-lines-3.svg",
+      "format": "svg",
+      "tags": [
+        "structural",
+        "architectural",
+        "blueprint",
+        "lines",
+        "chart",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass blueprint-style structural architectural diagram: isometric-style frame grid, crosshairs, dimension ticks, corner brackets, sapphire accent lines on near-black background.",
+      "geo": "assets/generated/structural-architectural-blueprint-lines-3.geo.json"
+    },
+    {
+      "id": "generated_digital-data-stream-particles-4",
+      "name": "digital data stream particles",
+      "type": "svg",
+      "src": "assets/generated/digital-data-stream-particles-4.svg",
+      "format": "svg",
+      "tags": [
+        "digital",
+        "data",
+        "stream",
+        "particles",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass digital illustration of a data stream: flowing white/blue particle trails with glowing nodes and a frosted glass core, palette #0A0A0A/#FFFFFF/#0A84FF/#8E8E93.",
+      "geo": "assets/generated/digital-data-stream-particles-4.geo.json"
+    },
+    {
+      "id": "generated_2010-year-marker-tech-5",
+      "name": "2010 year marker with tech glitch aesthetic",
+      "type": "svg",
+      "src": "assets/generated/2010-year-marker-tech-5.svg",
+      "format": "svg",
+      "tags": [
+        "2010",
+        "year",
+        "marker",
+        "tech",
+        "glitch",
+        "aesthetic",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A square dark-glass year marker reading \"2010\" with RGB-split glitch offset, scanlines, corner brackets, and monospace technical ticks — ideal for timeline/retrospective video graphics.",
+      "geo": "assets/generated/2010-year-marker-tech-5.geo.json"
+    },
+    {
+      "id": "generated_checkmark-icon-solved-state-6",
+      "name": "checkmark icon for solved state",
+      "type": "svg",
+      "src": "assets/generated/checkmark-icon-solved-state-6.svg",
+      "format": "svg",
+      "tags": [
+        "checkmark",
+        "icon",
+        "solved",
+        "state",
+        "icon",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "A dark-glass circular checkmark icon representing a solved/completed state. Features a frosted dark-glass disc with subtle top highlight, inner stroke, an electric blue gradient ring, and a bold white checkmark with soft glow, plus technical corner brackets and micro tick details. Designed for video shorts and UI overlays.",
+      "geo": "assets/generated/checkmark-icon-solved-state-6.geo.json"
+    },
+    {
+      "id": "generated_rubiks-cube-history-hero",
+      "name": "Rubik's Cube Hero Illustration — History Explainer",
+      "type": "svg",
+      "src": "assets/generated/rubiks-cube-history-hero.svg",
+      "format": "svg",
+      "tags": [
+        "second",
+        "explainer",
+        "about",
+        "history",
+        "rubik",
+        "cube",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass hero illustration of a Rubik's Cube on a 200x200 viewBox. Isometric 3x3 cube rendered with clean vector faces, glassmorphic backing card, glow accents in Apple blue (#0A84FF), white and gray palette on near-black background, subtle corner brackets and technical markers.",
+      "geo": "assets/generated/rubiks-cube-history-hero.geo.json"
+    },
+    {
+      "id": "generated_second-explainer-about-history-2",
+      "name": "Rubik's Cube History — Concept Emblem Badge",
+      "type": "svg",
+      "src": "assets/generated/second-explainer-about-history-2.svg",
+      "format": "svg",
+      "tags": [
+        "second",
+        "explainer",
+        "about",
+        "history",
+        "rubik",
+        "cube",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "A dark-glass circular emblem badge featuring a stylized 3x3 Rubik's Cube rendered isometrically with blue and gray glass faces on a near-black background, with subtle glow, corner brackets, and micro technical tick details. Suitable as a concept icon for a 24-second explainer about the history of the Rubik's Cube.",
+      "geo": "assets/generated/second-explainer-about-history-2.geo.json"
+    },
+    {
+      "id": "generated_second-explainer-about-history-3",
+      "name": "Rubik's Cube History — Data Metric Visualization",
+      "type": "svg",
+      "src": "assets/generated/second-explainer-about-history-3.svg",
+      "format": "svg",
+      "tags": [
+        "second",
+        "explainer",
+        "about",
+        "history",
+        "rubik",
+        "cube",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass data visualization for a 24-second Rubik's Cube history explainer: isometric glass cube motif with a rising stat bar chart, glowing sapphire accents, crosshair grid, and metric readouts on transparent dark background.",
+      "geo": "assets/generated/second-explainer-about-history-3.geo.json"
+    },
+    {
+      "id": "generated_explainer-motion-ornament-frame-4",
+      "name": "explainer motion ornament frame or ambient pattern",
+      "type": "svg",
+      "src": "assets/generated/explainer-motion-ornament-frame-4.svg",
+      "format": "svg",
+      "tags": [
+        "explainer",
+        "motion",
+        "ornament",
+        "frame",
+        "ambient",
+        "pattern",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass explainer motion ornament frame with ambient concentric rings, corner brackets, orbital accents, and glowing blue sapphire details on near-black background.",
+      "geo": "assets/generated/explainer-motion-ornament-frame-4.geo.json"
+    },
+    {
+      "id": "generated_photorealistic-rubik-cube-isolated-1",
+      "name": "photorealistic Rubik's cube isolated",
+      "type": "svg",
+      "src": "assets/generated/photorealistic-rubik-cube-isolated-1.svg",
+      "format": "svg",
+      "tags": [
+        "photorealistic",
+        "rubik",
+        "cube",
+        "isolated",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Photorealistic isometric Rubik's cube illustration on transparent background, dark-glass theme. Three visible faces (top, left, right) with 3x3 sticker grids in sapphire blue, white, and neutral gray, with glass gloss overlays, ambient occlusion, luminous edge highlights, soft contact shadow, and a subtle electric-blue glow.",
+      "geo": "assets/generated/photorealistic-rubik-cube-isolated-1.geo.json"
+    },
+    {
+      "id": "generated_mathematical-symbol-infinity-2",
+      "name": "mathematical symbol infinity",
+      "type": "svg",
+      "src": "assets/generated/mathematical-symbol-infinity-2.svg",
+      "format": "svg",
+      "tags": [
+        "mathematical",
+        "symbol",
+        "infinity",
+        "badge",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass style infinity symbol illustration: glowing sapphire-blue infinity lemniscate with white core highlight, glassmorphic rounded card, subtle grid, corner brackets, and soft radial glow on a near-black background.",
+      "geo": "assets/generated/mathematical-symbol-infinity-2.geo.json"
+    },
+    {
+      "id": "generated_large-data-dashboard-numeric-3",
+      "name": "large data dashboard with numeric tickers",
+      "type": "svg",
+      "src": "assets/generated/large-data-dashboard-numeric-3.svg",
+      "format": "svg",
+      "tags": [
+        "large",
+        "data",
+        "dashboard",
+        "numeric",
+        "tickers",
+        "chart",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass large data dashboard with numeric tickers, line chart, bar chart, and stat cards on a dark background with #0A84FF accents.",
+      "geo": "assets/generated/large-data-dashboard-numeric-3.geo.json"
+    },
+    {
+      "id": "generated_architectural-blueprint-wireframe-cube-4",
+      "name": "architectural blueprint wireframe of cube",
+      "type": "svg",
+      "src": "assets/generated/architectural-blueprint-wireframe-cube-4.svg",
+      "format": "svg",
+      "tags": [
+        "architectural",
+        "blueprint",
+        "wireframe",
+        "cube",
+        "icon",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass blueprint-style wireframe icon of an isometric cube with construction lines, corner brackets, grid ticks, and sapphire glow accents on near-black background.",
+      "geo": "assets/generated/architectural-blueprint-wireframe-cube-4.geo.json"
+    },
+    {
+      "id": "generated_glowing-particle-dust-5",
+      "name": "glowing particle dust",
+      "type": "svg",
+      "src": "assets/generated/glowing-particle-dust-5.svg",
+      "format": "svg",
+      "tags": [
+        "glowing",
+        "particle",
+        "dust",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass glowing particle dust illustration: scattered luminous particles in white and electric blue over a near-black dark-glass rounded container, with soft radial glows, bokeh circles, and subtle corner brackets.",
+      "geo": "assets/generated/glowing-particle-dust-5.geo.json"
+    },
+    {
+      "id": "generated_photorealistic-3x3-rubiks-cube-1",
+      "name": "photorealistic 3x3 rubiks cube",
+      "type": "svg",
+      "src": "assets/generated/photorealistic-3x3-rubiks-cube-1.svg",
+      "format": "svg",
+      "tags": [
+        "photorealistic",
+        "3x3",
+        "rubiks",
+        "cube",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Photorealistic 3x3 Rubik's cube on dark-glass theme with glossy beveled stickers, blue/white/gray palette, dark background, subtle glow.",
+      "geo": "assets/generated/photorealistic-3x3-rubiks-cube-1.geo.json"
+    },
+    {
+      "id": "generated_hungarian-professor-1970s-style-2",
+      "name": "hungarian professor 1970s style glasses",
+      "type": "svg",
+      "src": "assets/generated/hungarian-professor-1970s-style-2.svg",
+      "format": "svg",
+      "tags": [
+        "hungarian",
+        "professor",
+        "1970s",
+        "style",
+        "glasses",
+        "icon",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "A production-grade icon of 1970s-style large round oversize eyeglasses associated with a Hungarian professor aesthetic. Dark-glass styling with luminous #0A84FF lens reflections, monochrome frame, corner brackets and technical crosshair micro-details. Suitable for video shorts, avatars, and iconographic use on dark backgrounds.",
+      "geo": "assets/generated/hungarian-professor-1970s-style-2.geo.json"
+    },
+    {
+      "id": "generated_wireframe-dodecahedron-geometry-3",
+      "name": "3d wireframe dodecahedron geometry",
+      "type": "svg",
+      "src": "assets/generated/wireframe-dodecahedron-geometry-3.svg",
+      "format": "svg",
+      "tags": [
+        "wireframe",
+        "dodecahedron",
+        "geometry",
+        "chart",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass 3D wireframe dodecahedron with glowing sapphire edges, gradient vertices, and technical HUD accents on transparent background. For chart/geometry motion graphics.",
+      "geo": "assets/generated/wireframe-dodecahedron-geometry-3.geo.json"
+    },
+    {
+      "id": "generated_typography-bold-font-4",
+      "name": "typography 20 bold font",
+      "type": "svg",
+      "src": "assets/generated/typography-bold-font-4.svg",
+      "format": "svg",
+      "tags": [
+        "typography",
+        "bold",
+        "font",
+        "badge",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass typography illustration featuring a bold number 20 in white with electric blue accent, glass card background, subtle grid, glow filter, and technical corner brackets. Ideal for countdown or stat animations in shorts.",
+      "geo": "assets/generated/typography-bold-font-4.geo.json"
+    },
+    {
+      "id": "generated_digital-particle-grid-static-5",
+      "name": "digital particle grid static",
+      "type": "svg",
+      "src": "assets/generated/digital-particle-grid-static-5.svg",
+      "format": "svg",
+      "tags": [
+        "digital",
+        "particle",
+        "grid",
+        "static",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass digital particle grid illustration: subtle grid lattice with glowing blue node particles, connected constellation lines, corner brackets and technical crosshair accents on near-black background.",
+      "geo": "assets/generated/digital-particle-grid-static-5.geo.json"
+    },
+    {
+      "id": "generated_animated-bar-chart-geometry-6",
+      "name": "animated bar chart geometry data",
+      "type": "svg",
+      "src": "assets/generated/animated-bar-chart-geometry-6.svg",
+      "format": "svg",
+      "tags": [
+        "animated",
+        "bar",
+        "chart",
+        "geometry",
+        "data",
+        "chart",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass animated bar chart with five glowing blue bars rising from a baseline, featuring glass panel background, gridlines, corner brackets and technical ticks. Designed for motion graphics shorts and dashboards.",
+      "geo": "assets/generated/animated-bar-chart-geometry-6.geo.json"
+    },
+    {
+      "id": "generated_exploded-view-rubik-cube-1",
+      "name": "exploded view of Rubik cube corner mechanism",
+      "type": "svg",
+      "src": "assets/generated/exploded-view-rubik-cube-1.svg",
+      "format": "svg",
+      "tags": [
+        "exploded",
+        "view",
+        "rubik",
+        "cube",
+        "corner",
+        "mechanism",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass technical illustration of an exploded Rubik's cube corner mechanism: a white/blue corner cubie floating up-right along a dashed explode axis from a three-armed core spider. Glassmorphic dark card, blue glow accents, corner brackets and crosshair details.",
+      "geo": "assets/generated/exploded-view-rubik-cube-1.geo.json"
+    },
+    {
+      "id": "generated_1974-architectural-technical-drawing-cube",
+      "name": "1974 architectural technical drawing of a cube",
+      "type": "svg",
+      "src": "assets/generated/1974-architectural-technical-drawing-cube.svg",
+      "format": "svg",
+      "tags": [
+        "1974",
+        "architectural",
+        "technical",
+        "drawing",
+        "cube",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Retro 1974-style technical blueprint of an isometric cube: dimension lines, leader labels, hidden-edge dashed lines, coordinate ticks, and crosshairs on a dark glass panel. Monochrome white/grey linework with blue accents.",
+      "geo": "assets/generated/1974-architectural-technical-drawing-cube.geo.json"
+    },
+    {
+      "id": "generated_quintillion-numerical-counter-chip-3",
+      "name": "43 quintillion numerical counter chip",
+      "type": "svg",
+      "src": "assets/generated/quintillion-numerical-counter-chip-3.svg",
+      "format": "svg",
+      "tags": [
+        "quintillion",
+        "numerical",
+        "counter",
+        "chip",
+        "badge",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass square chip illustration showing a 4.3 x 10^19 (43 quintillion) counter readout in electric blue with technical markers and corner brackets.",
+      "geo": "assets/generated/quintillion-numerical-counter-chip-3.geo.json"
+    },
+    {
+      "id": "generated_vintage-1970s-student-student-4",
+      "name": "vintage 1970s student student silhouette",
+      "type": "svg",
+      "src": "assets/generated/vintage-1970s-student-student-4.svg",
+      "format": "svg",
+      "tags": [
+        "vintage",
+        "1970s",
+        "student",
+        "student",
+        "silhouette",
+        "icon",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Retro 1970s student silhouette icon: a figure with period afro-style hair and round vintage glasses, framed in a dark-glass circular badge with subtle blue accents. Ideal for education/retro themes in shorts and UI.",
+      "geo": "assets/generated/vintage-1970s-student-student-4.geo.json"
+    },
+    {
+      "id": "generated_pixelated-grid-formed-hundreds-5",
+      "name": "pixelated grid formed by hundreds of cubes",
+      "type": "svg",
+      "src": "assets/generated/pixelated-grid-formed-hundreds-5.svg",
+      "format": "svg",
+      "tags": [
+        "pixelated",
+        "grid",
+        "formed",
+        "hundreds",
+        "cubes",
+        "chart",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass themed isometric pixel-grid chart: hundreds of small cubes tiled seamlessly via pattern, with scattered electric-blue accent cubes, subtle grid glow, edge ticks and corner brackets. Ideal as a tech/data backdrop or transition element in shorts.",
+      "geo": "assets/generated/pixelated-grid-formed-hundreds-5.geo.json"
+    },
+    {
+      "id": "generated_dynamic-dust-motes-6",
+      "name": "dynamic dust motes",
+      "type": "svg",
+      "src": "assets/generated/dynamic-dust-motes-6.svg",
+      "format": "svg",
+      "tags": [
+        "dynamic",
+        "dust",
+        "motes",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of luminous dust motes floating in space; white and blue glowing particles of varying sizes with soft blur glows, faint glass panel hints and crosshair accents on a near-black background. Ideal as ambient overlay or backdrop for motion graphics shorts.",
+      "geo": "assets/generated/dynamic-dust-motes-6.geo.json"
+    },
+    {
+      "id": "generated_photorealistic-misaligned-rubik-cube-1",
+      "name": "photorealistic misaligned Rubik's cube corner",
+      "type": "svg",
+      "src": "assets/generated/photorealistic-misaligned-rubik-cube-1.svg",
+      "format": "svg",
+      "tags": [
+        "photorealistic",
+        "misaligned",
+        "rubik",
+        "cube",
+        "corner",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass themed, photorealistic SVG illustration of a single misaligned Rubik's cube corner piece, slightly rotated out of alignment with glowing blue accents and subtle glass highlights on a dark background.",
+      "geo": "assets/generated/photorealistic-misaligned-rubik-cube-1.geo.json"
+    },
+    {
+      "id": "generated_geometric-blueprint-grid-3x3-2",
+      "name": "geometric blueprint grid of a 3x3 cube",
+      "type": "svg",
+      "src": "assets/generated/geometric-blueprint-grid-3x3-2.svg",
+      "format": "svg",
+      "tags": [
+        "geometric",
+        "blueprint",
+        "grid",
+        "3x3",
+        "cube",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass blueprint-style isometric 3x3 cube illustration on 200x200 viewBox with grid background, corner brackets, and sapphire glow accents.",
+      "geo": "assets/generated/geometric-blueprint-grid-3x3-2.geo.json"
+    },
+    {
+      "id": "generated_bold-sans-serif-numeric-1",
+      "name": "bold sans-serif numeric 450M",
+      "type": "svg",
+      "src": "assets/generated/bold-sans-serif-numeric-1.svg",
+      "format": "svg",
+      "tags": [
+        "bold",
+        "sans",
+        "serif",
+        "numeric",
+        "450m",
+        "badge",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass style bold sans-serif numeric badge displaying 450M, with glowing sapphire gradient text on a translucent glass square tile, corner brackets and technical micro-details for motion graphics shorts.",
+      "geo": "assets/generated/bold-sans-serif-numeric-1.geo.json"
+    },
+    {
+      "id": "generated_exploded-view-plastic-cube-4",
+      "name": "exploded view plastic cube parts",
+      "type": "svg",
+      "src": "assets/generated/exploded-view-plastic-cube-4.svg",
+      "format": "svg",
+      "tags": [
+        "exploded",
+        "view",
+        "plastic",
+        "cube",
+        "parts",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass exploded view illustration of a plastic cube separated into six face panels floating in 3D space, with dashed alignment axis and corner brackets. Palette: near-black, white, blue #0A84FF, gray #8E8E93. For tech product/motion graphics shorts.",
+      "geo": "assets/generated/exploded-view-plastic-cube-4.geo.json"
+    },
+    {
+      "id": "generated_perfectly-solved-3x3-cube-5",
+      "name": "perfectly solved 3x3 cube in isometric view",
+      "type": "svg",
+      "src": "assets/generated/perfectly-solved-3x3-cube-5.svg",
+      "format": "svg",
+      "tags": [
+        "perfectly",
+        "solved",
+        "3x3",
+        "cube",
+        "isometric",
+        "view",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A perfectly solved 3x3 Rubik's cube rendered in isometric view on a dark-glass background. Each visible face is uniform blue (#0A84FF), with glossy glass highlights, subtle grid lines, and soft shadow. Sleek Apple-style palette: black, white, sapphire blue, gray.",
+      "geo": "assets/generated/perfectly-solved-3x3-cube-5.geo.json"
+    },
+    {
+      "id": "generated_history-rubiks-cube-hero",
+      "name": "A 24-second explainer about the history of the Rubik's Cube. — hero illustration of the core subject",
+      "type": "svg",
+      "src": "assets/generated/history-rubiks-cube-hero.svg",
+      "format": "svg",
+      "tags": [
+        "second",
+        "explainer",
+        "about",
+        "history",
+        "rubik",
+        "cube",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass hero illustration of a Rubik's Cube for a 24-second history explainer. Isometric 3x3 cube with dark glass faces, sapphire-blue and white accent tiles, glow, reflection, corner brackets and subtle tick marks on a near-black background.",
+      "geo": "assets/generated/history-rubiks-cube-hero.geo.json"
+    },
+    {
+      "id": "generated_rubiks-history-emblem",
+      "name": "History of the Rubik's Cube — concept emblem badge",
+      "type": "svg",
+      "src": "assets/generated/rubiks-history-emblem.svg",
+      "format": "svg",
+      "tags": [
+        "second",
+        "explainer",
+        "about",
+        "history",
+        "rubik",
+        "cube",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "A dark-glass circular emblem badge icon depicting an isometric Rubik's Cube with visible blue face highlights, glow accents, and corner brackets. Suitable as a concept icon for a 24-second history explainer short.",
+      "geo": "assets/generated/rubiks-history-emblem.geo.json"
+    },
+    {
+      "id": "generated_hyper-realistic-rubik-cube-1",
+      "name": "hyper-realistic 3D Rubik's cube with metallic finish",
+      "type": "svg",
+      "src": "assets/generated/hyper-realistic-rubik-cube-1.svg",
+      "format": "svg",
+      "tags": [
+        "hyper",
+        "realistic",
+        "rubik",
+        "cube",
+        "metallic",
+        "finish",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A hyper-realistic isometric 3x3 Rubik's cube rendered in a dark-glass aesthetic with metallic gradients, glossy sticker highlights, luminous blue ambient glow and drop shadow. Ideal as a hero illustration for tech shorts, puzzle/strategy content, or dark UI intro cards.",
+      "geo": "assets/generated/hyper-realistic-rubik-cube-1.geo.json"
+    },
+    {
+      "id": "generated_1974-vintage-engineering-drafting-2",
+      "name": "1974 vintage engineering drafting compass and protractor",
+      "type": "svg",
+      "src": "assets/generated/1974-vintage-engineering-drafting-2.svg",
+      "format": "svg",
+      "tags": [
+        "1974",
+        "vintage",
+        "engineering",
+        "drafting",
+        "compass",
+        "protractor",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass icon depicting a 1974 vintage drafting compass with a protractor semicircle backdrop, in monochrome with blue accents.",
+      "geo": "assets/generated/1974-vintage-engineering-drafting-2.geo.json"
+    },
+    {
+      "id": "generated_bold-sans-serif-number-20",
+      "name": "bold sans-serif number 20",
+      "type": "svg",
+      "src": "assets/generated/bold-sans-serif-number-20.svg",
+      "format": "svg",
+      "tags": [
+        "bold",
+        "sans",
+        "serif",
+        "number",
+        "badge",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Bold sans-serif number 20 on a dark-glass rounded card, with sapphire-blue gradient numeral, soft glow, subtle grid ticks and corner brackets. Ideal for countdowns, counters, and shorts overlays.",
+      "geo": "assets/generated/bold-sans-serif-number-20.geo.json"
+    },
+    {
+      "id": "generated_complexity-tree-diagram-collapsing-4",
+      "name": "complexity tree diagram collapsing",
+      "type": "svg",
+      "src": "assets/generated/complexity-tree-diagram-collapsing-4.svg",
+      "format": "svg",
+      "tags": [
+        "complexity",
+        "tree",
+        "diagram",
+        "collapsing",
+        "chart",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass complexity tree diagram in collapsing state: O(log n) hierarchy with nodes, connection lines, dashed ghost remnants of collapsed branches, corner brackets and technical ticks. Palette #0A0A0A, #FFFFFF, #0A84FF, #8E8E93.",
+      "geo": "assets/generated/complexity-tree-diagram-collapsing-4.geo.json"
+    },
+    {
+      "id": "generated_rhythmic-motion-blur-particle-5",
+      "name": "rhythmic motion blur particle streaks",
+      "type": "svg",
+      "src": "assets/generated/rhythmic-motion-blur-particle-5.svg",
+      "format": "svg",
+      "tags": [
+        "rhythmic",
+        "motion",
+        "blur",
+        "particle",
+        "streaks",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of rhythmic motion blur particle streaks: luminous blue curved trails sweeping around a dark orb, with white and grey velocity particles, glassy rim highlights and technical crosshair details.",
+      "geo": "assets/generated/rhythmic-motion-blur-particle-5.geo.json"
+    },
+    {
+      "id": "generated_oscilloscope-sound-wave-frequency-1",
+      "name": "oscilloscope sound wave frequency peak",
+      "type": "svg",
+      "src": "assets/generated/oscilloscope-sound-wave-frequency-1.svg",
+      "format": "svg",
+      "tags": [
+        "oscilloscope",
+        "sound",
+        "wave",
+        "frequency",
+        "peak",
+        "chart",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass oscilloscope panel showing a glowing white/blue waveform with a dominant resonant frequency peak, grid graticule, and frequency tick markers. Ideal for audio, music, or chart-themed motion graphics.",
+      "geo": "assets/generated/oscilloscope-sound-wave-frequency-1.geo.json"
+    },
+    {
+      "id": "generated_dopamine-molecular-structure-icon-2",
+      "name": "dopamine molecular structure icon",
+      "type": "svg",
+      "src": "assets/generated/dopamine-molecular-structure-icon-2.svg",
+      "format": "svg",
+      "tags": [
+        "dopamine",
+        "molecular",
+        "structure",
+        "icon",
+        "badge",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass style dopamine molecular structure icon: catechol benzene ring with ethylamine side chain and OH groups, bond skeleton in blue with glowing atom nodes, glassmorphic rounded square container on dark background.",
+      "geo": "assets/generated/dopamine-molecular-structure-icon-2.geo.json"
+    },
+    {
+      "id": "generated_flowing-neural-network-particles-3",
+      "name": "flowing neural network particles",
+      "type": "svg",
+      "src": "assets/generated/flowing-neural-network-particles-3.svg",
+      "format": "svg",
+      "tags": [
+        "flowing",
+        "neural",
+        "network",
+        "particles",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass neural network illustration: flowing stream of glowing white and electric-blue particles connected by translucent links, with a central luminous node cluster and subtle grid crosshairs. Palette #0A0A0A, #FFFFFF, #0A84FF, #8E8E93.",
+      "geo": "assets/generated/flowing-neural-network-particles-3.geo.json"
+    },
+    {
+      "id": "generated_shattered-glass-smartphone-screen-4",
+      "name": "shattered glass smartphone screen",
+      "type": "svg",
+      "src": "assets/generated/shattered-glass-smartphone-screen-4.svg",
+      "format": "svg",
+      "tags": [
+        "shattered",
+        "glass",
+        "smartphone",
+        "screen",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of a smartphone with a shattered screen: rounded dark phone body, faint blue screen glow, radiating white crack lines from an impact point, sharp polygonal glass shards with blue highlights, subtle glow filters and technical corner accents.",
+      "geo": "assets/generated/shattered-glass-smartphone-screen-4.geo.json"
+    },
+    {
+      "id": "generated_pulsing-notification-bell-icon-5",
+      "name": "pulsing notification bell icon",
+      "type": "svg",
+      "src": "assets/generated/pulsing-notification-bell-icon-5.svg",
+      "format": "svg",
+      "tags": [
+        "pulsing",
+        "notification",
+        "bell",
+        "icon",
+        "icon",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass pulsing notification bell icon: rounded-square glass tile, luminous white/sapphire bell with drop shadow, glowing badge dot, and animated concentric pulse rings for shorts and UI motion graphics.",
+      "geo": "assets/generated/pulsing-notification-bell-icon-5.geo.json"
+    },
+    {
+      "id": "generated_shattered-high-tech-biometric-1",
+      "name": "shattered high-tech biometric padlock",
+      "type": "svg",
+      "src": "assets/generated/shattered-high-tech-biometric-1.svg",
+      "format": "svg",
+      "tags": [
+        "shattered",
+        "high",
+        "tech",
+        "biometric",
+        "padlock",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of a high-tech biometric padlock with a glowing blue fingerprint scanner, shattered by crack fractures and floating glass shards. Palette: #0A0A0A dark glass, #0A84FF electric blue glow, #8E8E93 steel gray, #FFFFFF highlights. Suitable for security-breach, cybersecurity, and fail-state motion graphics.",
+      "geo": "assets/generated/shattered-high-tech-biometric-1.geo.json"
+    },
+    {
+      "id": "generated_exponential-curve-linear-progress-2",
+      "name": "exponential curve vs linear progress bar",
+      "type": "svg",
+      "src": "assets/generated/exponential-curve-linear-progress-2.svg",
+      "format": "svg",
+      "tags": [
+        "exponential",
+        "curve",
+        "linear",
+        "progress",
+        "bar",
+        "chart",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass chart comparing an exponential growth curve with a linear progress bar. Glowing #0A84FF curve on dark background with grid ticks, glass progress bar, and accent labels. Ideal for motion graphics about exponential vs linear growth.",
+      "geo": "assets/generated/exponential-curve-linear-progress-2.geo.json"
+    },
+    {
+      "id": "generated_quantum-qubit-lattice-structure-3",
+      "name": "quantum qubit lattice structure",
+      "type": "svg",
+      "src": "assets/generated/quantum-qubit-lattice-structure-3.svg",
+      "format": "svg",
+      "tags": [
+        "quantum",
+        "qubit",
+        "lattice",
+        "structure",
+        "icon",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass icon of a quantum qubit lattice: interconnected glowing nodes on a rounded dark glass tile, blue luminous center qubit with white satellite nodes and connecting links, technical corner brackets and grid ticks.",
+      "geo": "assets/generated/quantum-qubit-lattice-structure-3.geo.json"
+    },
+    {
+      "id": "generated_data-harvest-alert-notification-4",
+      "name": "data harvest alert notification icon",
+      "type": "svg",
+      "src": "assets/generated/data-harvest-alert-notification-4.svg",
+      "format": "svg",
+      "tags": [
+        "data",
+        "harvest",
+        "alert",
+        "notification",
+        "icon",
+        "badge",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass rounded-square notification icon showing a server/database stack being harvested with data streams, topped with a blue alert badge containing an exclamation mark. Palette #0A0A0A, #FFFFFF, #0A84FF, #8E8E93.",
+      "geo": "assets/generated/data-harvest-alert-notification-4.geo.json"
+    },
+    {
+      "id": "generated_glitch-noise-digital-distortion-5",
+      "name": "glitch noise digital distortion",
+      "type": "svg",
+      "src": "assets/generated/glitch-noise-digital-distortion-5.svg",
+      "format": "svg",
+      "tags": [
+        "glitch",
+        "noise",
+        "digital",
+        "distortion",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of digital glitch distortion: RGB channel split rectangles, noise scanlines, displaced bars, and pixel blocks with glow effects on dark background.",
+      "geo": "assets/generated/glitch-noise-digital-distortion-5.geo.json"
+    },
+    {
+      "id": "generated_shattered-digital-padlock-glowing-1",
+      "name": "shattered digital padlock glowing particles",
+      "type": "svg",
+      "src": "assets/generated/shattered-digital-padlock-glowing-1.svg",
+      "format": "svg",
+      "tags": [
+        "shattered",
+        "digital",
+        "padlock",
+        "glowing",
+        "particles",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A shattered digital padlock illustration on dark background: broken lock body split into angular fragments, glowing blue shackle gap, scattered luminous particles and spark accents. Dark-glass cyberpunk security theme, ideal for cybersecurity shorts, breach concepts, data-breach motion graphics.",
+      "geo": "assets/generated/shattered-digital-padlock-glowing-1.geo.json"
+    },
+    {
+      "id": "generated_logarithmic-time-scale-bar-2",
+      "name": "logarithmic time scale bar graph with infinite icon",
+      "type": "svg",
+      "src": "assets/generated/logarithmic-time-scale-bar-2.svg",
+      "format": "svg",
+      "tags": [
+        "logarithmic",
+        "time",
+        "scale",
+        "bar",
+        "graph",
+        "infinite",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass style bar graph showing logarithmic time scale (1ms to 1h) with ascending gradient bars and a glowing infinity icon accent. Use as a chart visual for time scale / performance comparisons in shorts.",
+      "geo": "assets/generated/logarithmic-time-scale-bar-2.geo.json"
+    },
+    {
+      "id": "generated_quantum-superposition-wave-interference-3",
+      "name": "quantum superposition wave interference pattern",
+      "type": "svg",
+      "src": "assets/generated/quantum-superposition-wave-interference-3.svg",
+      "format": "svg",
+      "tags": [
+        "quantum",
+        "superposition",
+        "wave",
+        "interference",
+        "pattern",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass quantum superposition illustration: two coherent wave sources emitting concentric rings whose overlap creates interference, with a white resultant waveform and blue/grey accents on near-black background.",
+      "geo": "assets/generated/quantum-superposition-wave-interference-3.geo.json"
+    },
+    {
+      "id": "generated_complex-lattice-interconnected-nodes-4",
+      "name": "complex 3d lattice of interconnected nodes",
+      "type": "svg",
+      "src": "assets/generated/complex-lattice-interconnected-nodes-4.svg",
+      "format": "svg",
+      "tags": [
+        "complex",
+        "lattice",
+        "interconnected",
+        "nodes",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A complex 3D lattice illustration: an isometric network of glowing interconnected nodes with layered translucent glass grid planes on a dark background, electric blue and gray accents.",
+      "geo": "assets/generated/complex-lattice-interconnected-nodes-4.geo.json"
+    },
+    {
+      "id": "generated_data-packet-icon-encrypted-5",
+      "name": "data packet icon encrypted shield",
+      "type": "svg",
+      "src": "assets/generated/data-packet-icon-encrypted-5.svg",
+      "format": "svg",
+      "tags": [
+        "data",
+        "packet",
+        "icon",
+        "encrypted",
+        "shield",
+        "badge",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass data packet icon with an encrypted shield emblem: glassmorphic dark shield with blue gradient edges, central padlock, radiating data packet dots and dotted transmission lines, corner brackets and technical ticks. Palette #0A0A0A, #FFFFFF, #0A84FF, #8E8E93.",
+      "geo": "assets/generated/data-packet-icon-encrypted-5.geo.json"
+    },
+    {
+      "id": "generated_binary-raining-code-stream-6",
+      "name": "binary raining code stream",
+      "type": "svg",
+      "src": "assets/generated/binary-raining-code-stream-6.svg",
+      "format": "svg",
+      "tags": [
+        "binary",
+        "raining",
+        "code",
+        "stream",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass binary rain illustration: vertical columns of white, blue (#0A0A84FF) and gray binary digits cascading with glowing highlights on a near-black background, framed with subtle corner brackets.",
+      "geo": "assets/generated/binary-raining-code-stream-6.geo.json"
+    },
+    {
+      "id": "generated_black-hole-event-horizon-hero",
+      "name": "Black Hole Event Horizon Hero Illustration",
+      "type": "svg",
+      "src": "assets/generated/black-hole-event-horizon-hero.svg",
+      "format": "svg",
+      "tags": [
+        "second",
+        "high",
+        "retention",
+        "explainer",
+        "physics",
+        "black",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Cinematic dark-glass hero illustration of a black hole with accretion disk, neon blue gravitational lensing rings (photon sphere), event horizon label, and precise data callouts (r_s = 2GM/c², r_photon = 1.5 r_s) for an explainer short on black hole physics.",
+      "geo": "assets/generated/black-hole-event-horizon-hero.geo.json"
+    },
+    {
+      "id": "generated_second-high-retention-explainer-2",
+      "name": "Black Hole Event Horizon Metric Visualization",
+      "type": "svg",
+      "src": "assets/generated/second-high-retention-explainer-2.svg",
+      "format": "svg",
+      "tags": [
+        "second",
+        "high",
+        "retention",
+        "explainer",
+        "physics",
+        "black",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Cinematic dark-glass data visualization of a black hole with neon blue gravitational lensing rings, event horizon, and precise data callouts (Schwarzschild radius, escape velocity, temperature) for a 24-second physics explainer short.",
+      "geo": "assets/generated/second-high-retention-explainer-2.geo.json"
+    },
+    {
+      "id": "generated_explainer-motion-ornament-frame-3",
+      "name": "explainer motion ornament frame or ambient pattern",
+      "type": "svg",
+      "src": "assets/generated/explainer-motion-ornament-frame-3.svg",
+      "format": "svg",
+      "tags": [
+        "explainer",
+        "motion",
+        "ornament",
+        "frame",
+        "ambient",
+        "pattern",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass explainer motion ornament: rounded square frame with corner brackets, glowing sapphire orb with orbit rings, ambient dot grid, tick marks and crosshair accents. Suitable as an explainer-video corner ornament or ambient looping pattern overlay.",
+      "geo": "assets/generated/explainer-motion-ornament-frame-3.geo.json"
+    },
+    {
+      "id": "generated_llama-logo-glowing-1",
+      "name": "llama 3 logo glowing",
+      "type": "svg",
+      "src": "assets/generated/llama-logo-glowing-1.svg",
+      "format": "svg",
+      "tags": [
+        "llama",
+        "logo",
+        "glowing",
+        "icon",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Glowing dark-glass icon icon featuring a stylized llama head silhouette with luminous blue gradient accent line, on transparent dark background. Ideal for tech/AI shorts and motion graphics.",
+      "geo": "assets/generated/llama-logo-glowing-1.geo.json"
+    },
+    {
+      "id": "generated_line-chart-trending-downward-2",
+      "name": "line chart trending downward rapidly",
+      "type": "svg",
+      "src": "assets/generated/line-chart-trending-downward-2.svg",
+      "format": "svg",
+      "tags": [
+        "line",
+        "chart",
+        "trending",
+        "downward",
+        "rapidly",
+        "chart",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass line chart on 200x200 viewBox showing a rapidly declining line with blue glow, gradient area fill, grid ticks, corner brackets, and a red-down arrow accent.",
+      "geo": "assets/generated/line-chart-trending-downward-2.geo.json"
+    },
+    {
+      "id": "generated_price-tag-reading-0",
+      "name": "price tag reading $0",
+      "type": "svg",
+      "src": "assets/generated/price-tag-reading-0.svg",
+      "format": "svg",
+      "tags": [
+        "price",
+        "tag",
+        "reading",
+        "badge",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass style price tag illustration reading \"$0\" — free. Isolated price tag with hole and string, glassmorphic card, sapphire blue accents, subtle grid ticks and glow on a transparent background. Suitable for motion graphics, shorts, and pricing/free-tier graphics.",
+      "geo": "assets/generated/price-tag-reading-0.geo.json"
+    },
+    {
+      "id": "generated_digital-secure-data-vault-4",
+      "name": "digital secure data vault",
+      "type": "svg",
+      "src": "assets/generated/digital-secure-data-vault-4.svg",
+      "format": "svg",
+      "tags": [
+        "digital",
+        "secure",
+        "data",
+        "vault",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass digital secure data vault illustration: glassmorphic vault door with concentric rings, glowing keypad dial, binary data streams and lock accents.",
+      "geo": "assets/generated/digital-secure-data-vault-4.geo.json"
+    },
+    {
+      "id": "generated_glowing-digital-data-streams-5",
+      "name": "glowing digital data streams",
+      "type": "svg",
+      "src": "assets/generated/glowing-digital-data-streams-5.svg",
+      "format": "svg",
+      "tags": [
+        "glowing",
+        "digital",
+        "data",
+        "streams",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of glowing blue digital data streams flowing across a black canvas with luminous particles, code-like dashes, and depth-of-field glow. Ideal for tech shorts, motion graphics overlays, and data-themed backdrops.",
+      "geo": "assets/generated/glowing-digital-data-streams-5.geo.json"
+    },
+    {
+      "id": "generated_geometric-exponential-growth-curve-1",
+      "name": "geometric exponential growth curve line",
+      "type": "svg",
+      "src": "assets/generated/geometric-exponential-growth-curve-1.svg",
+      "format": "svg",
+      "tags": [
+        "geometric",
+        "exponential",
+        "growth",
+        "curve",
+        "line",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass geometric exponential growth curve illustration on 200x200 viewBox. Luminous blue #0A84FF exponential bezier curve rising left-to-right, glowing gradient fill beneath, grid backdrop, corner brackets, crosshair, sparkline and technical tick accents in white/gray on #0A0A0A.",
+      "geo": "assets/generated/geometric-exponential-growth-curve-1.geo.json"
+    },
+    {
+      "id": "generated_wealth-accumulation-bar-chart-2",
+      "name": "wealth accumulation bar chart",
+      "type": "svg",
+      "src": "assets/generated/wealth-accumulation-bar-chart-2.svg",
+      "format": "svg",
+      "tags": [
+        "wealth",
+        "accumulation",
+        "bar",
+        "chart",
+        "chart",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass wealth accumulation bar chart with ascending sapphire gradient bars, glass card backdrop, grid lines, glow accents, and technical corner brackets.",
+      "geo": "assets/generated/wealth-accumulation-bar-chart-2.geo.json"
+    },
+    {
+      "id": "generated_percent-sign-99",
+      "name": "percent sign 99%",
+      "type": "svg",
+      "src": "assets/generated/percent-sign-99.svg",
+      "format": "svg",
+      "tags": [
+        "percent",
+        "sign",
+        "badge",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration featuring a bold 99% percent figure with glassmorphic circular badge, glowing sapphire accents, grid ticks and corner brackets on transparent background.",
+      "geo": "assets/generated/percent-sign-99.geo.json"
+    },
+    {
+      "id": "generated_clock-face-blurred-hands-4",
+      "name": "clock face with blurred hands",
+      "type": "svg",
+      "src": "assets/generated/clock-face-blurred-hands-4.svg",
+      "format": "svg",
+      "tags": [
+        "clock",
+        "face",
+        "blurred",
+        "hands",
+        "icon",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass clock face icon with blurred hour and minute hands, luminous blue second hand, glass rim highlights, tick markers and subtle grid crosshairs on transparent background.",
+      "geo": "assets/generated/clock-face-blurred-hands-4.geo.json"
+    },
+    {
+      "id": "generated_subtle-grain-noise-particle-5",
+      "name": "subtle grain noise particle",
+      "type": "svg",
+      "src": "assets/generated/subtle-grain-noise-particle-5.svg",
+      "format": "svg",
+      "tags": [
+        "subtle",
+        "grain",
+        "noise",
+        "particle",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass square tile featuring a subtle fractal-noise grain texture over a soft luminous particle orb with sapphire-blue glow, plus faint concentric rings and technical corner brackets. Ideal for overlays, backgrounds, or particle-accent graphics in motion shorts.",
+      "geo": "assets/generated/subtle-grain-noise-particle-5.geo.json"
+    },
+    {
+      "id": "generated_abstract-silhouette-warren-buffett-6",
+      "name": "abstract silhouette of warren buffett",
+      "type": "svg",
+      "src": "assets/generated/abstract-silhouette-warren-buffett-6.svg",
+      "format": "svg",
+      "tags": [
+        "abstract",
+        "silhouette",
+        "warren",
+        "buffett",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Abstract dark-glass silhouette portrait of Warren Buffett: minimalist bald head with iconic glasses, grey hair tufts, and suit silhouette on a dark glass card with electric blue accent glow. Suitable for finance shorts and editorial motion graphics.",
+      "geo": "assets/generated/abstract-silhouette-warren-buffett-6.geo.json"
+    },
+    {
+      "id": "generated_shattering-padlock-subscription-icon-1",
+      "name": "shattering 3d padlock with subscription icon",
+      "type": "svg",
+      "src": "assets/generated/shattering-padlock-subscription-icon-1.svg",
+      "format": "svg",
+      "tags": [
+        "shattering",
+        "padlock",
+        "subscription",
+        "icon",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass 3D padlock icon shattered with radial crack lines and flying glass shards, with a glowing subscription/bell badge. Suitable for videos about canceled subscriptions, paywall breaks, or privacy/lock removal concepts.",
+      "geo": "assets/generated/shattering-padlock-subscription-icon-1.geo.json"
+    },
+    {
+      "id": "generated_heavy-steel-vault-door-1",
+      "name": "heavy steel vault door mechanism",
+      "type": "svg",
+      "src": "assets/generated/heavy-steel-vault-door-1.svg",
+      "format": "svg",
+      "tags": [
+        "heavy",
+        "steel",
+        "vault",
+        "door",
+        "mechanism",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass style illustration of a heavy steel bank vault door with circular reinforced frame, central spinning handle wheel, bolt spokes, hinge brackets, glowing blue dial accents, and brushed steel gradients.",
+      "geo": "assets/generated/heavy-steel-vault-door-1.geo.json"
+    },
+    {
+      "id": "generated_laser-security-grid-pattern-2",
+      "name": "laser security grid pattern",
+      "type": "svg",
+      "src": "assets/generated/laser-security-grid-pattern-2.svg",
+      "format": "svg",
+      "tags": [
+        "laser",
+        "security",
+        "grid",
+        "pattern",
+        "chart",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass laser security grid: glowing blue horizontal and vertical scanlines with a corner emitter, glass card overlay, and dark background.",
+      "geo": "assets/generated/laser-security-grid-pattern-2.geo.json"
+    },
+    {
+      "id": "generated_empty-velvet-lined-diamond-3",
+      "name": "empty velvet-lined diamond display box",
+      "type": "svg",
+      "src": "assets/generated/empty-velvet-lined-diamond-3.svg",
+      "format": "svg",
+      "tags": [
+        "empty",
+        "velvet",
+        "lined",
+        "diamond",
+        "display",
+        "box",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass luxury jewelry display box shown open and empty, with a velvet-lined cushion holding an empty diamond-shaped recess where a gem would sit. Palette of deep blacks, white highlights, sapphire blue accents, and neutral grays. Ideal for product reveals or luxury motion graphics.",
+      "geo": "assets/generated/empty-velvet-lined-diamond-3.geo.json"
+    },
+    {
+      "id": "generated_half-eaten-salami-sandwich-4",
+      "name": "half-eaten salami sandwich on forensic tray",
+      "type": "svg",
+      "src": "assets/generated/half-eaten-salami-sandwich-4.svg",
+      "format": "svg",
+      "tags": [
+        "half",
+        "eaten",
+        "salami",
+        "sandwich",
+        "forensic",
+        "tray",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass forensic-style illustration of a half-eaten salami sandwich resting on an evidence tray with corner brackets and an evidence tag, palette #0A0A0A/#FFFFFF/#0A84FF/#8E8E93.",
+      "geo": "assets/generated/half-eaten-salami-sandwich-4.geo.json"
+    },
+    {
+      "id": "generated_dna-double-helix-graphic-5",
+      "name": "DNA double helix graphic",
+      "type": "svg",
+      "src": "assets/generated/dna-double-helix-graphic-5.svg",
+      "format": "svg",
+      "tags": [
+        "dna",
+        "double",
+        "helix",
+        "graphic",
+        "badge",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass themed DNA double helix illustration: two intertwined white/blue gradient strands with glowing rungs, depth via opacity layering, on a deep black background with subtle glass glow and micro crosshair accents.",
+      "geo": "assets/generated/dna-double-helix-graphic-5.geo.json"
+    },
+    {
+      "id": "generated_scanning-light-beam-sweep-6",
+      "name": "scanning light beam sweep",
+      "type": "svg",
+      "src": "assets/generated/scanning-light-beam-sweep-6.svg",
+      "format": "svg",
+      "tags": [
+        "scanning",
+        "light",
+        "beam",
+        "sweep",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass style illustration of a scanning light beam sweeping across a dark surface, with blue glow gradients and glass panel accents.",
+      "geo": "assets/generated/scanning-light-beam-sweep-6.geo.json"
+    },
+    {
+      "id": "generated_antwerp-diamond-heist-hero",
+      "name": "Antwerp Diamond Heist Hero Illustration",
+      "type": "svg",
+      "src": "assets/generated/antwerp-diamond-heist-hero.svg",
+      "format": "svg",
+      "tags": [
+        "create",
+        "second",
+        "true",
+        "crime",
+        "forensic",
+        "explainer",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass hero illustration of the 2003 Antwerp Diamond Heist: a radiant blue diamond at center over a vault door with concentric security rings (infrared heat sensor and Doppler radar motifs), corner brackets and technical crosshair accents, zero-alarms motif, on dark glass background. Palette #0A0A0A, #FFFFFF, #0A84FF, #8E8E93.",
+      "geo": "assets/generated/antwerp-diamond-heist-hero.geo.json"
+    },
+    {
+      "id": "generated_create-second-true-crime-2",
+      "name": "Antwerp Diamond Heist — Forensic Metric Dashboard",
+      "type": "svg",
+      "src": "assets/generated/create-second-true-crime-2.svg",
+      "format": "svg",
+      "tags": [
+        "create",
+        "second",
+        "true",
+        "crime",
+        "forensic",
+        "explainer",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass forensic data visualization for a true-crime explainer on the 2003 Antwerp Diamond Heist. Four metric cards ($100M+ heist value, 2 floors underground, 10 security layers, 0 alarms triggered) plus a donut gauge of compromised security layers and a diamond-tick sparkline. Palette: #0A0A0A, #FFFFFF, #0A84FF, #8E8E93. Suitable as a mid-video stats overlay for shorts.",
+      "geo": "assets/generated/create-second-true-crime-2.geo.json"
+    },
+    {
+      "id": "generated_shattered-video-timeline-interface-1",
+      "name": "shattered video timeline interface fragments",
+      "type": "svg",
+      "src": "assets/generated/shattered-video-timeline-interface-1.svg",
+      "format": "svg",
+      "tags": [
+        "shattered",
+        "video",
+        "timeline",
+        "interface",
+        "fragments",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Shattered video timeline interface fragments illustration: dark glass shards containing timeline clips, playhead, scrubber ticks and waveform accents, blue and white on near-black, with glow filters. Ideal for motion graphics shorts about video editing or broken media UI.",
+      "geo": "assets/generated/shattered-video-timeline-interface-1.geo.json"
+    },
+    {
+      "id": "generated_rendered-motion-graphic-bar-2",
+      "name": "3d rendered motion graphic bar chart",
+      "type": "svg",
+      "src": "assets/generated/rendered-motion-graphic-bar-2.svg",
+      "format": "svg",
+      "tags": [
+        "rendered",
+        "motion",
+        "graphic",
+        "bar",
+        "chart",
+        "chart",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass isometric 3D bar chart with glossy blue extruded bars, glowing highlights, reflective floor grid and HUD corner brackets. Ideal for motion graphics data segments.",
+      "geo": "assets/generated/rendered-motion-graphic-bar-2.geo.json"
+    },
+    {
+      "id": "generated_data-pipeline-schematic-nodes-3",
+      "name": "data pipeline schematic nodes and lines",
+      "type": "svg",
+      "src": "assets/generated/data-pipeline-schematic-nodes-3.svg",
+      "format": "svg",
+      "tags": [
+        "data",
+        "pipeline",
+        "schematic",
+        "nodes",
+        "lines",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass data pipeline schematic: luminous pipeline lines flowing left to right through glass node cards, with a central processing core, connector dots, and technical micro-details.",
+      "geo": "assets/generated/data-pipeline-schematic-nodes-3.geo.json"
+    },
+    {
+      "id": "generated_2025-calendar-icon-slash-4",
+      "name": "2025 calendar icon with slash mark",
+      "type": "svg",
+      "src": "assets/generated/2025-calendar-icon-slash-4.svg",
+      "format": "svg",
+      "tags": [
+        "2025",
+        "calendar",
+        "icon",
+        "slash",
+        "mark",
+        "badge",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass 2025 calendar icon with a bold diagonal slash mark overlay, blue accent header, and subtle grid details. Suitable for motion graphics, badges, and video shorts.",
+      "geo": "assets/generated/2025-calendar-icon-slash-4.geo.json"
+    },
+    {
+      "id": "generated_digital-particle-flow-grid-5",
+      "name": "digital particle flow grid",
+      "type": "svg",
+      "src": "assets/generated/digital-particle-flow-grid-5.svg",
+      "format": "svg",
+      "tags": [
+        "digital",
+        "particle",
+        "flow",
+        "grid",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass digital particle flow grid: luminous white and blue particles streaming along a faint grid with flow curves, corner brackets and crosshair accents. Suitable for motion graphics and video shorts backgrounds.",
+      "geo": "assets/generated/digital-particle-flow-grid-5.geo.json"
+    },
+    {
+      "id": "generated_complex-timeline-bar-many-1",
+      "name": "complex timeline bar with many small clips",
+      "type": "svg",
+      "src": "assets/generated/complex-timeline-bar-many-1.svg",
+      "format": "svg",
+      "tags": [
+        "complex",
+        "timeline",
+        "bar",
+        "many",
+        "small",
+        "clips",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass video editing timeline illustration: vertical track stack with many small clips in white/blue/gray, ruler ticks, playhead with glow, on a rounded glass panel over #0A0A0A background.",
+      "geo": "assets/generated/complex-timeline-bar-many-1.geo.json"
+    },
+    {
+      "id": "generated_animated-bar-chart-rising-2",
+      "name": "animated bar chart rising in code block",
+      "type": "svg",
+      "src": "assets/generated/animated-bar-chart-rising-2.svg",
+      "format": "svg",
+      "tags": [
+        "animated",
+        "bar",
+        "chart",
+        "rising",
+        "code",
+        "block",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Animated bar chart rising inside a dark glassmorphic code block window, with animated bars, blinking cursor, and window chrome. Palette: #0A0A0A background, #FFFFFF, #0A84FF accents, #8E8E93 secondary.",
+      "geo": "assets/generated/animated-bar-chart-rising-2.geo.json"
+    },
+    {
+      "id": "generated_minimalist-stopwatch-icon-3",
+      "name": "minimalist stopwatch icon",
+      "type": "svg",
+      "src": "assets/generated/minimalist-stopwatch-icon-3.svg",
+      "format": "svg",
+      "tags": [
+        "minimalist",
+        "stopwatch",
+        "icon",
+        "icon",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Minimalist dark-glass stopwatch icon: glass disc face, top button and side lugs, single blue hand, tick marks. Ideal for timers, fitness, or productivity UI in video shorts.",
+      "geo": "assets/generated/minimalist-stopwatch-icon-3.geo.json"
+    },
+    {
+      "id": "generated_glowing-cursor-pulse-4",
+      "name": "glowing cursor pulse",
+      "type": "svg",
+      "src": "assets/generated/glowing-cursor-pulse-4.svg",
+      "format": "svg",
+      "tags": [
+        "glowing",
+        "cursor",
+        "pulse",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A glowing pulsing cursor arrow icon on a dark glass rounded card, with concentric blue pulse rings and soft glow filters. Ideal for motion graphics emphasizing clicks or cursor interaction.",
+      "geo": "assets/generated/glowing-cursor-pulse-4.geo.json"
+    },
+    {
+      "id": "generated_physical-gold-coin-transitioning-1",
+      "name": "physical gold coin transitioning into binary 01 particles",
+      "type": "svg",
+      "src": "assets/generated/physical-gold-coin-transitioning-1.svg",
+      "format": "svg",
+      "tags": [
+        "physical",
+        "gold",
+        "coin",
+        "transitioning",
+        "into",
+        "binary",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass illustration of a physical gold coin on the left dissolving into binary 0/1 particle streams flowing to the right, symbolizing tokenization/digitization of assets. Transparent background, blue and gray accents per dark-glass theme.",
+      "geo": "assets/generated/physical-gold-coin-transitioning-1.geo.json"
+    },
+    {
+      "id": "generated_timeline-icons-barter-coins-2",
+      "name": "timeline icons barter coins credit card NFC",
+      "type": "svg",
+      "src": "assets/generated/timeline-icons-barter-coins-2.svg",
+      "format": "svg",
+      "tags": [
+        "timeline",
+        "icons",
+        "barter",
+        "coins",
+        "credit",
+        "card",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "A dark-glass themed horizontal timeline of four fintech icons: barter coins (two exchange coins), barter arrows exchange, credit card, and contactless NFC waves, with glowing accents in electric blue on near-black glass tiles.",
+      "geo": "assets/generated/timeline-icons-barter-coins-2.geo.json"
+    },
+    {
+      "id": "generated_central-bank-digital-currency-3",
+      "name": "central bank digital currency node network diagram",
+      "type": "svg",
+      "src": "assets/generated/central-bank-digital-currency-3.svg",
+      "format": "svg",
+      "tags": [
+        "central",
+        "bank",
+        "digital",
+        "currency",
+        "node",
+        "network",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass CBDC node network: glowing central bank node, satellite commercial bank and wallet nodes connected by luminous links, technical crosshair details on near-black background.",
+      "geo": "assets/generated/central-bank-digital-currency-3.geo.json"
+    },
+    {
+      "id": "generated_exponential-bar-chart-rising-4",
+      "name": "exponential bar chart rising to 18 trillion",
+      "type": "svg",
+      "src": "assets/generated/exponential-bar-chart-rising-4.svg",
+      "format": "svg",
+      "tags": [
+        "exponential",
+        "bar",
+        "chart",
+        "rising",
+        "trillion",
+        "chart",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass exponential bar chart on a 200x200 viewBox, bars rising steeply to a peak labeled 18T with blue glow accent, glass panel, gridlines, and axis ticks.",
+      "geo": "assets/generated/exponential-bar-chart-rising-4.geo.json"
+    },
+    {
+      "id": "generated_globe-target-markers-sweden-5",
+      "name": "globe with target markers for Sweden China Nigeria",
+      "type": "svg",
+      "src": "assets/generated/globe-target-markers-sweden-5.svg",
+      "format": "svg",
+      "tags": [
+        "globe",
+        "target",
+        "markers",
+        "sweden",
+        "china",
+        "nigeria",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass globe wireframe illustration with luminous target markers pinning Sweden, China, and Nigeria, with labels. Suitable for global reach/coverage shorts.",
+      "geo": "assets/generated/globe-target-markers-sweden-5.geo.json"
+    },
+    {
+      "id": "generated_subtle-floating-dust-particles-6",
+      "name": "subtle floating dust particles in dark space",
+      "type": "svg",
+      "src": "assets/generated/subtle-floating-dust-particles-6.svg",
+      "format": "svg",
+      "tags": [
+        "subtle",
+        "floating",
+        "dust",
+        "particles",
+        "dark",
+        "space",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass space illustration with subtle floating dust motes: faint radial nebula glow, scattered white/blue particles of varying opacity and size, subtle glow filters and micro crosshair accents. Use as ambient overlay background for motion graphics.",
+      "geo": "assets/generated/subtle-floating-dust-particles-6.geo.json"
+    },
+    {
+      "id": "generated_physical-gold-coin-disintegrating-1",
+      "name": "physical gold coin disintegrating into geometric pixels",
+      "type": "svg",
+      "src": "assets/generated/physical-gold-coin-disintegrating-1.svg",
+      "format": "svg",
+      "tags": [
+        "physical",
+        "gold",
+        "coin",
+        "disintegrating",
+        "into",
+        "geometric",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "A dark-glass illustration of a physical gold coin breaking apart into geometric pixel squares on its right side, with sapphire-blue accent pixels drifting away. Palette: #0A0A0A, #FFFFFF, #0A84FF, #8E8E93. ViewBox 200x200. Suitable for crypto/digitization/video shorts.",
+      "geo": "assets/generated/physical-gold-coin-disintegrating-1.geo.json"
+    },
+    {
+      "id": "generated_exponential-growth-bar-chart-2",
+      "name": "exponential growth bar chart rising from 2 to 18 trillion",
+      "type": "svg",
+      "src": "assets/generated/exponential-growth-bar-chart-2.svg",
+      "format": "svg",
+      "tags": [
+        "exponential",
+        "growth",
+        "bar",
+        "chart",
+        "rising",
+        "from",
+        "chart",
+        "generated-svg"
+      ],
+      "description": "Dark-glass exponential growth bar chart on a 200x200 canvas, with 8 glass bars rising exponentially from 2T to 18T, blue gradient fills, gridlines, corner brackets, and glowing peak accent.",
+      "geo": "assets/generated/exponential-growth-bar-chart-2.geo.json"
+    },
+    {
+      "id": "generated_glowing-globe-pulsating-nodes-3",
+      "name": "glowing globe with pulsating nodes in sweden china nigeria",
+      "type": "svg",
+      "src": "assets/generated/glowing-globe-pulsating-nodes-3.svg",
+      "format": "svg",
+      "tags": [
+        "glowing",
+        "globe",
+        "pulsating",
+        "nodes",
+        "sweden",
+        "china",
+        "icon",
+        "generated-svg"
+      ],
+      "description": "Dark-glass glowing wireframe globe icon with three pulsating location nodes positioned over Sweden, China, and Nigeria. Neon blue glow, orbit rings, and animated pulse halos. Ideal for tech/network/geo shorts.",
+      "geo": "assets/generated/glowing-globe-pulsating-nodes-3.geo.json"
+    },
+    {
+      "id": "generated_digital-binary-rain-particle-4",
+      "name": "digital binary rain particle flow",
+      "type": "svg",
+      "src": "assets/generated/digital-binary-rain-particle-4.svg",
+      "format": "svg",
+      "tags": [
+        "digital",
+        "binary",
+        "rain",
+        "particle",
+        "flow",
+        "overlay",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass digital binary rain illustration: cascading columns of 0s and 1s with luminous blue heads, glowing trails, and a frosted glass overlay panel with corner brackets on a near-black background.",
+      "geo": "assets/generated/digital-binary-rain-particle-4.geo.json"
+    },
+    {
+      "id": "generated_blinking-command-line-prompt-5",
+      "name": "blinking command line prompt underscore",
+      "type": "svg",
+      "src": "assets/generated/blinking-command-line-prompt-5.svg",
+      "format": "svg",
+      "tags": [
+        "blinking",
+        "command",
+        "line",
+        "prompt",
+        "underscore",
+        "hero",
+        "illustration",
+        "generated-svg"
+      ],
+      "description": "Dark-glass terminal illustration: chevron prompt with glowing blinking underscore cursor, subtle glass card, corner brackets, and terminal ticks.",
+      "geo": "assets/generated/blinking-command-line-prompt-5.geo.json"
+    }
+  ]
+}

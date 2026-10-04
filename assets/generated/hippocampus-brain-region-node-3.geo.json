@@ -1,0 +1,35 @@
+{
+  "id": "generated_hippocampus-brain-region-node-3",
+  "name": "hippocampus brain region node with pulsing activation ring and digital timer chip 00:02:14",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/hippocampus-brain-region-node-3.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M76 104 C70 88 78 66 96 60 C112 55 126 64 126 78 C126 92 112 96 104 92 C97 89 96 80 102 77"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "hippocampus",
+    "brain",
+    "region",
+    "node",
+    "pulsing",
+    "activation",
+    "illustration",
+    "generated-svg"
+  ]
+}

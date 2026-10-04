@@ -1,0 +1,35 @@
+{
+  "id": "generated_hungarian-professor-1970s-style-2",
+  "name": "hungarian professor 1970s style glasses",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/hungarian-professor-1970s-style-2.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M100 96 q0 -10 -0.5 -12"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "hungarian",
+    "professor",
+    "1970s",
+    "style",
+    "glasses",
+    "icon",
+    "icon",
+    "generated-svg"
+  ]
+}

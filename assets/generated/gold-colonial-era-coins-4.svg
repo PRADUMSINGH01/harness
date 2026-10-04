@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glassBg" cx="50%" cy="42%" r="72%">
+      <stop offset="0%" stop-color="#16181D"/>
+      <stop offset="60%" stop-color="#0A0A0A"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <linearGradient id="goldRim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF3C4"/>
+      <stop offset="45%" stop-color="#F2C14E"/>
+      <stop offset="100%" stop-color="#9A6B15"/>
+    </linearGradient>
+    <linearGradient id="goldFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE9A8"/>
+      <stop offset="40%" stop-color="#F5C542"/>
+      <stop offset="100%" stop-color="#B07E1C"/>
+    </linearGradient>
+    <linearGradient id="goldEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D9A32C"/>
+      <stop offset="100%" stop-color="#6E4A0D"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2.5" stdDeviation="3" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- dark-glass backdrop -->
+  <rect x="6" y="6" width="188" height="188" rx="34" fill="url(#glassBg)"/>
+  <rect x="6" y="6" width="188" height="188" rx="34" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.2"/>
+  <path d="M6 40 Q 100 4 194 40 L194 6 L6 6 Z" fill="#FFFFFF" opacity="0.05"/>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.85">
+    <path d="M20 34 V24 Q20 20 24 20 H34"/>
+    <path d="M166 20 H176 Q180 20 180 24 V34"/>
+    <path d="M180 166 V176 Q180 180 176 180 H166"/>
+    <path d="M34 180 H24 Q20 180 20 176 V166"/>
+  </g>
+
+  <!-- motion sparkle trails -->
+  <g stroke="#0A84FF" stroke-width="1.4" stroke-linecap="round" opacity="0.55" filter="url(#glow)">
+    <path d="M34 128 q6 -8 12 -10"/>
+    <path d="M40 96 q5 -7 11 -9"/>
+    <path d="M160 70 q-5 -7 -11 -9"/>
+  </g>
+
+  <!-- top tumbling coin: shilling, edge-on ellipse -->
+  <g filter="url(#softShadow)" transform="rotate(-18 100 58)">
+    <ellipse cx="100" cy="58" rx="26" ry="20" fill="url(#goldEdge)"/>
+    <ellipse cx="100" cy="56" rx="26" ry="20" fill="url(#goldFace)"/>
+    <ellipse cx="100" cy="56" rx="19.5" ry="14.5" fill="none" stroke="#8A5E10" stroke-width="1.2" opacity="0.7"/>
+    <text x="100" y="63" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="bold" fill="#7A520E">s</text>
+    <ellipse cx="91" cy="48" rx="7" ry="4" fill="#FFFDF2" opacity="0.65" transform="rotate(-20 91 48)"/>
+  </g>
+
+  <!-- left coin: dollar, tilted -->
+  <g filter="url(#softShadow)" transform="rotate(-14 66 128)">
+    <circle cx="66" cy="128" r="27" fill="url(#goldEdge)"/>
+    <circle cx="66" cy="126" r="27" fill="url(#goldFace)"/>
+    <circle cx="66" cy="126" r="21" fill="none" stroke="#8A5E10" stroke-width="1.2" opacity="0.7"/>
+    <g stroke="#7A520E" stroke-width="2.6" stroke-linecap="round" fill="none">
+      <line x1="66" y1="110" x2="66" y2="142"/>
+    </g>
+    <text x="66" y="135" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="bold" fill="#7A520E">$</text>
+    <path d="M50 110 Q60 98 76 102" fill="none" stroke="#FFFDF2" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+    <!-- reeded edge ticks -->
+    <g stroke="#6E4A0D" stroke-width="1" opacity="0.5">
+      <line x1="39.5" y1="120" x2="43.5" y2="121"/>
+      <line x1="88.5" y1="131" x2="92.5" y2="130"/>
+      <line x1="60" y1="152.5" x2="61" y2="148.5"/>
+    </g>
+  </g>
+
+  <!-- right small coin: shilling, flipping -->
+  <g filter="url(#softShadow)" transform="rotate(22 138 142)">
+    <circle cx="138" cy="142" r="19" fill="url(#goldEdge)"/>
+    <circle cx="138" cy="140" r="19" fill="url(#goldFace)"/>
+    <circle cx="138" cy="140" r="14.5" fill="none" stroke="#8A5E10" stroke-width="1" opacity="0.7"/>
+    <text x="138" y="147" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="bold" fill="#7A520E">/s</text>
+    <ellipse cx="132" cy="132" rx="5" ry="2.8" fill="#FFFDF2" opacity="0.6" transform="rotate(-24 132 132)"/>
+  </g>
+
+  <!-- sparkles -->
+  <g fill="#FFFFFF" filter="url(#glow)">
+    <path d="M150 92 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 Z"/>
+    <path d="M46 66 l1.4 3.6 3.6 1.4 -3.6 1.4 -1.4 3.6 -1.4 -3.6 -3.6 -1.4 3.6 -1.4 Z" opacity="0.85"/>
+    <circle cx="172" cy="118" r="1.6" opacity="0.8"/>
+    <circle cx="30" cy="152" r="1.3" opacity="0.7"/>
+  </g>
+
+  <!-- ground glint -->
+  <ellipse cx="100" cy="176" rx="58" ry="5" fill="#0A84FF" opacity="0.12"/>
+</svg>

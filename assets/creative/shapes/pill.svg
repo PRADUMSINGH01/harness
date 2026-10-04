@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200" role="img" aria-label="Gradient pill">
+<defs><linearGradient id="cx-sha-pill-g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" style="stop-color:var(--accent,#FF5A36);stop-opacity:1"/><stop offset="1" style="stop-color:var(--accent-2,#7B61FF);stop-opacity:1"/></linearGradient></defs>
+<rect id="shape" x="4" y="4" width="592" height="192" rx="96" style="fill:url(#cx-sha-pill-g)"/>
+</svg>

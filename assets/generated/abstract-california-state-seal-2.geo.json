@@ -1,0 +1,35 @@
+{
+  "id": "generated_abstract-california-state-seal-2",
+  "name": "abstract California state seal star-in-ring geometry stamp",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/abstract-california-state-seal-2.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M100 62 L110.16 88.62 L139.02 90.20 L116.51 108.05 L124.14 135.92 L100 120.4 L75.86 135.92 L83.49 108.05 L60.98 90.20 L89.84 88.62 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "abstract",
+    "california",
+    "state",
+    "seal",
+    "star",
+    "ring",
+    "illustration",
+    "generated-svg"
+  ]
+}

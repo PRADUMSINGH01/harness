@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14161c"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#D7DAE0"/>
+    </linearGradient>
+    <linearGradient id="paperDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B9BDC6"/>
+      <stop offset="1" stop-color="#8E8E93"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="drop" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- dark glass card -->
+  <rect x="6" y="6" width="188" height="188" rx="28" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <rect x="6" y="6" width="188" height="188" rx="28" fill="none" stroke="#0A84FF" stroke-opacity="0.15"/>
+
+  <!-- ambient blue glow -->
+  <ellipse cx="100" cy="100" rx="70" ry="60" fill="url(#glow)" opacity="0.5"/>
+
+  <!-- motion streaks (scrolling feel) -->
+  <g stroke="#0A84FF" stroke-linecap="round" opacity="0.35">
+    <line x1="24" y1="42" x2="46" y2="42" stroke-width="2"/>
+    <line x1="150" y1="160" x2="176" y2="160" stroke-width="2"/>
+    <line x1="160" y1="36" x2="176" y2="36" stroke-width="1.4" opacity="0.7"/>
+    <line x1="22" y1="152" x2="42" y2="152" stroke-width="1.4" opacity="0.7"/>
+  </g>
+  <g stroke="#8E8E93" stroke-linecap="round" opacity="0.25">
+    <line x1="34" y1="56" x2="52" y2="56" stroke-width="1.4"/>
+    <line x1="148" y1="146" x2="168" y2="146" stroke-width="1.4"/>
+  </g>
+
+  <!-- ribbon shadow -->
+  <path d="M40 118 C60 84 92 84 100 104 C108 124 140 128 158 100 L160 112 C144 142 106 140 94 118 C84 100 60 100 44 130 Z"
+        fill="#000000" opacity="0.4" filter="url(#drop)" transform="translate(4,8)"/>
+
+  <!-- ticker-tape ribbon: twisted looping strip -->
+  <g filter="url(#drop)">
+    <!-- back segment -->
+    <path d="M40 118 C58 86 92 82 100 104 C108 126 140 128 158 100 L158 112 C140 140 106 138 94 116 C86 100 62 100 42 130 Z"
+          fill="url(#paperDark)"/>
+    <!-- curl / roll at right end -->
+    <path d="M158 100 C168 86 166 74 156 70 C146 66 138 74 140 84 C142 94 152 96 158 100 Z" fill="url(#paper)"/>
+    <circle cx="152" cy="82" r="4.2" fill="#0A0A0A" opacity="0.75"/>
+    <!-- top face -->
+    <path d="M42 122 C60 88 92 84 100 106 C108 128 140 130 158 104 L158 112 C140 140 106 138 94 116 C86 100 62 100 42 130 Z"
+          fill="url(#paper)"/>
+  </g>
+
+  <!-- printed ticker lines on paper -->
+  <g stroke="#8E8E93" stroke-linecap="round" opacity="0.9">
+    <line x1="56" y1="104" x2="84" y2="102" stroke-width="2"/>
+    <line x1="104" y1="112" x2="136" y2="112" stroke-width="2"/>
+    <line x1="108" y1="118" x2="128" y2="119" stroke-width="1.6"/>
+  </g>
+  <!-- blue quote mark -->
+  <rect x="60" y="109" width="14" height="4" rx="2" fill="#0A84FF" filter="url(#softGlow)"/>
+
+  <!-- paper particles (small ribbon bits) -->
+  <g filter="url(#softGlow)">
+    <rect x="128" y="62" width="8" height="5" rx="1.2" fill="#FFFFFF" transform="rotate(24 132 64.5)"/>
+    <rect x="64" y="146" width="9" height="5.4" rx="1.2" fill="#D7DAE0" transform="rotate(-18 68.5 148.7)"/>
+    <rect x="148" y="132" width="7" height="4.4" rx="1.2" fill="#FFFFFF" transform="rotate(40 151.5 134.2)"/>
+    <rect x="46" y="66" width="7" height="4.4" rx="1.2" fill="#D7DAE0" transform="rotate(-32 49.5 68.2)"/>
+  </g>
+
+  <!-- glowing blue particles -->
+  <g filter="url(#softGlow)">
+    <circle cx="82" cy="54" r="2.6" fill="#0A84FF"/>
+    <circle cx="146" y="0" cy="152" r="2" fill="#0A84FF"/>
+    <circle cx="166" cy="118" r="1.6" fill="#FFFFFF"/>
+    <circle cx="36" cy="96" r="1.6" fill="#0A84FF"/>
+    <circle cx="112" cy="160" r="1.8" fill="#FFFFFF"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <path d="M18 30 V18 H30"/>
+    <path d="M170 18 H182 V30"/>
+    <path d="M182 170 V182 H170"/>
+    <path d="M30 182 H18 V170"/>
+  </g>
+</svg>

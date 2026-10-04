@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Dot grid">
+<defs><pattern id="cx-bac-dot-grid-p" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2.6" style="fill:var(--muted,#8B8F98)"/></pattern><radialGradient id="cx-bac-dot-grid-fade" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:#fff;stop-opacity:1"/><stop offset="0.75" style="stop-color:#fff;stop-opacity:0.35"/><stop offset="1" style="stop-color:#fff;stop-opacity:0"/></radialGradient><mask id="cx-bac-dot-grid-m"><rect width="1920" height="1080" style="fill:url(#cx-bac-dot-grid-fade)"/></mask></defs>
+<rect width="1920" height="1080" style="fill:var(--surface,#111216)"/>
+<rect width="1920" height="1080" mask="url(#cx-bac-dot-grid-m)" style="fill:url(#cx-bac-dot-grid-p);opacity:0.7"/>
+</svg>

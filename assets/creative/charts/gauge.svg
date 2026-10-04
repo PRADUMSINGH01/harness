@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-label="Speed gauge">
+<path d="M70 340 A250 250 0 0 1 195 123.5" style="fill:none;stroke:var(--accent,#FF5A36);stroke-width:44;opacity:0.45"/>
+<path d="M202.6 119.3 A250 250 0 0 1 437.4 119.3" style="fill:none;stroke:var(--highlight,#FFE14D);stroke-width:44;opacity:0.6"/>
+<path d="M445 123.5 A250 250 0 0 1 570 340" style="fill:none;stroke:var(--accent-3,#18C29C);stroke-width:44"/>
+<g id="needle" style="transform-origin:320px 340px;transform:rotate(60deg)"><path d="M314 340 L320 120 L326 340Z" style="fill:var(--ink,#F5F3EE)"/></g>
+<circle cx="320" cy="340" r="22" style="fill:var(--ink,#F5F3EE)"/>
+<text id="value" x="320" y="300" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:64px;font-weight:800;fill:var(--ink,#F5F3EE)">98</text>
+</svg>

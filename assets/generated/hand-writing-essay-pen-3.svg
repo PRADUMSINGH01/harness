@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1C1F26"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="penBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3A9DFF"/>
+      <stop offset="1" stop-color="#0A84FF"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <clipPath id="pageClip">
+      <rect x="42" y="38" width="104" height="128" rx="8"/>
+    </clipPath>
+  </defs>
+
+  <!-- glass backdrop card -->
+  <rect x="8" y="8" width="184" height="184" rx="28" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <rect x="8" y="8" width="184" height="184" rx="28" fill="none" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="6"/>
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.85">
+    <path d="M18 32 V22 a4 4 0 0 1 4-4 H32"/>
+    <path d="M168 18 H178 a4 4 0 0 1 4 4 V32"/>
+    <path d="M182 168 V178 a4 4 0 0 1-4 4 H168"/>
+    <path d="M32 182 H22 a4 4 0 0 1-4-4 V168"/>
+  </g>
+
+  <!-- notebook page -->
+  <g filter="url(#softShadow)">
+    <rect x="42" y="38" width="104" height="128" rx="8" fill="url(#paper)" stroke="#FFFFFF" stroke-opacity="0.25"/>
+    <g clip-path="url(#pageClip)">
+      <!-- margin line -->
+      <line x1="60" y1="38" x2="60" y2="166" stroke="#F43F5E" stroke-opacity="0.55" stroke-width="1.6"/>
+      <!-- ruled lines -->
+      <g stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="1.4">
+        <line x1="42" y1="58" x2="146" y2="58"/>
+        <line x1="42" y1="72" x2="146" y2="72"/>
+        <line x1="42" y1="86" x2="146" y2="86"/>
+        <line x1="42" y1="100" x2="146" y2="100"/>
+        <line x1="42" y1="114" x2="146" y2="114"/>
+        <line x1="42" y1="128" x2="146" y2="128"/>
+        <line x1="42" y1="142" x2="146" y2="142"/>
+        <line x1="42" y1="156" x2="146" y2="156"/>
+      </g>
+      <!-- handwriting scribbles on lines -->
+      <g stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" fill="none">
+        <path d="M66 55 h14 m4 0 h20 m4 0 h8"/>
+        <path d="M66 69 h22 m4 0 h14 m4 0 h6"/>
+        <path d="M66 83 h12 m4 0 h26 m4 0 h4"/>
+      </g>
+      <!-- fresh ink line being written -->
+      <path d="M66 97 h20" stroke="#0A84FF" stroke-width="2.4" stroke-linecap="round" filter="url(#glow)"/>
+      <!-- ink nib mark -->
+      <circle cx="88" cy="97" r="1.6" fill="#0A84FF" filter="url(#glow)"/>
+    </g>
+  </g>
+
+  <!-- pen: diagonal from bottom-right to page -->
+  <g transform="rotate(38 130 140)" filter="url(#softShadow)">
+    <rect x="122" y="96" width="12" height="74" rx="6" fill="url(#penBody)"/>
+    <rect x="122" y="118" width="12" height="8" fill="#0A0A0A" opacity="0.55"/>
+    <rect x="124" y="102" width="2.4" height="60" rx="1.2" fill="#FFFFFF" opacity="0.35"/>
+    <!-- nib -->
+    <path d="M124 170 L128 182 L132 170 Z" fill="#C7CCD4"/>
+    <path d="M128 182 L128 172" stroke="#0A0A0A" stroke-width="1"/>
+  </g>
+
+  <!-- stylized hand gripping pen (close-up silhouette) -->
+  <g fill="#8E8E93" opacity="0.95">
+    <path d="M152 178
+             C160 166, 164 154, 166 142
+             C167 136, 174 136, 175 142
+             C176 150, 174 158, 170 166
+             C166 174, 160 182, 152 188
+             C146 192, 140 190, 138 186
+             C136 182, 138 180, 142 178 Z"/>
+    <!-- thumb over pen -->
+    <path d="M132 132 C126 136, 120 144, 118 152 C116 158, 122 162, 126 158 C130 154, 134 146, 138 140 C141 135, 137 129, 132 132 Z"/>
+  </g>
+  <!-- hand edge highlight -->
+  <path d="M152 178 C160 166, 164 154, 166 142 C167 136, 174 136, 175 142"
+        fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

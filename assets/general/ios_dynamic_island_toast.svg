@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 72" width="100%" height="100%">
+  <!-- Apple iPhone Dynamic Island Outer Pill -->
+  <rect x="2" y="2" width="376" height="68" rx="34" fill="#000000" stroke="#334155" stroke-width="1.2"/>
+
+  <!-- Left Glowing Status Icon (Emerald Ping) -->
+  <circle cx="38" cy="36" r="14" fill="#065F46"/>
+  <circle cx="38" cy="36" r="7" fill="#10B981"/>
+
+  <!-- Center Content -->
+  <text x="66" y="33" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="14">AI Assistant Sync</text>
+  <text x="66" y="49" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="500" font-size="11">Automated Task Finished</text>
+
+  <!-- Right Dynamic Status Pill -->
+  <rect x="286" y="22" width="72" height="28" rx="14" fill="#1E293B"/>
+  <text x="322" y="41" text-anchor="middle" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="12">DONE</text>
+</svg>

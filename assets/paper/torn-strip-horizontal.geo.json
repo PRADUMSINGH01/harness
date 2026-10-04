@@ -1,0 +1,52 @@
+{
+  "id": "paper_torn_strip_horizontal_01",
+  "name": "Horizontal Torn Paper Strip",
+  "type": "svg_vector",
+  "category": "paper_craft",
+  "asset": {
+    "src": "assets/paper/torn-strip-horizontal.svg",
+    "format": "svg",
+    "transparent_background": true,
+    "fit": "fill",
+    "preserve_aspect_ratio": true
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 1080 260",
+    "anchor": "center",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 260
+    },
+    "closed_svg_path": "M 0,38 L 35,44 70,32 105,48 140,36 180,45 220,34 265,50 310,38 355,46 400,32 445,48 490,36 535,44 580,30 625,46 670,34 715,48 760,35 805,45 850,32 895,47 940,36 985,45 1030,34 1080,42 L 1080,215 L 1045,205 1010,222 975,208 940,220 900,206 860,224 815,210 770,222 725,208 680,224 635,212 590,226 545,210 500,224 455,208 410,222 365,207 320,225 275,211 230,224 185,209 140,222 95,207 50,224 0,212 Z",
+    "edge_style": "irregular_torn",
+    "recommended_role": "headline_backing_or_callout"
+  },
+  "render": {
+    "position": "absolute",
+    "default_width": "92%",
+    "z_index": 3,
+    "shadow": {
+      "enabled": true,
+      "x": 0,
+      "y": 10,
+      "blur": 16,
+      "color": "rgba(0,0,0,0.24)"
+    }
+  },
+  "animation": {
+    "recommended_entrance": "clip-reveal",
+    "suggested_ease": "power4.out",
+    "duration_seconds": 0.65
+  },
+  "tags": [
+    "torn-paper",
+    "banner",
+    "strip",
+    "paper-craft",
+    "editorial",
+    "headline-card"
+  ]
+}

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#0A84FF" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shardGrad" x1="0" y1="1" x2="0.3" y2="0">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#8E8E93" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="shardGrad2" x1="0" y1="1" x2="0.2" y2="0">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="smokeFade" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#8E8E93" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#8E8E93" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#8E8E93" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="blurSmoke" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5"/>
+    </filter>
+    <filter id="blurTiny" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="0.7"/>
+    </filter>
+  </defs>
+
+  <!-- dark glass backdrop -->
+  <rect x="0" y="0" width="200" height="200" rx="14" fill="#0A0A0A"/>
+  <rect x="0.5" y="0.5" width="199" height="199" rx="13.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.07"/>
+
+  <!-- ambient background glow -->
+  <ellipse cx="105" cy="120" rx="70" ry="80" fill="url(#glowBlue)" opacity="0.35"/>
+
+  <!-- smoke wisps dissolving upward -->
+  <g filter="url(#blurSmoke)" fill="url(#smokeFade)">
+    <path d="M96 170 C 90 140, 108 120, 98 96 C 90 76, 104 62, 100 44 C 98 32, 104 24, 102 12"/>
+    <path d="M112 176 C 118 150, 100 128, 112 104 C 122 84, 110 66, 118 46 C 122 34, 118 26, 122 16"/>
+    <path d="M84 164 C 78 142, 92 126, 84 106 C 78 90, 88 78, 84 60 C 82 50, 86 44, 84 34"/>
+  </g>
+
+  <!-- drifting shards -->
+  <g filter="url(#softGlow)">
+    <!-- large hero shard -->
+    <path d="M100 118 L114 92 L108 66 L92 76 L88 104 Z" fill="url(#shardGrad)" opacity="0.9"/>
+    <!-- secondary shards -->
+    <path d="M120 70 L132 54 L128 38 L116 48 Z" fill="url(#shardGrad2)" opacity="0.7"/>
+    <path d="M76 88 L86 74 L80 60 L70 70 Z" fill="url(#shardGrad2)" opacity="0.55"/>
+    <path d="M112 40 L120 28 L114 18 L106 28 Z" fill="#FFFFFF" opacity="0.45"/>
+    <path d="M84 44 L92 32 L86 24 L78 32 Z" fill="#FFFFFF" opacity="0.3"/>
+    <path d="M126 104 L136 94 L132 84 L122 92 Z" fill="#0A84FF" opacity="0.4"/>
+  </g>
+
+  <!-- shard edge highlights -->
+  <g stroke="#FFFFFF" stroke-opacity="0.5" fill="none" stroke-width="0.8" filter="url(#blurTiny)">
+    <path d="M108 66 L114 92 L100 118"/>
+    <path d="M132 54 L120 70"/>
+    <path d="M86 74 L76 88"/>
+  </g>
+
+  <!-- dissolving particle field -->
+  <g fill="#FFFFFF" filter="url(#blurTiny)">
+    <circle cx="102" cy="30" r="1.4" opacity="0.7"/>
+    <circle cx="118" cy="22" r="1.1" opacity="0.5"/>
+    <circle cx="88" cy="26" r="0.9" opacity="0.45"/>
+    <circle cx="108" cy="14" r="0.8" opacity="0.35"/>
+    <circle cx="126" cy="34" r="1.0" opacity="0.4"/>
+    <circle cx="78" cy="18" r="0.7" opacity="0.3"/>
+    <circle cx="96" cy="8" r="0.9" opacity="0.3"/>
+    <circle cx="132" cy="14" r="0.7" opacity="0.25"/>
+    <circle cx="70" cy="34" r="0.7" opacity="0.25"/>
+  </g>
+  <g fill="#0A84FF" filter="url(#blurTiny)">
+    <circle cx="112" cy="26" r="1.2" opacity="0.55"/>
+    <circle cx="92" cy="16" r="0.9" opacity="0.4"/>
+    <circle cx="122" cy="44" r="0.9" opacity="0.4"/>
+    <circle cx="82" cy="52" r="0.8" opacity="0.35"/>
+    <circle cx="104" cy="20" r="1.0" opacity="0.45"/>
+    <circle cx="136" cy="24" r="0.7" opacity="0.3"/>
+    <circle cx="90" cy="6" r="0.7" opacity="0.25"/>
+  </g>
+
+  <!-- glass corner brackets -->
+  <g stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.2" fill="none">
+    <path d="M12 22 V12 H22"/>
+    <path d="M178 12 H188 V22"/>
+    <path d="M188 178 V188 H178"/>
+    <path d="M22 188 H12 V178"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-label="Social post card">
+<defs><linearGradient id="cx-moc-social-post-av" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent,#FF5A36);stop-opacity:1"/><stop offset="1" style="stop-color:var(--accent-2,#7B61FF);stop-opacity:1"/></linearGradient></defs>
+<rect x="4" y="4" width="952" height="532" rx="34" style="fill:var(--ui-panel,#16181D);stroke:var(--ui-line,#2C2F38);stroke-width:2"/>
+<circle id="avatar" cx="96" cy="100" r="46" style="fill:url(#cx-moc-social-post-av)"/>
+<text id="name" x="166" y="92" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:32px;font-weight:700;fill:var(--ink,#F5F3EE)">Alex Rivera</text>
+<text id="handle" x="166" y="130" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:26px;font-weight:400;fill:var(--muted,#8B8F98)">@alexmakes · 2h</text>
+<text id="line-1" x="52" y="226" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:40px;font-weight:500;fill:var(--ink,#F5F3EE)">Made our launch video in ten minutes.</text>
+<text id="line-2" x="52" y="284" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:40px;font-weight:500;fill:var(--ink,#F5F3EE)">The motion feels hand-made. Wild.</text>
+<path d="M52 360 H908" style="stroke:var(--ui-line,#2C2F38);stroke-width:2"/>
+<path d="M60 420 h34 a8 8 0 0 1 8 8 v14 a8 8 0 0 1 -8 8 h-20 l-10 10 v-10 h-4 a8 8 0 0 1 -8 -8 v-14 a8 8 0 0 1 8 -8z" style="fill:none;stroke:var(--muted,#8B8F98);stroke-width:3"/>
+<text id="replies" x="118" y="446" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:26px;font-weight:500;fill:var(--muted,#8B8F98)">184</text>
+<path d="M300 446 c-14 -12 -26 -20 -26 -32 a13 13 0 0 1 26 -6 a13 13 0 0 1 26 6 c0 12 -12 20 -26 32z" style="fill:var(--accent,#FF5A36)"/>
+<text id="likes" x="340" y="446" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:26px;font-weight:600;fill:var(--accent,#FF5A36)">2.4K</text>
+</svg>

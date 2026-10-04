@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 380" fill="none">
+  <defs>
+    <linearGradient id="card-surface" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#181F33"/>
+      <stop offset="100%" stop-color="#111624"/>
+    </linearGradient>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  
+  <!-- Main Card -->
+  <rect width="740" height="380" rx="24" fill="url(#card-surface)" stroke="#263353" stroke-width="2" filter="url(#card-shadow)"/>
+  
+  <!-- Header: Dot-01 Avatar & Timestamp -->
+  <circle cx="56" cy="56" r="22" fill="#10B981"/>
+  <!-- Inner Star / Sparkle in Avatar -->
+  <path d="M56 43 C56 50 51 56 44 56 C51 56 56 62 56 69 C56 62 61 56 68 56 C61 56 56 50 56 43 Z" fill="#FFFFFF"/>
+  
+  <text x="94" y="52" font-family="'Sora', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">Dot-01</text>
+  <rect x="176" y="38" width="108" height="26" rx="6" fill="rgba(16,185,129,0.15)" stroke="rgba(16,185,129,0.3)" stroke-width="1"/>
+  <text x="230" y="55" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#10B981" text-anchor="middle">PROACTIVE</text>
+  <text x="684" y="52" font-family="'JetBrains Mono', monospace" font-size="14" fill="#64748B" text-anchor="end">Just now · Dedicated Cloud</text>
+
+  <!-- Message Body -->
+  <text x="56" y="112" font-family="'Sora', sans-serif" font-size="22" font-weight="600" fill="#E2E8F0">I investigated high-priority GitHub issue #341 while you were away.</text>
+  <text x="56" y="146" font-family="'Sora', sans-serif" font-size="18" font-weight="400" fill="#94A3B8" width="620">All 42 integration tests pass. The Stripe webhook retry bug is resolved.</text>
+
+  <!-- Diff Spec Box -->
+  <g transform="translate(56, 175)">
+    <rect width="628" height="88" rx="14" fill="rgba(0,0,0,0.3)" stroke="#222B42" stroke-width="1.5"/>
+    <text x="24" y="34" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="600" fill="#10B981">✓ PR #412: fix(stripe): handle idempotent webhook retries</text>
+    <text x="24" y="62" font-family="'JetBrains Mono', monospace" font-size="14" fill="#64748B">3 files modified (+64, -18) · verified in Docker sandbox</text>
+    <circle cx="590" cy="44" r="16" fill="rgba(16,185,129,0.15)"/>
+    <path d="M584 44 L588 48 L596 40" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Action Buttons -->
+  <g transform="translate(56, 290)">
+    <!-- Primary Green Button: Approve & Merge -->
+    <rect width="210" height="54" rx="14" fill="#10B981"/>
+    <text x="105" y="33" font-family="'Sora', sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">Approve &amp; Open PR</text>
+    
+    <!-- Secondary Button: View Diff -->
+    <rect x="226" width="160" height="54" rx="14" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+    <text x="306" y="33" font-family="'Sora', sans-serif" font-size="16" font-weight="600" fill="#E2E8F0" text-anchor="middle">Inspect Diff</text>
+
+    <!-- Dismiss Button -->
+    <rect x="402" width="130" height="54" rx="14" fill="transparent"/>
+    <text x="467" y="33" font-family="'Sora', sans-serif" font-size="16" font-weight="500" fill="#64748B" text-anchor="middle">Dismiss</text>
+  </g>
+</svg>

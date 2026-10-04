@@ -1,0 +1,30 @@
+{
+  "id": "prop_macro_punch",
+  "name": "Macro Punch",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/motion/prop_macro_punch.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 240 240",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 240,
+      "height": 240
+    },
+    "closed_svg_path": "M62 112 Q84 104 116 104 L146 106 Q150 108 150 118 L148 130 Q118 136 88 132 L64 126 Q58 122 62 112 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "storyboard-prop",
+    "macro-punch",
+    "motion"
+  ]
+}

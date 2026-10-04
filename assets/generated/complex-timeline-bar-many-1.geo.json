@@ -1,0 +1,35 @@
+{
+  "id": "generated_complex-timeline-bar-many-1",
+  "name": "complex timeline bar with many small clips",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/complex-timeline-bar-many-1.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M186 162 v6 a6 6 0 0 1-6 6 h-6"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "complex",
+    "timeline",
+    "bar",
+    "many",
+    "small",
+    "clips",
+    "illustration",
+    "generated-svg"
+  ]
+}

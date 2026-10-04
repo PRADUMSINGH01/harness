@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Split halves">
+<path id="half-a" d="M0 0 H1100 L820 1080 H0Z" style="fill:var(--accent,#FF5A36)"/><path id="half-b" d="M1100 0 H1920 V1080 H820Z" style="fill:var(--accent-2,#7B61FF)"/>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="capsuleFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#161C26"/>
+      <stop offset="1" stop-color="#0D1117"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#39FF14" flood-opacity="0.45" result="col"/>
+      <feComposite in="col" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#glow)">
+    <!-- Capsule -->
+    <rect x="14" y="68" width="172" height="64" rx="32" fill="url(#capsuleFill)" stroke="#39FF14" stroke-width="1.5"/>
+    <!-- Inner top-edge glass highlight -->
+    <rect x="30" y="72" width="140" height="2" rx="1" fill="url(#sheen)"/>
+
+    <!-- Bar-chart glyph with trend arrow -->
+    <g fill="#39FF14">
+      <rect x="34" y="116" width="4.5" height="8" rx="1"/>
+      <rect x="41.5" y="111" width="4.5" height="13" rx="1"/>
+      <rect x="49" y="105.5" width="4.5" height="18.5" rx="1"/>
+      <path d="M34.5 104.5 L52 95 L52 98.8 L34.5 107.5 Z" opacity="0.9"/>
+      <path d="M52 95 L57.5 95 L57.5 99.5 Z"/>
+    </g>
+    <!-- Trend arrow over bars -->
+    <g stroke="#39FF14" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0">
+    </g>
+
+    <!-- Value: 14,200 with superscript up-arrow -->
+    <text x="66" y="109" font-family="'Roboto Mono','SF Mono',Menlo,Consolas,monospace" font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">14,200</text>
+    <g stroke="#39FF14" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M141 98 L141 88"/>
+      <path d="M136.5 92.5 L141 87.5 L145.5 92.5"/>
+    </g>
+
+    <!-- Unit label -->
+    <text x="150" y="122" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="900" fill="#39FF14" letter-spacing="1.5">FPS</text>
+  </g>
+</svg>

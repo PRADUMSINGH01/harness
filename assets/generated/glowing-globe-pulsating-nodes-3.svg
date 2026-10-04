@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="sphere" cx="38%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="55%" stop-color="#101720"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#0A84FF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#8E8E93" stop-opacity="0.35"/>
+    </linearGradient>
+    <filter id="neon" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="100" cy="100" r="86" fill="url(#glow)"/>
+
+  <g fill="none">
+    <circle cx="100" cy="100" r="70" fill="url(#sphere)" stroke="url(#rim)" stroke-width="1.5" filter="url(#neon)"/>
+    <!-- meridians -->
+    <ellipse cx="100" cy="100" rx="24" ry="70" stroke="#8E8E93" stroke-opacity="0.30" stroke-width="0.8"/>
+    <ellipse cx="100" cy="100" rx="46" ry="70" stroke="#8E8E93" stroke-opacity="0.20" stroke-width="0.7"/>
+    <ellipse cx="100" cy="100" rx="62" ry="70" stroke="#8E8E93" stroke-opacity="0.12" stroke-width="0.6"/>
+    <line x1="30" y1="100" x2="170" y2="100" stroke="#8E8E93" stroke-opacity="0.28" stroke-width="0.7"/>
+    <!-- parallels -->
+    <path d="M 44 62 A 74 24 0 0 1 156 62" stroke="#8E8E93" stroke-opacity="0.22" stroke-width="0.7"/>
+    <path d="M 38 132 A 72 22 0 0 0 162 132" stroke="#8E8E93" stroke-opacity="0.18" stroke-width="0.7"/>
+  </g>
+
+  <!-- location nodes -->
+  <g filter="url(#neon)">
+    <!-- Sweden (83.6, 38.2) -->
+    <g>
+      <circle cx="83.6" cy="38.2" r="9" fill="none" stroke="#0A84FF" stroke-width="1.2" opacity="0.6">
+        <animate attributeName="r" values="5;13;5" dur="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0;0.7" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="83.6" cy="38.2" r="3.4" fill="#FFFFFF" stroke="#0A84FF" stroke-width="1.4"/>
+    </g>
+    <!-- China (149.7, 59.8) -->
+    <g>
+      <circle cx="149.7" cy="59.8" r="9" fill="none" stroke="#0A84FF" stroke-width="1.2" opacity="0.6">
+        <animate attributeName="r" values="5;13;5" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0;0.7" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="149.7" cy="59.8" r="3.4" fill="#FFFFFF" stroke="#0A84FF" stroke-width="1.4"/>
+    </g>
+    <!-- Nigeria (58.4, 89.1) -->
+    <g>
+      <circle cx="58.4" cy="89.1" r="9" fill="none" stroke="#0A84FF" stroke-width="1.2" opacity="0.6">
+        <animate attributeName="r" values="5;13;5" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0;0.7" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="58.4" cy="89.1" r="3.4" fill="#FFFFFF" stroke="#0A84FF" stroke-width="1.4"/>
+    </g>
+  </g>
+
+  <!-- orbit accents -->
+  <g fill="none" stroke="#8E8E93">
+    <ellipse cx="100" cy="100" rx="84" ry="30" stroke-opacity="0.20" stroke-width="0.8" transform="rotate(-18 100 100)"/>
+    <circle cx="166" cy="72" r="1.8" fill="#8E8E93" stroke="none" opacity="0.7"/>
+    <circle cx="30" cy="134" r="1.4" fill="#8E8E93" stroke="none" opacity="0.5"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#8E8E93" stroke-opacity="0.45" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <path d="M 12 24 V 12 H 24"/>
+    <path d="M 176 12 H 188 V 24"/>
+    <path d="M 188 176 V 188 H 176"/>
+    <path d="M 24 188 H 12 V 176"/>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Concentric Rings -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.6"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#06B6D4" stroke-width="2" stroke-dasharray="35 15"/>
+  <circle cx="100" cy="100" r="45" fill="none" stroke="#10B981" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="100" cy="100" r="16" fill="none" stroke="#22D3EE" stroke-width="2"/>
+  <circle cx="100" cy="100" r="3" fill="#34D399"/>
+
+  <!-- Crosshairs -->
+  <line x1="100" y1="5" x2="100" y2="40" stroke="#06B6D4" stroke-width="2"/>
+  <line x1="100" y1="160" x2="100" y2="195" stroke="#06B6D4" stroke-width="2"/>
+  <line x1="5" y1="100" x2="40" y2="100" stroke="#06B6D4" stroke-width="2"/>
+  <line x1="160" y1="100" x2="195" y2="100" stroke="#06B6D4" stroke-width="2"/>
+
+  <!-- Corner Brackets -->
+  <path d="M 25 45 L 25 25 L 45 25" fill="none" stroke="#22D3EE" stroke-width="3"/>
+  <path d="M 175 45 L 175 25 L 155 25" fill="none" stroke="#22D3EE" stroke-width="3"/>
+  <path d="M 25 155 L 25 175 L 45 175" fill="none" stroke="#22D3EE" stroke-width="3"/>
+  <path d="M 175 155 L 175 175 L 155 175" fill="none" stroke="#22D3EE" stroke-width="3"/>
+
+  <!-- Azimuth Coordinates -->
+  <text x="105" y="32" fill="#06B6D4" font-family="monospace" font-size="8">N 42°</text>
+  <text x="165" y="112" fill="#06B6D4" font-family="monospace" font-size="8">E 88°</text>
+</svg>

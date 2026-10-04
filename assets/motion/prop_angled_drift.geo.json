@@ -1,0 +1,30 @@
+{
+  "id": "prop_angled_drift",
+  "name": "Angled Drift",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/motion/prop_angled_drift.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 240 240",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 240,
+      "height": 240
+    },
+    "closed_svg_path": "M52 172 l14 -14 l6 6 l-14 14 z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "storyboard-prop",
+    "angled-drift",
+    "motion"
+  ]
+}

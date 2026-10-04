@@ -1,0 +1,253 @@
+{
+  "id": "motion-graphics",
+  "label": "Motion graphic",
+  "workflow": "motion-graphics",
+  "description": "Short, unnarrated, design-led unit where motion is the message: kinetic type, stat hit, chart, logo sting, lower third, map, tweet/news/webpage animation. Usually under 10s.",
+  "defaultVariants": 2,
+  "repairRounds": 2,
+  "duration": {
+    "band": [
+      2,
+      30
+    ],
+    "tolerance": 0.15
+  },
+  "motion": {
+    "maxSingleEntrySec": 0.9,
+    "maxStaggerEachSec": 0.15,
+    "maxStaggerTotalSec": 0.5,
+    "maxDistinctEases": 4
+  },
+  "density": {
+    "maxWordsPerSecond": 2.5,
+    "maxWordsPerBlock": 8,
+    "minFontPx": 40
+  },
+  "ledger": {
+    "requireAtScenes": 3,
+    "missingSeverity": "warning",
+    "maxTransitionTypes": 2
+  },
+  "check": {
+    "atTransitions": true,
+    "frameCheck": true
+  },
+  "seam": {
+    "enabled": true,
+    "hard": false,
+    "note": "Single-shot pieces rarely have seams; when they do, the cut must still carry momentum."
+  },
+  "proofTimes": [
+    0.08,
+    0.3,
+    0.55,
+    0.8,
+    0.97
+  ],
+  "gates": {
+    "entry": {
+      "hard": true,
+      "error": 40,
+      "warning": 5,
+      "cap": 40
+    },
+    "assets": {
+      "hard": true,
+      "error": 15,
+      "warning": 3,
+      "cap": 40
+    },
+    "duration": {
+      "hard": true,
+      "error": 15,
+      "warning": 5,
+      "cap": 20
+    },
+    "motion": {
+      "hard": true,
+      "error": 12,
+      "warning": 3,
+      "cap": 35
+    },
+    "determinism": {
+      "hard": true,
+      "error": 20,
+      "warning": 4,
+      "cap": 30
+    },
+    "density": {
+      "hard": false,
+      "error": 6,
+      "warning": 3,
+      "cap": 15
+    },
+    "ledger": {
+      "hard": false,
+      "error": 8,
+      "warning": 3,
+      "cap": 20
+    },
+    "check": {
+      "hard": true,
+      "error": 8,
+      "warning": 1.5,
+      "cap": 40
+    },
+    "seam": {
+      "hard": false,
+      "error": 6,
+      "warning": 2,
+      "cap": 20
+    },
+    "snapshot": {
+      "hard": true,
+      "error": 30,
+      "warning": 5,
+      "cap": 30
+    }
+  },
+  "blend": {
+    "technical": 0.35,
+    "judge": 0.65
+  },
+  "axes": [
+    {
+      "id": "signature_move",
+      "label": "Signature move",
+      "values": [
+        "kinetic-type-beats",
+        "titlecard-reveal",
+        "typewriter-reveal",
+        "dataviz-countup",
+        "logo-assemble-lockup",
+        "video-text-pivot",
+        "ticker-takeover",
+        "camera-journey",
+        "grid-card-assemble",
+        "fixed-anchor-cycle"
+      ],
+      "guidance": "The one move a viewer would describe afterwards. Read hyperframes-animation/blueprints/<id>.md. If it cannot serve this content category, take the nearest blueprint that can and record the substitution in NOTES.md.",
+      "file": "skills/hyperframes-animation/blueprints/{value}.md"
+    },
+    {
+      "id": "palette",
+      "label": "Palette",
+      "fromDir": "hyperframes-creative/palettes",
+      "guidance": "Read hyperframes-creative/palettes/<id>.md. Brand colors from the brief override palette hues but keep the palette's value structure.",
+      "file": "skills/hyperframes-creative/palettes/{value}.md"
+    },
+    {
+      "id": "current",
+      "label": "Dominant vector",
+      "values": [
+        "LEFT: lateral flow, the house default",
+        "UP: everything rises toward the payoff",
+        "PUSH: camera travels forward through layers"
+      ],
+      "guidance": "Every move in the piece rides this vector unless a visible cause spends a reserved one (motion-doctrine, The Current)."
+    },
+    {
+      "id": "tempo",
+      "label": "Tempo",
+      "values": [
+        "staccato: hard hits on a 0.4-0.6s grid, one 0.3-0.75s stillness before the payoff",
+        "legato: one continuous camera move that every element rides",
+        "build-and-drop: dense accumulation, then a single clean reveal on an empty frame"
+      ]
+    }
+  ],
+  "judge": {
+    "dimensions": [
+      {
+        "id": "signature",
+        "weight": 0.22,
+        "question": "Is there one unmistakable signature move worth rewatching, executed cleanly?",
+        "anchors": {
+          "2": "no identifiable move; things just appear",
+          "5": "a recognizable stock move (fade-up, slide-in) done competently",
+          "8": "a distinct move with a clear idea, cleanly timed",
+          "10": "a move you would study and steal"
+        }
+      },
+      {
+        "id": "message",
+        "weight": 0.18,
+        "question": "Is the brief's one message unmistakable at the final hold?",
+        "anchors": {
+          "2": "message absent or wrong",
+          "5": "present but competes with decoration",
+          "8": "lands instantly",
+          "10": "lands instantly and is memorable"
+        }
+      },
+      {
+        "id": "motion_craft",
+        "weight": 0.2,
+        "question": "Do moves cause each other (causal chain), share ease intent, avoid idle wobble, and earn a stillness beat before the payoff?",
+        "anchors": {
+          "2": "jerky, floaty, or wobbling",
+          "5": "smooth but every element animates independently",
+          "8": "causal, choreographed, purposeful stillness",
+          "10": "feels like one physical system"
+        }
+      },
+      {
+        "id": "composition",
+        "weight": 0.18,
+        "question": "Typography hierarchy, focal element, safe margins, contrast, readability at phone size in every proof frame?",
+        "anchors": {
+          "2": "cramped, clipped, or unreadable",
+          "5": "tidy centered template layout",
+          "8": "deliberate grid, strong hierarchy",
+          "10": "poster-grade in every frame"
+        }
+      },
+      {
+        "id": "readability_at_speed",
+        "weight": 0.1,
+        "question": "Can each word be read at the speed it is on screen?",
+        "anchors": {
+          "2": "text gone before it can be read",
+          "5": "readable on a second watch",
+          "8": "readable first time",
+          "10": "reading rhythm is part of the design"
+        }
+      },
+      {
+        "id": "originality",
+        "weight": 0.12,
+        "question": "Would a designer mistake this for default AI or template output?",
+        "anchors": {
+          "2": "obvious template (gradient blob, Inter on black, centered fade)",
+          "5": "clean but generic",
+          "8": "has a point of view",
+          "10": "distinctive and on-brand"
+        }
+      }
+    ],
+    "fatal": [
+      "text unreadable in the final hold",
+      "visible glitch: flash, pop, blank or black frame",
+      "brief's message missing",
+      "wrong deliverable (format, length, transparent vs opaque)",
+      "required brand asset missing, distorted, or recolored"
+    ]
+  },
+  "doctrine": [
+    ".claude/skills/motion-doctrine/SKILL.md",
+    ".claude/skills/cut-the-curve/SKILL.md"
+  ],
+  "essentials": [
+    "skills/motion-graphics/SKILL.md",
+    "skills/motion-graphics/agents/builder.md",
+    "skills/motion-graphics/references/builder-contract.md",
+    "skills/motion-graphics/references/motion-vocabulary.md",
+    "skills/hyperframes-core/references/minimal-composition.md",
+    ".claude/skills/motion-doctrine/SKILL.md"
+  ],
+  "budget": {
+    "maxTurns": 25,
+    "maxInputTokens": 600000,
+    "maxMinutes": 8
+  }
+}

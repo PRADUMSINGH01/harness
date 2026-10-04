@@ -1,0 +1,29 @@
+{
+  "id": "prop_slam_cut",
+  "name": "Slam Cut",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/motion/prop_slam_cut.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 240 240",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 240,
+      "height": 240
+    }
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "storyboard-prop",
+    "slam-cut",
+    "motion"
+  ]
+}

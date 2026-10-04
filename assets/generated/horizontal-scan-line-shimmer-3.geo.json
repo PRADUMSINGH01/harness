@@ -1,0 +1,35 @@
+{
+  "id": "generated_horizontal-scan-line-shimmer-3",
+  "name": "horizontal scan-line shimmer across ticket surface",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/horizontal-scan-line-shimmer-3.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M30 60 H170 V104 H150 A10 10 0 0 0 150 124 H170 V140 H30 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "horizontal",
+    "scan",
+    "line",
+    "shimmer",
+    "across",
+    "ticket",
+    "illustration",
+    "generated-svg"
+  ]
+}

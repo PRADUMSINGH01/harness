@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 84" fill="none">
+  <defs>
+    <linearGradient id="dot-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141928"/>
+      <stop offset="100%" stop-color="#0E131F"/>
+    </linearGradient>
+    <filter id="emerald-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="320" height="84" rx="20" fill="url(#dot-bg)" stroke="rgba(16,185,129,0.4)" stroke-width="2"/>
+  
+  <!-- Outer Pulse Ring -->
+  <circle cx="48" cy="42" r="22" stroke="rgba(16,185,129,0.25)" stroke-width="2" stroke-dasharray="4 4"/>
+  <!-- Middle Ring -->
+  <circle cx="48" cy="42" r="14" fill="rgba(16,185,129,0.15)"/>
+  <!-- Glowing Core -->
+  <circle cx="48" cy="42" r="8" fill="#10B981" filter="url(#emerald-glow)"/>
+  <circle cx="48" cy="42" r="3" fill="#FFFFFF"/>
+
+  <!-- Typography -->
+  <text x="86" y="38" font-family="'Sora', sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" letter-spacing="0.04em">DOTS AGENT</text>
+  <text x="86" y="60" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#10B981" letter-spacing="0.14em">ONLINE · 24/7 AUTONOMOUS</text>
+  
+  <!-- Cloud indicator badge -->
+  <rect x="238" y="24" width="66" height="34" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+  <text x="271" y="46" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#94A3B8" text-anchor="middle">CLOUD</text>
+</svg>

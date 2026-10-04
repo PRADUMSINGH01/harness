@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12151c"/>
+      <stop offset="0.5" stop-color="#0A0A0A"/>
+      <stop offset="1" stop-color="#05070b"/>
+    </linearGradient>
+    <radialGradient id="glowBlue" cx="0.75" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hairSheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#8E8E93"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="drop" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Dark glass card -->
+  <rect x="2" y="2" width="196" height="196" rx="10" fill="url(#glass)"/>
+  <rect x="2" y="2" width="196" height="196" rx="10" fill="url(#glowBlue)"/>
+  <rect x="2" y="2" width="196" height="196" rx="10" fill="none" stroke="#FFFFFF" stroke-opacity="0.08"/>
+
+  <!-- Ornate double border -->
+  <rect x="10" y="10" width="180" height="180" rx="4" fill="none" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.2"/>
+  <rect x="15" y="15" width="170" height="170" rx="2" fill="none" stroke="#8E8E93" stroke-width="0.6" stroke-opacity="0.8"/>
+
+  <!-- Corner flourishes -->
+  <g stroke="#0A84FF" stroke-width="1.1" fill="none" filter="url(#softGlow)" stroke-linecap="round">
+    <path d="M10 24 V14 Q10 10 14 10 H24"/>
+    <path d="M176 10 H186 Q190 10 190 14 V24"/>
+    <path d="M190 176 V186 Q190 190 186 190 H176"/>
+    <path d="M24 190 H14 Q10 190 10 186 V176"/>
+  </g>
+  <g fill="#0A84FF">
+    <circle cx="10" cy="10" r="1.4"/><circle cx="190" cy="10" r="1.4"/>
+    <circle cx="190" cy="190" r="1.4"/><circle cx="10" cy="190" r="1.4"/>
+  </g>
+
+  <!-- Ornamental center-top flourish -->
+  <g stroke="#8E8E93" stroke-width="0.8" fill="none" opacity="0.9">
+    <path d="M86 22 H97 M103 22 H114"/>
+    <path d="M92 22 q3 -3.5 5 0 q2 -3.5 5 0"/>
+    <circle cx="100" cy="22" r="1.4" fill="#FFFFFF" stroke="none"/>
+  </g>
+
+  <!-- Giant serif quotation mark -->
+  <text x="24" y="62" font-family="Georgia, 'Times New Roman', serif" font-size="44" fill="#0A84FF" opacity="0.55" font-style="italic">“</text>
+
+  <!-- Einstein silhouette bust -->
+  <g filter="url(#drop)">
+    <!-- wild hair -->
+    <path fill="url(#hairSheen)" d="M126 74 q-3 -9 4 -13 q-1 -7 6 -9 q1 -6 8 -6 q4 -5 10 -3 q6 -3 10 2 q7 0 8 6 q7 2 6 9 q6 4 3 12 q4 7 -2 12 q2 7 -6 9 l-2 -5 q3 -4 1 -8 q4 -4 0 -9 q2 -5 -3 -8 q1 -5 -5 -6 q-2 -4 -7 -3 q-3 -4 -8 -2 q-5 -2 -7 3 q-6 0 -6 6 q-5 2 -4 8 q-4 3 -2 8 q-3 4 0 8 l-3 4 q-6 -4 -1 -7 z"/>
+    <!-- face / head -->
+    <path fill="#0A0A0A" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="1.4" d="M134 90 q0 -12 12 -14 q13 -2 18 8 q3 6 2 13 q-1 7 -4 11 q3 3 2 7 q-1 4 -6 5 l-4 6 h-16 l-2 -8 q-5 -6 -4 -14 z"/>
+    <!-- mustache -->
+    <path fill="#FFFFFF" d="M145 106 q4 -2.5 7 0 q3 -2.5 7 0 q-2 3.5 -7 2.6 q-5 0.9 -7 -2.6 z"/>
+    <!-- brow + eye hint -->
+    <path d="M144 93 q4 -3 8 -1 M158 92 q4 -2 7 1" stroke="#8E8E93" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <!-- collar / shoulders -->
+    <path fill="#0A0A0A" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="1.4" d="M120 142 q4 -12 22 -15 l2 6 q8 3 14 0 l2 -6 q18 3 22 15 q2 8 2 14 h-66 q0 -6 2 -14 z"/>
+    <path d="M146 133 l6 10 l6 -10" fill="none" stroke="#8E8E93" stroke-width="0.9"/>
+    <path d="M152 143 v14" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="0.9"/>
+  </g>
+
+  <!-- Quote text -->
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#FFFFFF">
+    <text x="26" y="92" font-size="12.5" font-style="italic">Imagination is more</text>
+    <text x="26" y="110" font-size="12.5" font-style="italic">important than</text>
+    <text x="26" y="128" font-size="12.5" font-style="italic">knowledge.</text>
+  </g>
+
+  <!-- Attribution -->
+  <g>
+    <line x1="26" y1="140" x2="60" y2="140" stroke="#0A84FF" stroke-width="0.8" filter="url(#softGlow)"/>
+    <text x="26" y="152" font-family="Georgia, 'Times New Roman', serif" font-size="9" letter-spacing="2.5" fill="#8E8E93">ALBERT EINSTEIN</text>
+    <text x="26" y="164" font-family="Georgia, 'Times New Roman', serif" font-size="7" letter-spacing="1.5" fill="#8E8E93" opacity="0.7">1879 – 1955</text>
+  </g>
+
+  <!-- Bottom ornament -->
+  <g stroke="#8E8E93" stroke-width="0.7" opacity="0.8">
+    <line x1="60" y1="178" x2="94" y2="178"/>
+    <line x1="106" y1="178" x2="140" y2="178"/>
+    <circle cx="100" cy="178" r="2" fill="none"/>
+    <circle cx="100" cy="178" r="0.8" fill="#0A84FF" stroke="none"/>
+  </g>
+</svg>

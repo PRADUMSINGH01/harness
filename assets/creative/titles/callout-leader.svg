@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="760" height="320" role="img" aria-label="Callout with leader line">
+<circle id="anchor" cx="40" cy="270" r="18" style="fill:var(--accent,#FF5A36)"/><circle cx="40" cy="270" r="32" style="fill:none;stroke:var(--accent,#FF5A36);stroke-width:3;opacity:0.5"/>
+<path id="leader" class="draw" pathLength="1" d="M40 270 L180 110 H300" style="fill:none;stroke:var(--ink,#F5F3EE);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 1.05;stroke-dashoffset:0"/>
+<g id="label-box"><rect x="300" y="60" width="440" height="100" rx="20" style="fill:var(--ink,#F5F3EE)"/><text id="label" x="520" y="124" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:40px;font-weight:700;fill:var(--surface,#111216)">Auto-captions</text></g>
+</svg>

@@ -1,0 +1,29 @@
+{
+  "id": "custom_hud_1790764829318",
+  "name": "Cyberpunk Holographic Shield with Glowing Green Hexagonal Grid",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/custom/hud_1790764829318.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M100 14 L166 40 V96 C166 138 138 166 100 186 C62 166 34 138 34 96 V40 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "hud",
+    "generated-svg"
+  ]
+}

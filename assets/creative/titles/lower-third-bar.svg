@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220" width="1200" height="220" role="img" aria-label="Lower third, accent bar">
+<rect id="bar" x="0" y="20" width="12" height="180" rx="6" style="fill:var(--accent,#FF5A36);transform-box:fill-box;transform-origin:top"/>
+<text id="name" x="44" y="104" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:68px;font-weight:800;fill:var(--ink,#F5F3EE)">Alex Rivera</text>
+<text id="role" x="46" y="170" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:38px;font-weight:500;fill:var(--muted,#8B8F98)">Founder &amp; CEO, byreel</text>
+</svg>

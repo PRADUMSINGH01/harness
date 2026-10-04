@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glass" cx="50%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#14161c" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#0A0A0A" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#050505" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="trace" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A3E635" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#A3E635"/>
+      <stop offset="100%" stop-color="#0A84FF"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" rx="14" fill="url(#glass)"/>
+  <rect x="0.5" y="0.5" width="199" height="199" rx="13.5" fill="none" stroke="#8E8E93" stroke-opacity="0.22"/>
+
+  <!-- corner brackets -->
+  <g stroke="#8E8E93" stroke-opacity="0.6" stroke-width="1.4" fill="none" stroke-linecap="round">
+    <path d="M10 20 V10 H20"/>
+    <path d="M190 20 V10 H180"/>
+    <path d="M10 180 V190 H20"/>
+    <path d="M190 180 V190 H180"/>
+  </g>
+
+  <!-- faint grid ticks -->
+  <g stroke="#8E8E93" stroke-opacity="0.15" stroke-width="1">
+    <path d="M25 25 H25.01 M50 25 H50.01 M75 25 H75.01 M100 25 H100.01 M125 25 H125.01 M150 25 H150.01 M175 25 H175.01"/>
+    <path d="M25 175 H175"/>
+    <path d="M25 25 V175.01"/>
+  </g>
+
+  <!-- converging edge fan (flattening to baseline) -->
+  <g stroke="#0A84FF" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.85">
+    <path d="M60 55 C 80 100, 100 135, 100 158"/>
+    <path d="M85 40 C 92 90, 98 130, 100 158"/>
+    <path d="M115 40 C 108 90, 102 130, 100 158"/>
+    <path d="M140 55 C 120 100, 100 135, 100 158"/>
+    <path d="M48 90 C 70 125, 90 145, 100 158"/>
+    <path d="M152 90 C 130 125, 110 145, 100 158"/>
+    <path d="M70 120 C 82 138, 92 150, 100 158"/>
+    <path d="M130 120 C 118 138, 108 150, 100 158"/>
+    <path d="M100 70 L100 158"/>
+  </g>
+  <!-- internal brain edges -->
+  <g stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="0.9" fill="none">
+    <path d="M60 55 L85 40 L100 70 L115 40 L140 55 L100 70"/>
+    <path d="M60 55 L48 90 L100 70 L152 90 L140 55"/>
+    <path d="M48 90 L70 120 L100 70 L130 120 L152 90"/>
+    <path d="M70 120 L100 158 M130 120 L100 158"/>
+    <path d="M70 120 L100 70 M130 120 L100 70"/>
+  </g>
+
+  <!-- flatline trace -->
+  <g filter="url(#glow)">
+    <path d="M22 158 H88 L92 150 L96 166 L100 158 H178" fill="none" stroke="url(#trace)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M22 158 H178" stroke="#A3E635" stroke-opacity="0.25" stroke-width="6" filter="url(#softglow)" fill="none"/>
+
+  <!-- lime nodes -->
+  <g fill="#A3E635" filter="url(#glow)">
+    <circle cx="60" cy="55" r="3.4"/>
+    <circle cx="85" cy="40" r="3.8"/>
+    <circle cx="115" cy="40" r="3.8"/>
+    <circle cx="140" cy="55" r="3.4"/>
+    <circle cx="48" cy="90" r="3"/>
+    <circle cx="152" cy="90" r="3"/>
+    <circle cx="100" cy="70" r="4.2" fill="#D9F99D"/>
+    <circle cx="70" cy="120" r="2.8"/>
+    <circle cx="130" cy="120" r="2.8"/>
+    <circle cx="100" cy="158" r="4.6" fill="#D9F99D"/>
+  </g>
+  <!-- node halos -->
+  <g fill="none" stroke="#A3E635" stroke-opacity="0.35" stroke-width="1">
+    <circle cx="100" cy="70" r="7.5"/>
+    <circle cx="100" cy="158" r="8"/>
+    <circle cx="85" cy="40" r="6"/>
+    <circle cx="115" cy="40" r="6"/>
+  </g>
+
+  <!-- technical label -->
+  <text x="100" y="188" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="7" fill="#8E8E93" letter-spacing="2">NEURAL → FLATLINE</text>
+</svg>

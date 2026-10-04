@@ -1,0 +1,35 @@
+{
+  "id": "generated_chemical-gauge-dial-labeled-4",
+  "name": "chemical gauge dial labeled NORADRENALINE crashing from green to red flatline zero",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/chemical-gauge-dial-labeled-4.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M100 12 A88 88 0 0 1 188 100 L100 100 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "chemical",
+    "gauge",
+    "dial",
+    "labeled",
+    "noradrenaline",
+    "crashing",
+    "chart",
+    "generated-svg"
+  ]
+}

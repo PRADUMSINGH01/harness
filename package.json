@@ -1,0 +1,28 @@
+{
+  "name": "hf-harness",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Best-of-N agent harness server around the vendored HyperFrames skills: variant runs, quality gates, blind judging, learning across runs.",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "server": "tsx src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.288",
+    "express": "^5.2.1",
+    "hyperframes": "0.8.114",
+    "openai": "^7.27.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

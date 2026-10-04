@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 160" width="440" height="160" role="img" aria-label="Tooltip">
+<path d="M26 4 H414 A22 22 0 0 1 436 26 V94 A22 22 0 0 1 414 116 H26 A22 22 0 0 1 4 94 V26 A22 22 0 0 1 26 4Z" style="fill:var(--tooltip,#F5F3EE)"/><path d="M196 114 L220 152 L244 114Z" style="fill:var(--tooltip,#F5F3EE)"/><text id="label" x="220" y="72" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:32px;font-weight:600;fill:var(--tooltip-ink,#111216)">Click to generate</text>
+</svg>

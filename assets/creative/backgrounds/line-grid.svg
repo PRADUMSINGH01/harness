@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Line grid">
+<defs><pattern id="cx-bac-line-grid-p" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" style="fill:none;stroke:var(--muted,#8B8F98);stroke-width:1"/></pattern><radialGradient id="cx-bac-line-grid-fade" cx="50%" cy="50%" r="70%"><stop offset="0" style="stop-color:#fff;stop-opacity:1"/><stop offset="1" style="stop-color:#fff;stop-opacity:0"/></radialGradient><mask id="cx-bac-line-grid-m"><rect width="1920" height="1080" style="fill:url(#cx-bac-line-grid-fade)"/></mask></defs>
+<rect width="1920" height="1080" style="fill:var(--surface,#111216)"/>
+<rect width="1920" height="1080" mask="url(#cx-bac-line-grid-m)" style="fill:url(#cx-bac-line-grid-p);opacity:0.6"/>
+</svg>

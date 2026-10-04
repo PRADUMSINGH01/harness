@@ -1,0 +1,8 @@
+node_modules/
+# Variant projects, snapshots and renders are run output, not source.
+runs/*
+!runs/.gitkeep
+# Gate output written next to each gated project.
+.harness/
+# Provider keys.
+.env

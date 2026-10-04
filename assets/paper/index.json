@@ -1,0 +1,88 @@
+{
+  "catalog": "paper_assets_and_textures",
+  "version": "1.0.0",
+  "category": "paper_craft",
+  "description": "High-fidelity procedural paper textures, torn edges, and papercraft assets for motion graphics compositions.",
+  "items": [
+    {
+      "id": "paper_grain_texture",
+      "name": "Organic Paper Grain & Fine Fiber Texture",
+      "type": "texture_surface",
+      "src": "assets/paper/paper-grain-texture.svg",
+      "format": "svg",
+      "tags": ["texture", "paper-grain", "fibers", "editorial", "background"],
+      "usage_css": "background-image: url('assets/paper/paper-grain-texture.svg'); background-size: 400px 400px;",
+      "description": "Seamless procedural tactile paper grain with microscopic fiber noise and diffuse lighting."
+    },
+    {
+      "id": "crumpled_paper_texture",
+      "name": "Crumpled Paper Relief Texture",
+      "type": "texture_surface",
+      "src": "assets/paper/crumpled-paper-texture.svg",
+      "format": "svg",
+      "tags": ["texture", "crumpled", "folds", "creases", "tactile"],
+      "usage_css": "background-image: url('assets/paper/crumpled-paper-texture.svg'); background-size: cover;",
+      "description": "High-resolution relief texture with deep tactile folds, creases, and soft vignette."
+    },
+    {
+      "id": "kraft_cardboard_texture",
+      "name": "Recycled Kraft Cardboard Texture",
+      "type": "texture_surface",
+      "src": "assets/paper/kraft-cardboard-texture.svg",
+      "format": "svg",
+      "tags": ["kraft", "cardboard", "recycled", "organic", "earthy"],
+      "usage_css": "background-image: url('assets/paper/kraft-cardboard-texture.svg'); background-size: 500px 500px;",
+      "description": "Raw fibrous cardboard texture with natural flecks and porous warm brown surface."
+    },
+    {
+      "id": "folded_crease_overlay",
+      "name": "Folded Document Crease Overlay",
+      "type": "overlay",
+      "src": "assets/paper/folded-crease-overlay.svg",
+      "format": "svg",
+      "tags": ["crease", "fold", "overlay", "map", "brochure"],
+      "usage_css": "mix-blend-mode: multiply; pointer-events: none;",
+      "description": "Cross-fold highlights and shadows that give any flat card or image an authentic folded document appearance."
+    },
+    {
+      "id": "torn_strip_horizontal",
+      "name": "Horizontal Torn Paper Strip Banner",
+      "type": "geometry_vector",
+      "src": "assets/paper/torn-strip-horizontal.svg",
+      "geo": "assets/paper/torn-strip-horizontal.geo.json",
+      "format": "svg",
+      "tags": ["torn-paper", "banner", "strip", "headline-backing", "deckle-edge"],
+      "description": "Wide torn banner with jagged ripped top and bottom edges and drop shadow, ideal for backing headlines and callouts."
+    },
+    {
+      "id": "torn_note_sheet",
+      "name": "Torn Note Pad / Memo Sheet",
+      "type": "geometry_vector",
+      "src": "assets/paper/torn-note-sheet.svg",
+      "geo": "assets/paper/torn-note-sheet.geo.json",
+      "format": "svg",
+      "tags": ["note", "memo", "legal-pad", "torn-top", "grid-paper", "evidence-card"],
+      "description": "Ripped legal pad sheet with ragged top tear, subtle graph ruling, red margin rule, and drop shadow."
+    },
+    {
+      "id": "masking_tape_strip",
+      "name": "Translucent Washi / Masking Tape Strip",
+      "type": "geometry_vector",
+      "src": "assets/paper/masking-tape-strip.svg",
+      "geo": "assets/paper/masking-tape-strip.geo.json",
+      "format": "svg",
+      "tags": ["masking-tape", "washi-tape", "tape", "pin", "sticker"],
+      "description": "Semi-translucent textured tape with torn ends and surface wrinkles, used to pin down photos and paper cards."
+    },
+    {
+      "id": "torn_corner_piece",
+      "name": "Torn Paper Corner Scrap",
+      "type": "geometry_vector",
+      "src": "assets/paper/torn-corner-piece.svg",
+      "geo": "assets/paper/torn-corner-piece.geo.json",
+      "format": "svg",
+      "tags": ["corner", "scrap", "paper-craft", "collage", "photo-corner"],
+      "description": "Diagonal torn corner tag with ragged paper fibers for scrapbook and collage accents."
+    }
+  ]
+}

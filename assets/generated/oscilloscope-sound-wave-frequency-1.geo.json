@@ -1,0 +1,35 @@
+{
+  "id": "generated_oscilloscope-sound-wave-frequency-1",
+  "name": "oscilloscope sound wave frequency peak",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/oscilloscope-sound-wave-frequency-1.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M14 100 L24 99.5 L30 94 L36 99.2 L44 99 L52 96.5 L58 92 L62 99.4 L70 99 L78 99.6 L84 96 L90 99.4 L96 98.6 L100 40 L104 98.6 L110 99.4 L116 95.5 L122 99.2 L128 99.6 L134 96 L140 99 L146 99.4 L152 97 L158 99.2 L166 99.5 L172 98.5 L180 99.4 L186 100"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "oscilloscope",
+    "sound",
+    "wave",
+    "frequency",
+    "peak",
+    "chart",
+    "chart",
+    "generated-svg"
+  ]
+}

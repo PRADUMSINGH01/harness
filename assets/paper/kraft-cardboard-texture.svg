@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <!-- Kraft cardboard texture filter -->
+    <filter id="kraft-grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06 0.06" numOctaves="4" result="fibers" seed="55" />
+      <feDiffuseLighting in="fibers" lighting-color="#D7BA92" surfaceScale="2.2" result="cardboardBase">
+        <feDistantLight azimuth="45" elevation="60" />
+      </feDiffuseLighting>
+      <feTurbulence type="turbulence" baseFrequency="0.15 0.15" numOctaves="2" result="specks" seed="91" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.15  0 0 0 0 0.1  0 0 0 0 0.05  0 0 0 0.12 0" in="specks" result="darkSpecks" />
+      <feBlend mode="multiply" in="cardboardBase" in2="darkSpecks" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#CDB087" />
+  <rect width="100%" height="100%" filter="url(#kraft-grain)" />
+</svg>

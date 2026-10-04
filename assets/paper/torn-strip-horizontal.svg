@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="260" viewBox="0 0 1080 260">
+  <defs>
+    <!-- Paper surface noise filter -->
+    <filter id="torn-paper-grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05 0.05" numOctaves="3" result="noise" seed="12" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.96  0 0 0 0 0.94  0 0 0 0 0.90  0 0 0 0.25 0" in="noise" result="grain" />
+      <feBlend mode="multiply" in="SourceGraphic" in2="grain" />
+    </filter>
+
+    <!-- Drop shadow filter -->
+    <filter id="torn-shadow" x="-5%" y="-10%" width="110%" height="135%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#050505" flood-opacity="0.25" />
+    </filter>
+
+    <!-- Torn shape path -->
+    <path id="torn-path" d="M 0,38 
+      L 35,44 70,32 105,48 140,36 180,45 220,34 265,50 310,38 355,46 400,32 445,48 490,36 535,44 580,30 625,46 670,34 715,48 760,35 805,45 850,32 895,47 940,36 985,45 1030,34 1080,42 
+      L 1080,215 
+      L 1045,205 1010,222 975,208 940,220 900,206 860,224 815,210 770,222 725,208 680,224 635,212 590,226 545,210 500,224 455,208 410,222 365,207 320,225 275,211 230,224 185,209 140,222 95,207 50,224 0,212 Z" />
+  </defs>
+
+  <!-- Shadow & torn paper body -->
+  <g filter="url(#torn-shadow)">
+    <!-- Torn paper base fill -->
+    <use href="#torn-path" fill="#F4F1EA" />
+    <!-- Secondary torn white paper core layer underneath showing white edge -->
+    <path d="M 0,40 L 35,46 70,34 105,50 140,38 180,47 220,36 265,52 310,40 355,48 400,34 445,50 490,38 535,46 580,32 625,48 670,36 715,50 760,37 805,47 850,34 895,49 940,38 985,47 1030,36 1080,44 L 1080,213 L 1045,203 1010,220 975,206 940,218 900,204 860,222 815,208 770,220 725,206 680,222 635,210 590,224 545,208 500,222 455,206 410,220 365,205 320,223 275,209 230,222 185,207 140,220 95,205 50,222 0,210 Z" fill="#FDFDFB" opacity="0.8" />
+    <!-- Texture overlay on paper -->
+    <use href="#torn-path" fill="#EDE9DF" filter="url(#torn-paper-grain)" opacity="0.65" />
+  </g>
+</svg>

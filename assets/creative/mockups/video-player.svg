@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 150" width="1280" height="150" role="img" aria-label="Video player controls">
+<rect x="0" y="0" width="1280" height="150" rx="26" style="fill:#000;opacity:0.55"/>
+<path id="play" d="M50 50 L50 100 L92 75Z" style="fill:#fff"/>
+<rect id="track" x="140" y="69" width="860" height="12" rx="6" style="fill:#fff;opacity:0.3"/>
+<rect id="played" x="140" y="69" width="380" height="12" rx="6" style="fill:var(--accent,#FF5A36)"/>
+<circle id="playhead" cx="520" cy="75" r="16" style="fill:#fff"/>
+<text id="time" x="1030" y="86" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:28px;font-weight:500;fill:#fff">0:42 / 2:10</text>
+</svg>

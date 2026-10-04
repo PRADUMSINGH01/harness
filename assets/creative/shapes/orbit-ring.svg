@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Dashed orbit ring">
+<circle cx="256" cy="256" r="210" style="fill:none;stroke:var(--muted,#8B8F98);stroke-width:3;stroke-dasharray:4 14;stroke-linecap:round"/>
+<circle id="sat-1" cx="256" cy="46" r="16" style="fill:var(--accent,#FF5A36)"/>
+<circle id="sat-2" cx="466" cy="256" r="10" style="fill:var(--accent-2,#7B61FF)"/>
+</svg>

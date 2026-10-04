@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glass" cx="35%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#1C2330"/>
+      <stop offset="55%" stop-color="#10141C"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="failGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#E7EAF0"/>
+      <stop offset="100%" stop-color="#B7BCC7"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4DA6FF"/>
+      <stop offset="100%" stop-color="#0A84FF"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.5 0.5 0.5 0 -0.55" result="a"/>
+      <feComposite operator="in" in="a" in2="SourceGraphic"/>
+    </filter>
+    <mask id="ringWear">
+      <rect x="0" y="0" width="200" height="200" fill="white"/>
+      <g fill="black">
+        <circle cx="58" cy="42" r="4"/>
+        <circle cx="150" cy="60" r="3.4"/>
+        <ellipse cx="120" cy="170" rx="9" ry="3.6"/>
+        <rect x="30" y="120" width="12" height="4" rx="2" transform="rotate(-20 36 122)"/>
+        <rect x="128" cy="30" y="28" width="10" height="3.4" rx="1.7" transform="rotate(15 133 29.7)"/>
+        <circle cx="90" cy="28" r="2.6"/>
+        <circle cx="172" cy="118" r="3"/>
+      </g>
+    </mask>
+    <clipPath id="discClip"><circle cx="100" cy="100" r="84"/></clipPath>
+  </defs>
+
+  <!-- dark glass disc -->
+  <g filter="url(#softShadow)">
+    <circle cx="100" cy="100" r="84" fill="url(#glass)"/>
+    <circle cx="100" cy="100" r="84" fill="none" stroke="#2A3140" stroke-width="1.4"/>
+  </g>
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="6"/>
+
+  <!-- outer stamp ring (worn) -->
+  <g mask="url(#ringWear)">
+    <circle cx="100" cy="100" r="76" fill="none" stroke="url(#failGrad)" stroke-width="6"/>
+    <circle cx="100" cy="100" r="68" fill="none" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.4"/>
+  </g>
+
+  <!-- dashed verification ring -->
+  <circle cx="100" cy="100" r="61" fill="none" stroke="#0A84FF" stroke-opacity="0.55" stroke-width="1.6" stroke-dasharray="5 6" stroke-linecap="round"/>
+
+  <!-- curved label: QUOTE VERIFIED -->
+  <defs>
+    <path id="arcTop" d="M 100 100 m -52 0 a 52 52 0 1 1 104 0"/>
+    <path id="arcBot" d="M 100 100 m -52 0 a 52 52 0 1 0 104 0"/>
+  </defs>
+  <text font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" letter-spacing="3.2" fill="#8E8E93">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">QUOTE VERIFICATION</textPath>
+  </text>
+  <text font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" letter-spacing="4" fill="#8E8E93">
+    <textPath href="#arcBot" startOffset="50%" text-anchor="middle">SEAL · SEAL · SEAL</textPath>
+  </text>
+
+  <!-- rotated FAIL band -->
+  <g transform="rotate(-12 100 100)" filter="url(#grain)">
+    <rect x="26" y="86" width="148" height="34" rx="4" fill="none" stroke="#F43F5E" stroke-opacity="0.0" />
+    <rect x="28" y="87" width="144" height="32" rx="3" fill="#FFFFFF" fill-opacity="0.04" stroke="url(#failGrad)" stroke-width="2.6"/>
+    <text x="100" y="111.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="25" font-weight="900" letter-spacing="9" fill="url(#failGrad)" filter="url(#glow)">FAIL</text>
+  </g>
+
+  <!-- blue verdict accent bar + dot -->
+  <g filter="url(#glow)">
+    <rect x="72" y="128" width="56" height="3" rx="1.5" fill="url(#blueGrad)"/>
+  </g>
+
+  <!-- quote marks -->
+  <g fill="#0A84FF" opacity="0.9">
+    <path d="M56 96 q -6 4 -6 11 h 6 v -8 h -4 q 1 -3 4 -5 z"/>
+    <path d="M144 104 q 6 -4 6 -11 h -6 v 8 h 4 q -1 3 -4 5 z"/>
+  </g>
+
+  <!-- grunge overlay -->
+  <g filter="url(#grain)" opacity="0.5" clip-path="url(#discClip)">
+    <circle cx="100" cy="100" r="84" fill="#FFFFFF"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#8E8E93" stroke-width="1.6" fill="none" opacity="0.8" stroke-linecap="round">
+    <path d="M22 34 v -10 h 10"/>
+    <path d="M168 34 v -10 h -10"/>
+    <path d="M22 166 v 10 h 10"/>
+    <path d="M168 166 v 10 h -10"/>
+  </g>
+</svg>

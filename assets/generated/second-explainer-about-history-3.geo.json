@@ -1,0 +1,35 @@
+{
+  "id": "generated_second-explainer-about-history-3",
+  "name": "Rubik's Cube History — Data Metric Visualization",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/second-explainer-about-history-3.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M0 -20 L-18.6 -10 M0 -10 L-18.6 0 M0 0 L-18.6 10 M0 10 L-18.6 20"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "second",
+    "explainer",
+    "about",
+    "history",
+    "rubik",
+    "cube",
+    "chart",
+    "generated-svg"
+  ]
+}

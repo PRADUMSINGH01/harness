@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#0A0A0A"/>
+      <stop offset="70%" stop-color="#060606"/>
+      <stop offset="100%" stop-color="#030303"/>
+    </radialGradient>
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="25%" stop-color="#0A84FF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="linkGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#8E8E93" stop-opacity="0.12"/>
+    </linearGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="200" height="200" fill="url(#bgGlow)"/>
+
+  <!-- fine grid lattice -->
+  <g stroke="#FFFFFF" stroke-opacity="0.045" stroke-width="0.4">
+    <path d="M20 0V200M40 0V200M60 0V200M80 0V200M100 0V200M120 0V200M140 0V200M160 0V200M180 0V200"/>
+    <path d="M0 20H200M0 40H200M0 60H200M0 80H200M0 100H200M0 120H200M0 140H200M0 160H200M0 180H200"/>
+  </g>
+
+  <!-- glass panel -->
+  <g>
+    <rect x="26" y="26" width="148" height="148" rx="10" fill="#0A0A0A" fill-opacity="0.55" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="0.7"/>
+    <rect x="26.4" y="26.4" width="147.2" height="147.2" rx="10" fill="none" stroke="#0A84FF" stroke-opacity="0.15" stroke-width="0.4"/>
+  </g>
+
+  <!-- constellation links -->
+  <g stroke="url(#linkGrad)" stroke-width="0.6">
+    <path d="M52 62L86 48M86 48L122 66M122 66L150 54M52 62L70 100M86 48L70 100M70 100L104 92M104 92L122 66M104 92L138 112M138 112L150 54M70 100L58 138M58 138L96 148M96 148L104 92M96 148L138 112M138 112L146 146M122 66L104 92"/>
+  </g>
+
+  <!-- nodes -->
+  <g filter="url(#softGlow)">
+    <g fill="#0A84FF">
+      <circle cx="52" cy="62" r="3.2"/>
+      <circle cx="86" cy="48" r="2.4"/>
+      <circle cx="122" cy="66" r="3.6"/>
+      <circle cx="150" cy="54" r="2.2"/>
+      <circle cx="70" cy="100" r="4.4"/>
+      <circle cx="104" cy="92" r="2.6"/>
+      <circle cx="138" cy="112" r="3.4"/>
+      <circle cx="58" cy="138" r="2.4"/>
+      <circle cx="96" cy="148" r="3.8"/>
+      <circle cx="146" cy="146" r="2.2"/>
+    </g>
+    <g fill="#FFFFFF" fill-opacity="0.9">
+      <circle cx="51" cy="61" r="0.9"/>
+      <circle cx="121.3" cy="65.3" r="1.1"/>
+      <circle cx="69.4" cy="99.4" r="1.3"/>
+      <circle cx="95.4" cy="147.4" r="1.1"/>
+    </g>
+  </g>
+  <!-- halos -->
+  <g fill="url(#nodeGlow)" opacity="0.5">
+    <circle cx="70" cy="100" r="9"/>
+    <circle cx="96" cy="148" r="8"/>
+    <circle cx="122" cy="66" r="8"/>
+  </g>
+
+  <!-- micro accents -->
+  <g stroke="#8E8E93" stroke-opacity="0.6" stroke-width="0.6">
+    <path d="M30 34h8M34 30v8" fill="none"/>
+    <path d="M162 166h8M166 162v8" fill="none"/>
+  </g>
+  <g fill="#8E8E93" fill-opacity="0.7">
+    <circle cx="100" cy="26" r="0.8"/>
+    <circle cx="100" cy="174" r="0.8"/>
+    <circle cx="26" cy="100" r="0.8"/>
+    <circle cx="174" cy="100" r="0.8"/>
+  </g>
+  <!-- crosshair -->
+  <g stroke="#0A84FF" stroke-opacity="0.35" stroke-width="0.5" fill="none">
+    <circle cx="70" cy="100" r="7"/>
+    <path d="M70 89v4M70 107v4M59 100h4M77 100h4"/>
+  </g>
+</svg>

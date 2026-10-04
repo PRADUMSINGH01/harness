@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 260" width="100%" height="100%">
+  <!-- Window Base Background -->
+  <rect x="2" y="2" width="456" height="256" rx="16" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+
+  <!-- Window Header Bar -->
+  <path d="M2 18 C2 9.16 9.16 2 18 2 H442 C450.84 2 458 9.16 458 18 V42 H2 Z" fill="#161B22"/>
+
+  <!-- Traffic Lights -->
+  <circle cx="24" cy="22" r="6" fill="#FF5F56"/>
+  <circle cx="44" cy="22" r="6" fill="#FFBD2E"/>
+  <circle cx="64" cy="22" r="6" fill="#27C93F"/>
+
+  <!-- File Title Tab -->
+  <text x="230" y="26" text-anchor="middle" fill="#8B949E" font-family="monospace" font-size="12">agent.config.ts</text>
+
+  <!-- Line Numbers & Code Body -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="13">
+    <!-- Line 1 -->
+    <text x="24" y="78" fill="#484F58">1</text>
+    <text x="56" y="78" fill="#FF7B72">const</text>
+    <text x="105" y="78" fill="#79C0FF">agent</text>
+    <text x="154" y="78" fill="#FF7B72">=</text>
+    <text x="172" y="78" fill="#FF7B72">new</text>
+    <text x="206" y="78" fill="#FFA657">AutonomousWorker</text>
+    <text x="350" y="78" fill="#E6EDF3">({</text>
+
+    <!-- Line 2 -->
+    <text x="24" y="108" fill="#484F58">2</text>
+    <text x="76" y="108" fill="#79C0FF">mode:</text>
+    <text x="124" y="108" fill="#A5D6FF">"unsupervised-24/7"</text>
+    <text x="305" y="108" fill="#E6EDF3">,</text>
+
+    <!-- Line 3 -->
+    <text x="24" y="138" fill="#484F58">3</text>
+    <text x="76" y="138" fill="#79C0FF">telemetry:</text>
+    <text x="168" y="138" fill="#79C0FF">true</text>
+    <text x="204" y="138" fill="#E6EDF3">,</text>
+
+    <!-- Line 4 -->
+    <text x="24" y="168" fill="#484F58">4</text>
+    <text x="76" y="168" fill="#79C0FF">integrations:</text>
+    <text x="188" y="168" fill="#E6EDF3">[</text>
+    <text x="198" y="168" fill="#A5D6FF">"slack"</text>
+    <text x="260" y="168" fill="#E6EDF3">, </text>
+    <text x="274" y="168" fill="#A5D6FF">"github"</text>
+    <text x="345" y="168" fill="#E6EDF3">]</text>
+
+    <!-- Line 5 -->
+    <text x="24" y="198" fill="#484F58">5</text>
+    <text x="56" y="198" fill="#E6EDF3">});</text>
+
+    <!-- Line 6 (Cursor) -->
+    <text x="24" y="228" fill="#484F58">6</text>
+    <text x="56" y="228" fill="#FF7B72">await</text>
+    <text x="105" y="228" fill="#79C0FF">agent</text>
+    <text x="146" y="228" fill="#E6EDF3">.</text>
+    <text x="154" y="228" fill="#D2A8FF">deploy</text>
+    <text x="204" y="228" fill="#E6EDF3">();</text>
+    <rect x="230" y="215" width="8" height="16" fill="#58A6FF"/>
+  </g>
+</svg>

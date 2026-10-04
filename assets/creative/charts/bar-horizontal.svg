@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-label="Horizontal bar chart">
+<text id="label-1" x="0" y="92" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:32px;font-weight:600;fill:var(--ink,#F5F3EE)">Ours</text>
+<rect id="bar-1" class="bar" x="200" y="50" width="828" height="64" rx="14" style="fill:var(--accent,#FF5A36);transform-box:fill-box;transform-origin:left"/>
+<text id="val-1" x="1048" y="94" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:30px;font-weight:700;fill:var(--ink,#F5F3EE)">92%</text>
+<text id="label-2" x="0" y="212" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:32px;font-weight:600;fill:var(--muted,#8B8F98)">Tool B</text>
+<rect id="bar-2" class="bar" x="200" y="170" width="549" height="64" rx="14" style="fill:var(--ui-line,#3A3E48);transform-box:fill-box;transform-origin:left"/>
+<text id="val-2" x="769" y="214" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:30px;font-weight:700;fill:var(--ink,#F5F3EE)">61%</text>
+<text id="label-3" x="0" y="332" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:32px;font-weight:600;fill:var(--muted,#8B8F98)">Tool C</text>
+<rect id="bar-3" class="bar" x="200" y="290" width="432" height="64" rx="14" style="fill:var(--ui-line,#3A3E48);transform-box:fill-box;transform-origin:left"/>
+<text id="val-3" x="652" y="334" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:30px;font-weight:700;fill:var(--ink,#F5F3EE)">48%</text>
+<text id="label-4" x="0" y="452" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:32px;font-weight:600;fill:var(--muted,#8B8F98)">Tool D</text>
+<rect id="bar-4" class="bar" x="200" y="410" width="315" height="64" rx="14" style="fill:var(--ui-line,#3A3E48);transform-box:fill-box;transform-origin:left"/>
+<text id="val-4" x="535" y="454" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:30px;font-weight:700;fill:var(--ink,#F5F3EE)">35%</text>
+<text id="label-5" x="0" y="572" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:32px;font-weight:600;fill:var(--muted,#8B8F98)">Tool E</text>
+<rect id="bar-5" class="bar" x="200" y="530" width="198" height="64" rx="14" style="fill:var(--ui-line,#3A3E48);transform-box:fill-box;transform-origin:left"/>
+<text id="val-5" x="418" y="574" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:30px;font-weight:700;fill:var(--ink,#F5F3EE)">22%</text>
+</svg>

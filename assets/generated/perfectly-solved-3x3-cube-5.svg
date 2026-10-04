@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1A1D24" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#0A0A0A" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="topGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4DA8FF"/>
+      <stop offset="1" stop-color="#0A84FF"/>
+    </linearGradient>
+    <linearGradient id="leftGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#005BB8"/>
+    </linearGradient>
+    <linearGradient id="rightGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0870DB"/>
+      <stop offset="1" stop-color="#004FA0"/>
+    </linearGradient>
+    <linearGradient id="glossTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- dark glass backdrop card -->
+  <rect x="8" y="8" width="184" height="184" rx="24" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <rect x="8" y="8" width="184" height="90" rx="24" fill="#FFFFFF" opacity="0.03"/>
+
+  <!-- corner brackets -->
+  <g stroke="#8E8E93" stroke-opacity="0.5" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M20 34 v-8 a6 6 0 0 1 6-6 h8"/>
+    <path d="M180 34 v-8 a6 6 0 0 0 -6-6 h-8"/>
+    <path d="M20 166 v8 a6 6 0 0 0 6 6 h8"/>
+    <path d="M180 166 v8 a6 6 0 0 1 -6 6 h-8"/>
+  </g>
+
+  <!-- ground glow -->
+  <ellipse cx="100" cy="158" rx="52" ry="10" fill="#0A84FF" opacity="0.25" filter="url(#glow)"/>
+
+  <!-- cube geometry: iso, unit 24 -->
+  <g filter="url(#softShadow)">
+    <!-- top face: A(64,50) B(136,50) C(172,84) D(100,84) -->
+    <g>
+      <path d="M64 50 L136 50 L172 84 L100 84 Z" fill="url(#topGrad)"/>
+      <g stroke="#0A0A0A" stroke-opacity="0.55" stroke-width="1.6">
+        <line x1="88" y1="50" x2="124" y2="84"/>
+        <line x1="112" y1="50" x2="148" y2="84"/>
+        <line x1="76" y1="62" x2="148" y2="62"/>
+        <line x1="88" y1="73" x2="160" y2="73"/>
+      </g>
+      <!-- sticker inlays top -->
+      <g fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1">
+        <rect x="69" y="54" width="25.5" height="25.5" rx="4" transform="skewX(-0)"/>
+      </g>
+      <path d="M64 50 L136 50 L172 84 L100 84 Z" fill="url(#glossTop)"/>
+      <path d="M64 50 L136 50 L172 84 L100 84 Z" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1"/>
+    </g>
+
+    <!-- left face: D(100,84) C(172,84) ? use A(64,50)D(100,84)... left face is A(64,50) D(100,84) D'(100,152) A'(64,118)? Actually left face: (64,50)(100,84)(100,152)(64,118) -->
+    <g>
+      <path d="M64 50 L100 84 L100 152 L64 118 Z" fill="url(#leftGrad)"/>
+      <g stroke="#0A0A0A" stroke-opacity="0.55" stroke-width="1.6">
+        <line x1="76" y1="62" x2="76" y2="130"/>
+        <line x1="88" y1="74" x2="88" y2="142"/>
+        <line x1="64" y1="84" x2="100" y2="118"/>
+        <line x1="64" y1="118" x2="100" y2="152"/>
+      </g>
+      <path d="M64 50 L100 84 L100 152 L64 118 Z" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="1"/>
+      <path d="M64 50 L100 84 L100 100 L64 66 Z" fill="#FFFFFF" opacity="0.08"/>
+    </g>
+
+    <!-- right face: (100,84)(172,84)(172,152)(100,152) -->
+    <g>
+      <path d="M100 84 L172 84 L172 152 L100 152 Z" fill="url(#rightGrad)"/>
+      <g stroke="#0A0A0A" stroke-opacity="0.55" stroke-width="1.6">
+        <line x1="124" y1="84" x2="124" y2="152"/>
+        <line x1="148" y1="84" x2="148" y2="152"/>
+        <line x1="100" y1="106" x2="172" y2="106"/>
+        <line x1="100" y1="129" x2="172" y2="129"/>
+      </g>
+      <path d="M100 84 L172 84 L172 152 L100 152 Z" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="1"/>
+      <path d="M100 84 L172 84 L172 96 L100 96 Z" fill="#FFFFFF" opacity="0.06"/>
+    </g>
+
+    <!-- glass edge highlight along top ridges -->
+    <path d="M64 50 L100 84 L172 84" fill="none" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.4" stroke-linejoin="round"/>
+    <!-- center vertex sparkle -->
+    <circle cx="100" cy="84" r="2" fill="#FFFFFF" opacity="0.9" filter="url(#glow)"/>
+  </g>
+
+  <!-- micro coordinate ticks -->
+  <g stroke="#8E8E93" stroke-opacity="0.35" stroke-width="1">
+    <line x1="36" y1="192" x2="44" y2="192"/>
+    <line x1="98" y1="192" x2="106" y2="192"/>
+    <line x1="160" y1="192" x2="168" y2="192"/>
+  </g>
+</svg>

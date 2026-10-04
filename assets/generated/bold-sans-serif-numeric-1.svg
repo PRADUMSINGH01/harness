@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glassFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="sapph" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5EB8FF"/>
+      <stop offset="0.5" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#0060DF"/>
+    </linearGradient>
+    <linearGradient id="glassEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.25"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <clipPath id="textClip"><text x="100" y="126" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="62" letter-spacing="-2">450M</text></clipPath>
+  </defs>
+
+  <!-- glass tile -->
+  <g filter="url(#softShadow)">
+    <rect x="30" y="30" width="140" height="140" rx="24" fill="#0A0A0A"/>
+    <rect x="30" y="30" width="140" height="140" rx="24" fill="url(#glassFill)" stroke="url(#glassEdge)" stroke-width="1.5"/>
+    <rect x="30" y="30" width="140" height="60" rx="24" fill="#FFFFFF" opacity="0.05"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.9">
+    <path d="M20 42 V32 Q20 24 28 24 H38"/>
+    <path d="M162 24 H172 Q180 24 180 32 V42"/>
+    <path d="M180 158 V168 Q180 176 172 176 H162"/>
+    <path d="M38 176 H28 Q20 176 20 168 V158"/>
+  </g>
+
+  <!-- top hairline accent -->
+  <rect x="58" y="56" width="84" height="2.5" rx="1.25" fill="url(#sapph)" opacity="0.85"/>
+
+  <!-- glow base -->
+  <text x="100" y="126" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="62" letter-spacing="-2" fill="#0A84FF" opacity="0.45" filter="url(#glow)">450M</text>
+
+  <!-- gradient numeric -->
+  <text x="100" y="126" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="62" letter-spacing="-2" fill="url(#sapph)" filter="url(#glow)">450M</text>
+
+  <!-- glass sheen clipped to numerals -->
+  <g clip-path="url(#textClip)">
+    <rect x="50" y="80" width="100" height="26" fill="#FFFFFF" opacity="0.25"/>
+  </g>
+
+  <!-- technical micro-details -->
+  <g fill="#8E8E93" font-family="'SF Mono', Menlo, monospace" font-size="6" opacity="0.9">
+    <text x="46" y="150">UNIT·SCALE</text>
+    <text x="154" y="150" text-anchor="end">v1.0</text>
+  </g>
+  <g stroke="#8E8E93" stroke-width="1" opacity="0.6">
+    <line x1="90" y1="146" x2="110" y2="146"/>
+    <line x1="96" y1="143" x2="96" y2="149"/>
+    <line x1="104" y1="143" x2="104" y2="149"/>
+  </g>
+</svg>

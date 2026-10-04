@@ -1,0 +1,35 @@
+{
+  "id": "generated_archival-serif-quotation-card-5",
+  "name": "archival serif quotation card with ornate double border and Albert Einstein silhouette portrait bust",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/archival-serif-quotation-card-5.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M126 74 q-3 -9 4 -13 q-1 -7 6 -9 q1 -6 8 -6 q4 -5 10 -3 q6 -3 10 2 q7 0 8 6 q7 2 6 9 q6 4 3 12 q4 7 -2 12 q2 7 -6 9 l-2 -5 q3 -4 1 -8 q4 -4 0 -9 q2 -5 -3 -8 q1 -5 -5 -6 q-2 -4 -7 -3 q-3 -4 -8 -2 q-5 -2 -7 3 q-6 0 -6 6 q-5 2 -4 8 q-4 3 -2 8 q-3 4 0 8 l-3 4 q-6 -4 -1 -7 z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "archival",
+    "serif",
+    "quotation",
+    "card",
+    "ornate",
+    "double",
+    "illustration",
+    "generated-svg"
+  ]
+}

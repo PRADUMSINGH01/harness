@@ -1,0 +1,35 @@
+{
+  "id": "generated_geometric-blueprint-grid-3x3-2",
+  "name": "geometric blueprint grid of a 3x3 cube",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/geometric-blueprint-grid-3x3-2.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M0 20H200 M0 40H200 M0 60H200 M0 80H200 M0 100H200 M0 120H200 M0 140H200 M0 160H200 M0 180H200"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "geometric",
+    "blueprint",
+    "grid",
+    "3x3",
+    "cube",
+    "hero",
+    "illustration",
+    "generated-svg"
+  ]
+}

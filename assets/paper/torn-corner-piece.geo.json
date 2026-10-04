@@ -1,0 +1,51 @@
+{
+  "id": "paper_torn_corner_piece_01",
+  "name": "Torn Paper Corner Scrap",
+  "type": "svg_vector",
+  "category": "paper_craft",
+  "asset": {
+    "src": "assets/paper/torn-corner-piece.svg",
+    "format": "svg",
+    "transparent_background": true,
+    "fit": "contain",
+    "preserve_aspect_ratio": true
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 360 360",
+    "anchor": "top-right",
+    "bounds": {
+      "x": 30,
+      "y": 30,
+      "width": 300,
+      "height": 295
+    },
+    "closed_svg_path": "M 30,30 L 330,30 L 330,85 305,95 320,118 290,135 305,160 275,178 290,205 260,225 275,250 240,270 252,295 215,312 180,318 145,305 110,325 80,308 55,320 30,295 Z",
+    "edge_style": "jagged_diagonal_tear"
+  },
+  "render": {
+    "position": "absolute",
+    "default_width": "22%",
+    "z_index": 8,
+    "shadow": {
+      "enabled": true,
+      "x": 2,
+      "y": 8,
+      "blur": 10,
+      "color": "rgba(0,0,0,0.26)"
+    }
+  },
+  "animation": {
+    "recommended_entrance": "paper-peel",
+    "suggested_ease": "power3.out",
+    "duration_seconds": 0.5
+  },
+  "tags": [
+    "corner-scrap",
+    "paper-scrap",
+    "torn-corner",
+    "collage",
+    "paper-craft",
+    "evidence-pin"
+  ]
+}

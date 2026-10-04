@@ -1,0 +1,35 @@
+{
+  "id": "generated_physical-gold-coin-transitioning-1",
+  "name": "physical gold coin transitioning into binary 01 particles",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/physical-gold-coin-transitioning-1.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M45 84 Q56 72 74 78 Q62 84 54 96 Q48 92 45 84 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "physical",
+    "gold",
+    "coin",
+    "transitioning",
+    "into",
+    "binary",
+    "illustration",
+    "generated-svg"
+  ]
+}

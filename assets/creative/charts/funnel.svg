@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" width="900" height="720" role="img" aria-label="Funnel">
+<path id="stage-1" d="M20 20 H880 L795 176 H105Z" style="fill:var(--accent-2,#7B61FF);opacity:0.6"/><text id="stage-label-1" x="450" y="112" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:36px;font-weight:700;fill:#fff">Visitors</text>
+<path id="stage-2" d="M105 192 H795 L710 348 H190Z" style="fill:var(--accent-2,#7B61FF);opacity:0.7"/><text id="stage-label-2" x="450" y="284" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:36px;font-weight:700;fill:#fff">Sign-ups</text>
+<path id="stage-3" d="M190 364 H710 L625 520 H275Z" style="fill:var(--accent,#FF5A36);opacity:0.9"/><text id="stage-label-3" x="450" y="456" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:36px;font-weight:700;fill:#fff">Active</text>
+<path id="stage-4" d="M275 536 H625 L540 692 H360Z" style="fill:var(--accent,#FF5A36);opacity:1"/><text id="stage-label-4" x="450" y="628" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:36px;font-weight:700;fill:#fff">Paying</text>
+</svg>

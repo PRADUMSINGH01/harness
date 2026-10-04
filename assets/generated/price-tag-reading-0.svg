@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tagBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1C1F26"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="glassSheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.14"/>
+      <stop offset="0.45" stop-color="#FFFFFF" stop-opacity="0.03"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <pattern id="techGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M10 0H0V10" fill="none" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- glass backdrop halo -->
+  <circle cx="100" cy="100" r="82" fill="#0A84FF" opacity="0.06" filter="url(#glow)"/>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#8E8E93" stroke-opacity="0.18" stroke-width="1" stroke-dasharray="2 6"/>
+
+  <!-- string -->
+  <g fill="none" stroke="#8E8E93" stroke-width="2.5" stroke-linecap="round">
+    <path d="M100 34 C 96 22, 78 18, 66 24" opacity="0.9"/>
+    <path d="M100 34 C 108 20, 126 20, 136 28" opacity="0.55"/>
+  </g>
+
+  <!-- tag -->
+  <g transform="rotate(-14 100 112)" filter="url(#softShadow)">
+    <path d="M64 84 H126 L146 112 L126 140 H64 A10 10 0 0 1 54 130 V94 A10 10 0 0 1 64 84 Z"
+          fill="url(#tagBody)" stroke="#8E8E93" stroke-opacity="0.5" stroke-width="1.5"/>
+    <path d="M64 84 H126 L146 112 L126 140 H64 A10 10 0 0 1 54 130 V94 A10 10 0 0 1 64 84 Z"
+          fill="url(#glassSheen)"/>
+    <path d="M64 84 H126 L146 112" fill="none" stroke="url(#accent)" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- hole + grommet -->
+    <circle cx="66" cy="112" r="7.5" fill="#0A0A0A" stroke="#8E8E93" stroke-width="2"/>
+
+    <!-- price text -->
+    <text x="106" y="112" text-anchor="middle" dominant-baseline="central"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+          font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="1">$0</text>
+
+    <!-- tech details -->
+    <rect x="76" y="126" width="34" height="3" rx="1.5" fill="url(#accent)" opacity="0.9"/>
+    <g stroke="#8E8E93" stroke-opacity="0.35" stroke-width="1">
+      <path d="M76 92 H86"/><path d="M90 92 H98"/>
+    </g>
+  </g>
+
+  <!-- corner brackets -->
+  <g fill="none" stroke="#0A84FF" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round">
+    <path d="M22 38 V28 A4 4 0 0 1 26 24 H36"/>
+    <path d="M178 38 V28 A4 4 0 0 0 174 24 H164"/>
+    <path d="M22 162 V172 A4 4 0 0 0 26 176 H36"/>
+    <path d="M178 162 V172 A4 4 0 0 1 174 176 H164"/>
+  </g>
+
+  <!-- accent ticks -->
+  <g stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" opacity="0.7">
+    <path d="M100 8 V14"/><path d="M100 186 V192"/>
+  </g>
+  <circle cx="40" cy="52" r="2" fill="#0A84FF" opacity="0.8"/>
+  <circle cx="162" cy="150" r="2" fill="#38BDF8" opacity="0.8"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" role="img" aria-label="VHS tracking bands">
+<defs><filter id="cx-ove-vhs-tracking-n" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feTurbulence type="turbulence" baseFrequency="0.002 0.9" numOctaves="1" seed="31" stitchTiles="stitch"/><feColorMatrix type="matrix" values="0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0.33 0.33 0.33 0 0  0 0 0 0.9 0"/></filter></defs>
+<g id="bands">
+  <rect y="300" width="1920" height="70" style="filter:url(#cx-ove-vhs-tracking-n);opacity:0.75"/>
+  <rect y="820" width="1920" height="28" style="filter:url(#cx-ove-vhs-tracking-n);opacity:0.6"/>
+  <rect y="296" width="1920" height="3" style="fill:#FF2B4E;opacity:0.7"/>
+  <rect y="372" width="1920" height="3" style="fill:#22E4FF;opacity:0.7"/>
+  <rect y="818" width="1920" height="2" style="fill:#FF2B4E;opacity:0.6"/>
+</g>
+</svg>

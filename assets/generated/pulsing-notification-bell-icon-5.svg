@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1C1F26" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#0A0A0A" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#14161C" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="bellGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#C7CDD6"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <clipPath id="tileClip"><rect x="20" y="20" width="160" height="160" rx="38"/></clipPath>
+  </defs>
+
+  <!-- ambient blue glow behind tile -->
+  <circle cx="100" cy="100" r="80" fill="url(#blueGlow)" opacity="0.35"/>
+
+  <!-- pulse rings -->
+  <g clip-path="url(#tileClip)">
+    <circle cx="100" cy="100" r="34" fill="none" stroke="#0A84FF" stroke-width="2" opacity="0.5">
+      <animate attributeName="r" values="34;72" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.55;0" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="100" r="34" fill="none" stroke="#0A84FF" stroke-width="2" opacity="0.4">
+      <animate attributeName="r" values="34;72" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="100" r="34" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.35">
+      <animate attributeName="r" values="34;72" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.45;0" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- glass tile -->
+  <g filter="url(#dropShadow)">
+    <rect x="20" y="20" width="160" height="160" rx="38" fill="url(#glass)"/>
+    <rect x="20" y="20" width="160" height="160" rx="38" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1.5"/>
+    <rect x="24" y="24" width="152" height="76" rx="34" fill="#FFFFFF" fill-opacity="0.05"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-width="2" stroke-linecap="round" opacity="0.7" fill="none">
+    <path d="M36 50 v-10 a6 6 0 0 1 6 -6 h10"/>
+    <path d="M164 50 v-10 a6 6 0 0 0 -6 -6 h-10"/>
+    <path d="M36 150 v10 a6 6 0 0 0 6 6 h10"/>
+    <path d="M164 150 v10 a6 6 0 0 1 -6 6 h-10"/>
+  </g>
+
+  <!-- bell -->
+  <g filter="url(#softGlow)">
+    <g fill="url(#bellGrad)">
+      <path d="M100 52 c-17 0 -28 13 -28 31 v16 c0 8 -4 13 -9 17 -2.5 2 -1.5 6 2 6 h70 c3.5 0 4.5 -4 2 -6 -5 -4 -9 -9 -9 -17 v-16 c0 -18 -11 -31 -28 -31 z"/>
+      <path d="M100 128 a9 9 0 0 0 9 -9 h-18 a9 9 0 0 0 9 9 z" fill="#8E8E93"/>
+    </g>
+    <!-- top nub -->
+    <circle cx="100" cy="49" r="4" fill="#FFFFFF"/>
+  </g>
+
+  <!-- badge -->
+  <circle cx="142" cy="64" r="14" fill="#0A84FF" stroke="#0A0A0A" stroke-width="3" filter="url(#softGlow)">
+    <animate attributeName="r" values="13;15;13" dur="1.6s" repeatCount="indefinite"/>
+  </circle>
+  <text x="142" y="69.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">3</text>
+
+  <!-- micro ticks -->
+  <g stroke="#8E8E93" stroke-width="1" opacity="0.35">
+    <line x1="44" y1="176" x2="50" y2="176"/>
+    <line x1="100" y1="176" x2="106" y2="176"/>
+    <line x1="150" y1="176" x2="156" y2="176"/>
+  </g>
+</svg>

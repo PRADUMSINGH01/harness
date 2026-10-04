@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15161A"/>
+      <stop offset="0.5" stop-color="#0A0A0A"/>
+      <stop offset="1" stop-color="#101216"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="0.35" stop-color="#FFFFFF" stop-opacity="0.02"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blurSmall" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+    <filter id="dropGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#0A84FF" flood-opacity="0.6"/>
+    </filter>
+    <clipPath id="cardClip">
+      <rect x="14" y="14" width="172" height="172" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <!-- ambient glow -->
+  <circle cx="100" cy="100" r="88" fill="url(#glow)"/>
+
+  <!-- outer bracket frame -->
+  <g stroke="#8E8E93" stroke-width="2" fill="none" stroke-linecap="square" opacity="0.9">
+    <path d="M8 30 V12 H30"/>
+    <path d="M170 12 H192 V30"/>
+    <path d="M192 170 V188 H170"/>
+    <path d="M30 188 H8 V170"/>
+  </g>
+
+  <!-- dark glass card -->
+  <g filter="url(#dropGlow)">
+    <rect x="14" y="14" width="172" height="172" rx="18" fill="url(#glass)" stroke="#8E8E93" stroke-opacity="0.35"/>
+  </g>
+  <g clip-path="url(#cardClip)">
+    <rect x="14" y="14" width="172" height="90" rx="18" fill="url(#sheen)"/>
+    <!-- scanlines -->
+    <g fill="#FFFFFF" opacity="0.05">
+      <rect x="14" y="26" width="172" height="1"/>
+      <rect x="14" y="40" width="172" height="1"/>
+      <rect x="14" y="54" width="172" height="1"/>
+      <rect x="14" y="68" width="172" height="1"/>
+      <rect x="14" y="82" width="172" height="1"/>
+      <rect x="14" y="96" width="172" height="1"/>
+      <rect x="14" y="110" width="172" height="1"/>
+      <rect x="14" y="124" width="172" height="1"/>
+      <rect x="14" y="138" width="172" height="1"/>
+      <rect x="14" y="152" width="172" height="1"/>
+      <rect x="14" y="166" width="172" height="1"/>
+    </g>
+    <!-- glitch slices -->
+    <g opacity="0.85">
+      <rect x="30" y="86" width="52" height="5" fill="#0A84FF" opacity="0.35" filter="url(#blurSmall)"/>
+      <rect x="118" y="122" width="46" height="4" fill="#F43F5E" opacity="0.30" filter="url(#blurSmall)"/>
+      <rect x="46" y="140" width="34" height="3" fill="#FFFFFF" opacity="0.18" filter="url(#blurSmall)"/>
+    </g>
+  </g>
+
+  <!-- RGB-split glitch typography -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" text-anchor="middle">
+    <!-- red channel -->
+    <text x="97" y="118" font-size="58" letter-spacing="1" fill="#F43F5E" opacity="0.75" filter="url(#blurSmall)">2010</text>
+    <!-- cyan/blue channel -->
+    <text x="103" y="114" font-size="58" letter-spacing="1" fill="#0A84FF" opacity="0.75" filter="url(#blurSmall)">2010</text>
+    <!-- white core -->
+    <text x="100" y="116" font-size="58" letter-spacing="1" fill="#FFFFFF">2010</text>
+  </g>
+
+  <!-- glitch bar interrupting text -->
+  <g clip-path="url(#cardClip)">
+    <rect x="14" y="96" width="64" height="9" fill="#0A0A0A" opacity="0.9"/>
+    <rect x="20" y="97" width="56" height="7" fill="#0A84FF" opacity="0.85"/>
+  </g>
+
+  <!-- technical details -->
+  <g font-family="'SF Mono', Menlo, monospace" fill="#8E8E93" text-anchor="middle">
+    <text x="100" y="152" font-size="9" letter-spacing="4" opacity="0.85">- - - SYS:2010 - - -</text>
+  </g>
+  <g stroke="#8E8E93" stroke-width="1" opacity="0.5">
+    <path d="M28 40 h10"/>
+    <path d="M162 40 h10"/>
+    <path d="M28 168 h10"/>
+    <path d="M162 168 h10"/>
+  </g>
+  <circle cx="100" cy="38" r="3" fill="#0A84FF" filter="url(#dropGlow)"/>
+  <g stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1">
+    <path d="M44 32 v12"/>
+    <path d="M156 32 v12"/>
+  </g>
+</svg>

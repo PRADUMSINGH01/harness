@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="void" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#1a0f2e"/>
+      <stop offset="55%" stop-color="#120a22"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="strokeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8E8E93"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#0A84FF"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bigGlow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" fill="url(#void)"/>
+
+  <!-- faint grid ticks -->
+  <g stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="0.4">
+    <path d="M0 50 H200 M0 100 H200 M0 150 H200 M50 0 V200 M100 0 V200 M150 0 V200"/>
+  </g>
+  <g fill="#FFFFFF" fill-opacity="0.15" font-family="Menlo, monospace" font-size="4">
+    <text x="4" y="196">BRAIN-GRAPH // SYN-42</text>
+    <text x="196" y="8" text-anchor="end">Δ 0.84</text>
+  </g>
+
+  <!-- brain wireframe outline (profile, facing left) -->
+  <g fill="none" stroke="url(#strokeGrad)" stroke-width="0.9" filter="url(#glow)">
+    <path d="M60 148 C42 142 34 128 34 112 C28 104 28 92 36 84 C34 68 44 52 60 46 C68 30 90 22 108 28 C128 24 146 34 150 50 C166 56 172 74 166 88 C172 98 168 112 158 118 C158 132 148 142 136 144 C130 154 118 158 108 154 C96 160 78 160 70 152 Z" stroke-opacity="0.9"/>
+    <!-- cerebellum -->
+    <path d="M138 128 C150 130 156 138 152 146 C148 152 138 152 132 146" stroke-opacity="0.8"/>
+    <!-- brain stem -->
+    <path d="M124 152 C124 162 118 170 110 174" stroke-opacity="0.8"/>
+  </g>
+
+  <!-- internal fold lines (sulci) -->
+  <g fill="none" stroke="#8E8E93" stroke-width="0.55" stroke-opacity="0.55" filter="url(#glow)">
+    <path d="M56 96 C66 88 74 96 82 90 C90 84 96 92 104 88"/>
+    <path d="M50 120 C62 112 70 122 82 114 C92 108 100 118 112 112 C120 108 128 116 136 112"/>
+    <path d="M62 66 C72 60 80 68 90 62 C100 56 110 64 120 58 C130 54 138 62 146 60"/>
+    <path d="M66 136 C76 130 86 138 98 132"/>
+    <path d="M88 44 C96 40 104 46 112 42"/>
+  </g>
+
+  <!-- synapse connections -->
+  <g stroke="#0A84FF" stroke-width="0.45" stroke-opacity="0.5">
+    <path d="M46 108 L62 92 M62 92 L84 84 M84 84 L104 90 M104 90 L124 78 M124 78 L146 66
+             M58 128 L78 118 M78 118 L100 110 M100 110 L120 118 M120 118 L138 110
+             M66 70 L88 62 M88 62 L108 56 M108 56 L128 60 M128 60 L144 74
+             M62 92 L78 118 M84 84 L100 110 M124 78 L120 118 M146 66 L138 110
+             M46 108 L58 128 M144 74 L146 66"/>
+  </g>
+
+  <!-- nodes -->
+  <g filter="url(#glow)">
+    <g fill="#0A84FF" stroke="#FFFFFF" stroke-width="0.3">
+      <circle cx="46" cy="108" r="2.4"/><circle cx="62" cy="92" r="3.2"/>
+      <circle cx="84" cy="84" r="2.4"/><circle cx="104" cy="90" r="3.2"/>
+      <circle cx="124" cy="78" r="2.4"/><circle cx="146" cy="66" r="2.8"/>
+      <circle cx="58" cy="128" r="2.4"/><circle cx="78" cy="118" r="2.8"/>
+      <circle cx="100" cy="110" r="3.4"/><circle cx="120" cy="118" r="2.4"/>
+      <circle cx="138" cy="110" r="2.8"/>
+      <circle cx="66" cy="70" r="2.4"/><circle cx="88" cy="62" r="2.8"/>
+      <circle cx="108" cy="56" r="2.4"/><circle cx="128" cy="60" r="2.4"/>
+      <circle cx="144" cy="74" r="2.2"/>
+    </g>
+    <!-- bright hot cores -->
+    <g fill="#FFFFFF" filter="url(#bigGlow)">
+      <circle cx="100" cy="110" r="1.2"/>
+      <circle cx="62" cy="92" r="1"/>
+      <circle cx="104" cy="90" r="1"/>
+      <circle cx="88" cy="62" r="1"/>
+    </g>
+  </g>
+
+  <!-- corner brackets -->
+  <g fill="none" stroke="#8E8E93" stroke-width="0.8" stroke-opacity="0.6">
+    <path d="M6 14 V6 H14 M186 6 H194 V14 M194 186 V194 H186 M14 194 H6 V186"/>
+  </g>
+</svg>

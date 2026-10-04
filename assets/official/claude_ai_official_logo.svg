@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="claudeSpark" cx="0.42" cy="0.38" r="0.85">
+      <stop offset="0" stop-color="#FDE68A"/>
+      <stop offset="0.35" stop-color="#FBBF24"/>
+      <stop offset="0.75" stop-color="#D97706"/>
+      <stop offset="1" stop-color="#C2570A"/>
+    </radialGradient>
+    <radialGradient id="aura" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#D97706" stop-opacity="0.35"/>
+      <stop offset="0.6" stop-color="#FDE68A" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#FDE68A" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- warm radiant aura -->
+  <circle cx="100" cy="100" r="86" fill="url(#aura)"/>
+
+  <!-- official Claude sparklet: 8-pointed asymmetrical organic starburst -->
+  <g filter="url(#glow)">
+    <path fill="url(#claudeSpark)" d="
+      M 100 14
+      Q 104.5 55.5 110.5 76.5
+      Q 118.5 84.5 141.5 85.5
+      L 178 89.5
+      Q 140 97 121.5 102
+      Q 112.5 108.5 107.5 129.5
+      L 100 186
+      Q 95.5 143.5 90 121
+      Q 83 112 62 107.5
+      L 22 110
+      Q 60.5 101 78.5 96.5
+      Q 87.5 90 91.5 69.5
+      Z"/>
+  </g>
+</svg>

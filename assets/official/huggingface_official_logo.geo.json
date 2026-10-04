@@ -1,0 +1,31 @@
+{
+  "id": "huggingface_official_logo",
+  "name": "Hugging Face Official Logo",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/official/huggingface_official_logo.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M62 106\n           C 66 136, 84 148, 100 148\n           C 116 148, 134 136, 138 106\n           C 125 112, 112 114, 100 114\n           C 88 114, 75 112, 62 106 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "ai-labs",
+    "open-source",
+    "brand",
+    "mascot"
+  ]
+}

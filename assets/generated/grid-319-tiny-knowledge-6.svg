@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glassGlow" cx="18%" cy="28%" r="85%">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.14"/>
+      <stop offset="45%" stop-color="#0A0A0A" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.07"/>
+      <stop offset="30%" stop-color="#FFFFFF" stop-opacity="0.015"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="blueBloom" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.1" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- single avatar silhouette (head + shoulders) -->
+    <g id="av" fill="currentColor">
+      <circle cx="0" cy="-2.6" r="3.05"/>
+      <path d="M-5,6.2 C-5,1.2 -2.6,-0.4 0,-0.4 C2.6,-0.4 5,1.2 5,6.2 Z"/>
+    </g>
+
+    <!-- 319-avatar grid: 20 cols × 16 rows, last row omits col 19 -->
+    <g id="grid">
+      <use href="#av" x="5" y="10"/><use href="#av" x="15" y="10"/><use href="#av" x="25" y="10"/><use href="#av" x="35" y="10"/><use href="#av" x="45" y="10"/><use href="#av" x="55" y="10"/><use href="#av" x="65" y="10"/><use href="#av" x="75" y="10"/><use href="#av" x="85" y="10"/><use href="#av" x="95" y="10"/><use href="#av" x="105" y="10"/><use href="#av" x="115" y="10"/><use href="#av" x="125" y="10"/><use href="#av" x="135" y="10"/><use href="#av" x="145" y="10"/><use href="#av" x="155" y="10"/><use href="#av" x="165" y="10"/><use href="#av" x="175" y="10"/><use href="#av" x="185" y="10"/><use href="#av" x="195" y="10"/>
+      <use href="#av" x="5" y="22"/><use href="#av" x="15" y="22"/><use href="#av" x="25" y="22"/><use href="#av" x="35" y="22"/><use href="#av" x="45" y="22"/><use href="#av" x="55" y="22"/><use href="#av" x="65" y="22"/><use href="#av" x="75" y="22"/><use href="#av" x="85" y="22"/><use href="#av" x="95" y="22"/><use href="#av" x="105" y="22"/><use href="#av" x="115" y="22"/><use href="#av" x="125" y="22"/><use href="#av" x="135" y="22"/><use href="#av" x="145" y="22"/><use href="#av" x="155" y="22"/><use href="#av" x="165" y="22"/><use href="#av" x="175" y="22"/><use href="#av" x="185" y="22"/><use href="#av" x="195" y="22"/>
+      <use href="#av" x="5" y="34"/><use href="#av" x="15" y="34"/><use href="#av" x="25" y="34"/><use href="#av" x="35" y="34"/><use href="#av" x="45" y="34"/><use href="#av" x="55" y="34"/><use href="#av" x="65" y="34"/><use href="#av" x="75" y="34"/><use href="#av" x="85" y="34"/><use href="#av" x="95" y="34"/><use href="#av" x="105" y="34"/><use href="#av" x="115" y="34"/><use href="#av" x="125" y="34"/><use href="#av" x="135" y="34"/><use href="#av" x="145" y="34"/><use href="#av" x="155" y="34"/><use href="#av" x="165" y="34"/><use href="#av" x="175" y="34"/><use href="#av" x="185" y="34"/><use href="#av" x="195" y="34"/>
+      <use href="#av" x="5" y="46"/><use href="#av" x="15" y="46"/><use href="#av" x="25" y="46"/><use href="#av" x="35" y="46"/><use href="#av" x="45" y="46"/><use href="#av" x="55" y="46"/><use href="#av" x="65" y="46"/><use href="#av" x="75" y="46"/><use href="#av" x="85" y="46"/><use href="#av" x="95" y="46"/><use href="#av" x="105" y="46"/><use href="#av" x="115" y="46"/><use href="#av" x="125" y="46"/><use href="#av" x="135" y="46"/><use href="#av" x="145" y="46"/><use href="#av" x="155" y="46"/><use href="#av" x="165" y="46"/><use href="#av" x="175" y="46"/><use href="#av" x="185" y="46"/><use href="#av" x="195" y="46"/>
+      <use href="#av" x="5" y="58"/><use href="#av" x="15" y="58"/><use href="#av" x="25" y="58"/><use href="#av" x="35" y="58"/><use href="#av" x="45" y="58"/><use href="#av" x="55" y="58"/><use href="#av" x="65" y="58"/><use href="#av" x="75" y="58"/><use href="#av" x="85" y="58"/><use href="#av" x="95" y="58"/><use href="#av" x="105" y="58"/><use href="#av" x="115" y="58"/><use href="#av" x="125" y="58"/><use href="#av" x="135" y="58"/><use href="#av" x="145" y="58"/><use href="#av" x="155" y="58"/><use href="#av" x="165" y="58"/><use href="#av" x="175" y="58"/><use href="#av" x="185" y="58"/><use href="#av" x="195" y="58"/>
+      <use href="#av" x="5" y="70"/><use href="#av" x="15" y="70"/><use href="#av" x="25" y="70"/><use href="#av" x="35" y="70"/><use href="#av" x="45" y="70"/><use href="#av" x="55" y="70"/><use href="#av" x="65" y="70"/><use href="#av" x="75" y="70"/><use href="#av" x="85" y="70"/><use href="#av" x="95" y="70"/><use href="#av" x="105" y="70"/><use href="#av" x="115" y="70"/><use href="#av" x="125" y="70"/><use href="#av" x="135" y="70"/><use href="#av" x="145" y="70"/><use href="#av" x="155" y="70"/><use href="#av" x="165" y="70"/><use href="#av" x="175" y="70"/><use href="#av" x="185" y="70"/><use href="#av" x="195" y="70"/>
+      <use href="#av" x="5" y="82"/><use href="#av" x="15" y="82"/><use href="#av" x="25" y="82"/><use href="#av" x="35" y="82"/><use href="#av" x="45" y="82"/><use href="#av" x="55" y="82"/><use href="#av" x="65" y="82"/><use href="#av" x="75" y="82"/><use href="#av" x="85" y="82"/><use href="#av" x="95" y="82"/><use href="#av" x="105" y="82"/><use href="#av" x="115" y="82"/><use href="#av" x="125" y="82"/><use href="#av" x="135" y="82"/><use href="#av" x="145" y="82"/><use href="#av" x="155" y="82"/><use href="#av" x="165" y="82"/><use href="#av" x="175" y="82"/><use href="#av" x="185" y="82"/><use href="#av" x="195" y="82"/>
+      <use href="#av" x="5" y="94"/><use href="#av" x="15" y="94"/><use href="#av" x="25" y="94"/><use href="#av" x="35" y="94"/><use href="#av" x="45" y="94"/><use href="#av" x="55" y="94"/><use href="#av" x="65" y="94"/><use href="#av" x="75" y="94"/><use href="#av" x="85" y="94"/><use href="#av" x="95" y="94"/><use href="#av" x="105" y="94"/><use href="#av" x="115" y="94"/><use href="#av" x="125" y="94"/><use href="#av" x="135" y="94"/><use href="#av" x="145" y="94"/><use href="#av" x="155" y="94"/><use href="#av" x="165" y="94"/><use href="#av" x="175" y="94"/><use href="#av" x="185" y="94"/><use href="#av" x="195" y="94"/>
+      <use href="#av" x="5" y="106"/><use href="#av" x="15" y="106"/><use href="#av" x="25" y="106"/><use href="#av" x="35" y="106"/><use href="#av" x="45" y="106"/><use href="#av" x="55" y="106"/><use href="#av" x="65" y="106"/><use href="#av" x="75" y="106"/><use href="#av" x="85" y="106"/><use href="#av" x="95" y="106"/><use href="#av" x="105" y="106"/><use href="#av" x="115" y="106"/><use href="#av" x="125" y="106"/><use href="#av" x="135" y="106"/><use href="#av" x="145" y="106"/><use href="#av" x="155" y="106"/><use href="#av" x="165" y="106"/><use href="#av" x="175" y="106"/><use href="#av" x="185" y="106"/><use href="#av" x="195" y="106"/>
+      <use href="#av" x="5" y="118"/><use href="#av" x="15" y="118"/><use href="#av" x="25" y="118"/><use href="#av" x="35" y="118"/><use href="#av" x="45" y="118"/><use href="#av" x="55" y="118"/><use href="#av" x="65" y="118"/><use href="#av" x="75" y="118"/><use href="#av" x="85" y="118"/><use href="#av" x="95" y="118"/><use href="#av" x="105" y="118"/><use href="#av" x="115" y="118"/><use href="#av" x="125" y="118"/><use href="#av" x="135" y="118"/><use href="#av" x="145" y="118"/><use href="#av" x="155" y="118"/><use href="#av" x="165" y="118"/><use href="#av" x="175" y="118"/><use href="#av" x="185" y="118"/><use href="#av" x="195" y="118"/>
+      <use href="#av" x="5" y="130"/><use href="#av" x="15" y="130"/><use href="#av" x="25" y="130"/><use href="#av" x="35" y="130"/><use href="#av" x="45" y="130"/><use href="#av" x="55" y="130"/><use href="#av" x="65" y="130"/><use href="#av" x="75" y="130"/><use href="#av" x="85" y="130"/><use href="#av" x="95" y="130"/><use href="#av" x="105" y="130"/><use href="#av" x="115" y="130"/><use href="#av" x="125" y="130"/><use href="#av" x="135" y="130"/><use href="#av" x="145" y="130"/><use href="#av" x="155" y="130"/><use href="#av" x="165" y="130"/><use href="#av" x="175" y="130"/><use href="#av" x="185" y="130"/><use href="#av" x="195" y="130"/>
+      <use href="#av" x="5" y="142"/><use href="#av" x="15" y="142"/><use href="#av" x="25" y="142"/><use href="#av" x="35" y="142"/><use href="#av" x="45" y="142"/><use href="#av" x="55" y="142"/><use href="#av" x="65" y="142"/><use href="#av" x="75" y="142"/><use href="#av" x="85" y="142"/><use href="#av" x="95" y="142"/><use href="#av" x="105" y="142"/><use href="#av" x="115" y="142"/><use href="#av" x="125" y="142"/><use href="#av" x="135" y="142"/><use href="#av" x="145" y="142"/><use href="#av" x="155" y="142"/><use href="#av" x="165" y="142"/><use href="#av" x="175" y="142"/><use href="#av" x="185" y="142"/><use href="#av" x="195" y="142"/>
+      <use href="#av" x="5" y="154"/><use href="#av" x="15" y="154"/><use href="#av" x="25" y="154"/><use href="#av" x="35" y="154"/><use href="#av" x="45" y="154"/><use href="#av" x="55" y="154"/><use href="#av" x="65" y="154"/><use href="#av" x="75" y="154"/><use href="#av" x="85" y="154"/><use href="#av" x="95" y="154"/><use href="#av" x="105" y="154"/><use href="#av" x="115" y="154"/><use href="#av" x="125" y="154"/><use href="#av" x="135" y="154"/><use href="#av" x="145" y="154"/><use href="#av" x="155" y="154"/><use href="#av" x="165" y="154"/><use href="#av" x="175" y="154"/><use href="#av" x="185" y="154"/><use href="#av" x="195" y="154"/>
+      <use href="#av" x="5" y="166"/><use href="#av" x="15" y="166"/><use href="#av" x="25" y="166"/><use href="#av" x="35" y="166"/><use href="#av" x="45" y="166"/><use href="#av" x="55" y="166"/><use href="#av" x="65" y="166"/><use href="#av" x="75" y="166"/><use href="#av" x="85" y="166"/><use href="#av" x="95" y="166"/><use href="#av" x="105" y="166"/><use href="#av" x="115" y="166"/><use href="#av" x="125" y="166"/><use href="#av" x="135" y="166"/><use href="#av" x="145" y="166"/><use href="#av" x="155" y="166"/><use href="#av" x="165" y="166"/><use href="#av" x="175" y="166"/><use href="#av" x="185" y="166"/><use href="#av" x="195" y="166"/>
+      <use href="#av" x="5" y="178"/><use href="#av" x="15" y="178"/><use href="#av" x="25" y="178"/><use href="#av" x="35" y="178"/><use href="#av" x="45" y="178"/><use href="#av" x="55" y="178"/><use href="#av" x="65" y="178"/><use href="#av" x="75" y="178"/><use href="#av" x="85" y="178"/><use href="#av" x="95" y="178"/><use href="#av" x="105" y="178"/><use href="#av" x="115" y="178"/><use href="#av" x="125" y="178"/><use href="#av" x="135" y="178"/><use href="#av" x="145" y="178"/><use href="#av" x="155" y="178"/><use href="#av" x="165" y="178"/><use href="#av" x="175" y="178"/><use href="#av" x="185" y="178"/><use href="#av" x="195" y="178"/>
+      <use href="#av" x="5" y="190"/><use href="#av" x="15" y="190"/><use href="#av" x="25" y="190"/><use href="#av" x="35" y="190"/><use href="#av" x="45" y="190"/><use href="#av" x="55" y="190"/><use href="#av" x="65" y="190"/><use href="#av" x="75" y="190"/><use href="#av" x="85" y="190"/><use href="#av" x="95" y="190"/><use href="#av" x="105" y="190"/><use href="#av" x="115" y="190"/><use href="#av" x="125" y="190"/><use href="#av" x="135" y="190"/><use href="#av" x="145" y="190"/><use href="#av" x="155" y="190"/><use href="#av" x="165" y="190"/><use href="#av" x="175" y="190"/><use href="#av" x="185" y="190"/>
+    </g>
+
+    <!-- heat-mask: scattered lit cluster -->
+    <mask id="mBlue" maskUnits="userSpaceOnUse">
+      <g fill="#FFFFFF">
+        <rect x="0.4" y="40.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="10.4" y="40.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="20.4" y="40.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="10.4" y="52.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="20.4" y="64.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="30.4" y="52.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="30.4" y="76.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="40.4" y="64.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="50.4" y="76.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="0.4" y="100.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="20.4" y="112.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="10.4" y="124.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="40.4" y="100.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="60.4" y="112.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="50.4" y="136.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="70.4" y="124.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="20.4" y="160.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="60.4" y="160.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="80.4" y="148.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="90.4" y="136.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="30.4" y="16.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="60.4" y="28.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="0.4" y="160.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="80.4" y="76.6" width="9.2" height="10.8" rx="2"/>
+        <rect x="100.4" y="100.6" width="9.2" height="10.8" rx="2"/>
+      </g>
+    </mask>
+    <!-- hot-spot mask: the single brightest avatar -->
+    <mask id="mHot" maskUnits="userSpaceOnUse">
+      <rect x="20.4" y="52.6" width="9.2" height="10.8" rx="2" fill="#FFFFFF"/>
+    </mask>
+  </defs>
+
+  <!-- dark-glass panel -->
+  <rect x="1.5" y="1.5" width="197" height="197" rx="18" fill="#0A0A0A"/>
+  <rect x="1.5" y="1.5" width="197" height="197" rx="18" fill="url(#glassGlow)"/>
+  <rect x="1.5" y="1.5" width="197" height="197" rx="18" fill="url(#sheen)"/>
+  <rect x="1.5" y="1.5" width="197" height="197" rx="18" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- avatar layers: base gray → blue heat → white hot -->
+  <use href="#grid" color="#8E8E93" opacity="0.38"/>
+  <use href="#grid" color="#0A84FF" mask="url(#mBlue)" filter="url(#blueBloom)"/>
+  <use href="#grid" color="#FFFFFF" mask="url(#mHot)" filter="url(#glow)"/>
+
+  <!-- technical corner brackets -->
+  <g fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.4" stroke-linecap="round">
+    <path d="M9,17 V11 Q9,9 11,9 H17"/>
+    <path d="M191,9 H197 V17"/>
+    <path d="M197,183 V189 Q197,191 195,191 H189"/>
+    <path d="M9,191 H3 Q1,191 1,189 V183" transform="translate(8,0)"/>
+  </g>
+</svg>

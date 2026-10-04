@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A1A1E"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="bond" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#5AC8FA"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+    <filter id="drop" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Glass container -->
+  <rect x="10" y="10" width="180" height="180" rx="42" fill="url(#glass)" stroke="#2C2C31" stroke-width="1.5"/>
+  <rect x="10.75" y="10.75" width="178.5" height="178.5" rx="41.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.5"/>
+  <path d="M52 11 h96 a40 40 0 0 1 26 12 q-20 -8 -60 -8 h-50 q-30 0 -44 12 a40 40 0 0 1 32 -16 Z" fill="#FFFFFF" opacity="0.06"/>
+
+  <!-- Technical corner brackets -->
+  <g stroke="#8E8E93" stroke-opacity="0.5" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M32 46 v-8 a6 6 0 0 1 6 -6 h8"/>
+    <path d="M168 46 v-8 a-6 -6 0 0 0 -6 -6 h-8" transform="translate(200,0) scale(-1,1)"/>
+    <path d="M32 154 v8 a6 6 0 0 0 6 6 h8"/>
+    <path d="M168 154 v8 a-6 -6 0 0 1 -6 6 h-8" transform="translate(200,0) scale(-1,1)"/>
+  </g>
+
+  <!-- Ambient glow behind molecule -->
+  <ellipse cx="100" cy="100" rx="72" ry="62" fill="url(#glow)" opacity="0.7"/>
+
+  <!-- Dopamine skeleton: catechol ring + ethylamine chain -->
+  <!-- Ring centered ~ (86,100), r=26 -->
+  <g filter="url(#drop)">
+    <g stroke="url(#bond)" stroke-width="4" stroke-linecap="round" fill="none">
+      <path d="M86 74 L109 87 L109 113 L86 126 L63 113 L63 87 Z"/>
+      <!-- inner double-bond ticks -->
+      <g stroke-width="3" opacity="0.85">
+        <path d="M86 80 L103.5 90.3"/>
+        <path d="M103.5 109.7 L86 120"/>
+        <path d="M68.5 109.7 L68.5 90.3"/>
+      </g>
+      <!-- side chain -->
+      <path d="M109 113 L134 127"/>
+      <path d="M134 127 L159 113"/>
+    </g>
+
+    <!-- atoms -->
+    <g fill="#FFFFFF" stroke="#0A84FF" stroke-width="2">
+      <circle cx="86" cy="74" r="5.5"/>
+      <circle cx="63" cy="87" r="5.5"/>
+      <circle cx="109" cy="87" r="5.5"/>
+      <circle cx="63" cy="113" r="5.5"/>
+      <circle cx="109" cy="113" r="5.5"/>
+      <circle cx="86" cy="126" r="5.5"/>
+    </g>
+    <!-- OH groups -->
+    <g stroke="#0A84FF" stroke-width="3.5" stroke-linecap="round">
+      <path d="M63 87 L44 76"/>
+      <path d="M63 113 L44 124"/>
+    </g>
+    <g fill="#FFFFFF" stroke="#0A84FF" stroke-width="2">
+      <circle cx="44" cy="76" r="5.5"/>
+      <circle cx="44" cy="124" r="5.5"/>
+    </g>
+    <!-- amine terminal -->
+    <circle cx="159" cy="113" r="9" fill="#0A84FF"/>
+    <circle cx="159" cy="113" r="4" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+
+  <!-- Labels -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    <text x="28" y="68" font-size="13" font-weight="700" fill="#8E8E93" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">HO</text>
+    <text x="28" y="132" font-size="13" font-weight="700" fill="#8E8E93">HO</text>
+    <text x="171" y="97" font-size="13" font-weight="700" fill="#0A84FF">NH₂</text>
+    <text x="100" y="170" font-size="11" font-weight="600" fill="#8E8E93" text-anchor="middle" letter-spacing="3" font-family="ui-monospace, 'SF Mono', Menlo, monospace">DOPAMINE · C8H11NO2</text>
+  </g>
+
+  <!-- accent spark -->
+  <circle cx="159" cy="104" r="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1"/>
+  <circle cx="163" cy="97" r="1.6" fill="#FFFFFF" opacity="0.8"/>
+</svg>

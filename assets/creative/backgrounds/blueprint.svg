@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Blueprint grid">
+<defs><pattern id="cx-bac-blueprint-minor" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" style="fill:none;stroke:#7FB6FF;stroke-width:0.6;opacity:0.35"/></pattern><pattern id="cx-bac-blueprint-major" width="120" height="120" patternUnits="userSpaceOnUse"><path d="M120 0H0V120" style="fill:none;stroke:#A9CFFF;stroke-width:1.4;opacity:0.5"/></pattern></defs>
+<rect width="1920" height="1080" style="fill:var(--blueprint,#0D3B78)"/>
+<rect width="1920" height="1080" style="fill:url(#cx-bac-blueprint-minor)"/>
+<rect width="1920" height="1080" style="fill:url(#cx-bac-blueprint-major)"/>
+</svg>

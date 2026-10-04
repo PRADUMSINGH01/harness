@@ -1,0 +1,35 @@
+{
+  "id": "generated_gold-colonial-era-coins-4",
+  "name": "gold colonial-era coins tumbling with dollar and shilling symbols",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/gold-colonial-era-coins-4.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M46 66 l1.4 3.6 3.6 1.4 -3.6 1.4 -1.4 3.6 -1.4 -3.6 -3.6 -1.4 3.6 -1.4 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "gold",
+    "colonial",
+    "era",
+    "coins",
+    "tumbling",
+    "dollar",
+    "icon",
+    "generated-svg"
+  ]
+}

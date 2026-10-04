@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1C1F26" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#0A0A0A" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="arcGood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#30D158"/>
+    </linearGradient>
+    <linearGradient id="arcBad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFD60A"/>
+      <stop offset="1" stop-color="#FF3B30"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.02"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <!-- outer dark glass disc -->
+  <circle cx="100" cy="100" r="96" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="0.6"/>
+  <path d="M100 12 A88 88 0 0 1 188 100 L100 100 Z" fill="url(#sheen)"/>
+
+  <!-- gauge arcs: 210deg sweep from 195deg (left) to -15deg (right) -->
+  <g stroke-linecap="round" fill="none">
+    <path d="M 33.5 61.5 A 82 82 0 0 1 100 18" stroke="url(#arcGood)" stroke-width="7" filter="url(#glow)" opacity="0.9"/>
+    <path d="M 100 18 A 82 82 0 0 1 166.5 61.5" stroke="url(#arcBad)" stroke-width="7" opacity="0.9"/>
+    <!-- track -->
+    <path d="M 33.5 61.5 A 82 82 0 0 1 166.5 61.5" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="10"/>
+  </g>
+
+  <!-- ticks -->
+  <g stroke="#8E8E93" stroke-width="1.2" opacity="0.8">
+    <line x1="40.2" y1="54.8" x2="46" y2="60.6"/>
+    <line x1="62" y1="27.5" x2="65" y2="34.7"/>
+    <line x1="100" y1="18" x2="100" y2="26"/>
+    <line x1="138" y1="27.5" x2="135" y2="34.7"/>
+    <line x1="159.8" y1="54.8" x2="154" y2="60.6"/>
+  </g>
+  <g stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="0.8">
+    <line x1="50.6" y1="41" x2="54.6" y2="45"/>
+    <line x1="81" y1="20.6" x2="82" y2="28.5"/>
+    <line x1="119" y1="20.6" x2="118" y2="28.5"/>
+    <line x1="149.4" y1="41" x2="145.4" y2="45"/>
+  </g>
+
+  <!-- needle collapsed at zero (left, low position) -->
+  <g filter="url(#glow)">
+    <line x1="100" y1="100" x2="46" y2="72" stroke="#FF3B30" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <circle cx="46" cy="72" r="3.5" fill="#FF3B30" filter="url(#glow)"/>
+  <circle cx="100" cy="100" r="7" fill="#0A0A0A" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.5"/>
+  <circle cx="100" cy="100" r="2.2" fill="#FF3B30"/>
+
+  <!-- zero glow pulse -->
+  <circle cx="46" cy="72" r="9" fill="#FF3B30" opacity="0.18" filter="url(#softglow)"/>
+
+  <!-- readout -->
+  <text x="100" y="136" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="30" font-weight="700" fill="#FFFFFF">0.00</text>
+  <text x="100" y="150" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="9" fill="#FF3B30" letter-spacing="3">CRASH ▼ 100%</text>
+
+  <!-- label -->
+  <text x="100" y="170" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" letter-spacing="3.5">NORADRENALINE</text>
+  <text x="100" y="182" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="7" fill="#8E8E93" letter-spacing="2.5">C8H11NO3 · FLATLINE</text>
+
+  <!-- corner brackets -->
+  <g stroke="#8E8E93" stroke-opacity="0.5" stroke-width="1" fill="none">
+    <path d="M14 26 v-8 h8"/>
+    <path d="M186 26 v-8 h-8"/>
+    <path d="M14 174 v8 h8"/>
+    <path d="M186 174 v8 h-8"/>
+  </g>
+</svg>

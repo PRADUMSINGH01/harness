@@ -1,0 +1,34 @@
+{
+  "id": "generated_shattering-padlock-subscription-icon-1",
+  "name": "shattering 3d padlock with subscription icon",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/shattering-padlock-subscription-icon-1.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M152 45 c5.5 0 8 4 8.2 9 c0.2 5 2 7 3.3 8.5 c0.7 0.8 0.2 2.2 -1 2.2 h-21 c-1.2 0 -1.7 -1.4 -1 -2.2 c1.3 -1.5 3.1 -3.5 3.3 -8.5 c0.2 -5 2.7 -9 8.2 -9 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "shattering",
+    "padlock",
+    "subscription",
+    "icon",
+    "hero",
+    "illustration",
+    "generated-svg"
+  ]
+}

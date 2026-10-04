@@ -1,0 +1,35 @@
+{
+  "id": "generated_eeg-brain-cap-wired-2",
+  "name": "EEG brain cap with wired electrodes on human head, medical documentary photography style",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/eeg-brain-cap-wired-2.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M118 34\n             C 88 34 66 52 62 78\n             C 60 88 61 94 56 100\n             C 52 105 54 108 58 109\n             L 62 110 C 61 120 60 128 66 133\n             C 72 138 82 137 84 141\n             C 85 146 84 152 88 156\n             C 93 161 104 161 112 158\n             L 112 166\n             C 112 166 150 168 152 146\n             L 152 122\n             C 152 122 160 116 160 108\n             C 160 100 154 96 154 96\n             L 154 70\n             C 154 48 140 34 118 34 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "eeg",
+    "brain",
+    "cap",
+    "wired",
+    "electrodes",
+    "human",
+    "icon",
+    "generated-svg"
+  ]
+}

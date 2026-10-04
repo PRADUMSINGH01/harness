@@ -1,0 +1,54 @@
+{
+  "id": "paper_masking_tape_strip_01",
+  "name": "Translucent Washi / Masking Tape Strip",
+  "type": "svg_vector",
+  "category": "paper_craft",
+  "asset": {
+    "src": "assets/paper/masking-tape-strip.svg",
+    "format": "svg",
+    "transparent_background": true,
+    "fit": "contain",
+    "preserve_aspect_ratio": true
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 500 140",
+    "anchor": "center",
+    "bounds": {
+      "x": 14,
+      "y": 22,
+      "width": 474,
+      "height": 96
+    },
+    "closed_svg_path": "M 22,25 L 478,22 L 485,32 476,44 488,56 475,68 486,80 477,92 488,104 476,115 L 24,118 L 15,108 25,95 14,83 26,71 16,59 25,47 15,36 Z",
+    "edge_style": "torn_ends_straight_sides",
+    "recommended_role": "tape_down_photo_or_note"
+  },
+  "render": {
+    "position": "absolute",
+    "default_width": "35%",
+    "rotation_degrees": -3,
+    "z_index": 10,
+    "opacity": 0.95,
+    "shadow": {
+      "enabled": true,
+      "x": 0,
+      "y": 4,
+      "blur": 6,
+      "color": "rgba(21,18,12,0.22)"
+    }
+  },
+  "animation": {
+    "recommended_entrance": "enter-scale",
+    "suggested_ease": "power2.out",
+    "duration_seconds": 0.35
+  },
+  "tags": [
+    "masking-tape",
+    "washi-tape",
+    "paper-craft",
+    "collage",
+    "sticker",
+    "tape-pin"
+  ]
+}

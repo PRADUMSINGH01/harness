@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1A1D24" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#0A0A0A" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5EB8FF"/>
+      <stop offset="1" stop-color="#0A84FF"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.1"/>
+      <stop offset="0.5" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- connecting timeline -->
+  <rect x="30" y="98" width="140" height="2" rx="1" fill="url(#line)"/>
+
+  <!-- node tiles -->
+  <g>
+    <!-- TILE 1: coins -->
+    <g transform="translate(30,100)">
+      <circle r="6" fill="#0A84FF" opacity="0.9"/>
+      <rect x="-17" y="-26" width="34" height="52" rx="9" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <g stroke="url(#blue)" stroke-width="2.4" fill="none" stroke-linecap="round" filter="url(#glow)">
+        <circle cx="-5" cy="6" r="5.5"/>
+        <path d="M -2 -3 Q -2 -11 -9 -11"/>
+      </g>
+      <g stroke="#8E8E93" stroke-width="2.4" fill="none" stroke-linecap="round" filter="url(#glow)">
+        <circle cx="5" cy="-6" r="5.5"/>
+        <path d="M 2 3 Q 2 11 9 11"/>
+      </g>
+    </g>
+
+    <!-- TILE 2: barter exchange -->
+    <g transform="translate(77,100)">
+      <circle r="6" fill="#0A84FF" opacity="0.9"/>
+      <rect x="-17" y="-26" width="34" height="52" rx="9" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" filter="url(#glow)">
+        <path d="M -9 -5 H 7 M 3 -9 L 7 -5 L 3 -1" stroke="url(#blue)"/>
+        <path d="M 9 5 H -7 M -3 1 L -7 5 L -3 9" stroke="#8E8E93"/>
+      </g>
+    </g>
+
+    <!-- TILE 3: credit card -->
+    <g transform="translate(124,100)">
+      <circle r="6" fill="#0A84FF" opacity="0.9"/>
+      <rect x="-17" y="-26" width="34" height="52" rx="9" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <g filter="url(#glow)">
+        <rect x="-11" y="-7" width="22" height="15" rx="2.5" fill="none" stroke="url(#blue)" stroke-width="2.2"/>
+        <rect x="-11" y="-3" width="22" height="3.4" fill="#0A84FF"/>
+        <line x1="-8" y1="4.5" x2="-3" y2="4.5" stroke="#8E8E93" stroke-width="1.8" stroke-linecap="round"/>
+      </g>
+    </g>
+
+    <!-- TILE 4: NFC -->
+    <g transform="translate(171,100)">
+      <circle r="6" fill="#0A84FF" opacity="0.9"/>
+      <rect x="-17" y="-26" width="34" height="52" rx="9" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <g fill="none" stroke-linecap="round" stroke-width="2.2" filter="url(#glow)">
+        <path d="M -7 -5 Q -7 5 -7 5" stroke="url(#blue)" transform="rotate(45)"/>
+        <path d="M -2 -11 Q 5 0 -2 11" stroke="url(#blue)"/>
+        <path d="M 4 -16 Q 14 0 4 16" stroke="#8E8E93"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M 8 20 V 12 Q 8 8 12 8 H 20"/>
+    <path d="M 180 8 H 188 Q 192 8 192 12 V 20"/>
+    <path d="M 192 180 V 188 Q 192 192 188 192 H 180"/>
+    <path d="M 20 192 H 12 Q 8 192 8 188 V 180"/>
+  </g>
+</svg>

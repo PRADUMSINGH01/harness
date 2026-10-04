@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1080" width="2200" height="1080" role="img" aria-label="Zigzag tear panel">
+<path id="panel" d="M0 0 L1900 0 L1960 0 L2200 90 L1960 180 L2200 270 L1960 360 L2200 450 L1960 540 L2200 630 L1960 720 L2200 810 L1960 900 L2200 990 L1960 1080 L1900 1080 L0 1080Z" style="fill:var(--accent,#FF5A36)"/>
+</svg>

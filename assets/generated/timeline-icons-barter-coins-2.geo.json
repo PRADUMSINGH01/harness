@@ -1,0 +1,35 @@
+{
+  "id": "generated_timeline-icons-barter-coins-2",
+  "name": "timeline icons barter coins credit card NFC",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/timeline-icons-barter-coins-2.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M 192 180 V 188 Q 192 192 188 192 H 180"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "timeline",
+    "icons",
+    "barter",
+    "coins",
+    "credit",
+    "card",
+    "icon",
+    "generated-svg"
+  ]
+}

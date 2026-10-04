@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="phoneBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1C1C1E"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0.08"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.55"/>
+      <stop offset="0.6" stop-color="#0A84FF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="drop" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- background glass card -->
+  <rect x="8" y="8" width="184" height="184" rx="36" fill="#0A0A0A"/>
+  <rect x="8.75" y="8.75" width="182.5" height="182.5" rx="35.25" fill="none" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1.5"/>
+  <rect x="16" y="16" width="168" height="168" rx="30" fill="#FFFFFF" opacity="0.02"/>
+
+  <!-- alarm clock glow halo -->
+  <circle cx="108" cy="76" r="42" fill="url(#glow)"/>
+
+  <!-- phone -->
+  <g filter="url(#drop)">
+    <rect x="88" y="40" width="40" height="72" rx="9" fill="url(#phoneBody)" stroke="#8E8E93" stroke-opacity="0.55" stroke-width="1.5"/>
+    <rect x="92.5" y="46" width="31" height="56" rx="5.5" fill="url(#screen)" stroke="#0A84FF" stroke-opacity="0.35" stroke-width="1"/>
+    <!-- notch -->
+    <rect x="102" y="43" width="12" height="2.6" rx="1.3" fill="#8E8E93" opacity="0.6"/>
+    <!-- clock face -->
+    <g filter="url(#softGlow)">
+      <text x="108" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle">6:30</text>
+    </g>
+    <!-- tiny alarm bells -->
+    <path d="M99 62 l4 -3 M117 62 l-4 -3" stroke="#0A84FF" stroke-width="1.6" stroke-linecap="round" opacity="0.9"/>
+    <!-- zzz accent -->
+    <text x="130" y="52" font-family="Menlo, monospace" font-size="7" fill="#8E8E93" opacity="0.8">Z</text>
+    <text x="134" y="45" font-family="Menlo, monospace" font-size="5" fill="#8E8E93" opacity="0.5">z</text>
+  </g>
+
+  <!-- retraction arc (dashed, back from phone to hand) -->
+  <path d="M96 96 C 74 110, 58 118, 44 132" fill="none" stroke="#8E8E93" stroke-width="1.6" stroke-dasharray="1 5" stroke-linecap="round" opacity="0.9"/>
+  <path d="M47 125 l-4 8 8.6 -1.4" fill="none" stroke="#8E8E93" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+
+  <!-- hand reaching (index finger extended toward phone) -->
+  <g fill="#FFFFFF" stroke="none">
+    <!-- extended index finger -->
+    <path d="M34 130 L62 108 Q67 104.5 71.5 108.5 Q76 112.5 72 117.5 L52 140 Q47 145 41.5 141.5 Q36 138 34 130 Z"/>
+    <!-- curled fingers (fist) -->
+    <path d="M40 134 Q44 150 58 152 Q72 154 78 142 Q82 133 76 126 Q70 120 62 124 Q54 128 48 126 Q42 124 40 134 Z" fill="#FFFFFF" opacity="0.92"/>
+    <!-- thumb -->
+    <path d="M46 128 Q38 118 42 110 Q45 105 50 108 Q56 112 54 122 Z" fill="#FFFFFF" opacity="0.95"/>
+  </g>
+  <!-- hand separation lines -->
+  <g stroke="#0A0A0A" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.55">
+    <path d="M52 141 Q54 147 58 150"/>
+    <path d="M60 136 Q63 143 67 145"/>
+    <path d="M68 130 Q72 135 75 138"/>
+  </g>
+  <!-- wrist sleeve -->
+  <path d="M28 128 L44 140 L36 152 L20 140 Z" fill="#8E8E93" opacity="0.85"/>
+  <path d="M28 128 L44 140 L36 152 L20 140 Z" fill="none" stroke="#0A0A0A" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- blue glow tick radiating from screen toward hand -->
+  <g stroke="#0A84FF" stroke-width="1.8" stroke-linecap="round" opacity="0.85" filter="url(#softGlow)">
+    <path d="M78 84 L86 79"/>
+    <path d="M74 94 L83 91"/>
+    <path d="M74 74 L83 70"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <path d="M22 34 v-10 h10"/>
+    <path d="M178 34 v-10 h-10"/>
+    <path d="M22 166 v10 h10"/>
+    <path d="M178 166 v10 h-10"/>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 76" fill="none">
+  <defs>
+    <linearGradient id="chrome-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A2033"/>
+      <stop offset="100%" stop-color="#121726"/>
+    </linearGradient>
+  </defs>
+  <!-- Window Chrome Surface -->
+  <path d="M0 20 C0 8.95 8.95 0 20 0 L940 0 C951.05 0 960 8.95 960 20 L960 76 L0 76 Z" fill="url(#chrome-grad)" stroke="#26314D" stroke-width="1.5"/>
+
+  <!-- macOS Window Controls -->
+  <circle cx="36" cy="38" r="7" fill="#EF4444"/>
+  <circle cx="58" cy="38" r="7" fill="#F59E0B"/>
+  <circle cx="80" cy="38" r="7" fill="#10B981"/>
+
+  <!-- Sidebar Toggle Icon -->
+  <rect x="116" y="27" width="22" height="22" rx="5" fill="none" stroke="#64748B" stroke-width="1.8"/>
+  <line x1="123" y1="27" x2="123" y2="49" stroke="#64748B" stroke-width="1.8"/>
+
+  <!-- Center Model Selector Pill: GPT-6 Astra -->
+  <g transform="translate(370, 18)">
+    <rect width="220" height="40" rx="10" fill="#0D111D" stroke="rgba(16,185,129,0.35)" stroke-width="1.5"/>
+    <circle cx="24" cy="20" r="5" fill="#10B981"/>
+    <text x="40" y="25" font-family="'Sora', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="0.02em">GPT-6 Astra</text>
+    <path d="M190 18 L196 24 L202 18" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Right App Controls: Share, Search, Settings -->
+  <circle cx="870" cy="38" r="14" fill="rgba(255,255,255,0.05)"/>
+  <path d="M866 38 L874 38 M870 34 L874 38 L870 42" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="914" cy="38" r="14" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="913" cy="37" r="5" stroke="#94A3B8" stroke-width="1.8"/>
+  <line x1="917" y1="41" x2="921" y2="45" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

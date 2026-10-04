@@ -1,0 +1,35 @@
+{
+  "id": "generated_1974-architectural-technical-drawing-cube",
+  "name": "1974 architectural technical drawing of a cube",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/1974-architectural-technical-drawing-cube.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M20 0V200 M40 0V200 M60 0V200 M80 0V200 M100 0V200 M120 0V200 M140 0V200 M160 0V200 M180 0V200"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "1974",
+    "architectural",
+    "technical",
+    "drawing",
+    "cube",
+    "hero",
+    "illustration",
+    "generated-svg"
+  ]
+}

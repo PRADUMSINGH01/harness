@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <filter id="inkShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <linearGradient id="paperGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F3F4F6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- white under-stroke marker pass (highlight) -->
+  <g filter="url(#inkShadow)">
+    <path d="M38 150 C 58 158, 92 150, 116 122 C 134 100, 138 82, 136 62"
+          fill="none" stroke="url(#paperGlow)" stroke-width="21"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M118 88 L 136 50 L 154 84 Z" fill="url(#paperGlow)"
+          stroke="url(#paperGlow)" stroke-width="10" stroke-linejoin="round"/>
+  </g>
+
+  <!-- black ink outline pass, slightly offset for hand-drawn feel -->
+  <g opacity="0.95">
+    <path d="M40 147 C 60 156, 94 149, 118 120 C 135 99, 139 82, 137 64"
+          fill="none" stroke="#000000" stroke-width="5.5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M119.5 89 L 136.5 53 L 153.5 85 Z" fill="#000000"
+          stroke="#000000" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+
+  <!-- subtle double-pass sketch tick for kinetic marker authenticity -->
+  <path d="M45 154 C 64 161, 96 153, 121 124" fill="none"
+        stroke="#1E1E1E" stroke-width="2" stroke-linecap="round" opacity="0.45"/>
+
+  <!-- micro corner brackets -->
+  <g stroke="#1E1E1E" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.55">
+    <path d="M20 172 L 20 182 L 30 182"/>
+    <path d="M180 172 L 180 182 L 170 182"/>
+  </g>
+</svg>

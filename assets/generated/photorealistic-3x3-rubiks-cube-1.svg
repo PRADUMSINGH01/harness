@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="42%" r="70%">
+    <stop offset="0%" stop-color="#1a1e26"/>
+    <stop offset="60%" stop-color="#0f1116"/>
+    <stop offset="100%" stop-color="#0A0A0A"/>
+  </radialGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01"/>
+  </linearGradient>
+  <linearGradient id="blueStk" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#5FB2FF"/>
+    <stop offset="45%" stop-color="#0A84FF"/>
+    <stop offset="100%" stop-color="#0B4FA0"/>
+  </linearGradient>
+  <linearGradient id="whiteStk" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="100%" stop-color="#C7CBD1"/>
+  </linearGradient>
+  <linearGradient id="grayStk" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#B7BCC4"/>
+    <stop offset="100%" stop-color="#6E737B"/>
+  </linearGradient>
+  <linearGradient id="topFace" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1b212c"/>
+    <stop offset="100%" stop-color="#0e1219"/>
+  </linearGradient>
+  <linearGradient id="sideFace" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#0c0f15"/>
+    <stop offset="100%" stop-color="#05070a"/>
+  </linearGradient>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="6" result="b"/>
+    <feComposite in="SourceGraphic" in2="b" operator="over"/>
+  </filter>
+  <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+    <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.7"/>
+  </filter>
+</defs>
+
+<rect width="200" height="200" fill="url(#bg)"/>
+
+<!-- ground reflection glow -->
+<ellipse cx="100" cy="172" rx="62" ry="10" fill="#0A84FF" opacity="0.15" filter="url(#glow)"/>
+
+<g filter="url(#softShadow)">
+<!-- TOP FACE -->
+<g>
+  <path d="M45 55 L100 30 L155 55 L100 80 Z" fill="url(#topFace)" stroke="#2a3140" stroke-width="0.6"/>
+  <!-- stickers: row/col, top face is diamond grid -->
+  <!-- helper mapping: top face parallelogram. corners: A(45,55) B(100,30) C(155,55) D(100,80) -->
+  <!-- sticker(u,v): point = A + u*(B-A)/3 + v*(D-A)/3 ... use vector basis -->
+  <!-- U1 = (55/3, -25/3) ≈ (18.33,-8.33); U2 = (55/3, 25/3) ≈ (18.33, 8.33) -->
+  <g stroke="#0A0A0A" stroke-width="1.6" stroke-linejoin="round">
+    <path fill="url(#grayStk)" d="M48.3 53.3 L66.7 44.2 L85 53.3 L66.7 62.5 Z"/>
+    <path fill="url(#grayStk)" d="M66.7 44.2 L85 35 L103.3 44.2 L85 53.3 Z"/>
+    <path fill="url(#blueStk)" d="M85 35 L103.3 25.8 L121.7 35 L103.3 44.2 Z"/>
+    <path fill="url(#blueStk)" d="M66.7 62.5 L85 53.3 L103.3 62.5 L85 71.7 Z"/>
+    <path fill="url(#grayStk)" d="M85 53.3 L103.3 44.2 L121.7 53.3 L103.3 62.5 Z"/>
+    <path fill="url(#blueStk)" d="M103.3 44.2 L121.7 35 L140 44.2 L121.7 53.3 Z"/>
+    <path fill="url(#blueStk)" d="M85 71.7 L103.3 62.5 L121.7 71.7 L103.3 80.8 Z"/>
+    <path fill="url(#blueStk)" d="M103.3 62.5 L121.7 53.3 L140 62.5 L121.7 71.7 Z"/>
+    <path fill="url(#blueStk)" d="M121.7 53.3 L140 44.2 L158.3 53.3 L140 62.5 Z"/>
+  </g>
+  <!-- gloss on top stickers -->
+  <path d="M48.3 53.3 L85 35 L103.3 44.2 L66.7 62.5 Z" fill="#ffffff" opacity="0.07"/>
+</g>
+
+<!-- LEFT FACE (blue front-left) -->
+<g>
+  <path d="M45 55 L100 80 L100 150 L45 125 Z" fill="url(#glass)" stroke="#2a3140" stroke-width="0.6"/>
+  <!-- basis: right = (55/3, 25/3), down = (0, 70/3) -->
+  <g stroke="#0A0A0A" stroke-width="1.6" stroke-linejoin="round">
+    <path fill="url(#blueStk)" d="M48.3 56.7 L63.3 64.2 L63.3 82.5 L48.3 75 Z"/>
+    <path fill="url(#blueStk)" d="M63.3 64.2 L78.3 71.7 L78.3 90 L63.3 82.5 Z"/>
+    <path fill="url(#blueStk)" d="M78.3 71.7 L93.3 79.2 L93.3 97.5 L78.3 90 Z"/>
+    <path fill="url(#blueStk)" d="M48.3 75 L63.3 82.5 L63.3 100.8 L48.3 93.3 Z"/>
+    <path fill="url(#whiteStk)" d="M63.3 82.5 L78.3 90 L78.3 108.3 L63.3 100.8 Z"/>
+    <path fill="url(#blueStk)" d="M78.3 90 L93.3 97.5 L93.3 115.8 L78.3 108.3 Z"/>
+    <path fill="url(#blueStk)" d="M48.3 93.3 L63.3 100.8 L63.3 119.2 L48.3 111.7 Z"/>
+    <path fill="url(#blueStk)" d="M63.3 100.8 L78.3 108.3 L78.3 126.7 L63.3 119.2 Z"/>
+    <path fill="url(#blueStk)" d="M78.3 108.3 L93.3 115.8 L93.3 134.2 L78.3 126.7 Z"/>
+  </g>
+  <!-- vertical gloss sweep -->
+  <path d="M48.3 56.7 L60 62.5 L60 131 L48.3 125 Z" fill="#ffffff" opacity="0.10"/>
+  <path d="M48.3 75 L93.3 97.5 L93.3 100 L48.3 77.5 Z" fill="#ffffff" opacity="0.05"/>
+</g>
+
+<!-- RIGHT FACE (white front-right) -->
+<g>
+  <path d="M100 80 L155 55 L155 125 L100 150 Z" fill="url(#sideFace)" stroke="#2a3140" stroke-width="0.6"/>
+  <!-- basis: right = (55/3, -25/3), down = (0, 70/3) -->
+  <g stroke="#0A0A0A" stroke-width="1.6" stroke-linejoin="round">
+    <path fill="url(#whiteStk)" d="M106.7 77.5 L121.7 70 L121.7 88.3 L106.7 95.8 Z"/>
+    <path fill="url(#whiteStk)" d="M121.7 70 L136.7 62.5 L136.7 80.8 L121.7 88.3 Z"/>
+    <path fill="url(#whiteStk)" d="M136.7 62.5 L151.7 55 L151.7 73.3 L136.7 80.8 Z"/>
+    <path fill="url(#whiteStk)" d="M106.7 95.8 L121.7 88.3 L121.7 106.7 L106.7 114.2 Z"/>
+    <path fill="url(#grayStk)" d="M121.7 88.3 L136.7 80.8 L136.7 99.2 L121.7 106.7 Z"/>
+    <path fill="url(#whiteStk)" d="M136.7 80.8 L151.7 73.3 L151.7 91.7 L136.7 99.2 Z"/>
+    <path fill="url(#whiteStk)" d="M106.7 114.2 L121.7 106.7 L121.7 125 L106.7 132.5 Z"/>
+    <path fill="url(#whiteStk)" d="M121.7 106.7 L136.7 99.2 L136.7 117.5 L121.7 125 Z"/>
+    <path fill="url(#whiteStk)" d="M136.7 99.2 L151.7 91.7 L151.7 110 L136.7 117.5 Z"/>
+  </g>
+  <path d="M106.7 77.5 L118 72 L118 138 L106.7 132.5 Z" fill="#ffffff" opacity="0.08"/>
+</g>
+</g>
+
+<!-- corner accents -->
+<g stroke="#8E8E93" stroke-width="1" opacity="0.5" fill="none">
+  <path d="M20 30 L20 20 L30 20"/>
+  <path d="M170 30 L170 20 L180 20"/>
+  <path d="M20 170 L20 180 L30 180"/>
+  <path d="M170 170 L170 180 L180 180"/>
+</g>
+</svg>

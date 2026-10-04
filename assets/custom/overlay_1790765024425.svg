@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="inkGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E1E1E"/>
+      <stop offset="0.6" stop-color="#000000"/>
+      <stop offset="1" stop-color="#1E1E1E"/>
+    </linearGradient>
+    <linearGradient id="whiteGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F3F4F6"/>
+    </linearGradient>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- kinetic motion trail (dashed, animatable) -->
+  <g opacity="0.85">
+    <line x1="18" y1="118" x2="58" y2="118" stroke="#000000" stroke-width="6" stroke-linecap="round" stroke-dasharray="10 10"/>
+    <line x1="30" y1="140" x2="62" y2="140" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 10" opacity="0.6"/>
+    <line x1="42" y1="96" x2="66" y2="96" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 10" opacity="0.6"/>
+  </g>
+
+  <!-- main bold arrow -->
+  <g filter="url(#softShadow)">
+    <path d="M62 84 L62 152 L92 130 L118 178 L144 165 L118 118 L156 112 Z"
+          fill="url(#inkGrad)" stroke="#000000" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M74 100 L74 136 L94 121 L110 152 L126 143 L110 118 L136 113 Z"
+          fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" opacity="0.9"/>
+  </g>
+
+  <!-- glass highlight on arrowhead -->
+  <path d="M118 118 L156 112 L144 165 L136 156 L142 126 Z" fill="url(#whiteGrad)" opacity="0.12"/>
+
+  <!-- impact burst ticks around tip -->
+  <g stroke="#000000" stroke-width="5" stroke-linecap="round">
+    <line x1="164" y1="102" x2="176" y2="92"/>
+    <line x1="170" y1="128" x2="184" y2="130"/>
+    <line x1="150" y1="184" x2="156" y2="196"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#1E1E1E" stroke-width="3" fill="none" stroke-linecap="square" opacity="0.9">
+    <path d="M14 34 L14 14 L34 14"/>
+    <path d="M186 34 L186 14 L166 14"/>
+    <path d="M14 166 L14 186 L34 186"/>
+    <path d="M186 166 L186 186 L166 186"/>
+  </g>
+
+  <!-- crosshair accent -->
+  <g stroke="#F3F4F6" stroke-width="2" opacity="0.9" filter="url(#glow)">
+    <circle cx="62" cy="84" r="5" fill="none"/>
+    <line x1="53" y1="84" x2="71" y2="84"/>
+    <line x1="62" y1="75" x2="62" y2="93"/>
+  </g>
+
+  <!-- coordinate ticks -->
+  <g stroke="#1E1E1E" stroke-width="2" opacity="0.5">
+    <line x1="60" y1="8" x2="60" y2="12"/>
+    <line x1="100" y1="8" x2="100" y2="12"/>
+    <line x1="140" y1="8" x2="140" y2="12"/>
+    <line x1="8" y1="60" x2="12" y2="60"/>
+    <line x1="8" y1="100" x2="12" y2="100"/>
+    <line x1="8" y1="140" x2="12" y2="140"/>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img" aria-label="Laptop frame">
+<defs><linearGradient id="cx-moc-laptop-base" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--device-light,#C9CCD2);stop-opacity:1"/><stop offset="1" style="stop-color:var(--device-mid,#8D9199);stop-opacity:1"/></linearGradient></defs>
+<path fill-rule="evenodd" d="M134 20 H1466 A34 34 0 0 1 1500 54 V866 A34 34 0 0 1 1466 900 H134 A34 34 0 0 1 100 866 V54 A34 34 0 0 1 134 20Z M136 48 H1464 A8 8 0 0 1 1472 56 V864 A8 8 0 0 1 1464 872 H136 A8 8 0 0 1 128 864 V56 A8 8 0 0 1 136 48Z" style="fill:var(--device,#0B0C0F)"/>
+<circle cx="800" cy="34" r="5" style="fill:#2A2C31"/>
+<path d="M0 900 H1600 L1560 960 Q1550 972 1530 972 H70 Q50 972 40 960Z" style="fill:url(#cx-moc-laptop-base)"/>
+<path d="M700 900 h200 q0 14 -14 14 h-172 q-14 0 -14 -14z" style="fill:var(--device-mid,#8D9199)"/>
+</svg>

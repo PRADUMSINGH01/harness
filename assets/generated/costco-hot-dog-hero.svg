@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14100c"/>
+      <stop offset="1" stop-color="#1e1812"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2e8d5" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#f2e8d5" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="bun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2e8d5"/>
+      <stop offset="1" stop-color="#d9c9a3"/>
+    </linearGradient>
+    <linearGradient id="cup" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e63b2e"/>
+      <stop offset="1" stop-color="#b32417"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e63b2e" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#e63b2e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="ds" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="200" height="200" rx="18" fill="url(#bg)"/>
+  <circle cx="100" cy="96" r="70" fill="url(#glow)"/>
+
+  <!-- faint grid ticks -->
+  <g stroke="#f2e8d5" stroke-opacity="0.08" stroke-width="1">
+    <path d="M20 40h8M172 40h8M20 160h8M172 160h8"/>
+    <path d="M40 24v8M40 168v8M160 24v8M160 168v8"/>
+  </g>
+
+  <!-- dark glass card -->
+  <g filter="url(#ds)">
+    <rect x="16" y="18" width="168" height="164" rx="14" fill="url(#glass)" stroke="#f2e8d5" stroke-opacity="0.15" stroke-width="1"/>
+  </g>
+  <!-- corner brackets -->
+  <g stroke="#e63b2e" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M26 30v-6h6"/>
+    <path d="M174 30v-6h-6"/>
+    <path d="M26 170v6h6"/>
+    <path d="M174 170v6h-6"/>
+  </g>
+
+  <!-- shadow under items -->
+  <ellipse cx="86" cy="150" rx="44" ry="6" fill="#000" opacity="0.4" filter="url(#soft)"/>
+  <ellipse cx="146" cy="152" rx="20" ry="5" fill="#000" opacity="0.4" filter="url(#soft)"/>
+
+  <!-- HOT DOG -->
+  <g transform="rotate(-8 86 122)">
+    <!-- bun bottom -->
+    <path d="M40 128 Q86 142 132 128 L132 134 Q86 148 40 134 Z" fill="#d9c9a3"/>
+    <!-- sausage -->
+    <path d="M42 124 Q86 136 130 124 Q86 152 42 124 Z" fill="#e63b2e"/>
+    <path d="M42 124 Q86 136 130 124" fill="none" stroke="#f2e8d5" stroke-opacity="0.35" stroke-width="1.5"/>
+    <!-- mustard squiggle -->
+    <path d="M50 122 Q60 116 68 122 T86 122 T104 122 T122 122" fill="none" stroke="#f2e8d5" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+    <!-- bun top -->
+    <path d="M40 120 Q86 96 132 120 Q86 106 40 120 Z" fill="url(#bun)"/>
+    <path d="M40 120 Q86 96 132 120 Q86 118 40 120 Z" fill="#f2e8d5" opacity="0.25"/>
+    <!-- sesame -->
+    <g fill="#14100c" opacity="0.25">
+      <ellipse cx="70" cy="109" rx="1.6" ry="0.9" transform="rotate(-20 70 109)"/>
+      <ellipse cx="86" cy="105" rx="1.6" ry="0.9"/>
+      <ellipse cx="102" cy="109" rx="1.6" ry="0.9" transform="rotate(20 102 109)"/>
+    </g>
+  </g>
+
+  <!-- SODA CUP -->
+  <g filter="url(#ds)">
+    <path d="M136 104 L156 104 L152 150 L140 150 Z" fill="url(#cup)"/>
+    <path d="M136 104 L156 104 L155.2 112 L136.8 112 Z" fill="#f2e8d5"/>
+    <rect x="134" y="100" width="24" height="5" rx="2.5" fill="#f2e8d5"/>
+    <!-- straw -->
+    <path d="M148 100 L154 82 L157.5 83 L151 100 Z" fill="#f2e8d5" opacity="0.9"/>
+    <!-- cup stripes -->
+    <g stroke="#f2e8d5" stroke-opacity="0.35" stroke-width="1.4">
+      <path d="M139 120 L153 120"/>
+      <path d="M140 128 L152 128"/>
+      <path d="M141 136 L151 136"/>
+    </g>
+    <!-- highlight -->
+    <path d="M139 108 L142 146" stroke="#f2e8d5" stroke-opacity="0.4" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- PRICE BADGE -->
+  <g filter="url(#ds)">
+    <circle cx="100" cy="72" r="26" fill="#e63b2e" stroke="#f2e8d5" stroke-width="2.5"/>
+  </g>
+  <text x="100" y="71" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="17" fill="#f2e8d5">$1.50</text>
+  <text x="100" y="84" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="7" letter-spacing="1.5" fill="#f2e8d5" opacity="0.9">SINCE 1985</text>
+
+  <!-- steam -->
+  <g stroke="#f2e8d5" stroke-opacity="0.35" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M70 60 Q66 52 70 46"/>
+    <path d="M100 40 Q96 33 100 27"/>
+    <path d="M126 58 Q122 51 126 45"/>
+  </g>
+
+  <!-- caption -->
+  <text x="100" y="176" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="8" letter-spacing="2.5" fill="#f2e8d5" opacity="0.75">HOT DOG + SODA COMBO</text>
+</svg>

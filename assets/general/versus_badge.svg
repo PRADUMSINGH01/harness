@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="vs-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="vs-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Behind -->
+  <circle cx="100" cy="100" r="76" fill="url(#vs-grad)" opacity="0.3" filter="url(#vs-glow)"/>
+
+  <!-- Outer Dark Core Circle -->
+  <circle cx="100" cy="100" r="72" fill="#090A0F" stroke="url(#vs-grad)" stroke-width="4"/>
+
+  <!-- Inner Concentric Ring -->
+  <circle cx="100" cy="100" r="62" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.4"/>
+
+  <!-- Clash Energy Slash -->
+  <line x1="45" y1="155" x2="155" y2="45" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.3" stroke-linecap="round"/>
+
+  <!-- Bold VS Typography -->
+  <text x="100" y="118" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="52" font-style="italic" letter-spacing="-2">VS</text>
+
+  <!-- Top and Bottom Accent Dots -->
+  <circle cx="100" cy="32" r="3" fill="#EC4899"/>
+  <circle cx="100" cy="168" r="3" fill="#3B82F6"/>
+</svg>

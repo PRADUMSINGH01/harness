@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1C1F26"/>
+      <stop offset="0.5" stop-color="#0A0A0A"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#5AC8FA"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="check" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EAF6FF"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <clipPath id="disc">
+      <circle cx="100" cy="100" r="66"/>
+    </clipPath>
+  </defs>
+
+  <!-- outer glass disc -->
+  <g filter="url(#softShadow)">
+    <circle cx="100" cy="100" r="66" fill="url(#glass)"/>
+    <circle cx="100" cy="100" r="66" fill="none" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1"/>
+  </g>
+
+  <!-- glass sheen top half -->
+  <g clip-path="url(#disc)">
+    <ellipse cx="100" cy="58" rx="72" ry="44" fill="url(#sheen)"/>
+    <!-- subtle grid ticks -->
+    <g stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1">
+      <line x1="34" y1="100" x2="166" y2="100"/>
+      <line x1="100" y1="34" x2="100" y2="166"/>
+    </g>
+  </g>
+
+  <!-- blue progress ring -->
+  <circle cx="100" cy="100" r="74" fill="none" stroke="#0A84FF" stroke-opacity="0.15" stroke-width="3"/>
+  <circle cx="100" cy="100" r="74" fill="none" stroke="url(#ring)" stroke-width="3" stroke-linecap="round"
+          stroke-dasharray="310 465" stroke-dashoffset="-60" transform="rotate(-90 100 100)" filter="url(#glow)"/>
+
+  <!-- checkmark -->
+  <path d="M68 101 L92 126 L134 78" fill="none" stroke="url(#check)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+
+  <!-- corner brackets -->
+  <g stroke="#8E8E93" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.85">
+    <path d="M14 34 L14 18 L30 18"/>
+    <path d="M170 18 L186 18 L186 34"/>
+    <path d="M186 166 L186 182 L170 182"/>
+    <path d="M30 182 L14 182 L14 166"/>
+  </g>
+  <!-- micro ticks -->
+  <g stroke="#8E8E93" stroke-width="1.5" stroke-linecap="round" opacity="0.7">
+    <line x1="100" y1="8" x2="100" y2="14"/>
+    <line x1="100" y1="186" x2="100" y2="192"/>
+    <line x1="8" y1="100" x2="14" y2="100"/>
+    <line x1="186" y1="100" x2="192" y2="100"/>
+  </g>
+</svg>

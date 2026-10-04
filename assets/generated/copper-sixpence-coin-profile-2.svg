@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="copperFace" cx="42%" cy="38%" r="75%">
+      <stop offset="0%" stop-color="#E8A87C"/>
+      <stop offset="45%" stop-color="#C97C4A"/>
+      <stop offset="80%" stop-color="#9A5530"/>
+      <stop offset="100%" stop-color="#6E3A1F"/>
+    </radialGradient>
+    <linearGradient id="rimGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F0BC8E"/>
+      <stop offset="35%" stop-color="#C97C4A"/>
+      <stop offset="65%" stop-color="#7E4426"/>
+      <stop offset="100%" stop-color="#E8A87C"/>
+    </linearGradient>
+    <linearGradient id="glassSheen" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0.08"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#0A84FF" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0.25"/>
+    </radialGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0A0A0A" flood-opacity="0.7"/>
+    </filter>
+    <filter id="relief" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0.6" dy="1" stdDeviation="0.6" flood-color="#4A2412" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+
+  <!-- ambient glass glow -->
+  <circle cx="100" cy="100" r="96" fill="url(#glow)"/>
+
+  <!-- coin body -->
+  <g filter="url(#softShadow)">
+    <circle cx="100" cy="100" r="86" fill="url(#rimGrad)"/>
+    <circle cx="100" cy="100" r="79" fill="url(#copperFace)"/>
+    <circle cx="100" cy="100" r="79" fill="none" stroke="#3A1C0E" stroke-opacity="0.5" stroke-width="1"/>
+  </g>
+
+  <!-- beaded edge -->
+  <g fill="#F2C79A" opacity="0.85">
+    <circle cx="100" cy="27" r="1.8"/>
+    <circle cx="100" cy="173" r="1.8"/>
+    <circle cx="27" cy="100" r="1.8"/>
+    <circle cx="173" cy="100" r="1.8"/>
+    <circle cx="45.5" cy="45.5" r="1.8"/>
+    <circle cx="154.5" cy="45.5" r="1.8"/>
+    <circle cx="45.5" cy="154.5" r="1.8"/>
+    <circle cx="154.5" cy="154.5" r="1.8"/>
+    <circle cx="100" cy="21.5" r="1.4" opacity="0.5"/>
+    <circle cx="100" cy="178.5" r="1.4" opacity="0.5"/>
+    <circle cx="21.5" cy="100" r="1.4" opacity="0.5"/>
+    <circle cx="178.5" cy="100" r="1.4" opacity="0.5"/>
+  </g>
+
+  <!-- inner milled ring -->
+  <circle cx="100" cy="100" r="72" fill="none" stroke="#F0BC8E" stroke-opacity="0.35" stroke-width="0.8" stroke-dasharray="2 3"/>
+  <circle cx="100" cy="100" r="69" fill="none" stroke="#5A2E16" stroke-opacity="0.4" stroke-width="0.6"/>
+
+  <!-- profile portrait: left-facing relief -->
+  <g filter="url(#relief)">
+    <path d="M108 52
+             C 92 50, 80 60, 78 74
+             C 77 80, 73 84, 71 89
+             C 70 91.5, 72 93, 74 93.5
+             C 73.5 96, 73.5 98, 74.5 100
+             C 73.5 101, 73.5 103, 74.8 104
+             C 74 106, 74.5 108, 77 109
+             C 76.5 113, 78 117, 82 118
+             L 82 130
+             C 82 136, 86 140, 93 140
+             L 106 140
+             L 106 62 Z"
+          fill="#B5663A"/>
+    <path d="M108 52
+             C 122 52, 130 62, 131 74
+             C 132 86, 128 94, 126 102
+             C 124 112, 126 126, 124 138
+             C 122.5 148, 116 152, 108 152
+             L 92 152
+             C 90 152, 89 150, 90 148
+             C 93 143, 94 138, 93 132
+             C 92 126, 90 122, 88 118
+             C 84 110, 80 106, 79 100"
+          fill="none" stroke="#F2C79A" stroke-opacity="0.7" stroke-width="1.4" stroke-linecap="round"/>
+    <!-- hair mass -->
+    <path d="M108 50 C 128 50, 138 64, 137 80 C 136 94, 132 104, 130 118 C 128.5 130, 130 144, 126 154 L 110 154 C 115 144, 116 132, 114 122 C 112 112, 108 104, 104 96 C 100 88, 98 78, 100 68 C 101.5 59, 103 54, 108 50 Z"
+          fill="#8E4A26" opacity="0.9"/>
+    <path d="M112 56 C 124 58, 130 68, 130 80" fill="none" stroke="#F2C79A" stroke-opacity="0.35" stroke-width="1" stroke-linecap="round"/>
+    <!-- brow -->
+    <path d="M80 82 Q 86 79, 91 82" fill="none" stroke="#6E3A1F" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- eye -->
+    <path d="M82 88 Q 87 86, 91 88.5" fill="none" stroke="#5A2E16" stroke-width="1.4" stroke-linecap="round"/>
+    <circle cx="87" cy="88" r="1.1" fill="#5A2E16"/>
+    <!-- nose tip shading -->
+    <path d="M74.5 89 Q 71.5 88.5, 71 90" fill="none" stroke="#F2C79A" stroke-opacity="0.5" stroke-width="1"/>
+    <!-- lips -->
+    <path d="M77.5 108 Q 82 106.5, 85.5 108" fill="none" stroke="#6E3A1F" stroke-width="1.4" stroke-linecap="round"/>
+    <!-- neck shading -->
+    <path d="M90 118 C 92 124, 94 130, 93 136" fill="none" stroke="#6E3A1F" stroke-opacity="0.5" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- shoulder / drape -->
+    <path d="M92 140 C 104 138, 116 142, 124 152 L 110 154 C 106 148, 98 144, 90 144 Z" fill="#A35C32"/>
+  </g>
+
+  <!-- VI engraving -->
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#F6D4AC" stroke="#4A2412" stroke-width="0.4" filter="url(#relief)">
+    <text x="100" y="169" text-anchor="middle" font-size="17" font-weight="bold" letter-spacing="3">VI</text>
+  </g>
+  <path d="M84 172 H 116" stroke="#F2C79A" stroke-opacity="0.4" stroke-width="1"/>
+
+  <!-- dark glass sheen overlay -->
+  <g>
+    <path d="M100 14 A 86 86 0 0 1 186 100 A 86 86 0 0 1 100 186 A 110 110 0 0 0 100 14 Z" fill="url(#glassSheen)" opacity="0.9"/>
+    <ellipse cx="72" cy="58" rx="34" ry="18" fill="#FFFFFF" opacity="0.12" transform="rotate(-32 72 58)"/>
+  </g>
+
+  <!-- glass rim highlight -->
+  <path d="M40 46 A 86 86 0 0 1 132 15" fill="none" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round"/>
+  <path d="M162 172 A 86 86 0 0 1 120 184" fill="none" stroke="#0A84FF" stroke-opacity="0.35" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- corner technical brackets -->
+  <g stroke="#8E8E93" stroke-width="1.5" fill="none" opacity="0.7">
+    <path d="M8 24 V 8 H 24"/>
+    <path d="M176 8 H 192 V 24"/>
+    <path d="M192 176 V 192 H 176"/>
+    <path d="M24 192 H 8 V 176"/>
+  </g>
+  <g fill="#8E8E93" font-family="'SF Mono', Menlo, monospace" font-size="6" opacity="0.6">
+    <text x="14" y="34">SIXPENCE · VI</text>
+    <text x="186" y="170" text-anchor="end">Ø 21mm</text>
+  </g>
+</svg>

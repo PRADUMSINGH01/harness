@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <!-- Paper surface noise filter -->
+    <filter id="note-grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05 0.05" numOctaves="3" result="noise" seed="31" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.94  0 0 0 0 0.93  0 0 0 0 0.90  0 0 0 0.28 0" in="noise" result="grain" />
+      <feBlend mode="multiply" in="SourceGraphic" in2="grain" />
+    </filter>
+
+    <!-- Deep card shadow filter -->
+    <filter id="note-shadow" x="-8%" y="-5%" width="116%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#070605" flood-opacity="0.28" />
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#070605" flood-opacity="0.14" />
+    </filter>
+
+    <!-- Pattern for faint note grid ruling -->
+    <pattern id="note-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(30, 80, 160, 0.07)" stroke-width="1" />
+    </pattern>
+
+    <!-- Torn top edge sheet path -->
+    <path id="note-sheet-path" d="M 40,80
+      L 70,68 100,85 135,72 170,88 205,65 240,82 280,70 320,86 360,68 400,84 440,70 480,88 520,72 560,86 600,68 640,85 680,72 720,86 760,74
+      L 760,940
+      Q 760,950 750,950
+      L 50,950
+      Q 40,950 40,940
+      Z" />
+  </defs>
+
+  <g filter="url(#note-shadow)">
+    <!-- Main paper body -->
+    <use href="#note-sheet-path" fill="#F8F6F0" />
+    <!-- White paper core torn edge highlight at the top -->
+    <path d="M 40,84 L 70,72 100,89 135,76 170,92 205,69 240,86 280,74 320,90 360,72 400,88 440,74 480,92 520,76 560,90 600,72 640,89 680,76 720,90 760,78 L 760,110 L 40,110 Z" fill="#FFFFFF" opacity="0.85" />
+    <!-- Note grid pattern overlay -->
+    <use href="#note-sheet-path" fill="url(#note-grid)" />
+    <!-- Natural tactile fiber grain -->
+    <use href="#note-sheet-path" fill="#EDEAE2" filter="url(#note-grain)" opacity="0.6" />
+    <!-- Red margin line on left -->
+    <line x1="140" y1="95" x2="140" y2="940" stroke="rgba(220, 60, 60, 0.16)" stroke-width="1.5" />
+  </g>
+</svg>

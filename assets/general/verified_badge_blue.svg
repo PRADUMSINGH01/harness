@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Twitter / Meta style 8-point scalloped verified badge -->
+  <path fill="#1D9BF0" d="M50 0 L61 14 L78 9 L81 27 L98 31 L91 48 L100 63 L86 73 L84 91 L66 89 L55 100 L41 93 L27 100 L21 84 L4 80 L9 63 L0 48 L12 36 L10 18 L28 19 L36 4 Z"/>
+  <path d="M36 50 L46 60 L65 38" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

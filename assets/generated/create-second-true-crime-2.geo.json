@@ -1,0 +1,35 @@
+{
+  "id": "generated_create-second-true-crime-2",
+  "name": "Antwerp Diamond Heist — Forensic Metric Dashboard",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/create-second-true-crime-2.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M100 12 L106 18 L112 12 L118 20 L100 34 L82 20 L88 12 L94 18 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "create",
+    "second",
+    "true",
+    "crime",
+    "forensic",
+    "explainer",
+    "chart",
+    "generated-svg"
+  ]
+}

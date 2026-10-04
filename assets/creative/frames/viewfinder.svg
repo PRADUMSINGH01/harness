@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Camera viewfinder">
+<path d="M80 200 V80 H200 M1720 80 H1840 V200 M1840 880 V1000 H1720 M200 1000 H80 V880" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:square"/>
+<path d="M940 540 H980 M960 520 V560" style="fill:none;stroke:#fff;stroke-width:3;opacity:0.8"/>
+<circle id="rec-dot" cx="140" cy="146" r="16" style="fill:#FF2D2D"/><text x="172" y="160" text-anchor="start" style="font-family:var(--font-mono,'JetBrains Mono',ui-monospace,monospace);font-size:40px;font-weight:700;fill:#fff">REC</text>
+<text id="timecode" x="1840" y="160" text-anchor="end" style="font-family:var(--font-mono,'JetBrains Mono',ui-monospace,monospace);font-size:40px;font-weight:600;fill:#fff">00:00:12:08</text>
+<path d="M1706 950 H1784 A6 6 0 0 1 1790 956 V984 A6 6 0 0 1 1784 990 H1706 A6 6 0 0 1 1700 984 V956 A6 6 0 0 1 1706 950Z M1790 962 h8 v16 h-8" style="fill:none;stroke:#fff;stroke-width:4"/><rect x="1706" y="956" width="56" height="28" rx="3" style="fill:#fff"/>
+<text x="140" y="990" text-anchor="start" style="font-family:var(--font-mono,'JetBrains Mono',ui-monospace,monospace);font-size:32px;font-weight:600;fill:#fff;opacity:0.85">4K · 24fps</text>
+</svg>

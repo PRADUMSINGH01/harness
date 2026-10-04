@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Organic blob 04">
+<defs><linearGradient id="cx-sha-blob-04-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent,#FF5A36);stop-opacity:1"/><stop offset="1" style="stop-color:var(--accent-2,#7B61FF);stop-opacity:1"/></linearGradient></defs>
+<path id="shape" d="M492.9 256 C489.5 294.4 417.4 333.8 383 362.5 C348.6 391.3 325.8 414.8 286.4 428.5 C247.1 442.3 188.9 460.3 146.9 444.9 C105 429.6 50 380.1 34.8 336.5 C19.6 292.9 36.9 227.8 55.7 183.1 C74.5 138.4 107.6 94 147.7 68.4 C187.7 42.7 253.3 18.7 296 29.3 C338.7 39.9 370.9 94.2 403.8 132 C436.6 169.8 496.4 217.6 492.9 256Z" style="fill:var(--accent,#FF5A36)"/>
+</svg>

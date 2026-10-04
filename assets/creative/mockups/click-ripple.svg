@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Click ripple">
+<circle id="ring-1" cx="100" cy="100" r="52" style="fill:none;stroke:var(--accent,#FF5A36);stroke-width:5;opacity:0.8"/><circle id="ring-2" cx="100" cy="100" r="74" style="fill:none;stroke:var(--accent,#FF5A36);stroke-width:4;opacity:0.6"/><circle id="ring-3" cx="100" cy="100" r="96" style="fill:none;stroke:var(--accent,#FF5A36);stroke-width:3;opacity:0.3"/><circle id="dot" cx="100" cy="100" r="16" style="fill:var(--accent,#FF5A36)"/>
+</svg>

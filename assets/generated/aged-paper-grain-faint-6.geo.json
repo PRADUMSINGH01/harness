@@ -1,0 +1,35 @@
+{
+  "id": "generated_aged-paper-grain-faint-6",
+  "name": "aged paper grain and faint archival ink smudge texture",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/aged-paper-grain-faint-6.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M120 110 C 130 96, 152 100, 156 116 C 158 128, 142 134, 132 126 C 124 120, 122 116, 120 110 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "aged",
+    "paper",
+    "grain",
+    "faint",
+    "archival",
+    "ink",
+    "illustration",
+    "generated-svg"
+  ]
+}

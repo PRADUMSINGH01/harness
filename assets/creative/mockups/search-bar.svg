@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 130" width="1000" height="130" role="img" aria-label="Search bar">
+<rect x="5" y="5" width="990" height="120" rx="60" style="fill:var(--ui-panel,#1E2027);stroke:var(--ui-line,#2C2F38);stroke-width:3"/>
+<circle cx="78" cy="61" r="20" style="fill:none;stroke:var(--muted,#8B8F98);stroke-width:5"/><path d="M93 76 L108 91" style="fill:none;stroke:var(--muted,#8B8F98);stroke-width:5;stroke-linecap:round"/>
+<text id="query" x="136" y="78" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:36px;font-weight:400;fill:var(--muted,#8B8F98)">Ask anything…</text>
+<rect id="caret" x="132" y="44" width="3" height="44" style="fill:var(--accent,#FF5A36)"/>
+<rect x="852" y="38" width="104" height="54" rx="14" style="fill:none;stroke:var(--ui-line,#2C2F38);stroke-width:3"/><text x="904" y="75" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:26px;font-weight:600;fill:var(--muted,#8B8F98)">⌘K</text>
+</svg>

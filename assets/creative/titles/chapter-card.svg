@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 340" width="1500" height="340" role="img" aria-label="Chapter card">
+<text id="number" x="0" y="270" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:300px;font-weight:900;fill:none;stroke:var(--accent,#FF5A36);stroke-width:4">02</text>
+<path id="rule" class="draw" pathLength="1" d="M420 60 V280" style="fill:none;stroke:var(--muted,#8B8F98);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 1.05;stroke-dashoffset:0"/>
+<text id="kicker" x="470" y="130" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:34px;font-weight:700;fill:var(--accent,#FF5A36);letter-spacing:6px">CHAPTER TWO</text>
+<text id="title" x="470" y="222" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:76px;font-weight:800;fill:var(--ink,#F5F3EE)">Building the brand kit</text>
+</svg>

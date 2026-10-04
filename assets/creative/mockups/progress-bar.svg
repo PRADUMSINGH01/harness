@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 120" width="1000" height="120" role="img" aria-label="Progress bar">
+<text id="label" x="0" y="34" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:30px;font-weight:600;fill:var(--ink,#F5F3EE)">Rendering</text>
+<text id="percent" x="1000" y="34" text-anchor="end" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:30px;font-weight:700;fill:var(--ink,#F5F3EE)">100%</text>
+<rect id="track" x="0" y="64" width="1000" height="28" rx="14" style="fill:var(--ui-line,#2C2F38)"/>
+<rect id="fill" x="0" y="64" width="1000" height="28" rx="14" style="fill:var(--accent,#FF5A36)"/>
+</svg>

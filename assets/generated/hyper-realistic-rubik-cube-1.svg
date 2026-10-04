@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="topFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B2028"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="leftFace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#171B22"/>
+      <stop offset="1" stop-color="#08090C"/>
+    </linearGradient>
+    <linearGradient id="rightFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14171D"/>
+      <stop offset="1" stop-color="#060709"/>
+    </linearGradient>
+    <linearGradient id="blueHi" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7DD3FC"/>
+      <stop offset="0.5" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#0A84FF"/>
+    </linearGradient>
+    <linearGradient id="blueMid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#0A5BC4"/>
+    </linearGradient>
+    <linearGradient id="blueDeep" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E63D6"/>
+      <stop offset="1" stop-color="#0A2E66"/>
+    </linearGradient>
+    <linearGradient id="whiteHi" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.6" stop-color="#E4E7EC"/>
+      <stop offset="1" stop-color="#AEB4BC"/>
+    </linearGradient>
+    <linearGradient id="whiteMid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D8DBE0"/>
+      <stop offset="1" stop-color="#8E8E93"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.55"/>
+      <stop offset="0.6" stop-color="#0A84FF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="specular" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+    <filter id="edgeGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ambient floor glow -->
+  <ellipse cx="100" cy="176" rx="72" ry="13" fill="url(#glow)"/>
+
+  <g transform="translate(0,14)" filter="url(#softShadow)">
+    <!-- body faces (dark glass metal) -->
+    <polygon points="100,10.4 172,52 100,93.6 28,52" fill="url(#topFace)" stroke="#2A2F38" stroke-width="1"/>
+    <polygon points="28,52 100,93.6 100,153.6 28,112" fill="url(#leftFace)" stroke="#1E232B" stroke-width="1"/>
+    <polygon points="172,52 100,93.6 100,153.6 172,112" fill="url(#rightFace)" stroke="#1A1E25" stroke-width="1"/>
+
+    <!-- ===== TOP FACE (blue metallic) ===== -->
+    <g stroke="#0A0A0A" stroke-width="0.8">
+      <polygon points="100,-7.5 115.5,19.3 100,28.3 84.5,19.3" fill="url(#blueHi)"/>
+      <polygon points="64,13.3 79.5,40.1 64,49.1 48.5,40.1" fill="url(#blueMid)"/>
+      <polygon points="28,34.1 43.5,60.9 28,69.9 12.5,60.9" fill="url(#blueDeep)"/>
+      <polygon points="136,13.3 151.5,40.1 136,49.1 120.5,40.1" fill="url(#blueMid)"/>
+      <polygon points="100,34.1 115.5,60.9 100,69.9 84.5,60.9" fill="url(#blueHi)"/>
+      <polygon points="64,54.9 79.5,81.7 64,90.7 48.5,81.7" fill="url(#blueDeep)"/>
+      <polygon points="172,34.1 187.5,60.9 172,69.9 156.5,60.9" fill="url(#blueDeep)"/>
+      <polygon points="136,54.9 151.5,81.7 136,90.7 120.5,81.7" fill="url(#blueMid)"/>
+      <polygon points="100,75.7 115.5,102.5 100,111.5 84.5,102.5" fill="url(#blueHi)"/>
+    </g>
+    <!-- top specular sweeps -->
+    <g opacity="0.35" fill="url(#specular)">
+      <polygon points="100,-5.5 112,15.5 106,18.5 94,-2.5"/>
+      <polygon points="64,15.5 76,36.5 70,39.5 58,18.5"/>
+      <polygon points="136,15.5 148,36.5 142,39.5 130,18.5"/>
+    </g>
+
+    <!-- ===== LEFT FACE (white/silver metallic) ===== -->
+    <g stroke="#0A0A0A" stroke-width="0.8">
+      <polygon points="34.8,61.2 45.2,73.2 45.2,90.6 34.8,78.6" fill="url(#whiteHi)"/>
+      <polygon points="34.8,81.2 45.2,93.2 45.2,110.6 34.8,98.6" fill="url(#whiteMid)"/>
+      <polygon points="34.8,101.2 45.2,113.2 45.2,130.6 34.8,118.6" fill="url(#whiteHi)"/>
+      <polygon points="58.8,88.9 69.2,100.9 69.2,118.3 58.8,106.3" fill="url(#whiteMid)"/>
+      <polygon points="58.8,108.9 69.2,120.9 69.2,138.3 58.8,126.3" fill="url(#whiteHi)"/>
+      <polygon points="58.8,128.9 69.2,140.9 69.2,158.3 58.8,146.3" fill="url(#whiteMid)"/>
+      <polygon points="82.8,116.6 93.2,128.6 93.2,146 82.8,134" fill="url(#whiteHi)"/>
+      <polygon points="82.8,136.6 93.2,148.6 93.2,166 82.8,154" fill="url(#whiteMid)"/>
+      <polygon points="82.8,156.6 93.2,168.6 93.2,186 82.8,174" fill="url(#whiteHi)"/>
+    </g>
+    <g opacity="0.3" fill="#FFFFFF">
+      <polygon points="36,63 38,62 37,86 35,86"/>
+      <polygon points="60,91 62,90 61,114 59,114"/>
+      <polygon points="84,119 86,118 85,142 83,142"/>
+    </g>
+
+    <!-- ===== RIGHT FACE (deep blue metallic) ===== -->
+    <g stroke="#0A0A0A" stroke-width="0.8">
+      <polygon points="165.2,51.2 154.8,63.2 154.8,80.6 165.2,68.6" fill="url(#blueMid)"/>
+      <polygon points="165.2,71.2 154.8,83.2 154.8,100.6 165.2,88.6" fill="url(#blueDeep)"/>
+      <polygon points="165.2,91.2 154.8,103.2 154.8,120.6 165.2,108.6" fill="url(#blueMid)"/>
+      <polygon points="141.2,78.9 130.8,90.9 130.8,108.3 141.2,96.3" fill="url(#blueDeep)"/>
+      <polygon points="141.2,98.9 130.8,110.9 130.8,128.3 141.2,116.3" fill="url(#blueMid)"/>
+      <polygon points="141.2,118.9 130.8,130.9 130.8,148.3 141.2,136.3" fill="url(#blueDeep)"/>
+      <polygon points="117.2,106.6 106.8,118.6 106.8,136 117.2,124" fill="url(#blueMid)"/>
+      <polygon points="117.2,126.6 106.8,138.6 106.8,156 117.2,144" fill="url(#blueDeep)"/>
+      <polygon points="117.2,146.6 106.8,158.6 106.8,176 117.2,164" fill="url(#blueMid)"/>
+    </g>
+    <g opacity="0.28" fill="url(#specular)">
+      <polygon points="163.8,53 165.6,54 156,81 154.8,79"/>
+      <polygon points="139.8,80.7 141.6,81.7 132,108.7 130.8,106.7"/>
+      <polygon points="115.8,108.4 117.6,109.4 108,136.4 106.8,134.4"/>
+    </g>
+
+    <!-- metallic edge highlights -->
+    <g filter="url(#edgeGlow)">
+      <polyline points="28,52 100,10.4 172,52" fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-opacity="0.85" stroke-linejoin="round"/>
+      <line x1="28" y1="52" x2="28" y2="112" stroke="#C9CDD4" stroke-width="1.1" stroke-opacity="0.6"/>
+      <line x1="172" y1="52" x2="172" y2="112" stroke="#C9CDD4" stroke-width="1.1" stroke-opacity="0.45"/>
+      <line x1="100" y1="93.6" x2="100" y2="153.6" stroke="#FFFFFF" stroke-width="0.9" stroke-opacity="0.35"/>
+    </g>
+
+    <!-- corner sparkles -->
+    <g fill="#FFFFFF">
+      <circle cx="100" cy="10.4" r="1.3" opacity="0.9"/>
+      <circle cx="28" cy="52" r="0.9" opacity="0.6"/>
+      <circle cx="172" cy="52" r="0.9" opacity="0.55"/>
+    </g>
+  </g>
+</svg>

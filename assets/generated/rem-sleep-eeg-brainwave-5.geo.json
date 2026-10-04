@@ -1,0 +1,35 @@
+{
+  "id": "generated_rem-sleep-eeg-brainwave-5",
+  "name": "REM sleep EEG brainwave waveform strip scrolling with spindle bursts",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/rem-sleep-eeg-brainwave-5.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M20 100\n         L24 97 L27 103 L30 99 L34 96 L38 103 L42 100 L46 97 L50 102 L54 99\n         L57 97 L59 94 L61 99 L63 106 L65 100 L67 93 L69 98 L71 107 L73 101 L75 92 L77 97 L79 106 L81 99 L83 93 L85 100 L87 106 L89 98 L91 94 L93 101 L95 99\n         L98 97 L102 103 L106 98 L110 101 L114 96 L118 103 L122 99 L126 97\n         L129 95 L131 91 L133 98 L135 108 L137 100 L139 91 L141 97 L143 108 L145 100 L147 92 L149 98 L151 106 L153 99 L155 94 L157 100 L159 99\n         L163 98 L167 102 L171 97 L175 100 L180 99"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "rem",
+    "sleep",
+    "eeg",
+    "brainwave",
+    "waveform",
+    "strip",
+    "chart",
+    "generated-svg"
+  ]
+}

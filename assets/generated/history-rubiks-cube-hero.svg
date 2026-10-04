@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="topFace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2A2F3A"/>
+      <stop offset="1" stop-color="#141821"/>
+    </linearGradient>
+    <linearGradient id="leftFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#171B24"/>
+      <stop offset="1" stop-color="#0C0F15"/>
+    </linearGradient>
+    <linearGradient id="rightFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1C2230"/>
+      <stop offset="1" stop-color="#0E1219"/>
+    </linearGradient>
+    <linearGradient id="tileBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4DA3FF"/>
+      <stop offset="1" stop-color="#0A84FF"/>
+    </linearGradient>
+    <linearGradient id="tileBlueDim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2C6FD1"/>
+      <stop offset="1" stop-color="#0A5FB8"/>
+    </linearGradient>
+    <radialGradient id="bgGlow" cx="0.5" cy="0.45" r="0.65">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#0A0A0A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="refl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" fill="#0A0A0A"/>
+  <rect width="200" height="200" fill="url(#bgGlow)"/>
+
+  <!-- grid ticks -->
+  <g stroke="#8E8E93" stroke-opacity="0.18" stroke-width="0.6">
+    <line x1="20" y1="188" x2="180" y2="188"/>
+    <line x1="20" y1="12" x2="180" y2="12"/>
+  </g>
+  <g fill="#8E8E93" fill-opacity="0.35" font-family="monospace" font-size="4">
+    <text x="20" y="185">1974</text>
+    <text x="168" y="185">RUBIK</text>
+    <text x="20" y="9">3×3×3</text>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.2" fill="none">
+    <path d="M12 24 V12 H24"/>
+    <path d="M176 12 H188 V24"/>
+    <path d="M188 176 V188 H176"/>
+    <path d="M24 188 H12 V176"/>
+  </g>
+
+  <!-- ground reflection -->
+  <g transform="translate(100,197) scale(1,-0.45) translate(-100,-100)" opacity="0.35">
+    <ellipse cx="100" cy="118" rx="52" ry="14" fill="url(#refl)"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <!-- TOP face (iso diamond): center (100,66); unit u=(15,8.66) -->
+    <g transform="translate(100,42)">
+      <!-- rows of 3 along v=(15,8.66), columns along u=(15,-8.66); start corner at (-45,0) -->
+      <g transform="translate(-45,0)" filter="url(#glow)">
+        <g transform="translate(0,0)">
+          <path d="M0 0 L15 -8.66 L30 0 L15 8.66 Z" fill="url(#tileBlue)"/>
+        </g>
+        <g transform="translate(15,8.66)">
+          <path d="M0 0 L15 -8.66 L30 0 L15 8.66 Z" fill="#141821" stroke="#3A4152" stroke-width="0.5"/>
+        </g>
+        <g transform="translate(30,17.32)">
+          <path d="M0 0 L15 -8.66 L30 0 L15 8.66 Z" fill="#FFFFFF" opacity="0.92"/>
+        </g>
+        <g transform="translate(-15,8.66)">
+          <path d="M0 0 L15 -8.66 L30 0 L15 8.66 Z" fill="#141821" stroke="#3A4152" stroke-width="0.5"/>
+        </g>
+        <g transform="translate(0,17.32)">
+          <path d="M0 0 L15 -8.66 L30 0 L15 8.66 Z" fill="url(#tileBlueDim)"/>
+        </g>
+        <g transform="translate(15,25.98)">
+          <path d="M0 0 L15 -8.66 L30 0 L15 8.66 Z" fill="#141821" stroke="#3A4152" stroke-width="0.5"/>
+        </g>
+        <g transform="translate(-30,17.32)">
+          <path d="M0 0 L15 -8.66 L30 0 L15 8.66 Z" fill="url(#tileBlueDim)"/>
+        </g>
+        <g transform="translate(-15,25.98)">
+          <path d="M0 0 L15 -8.66 L30 0 L15 8.66 Z" fill="#FFFFFF" opacity="0.85"/>
+        </g>
+        <g transform="translate(0,34.64)">
+          <path d="M0 0 L15 -8.66 L30 0 L15 8.66 Z" fill="#141821" stroke="#3A4152" stroke-width="0.5"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- LEFT face: from corner (-45,42) down, rows along u=(15,8.66), depth along v=(0,15) -->
+    <g transform="translate(-45,42)">
+      <g transform="translate(0,0)">
+        <rect x="0" y="0" width="15" height="15" fill="#141821" stroke="#3A4152" stroke-width="0.5" transform="skewY(30)"/>
+      </g>
+      <g transform="translate(15,8.66)"><rect x="0" y="0" width="15" height="15" fill="url(#tileBlueDim)" transform="skewY(30)"/></g>
+      <g transform="translate(30,17.32)"><rect x="0" y="0" width="15" height="15" fill="#141821" stroke="#3A4152" stroke-width="0.5" transform="skewY(30)"/></g>
+      <g transform="translate(0,15)"><rect x="0" y="0" width="15" height="15" fill="url(#tileBlue)" transform="skewY(30)"/></g>
+      <g transform="translate(15,23.66)"><rect x="0" y="0" width="15" height="15" fill="#141821" stroke="#3A4152" stroke-width="0.5" transform="skewY(30)"/></g>
+      <g transform="translate(30,32.32)"><rect x="0" y="0" width="15" height="15" fill="#FFFFFF" opacity="0.88" transform="skewY(30)"/></g>
+      <g transform="translate(0,30)"><rect x="0" y="0" width="15" height="15" fill="#141821" stroke="#3A4152" stroke-width="0.5" transform="skewY(30)"/></g>
+      <g transform="translate(15,38.66)"><rect x="0" y="0" width="15" height="15" fill="url(#tileBlueDim)" transform="skewY(30)"/></g>
+      <g transform="translate(30,47.32)"><rect x="0" y="0" width="15" height="15" fill="url(#tileBlue)" transform="skewY(30)"/></g>
+    </g>
+
+    <!-- RIGHT face: from corner (45,42), skewed -30° -->
+    <g transform="translate(45,42)">
+      <g transform="translate(0,0)"><rect x="0" y="0" width="15" height="15" fill="url(#tileBlue)" transform="skewY(-30)"/></g>
+      <g transform="translate(15,-8.66)"><rect x="0" y="0" width="15" height="15" fill="#141821" stroke="#3A4152" stroke-width="0.5" transform="skewY(-30)"/></g>
+      <g transform="translate(30,-17.32)"><rect x="0" y="0" width="15" height="15" fill="url(#tileBlueDim)" transform="skewY(-30)"/></g>
+      <g transform="translate(0,15)"><rect x="0" y="0" width="15" height="15" fill="#FFFFFF" opacity="0.88" transform="skewY(-30)"/></g>
+      <g transform="translate(15,6.34)"><rect x="0" y="0" width="15" height="15" fill="url(#tileBlueDim)" transform="skewY(-30)"/></g>
+      <g transform="translate(30,-2.32)"><rect x="0" y="0" width="15" height="15" fill="#141821" stroke="#3A4152" stroke-width="0.5" transform="skewY(-30)"/></g>
+      <g transform="translate(0,30)"><rect x="0" y="0" width="15" height="15" fill="#141821" stroke="#3A4152" stroke-width="0.5" transform="skewY(-30)"/></g>
+      <g transform="translate(15,21.34)"><rect x="0" y="0" width="15" height="15" fill="url(#tileBlue)" transform="skewY(-30)"/></g>
+      <g transform="translate(30,12.68)"><rect x="0" y="0" width="15" height="15" fill="#FFFFFF" opacity="0.8" transform="skewY(-30)"/></g>
+    </g>
+
+    <!-- face outlines / edge highlights -->
+    <g fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="0.8">
+      <path d="M55 42 L100 16 L145 42 L100 68 Z"/>
+      <path d="M55 42 L55 132 L100 158 L100 68"/>
+      <path d="M145 42 L145 132 L100 158"/>
+    </g>
+  </g>
+
+  <!-- orbit ring accent -->
+  <g fill="none">
+    <ellipse cx="100" cy="90" rx="86" ry="30" stroke="#0A84FF" stroke-opacity="0.25" stroke-width="0.8" stroke-dasharray="3 5"/>
+    <circle cx="186" cy="90" r="2.4" fill="#0A84FF" filter="url(#glow)"/>
+    <circle cx="14" cy="90" r="1.6" fill="#FFFFFF" opacity="0.7"/>
+  </g>
+
+  <!-- caption -->
+  <text x="100" y="178" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" letter-spacing="3" fill="#FFFFFF" fill-opacity="0.85" font-weight="600">THE CUBE</text>
+  <text x="100" y="170" text-anchor="middle" font-family="monospace" font-size="4.5" letter-spacing="2" fill="#0A84FF">EST. 1974 — BUDAPEST</text>
+</svg>

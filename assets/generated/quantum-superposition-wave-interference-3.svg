@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glass" cx="50%" cy="42%" r="70%">
+      <stop offset="0%" stop-color="#14181f"/>
+      <stop offset="60%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <radialGradient id="srcGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#0A84FF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="waveGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A84FF"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#0A84FF"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" rx="22" fill="url(#glass)"/>
+  <rect x="0.5" y="0.5" width="199" height="199" rx="21.5" fill="none" stroke="#8E8E93" stroke-opacity="0.25"/>
+
+  <!-- ring wavefronts from source A (60,78) and source B (140,78) -->
+  <g fill="none" stroke="#0A84FF">
+    <g opacity="0.55">
+      <circle cx="60" cy="78" r="14" stroke-opacity="0.7"/>
+      <circle cx="60" cy="78" r="26" stroke-opacity="0.55"/>
+      <circle cx="60" cy="78" r="38" stroke-opacity="0.4"/>
+      <circle cx="60" cy="78" r="50" stroke-opacity="0.3"/>
+      <circle cx="60" cy="78" r="62" stroke-opacity="0.22"/>
+      <circle cx="60" cy="78" r="74" stroke-opacity="0.15"/>
+      <circle cx="60" cy="78" r="86" stroke-opacity="0.1"/>
+    </g>
+    <g opacity="0.55">
+      <circle cx="140" cy="78" r="14" stroke-opacity="0.7"/>
+      <circle cx="140" cy="78" r="26" stroke-opacity="0.55"/>
+      <circle cx="140" cy="78" r="38" stroke-opacity="0.4"/>
+      <circle cx="140" cy="78" r="50" stroke-opacity="0.3"/>
+      <circle cx="140" cy="78" r="62" stroke-opacity="0.22"/>
+      <circle cx="140" cy="78" r="74" stroke-opacity="0.15"/>
+      <circle cx="140" cy="78" r="86" stroke-opacity="0.1"/>
+    </g>
+  </g>
+
+  <!-- interference nodes: crosshair markers at constructive points -->
+  <g stroke="#8E8E93" stroke-opacity="0.6" stroke-width="1">
+    <g transform="translate(100,120)"><path d="M-4 0H4M0 -4V4"/></g>
+    <g transform="translate(100,42)"><path d="M-4 0H4M0 -4V4"/></g>
+    <g transform="translate(58,132)"><path d="M-3 0H3M0 -3V3"/></g>
+    <g transform="translate(142,132)"><path d="M-3 0H3M0 -3V3"/></g>
+    <g transform="translate(30,78)"><path d="M-3 0H3M0 -3V3"/></g>
+    <g transform="translate(170,78)"><path d="M-3 0H3M0 -3V3"/></g>
+  </g>
+
+  <!-- resultant superposition waveform -->
+  <g filter="url(#glow)">
+    <path d="M12 78 C20 50,28 50,36 78 C44 106,52 106,60 78 C68 42,76 42,84 78 C92 114,100 114,108 78 C116 42,124 42,132 78 C140 106,148 106,156 78 C164 50,172 50,188 78"
+          fill="none" stroke="url(#waveGrad)" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- sources -->
+  <circle cx="60" cy="78" r="8" fill="url(#srcGlow)"/>
+  <circle cx="140" cy="78" r="8" fill="url(#srcGlow)"/>
+  <circle cx="60" cy="78" r="2.6" fill="#FFFFFF"/>
+  <circle cx="140" cy="78" r="2.6" fill="#FFFFFF"/>
+
+  <!-- axis baseline -->
+  <line x1="12" y1="78" x2="188" y2="78" stroke="#8E8E93" stroke-opacity="0.3" stroke-width="0.6" stroke-dasharray="3 3"/>
+
+  <!-- corner brackets -->
+  <g stroke="#8E8E93" stroke-opacity="0.5" stroke-width="1.2" fill="none">
+    <path d="M10 20V12H18"/><path d="M182 12H190V20"/>
+    <path d="M190 180V188H182"/><path d="M18 188H10V180"/>
+  </g>
+
+  <!-- label -->
+  <text x="100" y="176" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="8" letter-spacing="2.5" fill="#8E8E93">|ψ⟩ = |A⟩ + |B⟩</text>
+</svg>

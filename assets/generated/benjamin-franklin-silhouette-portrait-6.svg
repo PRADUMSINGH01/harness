@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="copper" cx="0.38" cy="0.32" r="0.95">
+      <stop offset="0" stop-color="#F0B27A"/>
+      <stop offset="0.35" stop-color="#C97B3C"/>
+      <stop offset="0.7" stop-color="#8A4E22"/>
+      <stop offset="1" stop-color="#4A2A12"/>
+    </radialGradient>
+    <radialGradient id="glassDark" cx="0.5" cy="0.4" r="0.8">
+      <stop offset="0" stop-color="#1C1F26"/>
+      <stop offset="0.75" stop-color="#0A0A0A"/>
+      <stop offset="1" stop-color="#030304"/>
+    </radialGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+      <stop offset="0.45" stop-color="#FFFFFF" stop-opacity="0.04"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD9A8"/>
+      <stop offset="0.5" stop-color="#A05A2C"/>
+      <stop offset="1" stop-color="#3A2010"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+    <clipPath id="medalClip">
+      <circle cx="100" cy="100" r="82"/>
+    </clipPath>
+  </defs>
+
+  <!-- copper medallion body -->
+  <circle cx="100" cy="100" r="92" fill="url(#copper)"/>
+  <circle cx="100" cy="100" r="92" fill="none" stroke="url(#rim)" stroke-width="1.5"/>
+  <!-- inner rim rings -->
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#FFD9A8" stroke-opacity="0.55" stroke-width="1"/>
+  <circle cx="100" cy="100" r="82" fill="url(#glassDark)"/>
+
+  <g clip-path="url(#medalClip)">
+    <!-- radiating hatch rays -->
+    <g stroke="#8E8E93" stroke-opacity="0.12" stroke-width="1.2">
+      <g transform="rotate(0 100 100)">
+        <line x1="100" y1="22" x2="100" y2="178"/>
+        <line x1="100" y1="22" x2="100" y2="178" transform="rotate(15 100 100)"/>
+        <line x1="100" y1="22" x2="100" y2="178" transform="rotate(30 100 100)"/>
+        <line x1="100" y1="22" x2="100" y2="178" transform="rotate(45 100 100)"/>
+        <line x1="100" y1="22" x2="100" y2="178" transform="rotate(60 100 100)"/>
+        <line x1="100" y1="22" x2="100" y2="178" transform="rotate(75 100 100)"/>
+        <line x1="100" y1="22" x2="100" y2="178" transform="rotate(90 100 100)"/>
+      </g>
+    </g>
+
+    <!-- Franklin silhouette -->
+    <g fill="#0A0A0A">
+      <!-- hair / head mass -->
+      <path d="M100 42
+               C82 42 72 54 71 68
+               C70 74 70 80 68 86
+               C66 94 63 100 63 108
+               C63 118 68 124 74 127
+               C72 136 66 144 56 152
+               C44 160 32 166 24 172
+               L24 200 L176 200 L176 172
+               C168 166 156 160 144 152
+               C134 144 128 136 126 127
+               C132 124 137 118 137 108
+               C137 100 134 94 132 86
+               C130 80 130 74 129 68
+               C128 54 118 42 100 42 Z"/>
+      <!-- subtle highlight ridge on hair (dark glass top-light) -->
+      <path d="M100 42 C86 42 77 51 73 62 C80 52 89 47 100 47 C111 47 120 52 127 62 C123 51 114 42 100 42 Z" fill="#1A1D24"/>
+    </g>
+
+    <!-- blue accent edge glow on silhouette -->
+    <path d="M74 127 C72 136 66 144 56 152 C44 160 32 166 24 172 L24 178 C34 171 48 165 60 156 C72 147 79 137 80 126 Z"
+          fill="#0A84FF" opacity="0.55" filter="url(#glow)"/>
+
+    <!-- cravat hint highlight -->
+    <path d="M88 130 L100 146 L112 130 L100 138 Z" fill="#8E8E93" opacity="0.35"/>
+
+    <!-- glass sheen -->
+    <path d="M42 46 A82 82 0 0 1 132 24 L110 78 A52 52 0 0 0 66 96 Z" fill="url(#sheen)"/>
+  </g>
+
+  <!-- outer edge sheen on copper rim -->
+  <path d="M22 60 A92 92 0 0 1 140 12 L134 30 A74 74 0 0 0 36 74 Z" fill="url(#sheen)" opacity="0.6"/>
+
+  <!-- technical corner brackets -->
+  <g stroke="#0A84FF" stroke-opacity="0.8" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <path d="M14 30 L14 14 L30 14"/>
+    <path d="M170 14 L186 14 L186 30"/>
+    <path d="M186 170 L186 186 L170 186"/>
+    <path d="M30 186 L14 186 L14 170"/>
+  </g>
+</svg>

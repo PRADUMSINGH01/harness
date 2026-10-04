@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2A2A30"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="drawerG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1C1C22"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="display" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#005BB8"/>
+    </linearGradient>
+    <radialGradient id="coinG" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.55" stop-color="#E8E8EC"/>
+      <stop offset="1" stop-color="#8E8E93"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <!-- coin pop arc -->
+  <g opacity="0.5" stroke="#8E8E93" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="1 6">
+    <path d="M112 78 Q118 58 130 50"/>
+  </g>
+
+  <!-- coin -->
+  <g filter="url(#shadow)">
+    <circle cx="134" cy="42" r="14" fill="url(#coinG)"/>
+    <circle cx="134" cy="42" r="10" fill="none" stroke="#0A0A0A" stroke-opacity="0.35" stroke-width="1.5"/>
+    <path d="M134 35 v14 M130 39 h8" stroke="#0A0A0A" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- paper roll -->
+  <g filter="url(#shadow)">
+    <rect x="66" y="46" width="24" height="26" rx="4" fill="#FFFFFF"/>
+    <rect x="70" y="52" width="16" height="3" rx="1.5" fill="#8E8E93" opacity="0.7"/>
+    <rect x="70" y="59" width="12" height="3" rx="1.5" fill="#8E8E93" opacity="0.5"/>
+    <rect x="64" y="42" width="28" height="8" rx="4" fill="#0A0A0A" stroke="#8E8E93" stroke-width="1.5"/>
+  </g>
+
+  <!-- register body -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="70" width="120" height="72" rx="12" fill="url(#body)" stroke="#8E8E93" stroke-opacity="0.55" stroke-width="1.5"/>
+  </g>
+
+  <!-- display -->
+  <rect x="52" y="80" width="62" height="18" rx="5" fill="url(#display)" filter="url(#glow)"/>
+  <text x="83" y="93" font-family="'SF Mono', 'Courier New', monospace" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle" opacity="0.95">12.50</text>
+
+  <!-- keys -->
+  <g fill="#FFFFFF">
+    <rect x="122" y="80" width="11" height="7" rx="2" opacity="0.85"/>
+    <rect x="137" y="80" width="11" height="7" rx="2" opacity="0.85"/>
+    <rect x="122" y="91" width="11" height="7" rx="2" opacity="0.6"/>
+    <rect x="137" y="91" width="11" height="7" rx="2" fill="#0A84FF"/>
+  </g>
+  <g fill="#FFFFFF">
+    <rect x="52" y="106" width="13" height="10" rx="2.5" opacity="0.7"/>
+    <rect x="70" y="106" width="13" height="10" rx="2.5" opacity="0.7"/>
+    <rect x="88" y="106" width="13" height="10" rx="2.5" opacity="0.7"/>
+    <rect x="106" y="106" width="13" height="10" rx="2.5" opacity="0.7"/>
+    <rect x="124" y="106" width="24" height="10" rx="2.5" fill="#0A84FF" fill-opacity="0.9"/>
+  </g>
+
+  <!-- drawer slot -->
+  <rect x="36" y="140" width="128" height="6" rx="3" fill="#8E8E93" opacity="0.4"/>
+
+  <!-- drawer (popped out) -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="146" width="102" height="24" rx="6" fill="url(#drawerG)" stroke="#8E8E93" stroke-opacity="0.6" stroke-width="1.5"/>
+    <rect x="38" y="154" width="86" height="4" rx="2" fill="#0A84FF" opacity="0.85"/>
+    <circle cx="36" cy="158" r="3.5" fill="#8E8E93"/>
+    <circle cx="126" cy="158" r="3.5" fill="#8E8E93"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#8E8E93" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M22 24 v-8 h8"/>
+    <path d="M178 24 v-8 h-8"/>
+    <path d="M22 176 v8 h8"/>
+    <path d="M178 176 v8 h-8"/>
+  </g>
+</svg>

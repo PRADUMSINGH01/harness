@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c2440" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#0b1024" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="edgeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6ee7ff" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#7c5cff" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#6ee7ff" stop-opacity="0.35"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8be9ff" stop-opacity="0.9"/>
+      <stop offset="0.6" stop-color="#7c5cff" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="ringBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+  </defs>
+
+  <!-- Settling-out ripple rings (decreasing offsets convey easing into rest) -->
+  <circle cx="120" cy="120" r="98" fill="none" stroke="#6ee7ff" stroke-opacity="0.18" stroke-width="1.5" filter="url(#ringBlur)"/>
+  <circle cx="120" cy="120" r="82" fill="none" stroke="#7c5cff" stroke-opacity="0.28" stroke-width="1.8" stroke-dasharray="4 7"/>
+  <circle cx="120" cy="120" r="66" fill="none" stroke="#6ee7ff" stroke-opacity="0.4" stroke-width="1.6"/>
+
+  <!-- Center core glow -->
+  <circle cx="120" cy="120" r="58" fill="url(#coreGlow)"/>
+
+  <!-- Glassmorphic card at rest -->
+  <g filter="url(#softGlow)">
+    <rect x="72" y="86" width="96" height="68" rx="14" fill="url(#cardGrad)" stroke="url(#edgeGrad)" stroke-width="1.5"/>
+    <rect x="72" y="86" width="96" height="68" rx="14" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.75"/>
+  </g>
+  <rect x="82" y="102" width="46" height="6" rx="3" fill="#8be9ff" fill-opacity="0.85"/>
+  <rect x="82" y="116" width="72" height="4" rx="2" fill="#ffffff" fill-opacity="0.35"/>
+  <rect x="82" y="126" width="60" height="4" rx="2" fill="#ffffff" fill-opacity="0.25"/>
+  <rect x="82" y="138" width="28" height="8" rx="4" fill="#7c5cff" fill-opacity="0.9"/>
+
+  <!-- Converged energy nodes on settle radius -->
+  <g filter="url(#softGlow)">
+    <circle cx="120" cy="22" r="4.5" fill="#8be9ff"/>
+    <circle cx="215" cy="120" r="4" fill="#7c5cff"/>
+    <circle cx="120" cy="218" r="3.5" fill="#8be9ff"/>
+    <circle cx="25" cy="120" r="3" fill="#7c5cff"/>
+    <circle cx="188" cy="52" r="2.5" fill="#8be9ff" fill-opacity="0.8"/>
+    <circle cx="52" cy="188" r="2.5" fill="#8be9ff" fill-opacity="0.8"/>
+  </g>
+
+  <!-- Corner settle ticks -->
+  <g stroke="#6ee7ff" stroke-opacity="0.6" stroke-width="2" stroke-linecap="round">
+    <path d="M38 46 L46 46 M38 46 L38 54"/>
+    <path d="M202 46 L194 46 M202 46 L202 54"/>
+    <path d="M38 194 L46 194 M38 194 L38 186"/>
+    <path d="M202 194 L194 194 M202 194 L202 186"/>
+  </g>
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0A0A0A"/>
+      <stop offset="70%" stop-color="#0A0A0A"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+    <linearGradient id="strandA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0A84FF"/>
+      <stop offset="50%" stop-color="#7FC4FF"/>
+      <stop offset="100%" stop-color="#0A84FF"/>
+    </linearGradient>
+    <linearGradient id="strandB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8E8E93"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#8E8E93"/>
+    </linearGradient>
+    <linearGradient id="rungGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0A84FF"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#0A84FF"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" fill="url(#bgGlow)"/>
+
+  <!-- ambient helix glow -->
+  <g filter="url(#softGlow)" opacity="0.35">
+    <path d="M70 20 C 130 45, 130 65, 70 90 C 10 115, 10 135, 70 160 C 110 176, 130 182, 130 190" fill="none" stroke="#0A84FF" stroke-width="8" stroke-linecap="round"/>
+    <path d="M130 20 C 70 45, 70 65, 130 90 C 190 115, 190 135, 130 160 C 90 176, 70 182, 70 190" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <!-- base pairs (rungs), back layer (dim) -->
+  <g stroke="url(#rungGrad)" stroke-width="3" stroke-linecap="round" opacity="0.30">
+    <line x1="70" y1="35" x2="130" y2="25"/>
+    <line x1="88" y1="77" x2="112" y2="82"/>
+    <line x1="70" y1="115" x2="130" y2="105"/>
+    <line x1="70" y1="165" x2="130" y2="155"/>
+  </g>
+
+  <!-- helix strands -->
+  <path d="M70 10 C 130 35, 130 55, 70 80 C 10 105, 10 125, 70 150 C 110 166, 130 174, 130 192"
+        fill="none" stroke="url(#strandA)" stroke-width="6" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M130 10 C 70 35, 70 55, 130 80 C 190 105, 190 125, 130 150 C 90 166, 70 174, 70 192"
+        fill="none" stroke="url(#strandB)" stroke-width="6" stroke-linecap="round" filter="url(#glow)" opacity="0.9"/>
+
+  <!-- base pairs, front layer (bright) -->
+  <g stroke="url(#rungGrad)" stroke-width="3" stroke-linecap="round" filter="url(#glow)">
+    <line x1="130" y1="30" x2="70" y2="40"/>
+    <line x1="70" y1="70" x2="130" y2="60"/>
+    <line x1="130" y1="100" x2="70" y2="110"/>
+    <line x1="88" y1="140" x2="112" y2="145"/>
+    <line x1="130" y1="180" x2="70" y2="170"/>
+  </g>
+
+  <!-- nucleotide node accents on crossings -->
+  <g fill="#FFFFFF">
+    <circle cx="130" cy="30" r="3.5" filter="url(#glow)"/>
+    <circle cx="70" cy="40" r="3.5" fill="#0A84FF" filter="url(#glow)"/>
+    <circle cx="70" cy="70" r="3.5" filter="url(#glow)"/>
+    <circle cx="130" cy="60" r="3.5" fill="#0A84FF" filter="url(#glow)"/>
+    <circle cx="70" cy="110" r="3.5" fill="#0A84FF" filter="url(#glow)"/>
+    <circle cx="130" cy="100" r="3.5" filter="url(#glow)"/>
+    <circle cx="70" cy="170" r="3.5" fill="#0A84FF" filter="url(#glow)"/>
+    <circle cx="130" cy="180" r="3.5" filter="url(#glow)"/>
+  </g>
+
+  <!-- micro technical accents -->
+  <g stroke="#8E8E93" stroke-width="1" opacity="0.55" fill="none">
+    <path d="M12 12 h10 M12 12 v10"/>
+    <path d="M188 188 h-10 M188 188 v-10"/>
+    <path d="M188 12 h-10 M188 12 v10"/>
+    <path d="M12 188 h10 M12 188 v-10"/>
+  </g>
+  <g font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="5" fill="#8E8E93" opacity="0.7">
+    <text x="24" y="14">SEQ-5&#8242;&#8594;3&#8242;</text>
+    <text x="150" y="191">3.4 nm</text>
+  </g>
+</svg>

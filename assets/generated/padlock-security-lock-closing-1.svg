@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bodyGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2A2F3A"/>
+      <stop offset="0.5" stop-color="#161A22"/>
+      <stop offset="1" stop-color="#0A0D14"/>
+    </linearGradient>
+    <linearGradient id="shackleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#8E8E93"/>
+    </linearGradient>
+    <linearGradient id="traceGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <radialGradient id="safeGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#34D399" stop-opacity="0.55"/>
+      <stop offset="0.6" stop-color="#10B981" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- green safe-state halo -->
+  <circle cx="100" cy="102" r="72" fill="url(#safeGlow)"/>
+
+  <!-- circuit traces -->
+  <g fill="none" stroke="url(#traceGrad)" stroke-width="2.5" stroke-linecap="round" filter="url(#glow)">
+    <path d="M100 30 V44"/>
+    <path d="M100 30 h24 v12"/>
+    <path d="M100 30 h-24 v12"/>
+    <path d="M100 174 v-14"/>
+    <path d="M100 174 h26 v-12"/>
+    <path d="M100 174 h-26 v-12"/>
+    <path d="M28 102 h14"/>
+    <path d="M28 102 v-16"/>
+    <path d="M172 102 h-14"/>
+    <path d="M172 102 v16"/>
+  </g>
+  <!-- circuit node pads -->
+  <g fill="#0A84FF" filter="url(#glow)">
+    <circle cx="100" cy="28" r="4"/>
+    <circle cx="124" cy="30" r="3"/>
+    <circle cx="76" cy="30" r="3"/>
+    <circle cx="100" cy="176" r="4"/>
+    <circle cx="126" cy="174" r="3"/>
+    <circle cx="74" cy="174" r="3"/>
+    <circle cx="26" cy="102" r="4"/>
+    <circle cx="26" cy="86" r="3"/>
+    <circle cx="174" cy="102" r="4"/>
+    <circle cx="174" cy="118" r="3"/>
+  </g>
+
+  <!-- node ring (blue) -->
+  <circle cx="100" cy="102" r="52" fill="none" stroke="#0A84FF" stroke-width="1.5" stroke-opacity="0.35" stroke-dasharray="4 6"/>
+
+  <!-- safe-state ring (green) -->
+  <g filter="url(#glow)">
+    <circle cx="100" cy="102" r="60" fill="none" stroke="#34D399" stroke-width="3" stroke-linecap="round" stroke-dasharray="300 78" transform="rotate(-90 100 102)"/>
+  </g>
+
+  <!-- padlock body: dark glass -->
+  <g filter="url(#softShadow)">
+    <rect x="64" y="86" width="72" height="56" rx="14" fill="url(#bodyGlass)" stroke="#8E8E93" stroke-opacity="0.5" stroke-width="1.5"/>
+    <rect x="68" y="90" width="64" height="24" rx="10" fill="#FFFFFF" opacity="0.06"/>
+  </g>
+
+  <!-- shackle (closed) -->
+  <path d="M78 86 V66 a22 22 0 0 1 44 0 V86" fill="none" stroke="url(#shackleGrad)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M78 86 V66 a22 22 0 0 1 44 0 V86" fill="none" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 5" stroke-opacity="0.35"/>
+
+  <!-- keyhole / lock core: green safe state -->
+  <circle cx="100" cy="108" r="8" fill="#34D399" filter="url(#glow)"/>
+  <rect x="97" y="112" width="6" height="14" rx="3" fill="#34D399" filter="url(#glow)"/>
+
+  <!-- micro corner brackets -->
+  <g stroke="#8E8E93" stroke-width="1.5" fill="none" opacity="0.55" stroke-linecap="round">
+    <path d="M22 14 h10 M22 14 v10"/>
+    <path d="M178 14 h-10 M178 14 v10"/>
+    <path d="M22 186 h10 M22 186 v-10"/>
+    <path d="M178 186 h-10 M178 186 v-10"/>
+  </g>
+
+  <!-- status tick marks -->
+  <g stroke="#34D399" stroke-width="2" stroke-linecap="round" opacity="0.9" filter="url(#glow)">
+    <path d="M118 106 l4 4 l8 -9"/>
+  </g>
+</svg>

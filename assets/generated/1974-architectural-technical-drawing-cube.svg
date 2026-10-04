@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14161c"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" rx="8" fill="url(#glass)"/>
+  <rect x="0.5" y="0.5" width="199" height="199" rx="8" fill="none" stroke="#8E8E93" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- faint drafting grid -->
+  <g stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="0.5">
+    <path d="M20 0V200 M40 0V200 M60 0V200 M80 0V200 M100 0V200 M120 0V200 M140 0V200 M160 0V200 M180 0V200"/>
+    <path d="M0 20H200 M0 40H200 M0 60H200 M0 80H200 M0 100H200 M0 120H200 M0 140H200 M0 160H200 M0 180H200"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-width="1.2" fill="none" stroke-opacity="0.9">
+    <path d="M8 16V8H16 M184 8H192V16 M192 184V192H184 M16 192H8V184"/>
+  </g>
+
+  <!-- crosshair -->
+  <g stroke="#0A84FF" stroke-opacity="0.5" stroke-width="0.6" stroke-dasharray="2 2">
+    <path d="M100 34V152 M40 96H160"/>
+    <circle cx="100" cy="96" r="34"/>
+  </g>
+
+  <!-- CUBE: isometric, top center (100,56), size ~40 -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- visible edges -->
+    <g fill="#0A84FF" fill-opacity="0.06" stroke="#FFFFFF" stroke-width="1.6" filter="url(#glow)">
+      <path d="M100 48 L144 72 L100 96 L56 72 Z"/>   <!-- top -->
+      <path d="M56 72 L56 124 L100 148 L100 96 Z" fill="#FFFFFF" fill-opacity="0.02"/> <!-- left -->
+      <path d="M144 72 L144 124 L100 148 L100 96 Z" fill="#0A0A0A" fill-opacity="0.4"/> <!-- right -->
+    </g>
+    <!-- hidden edges -->
+    <g stroke="#8E8E93" stroke-width="1" stroke-dasharray="3 3" fill="none">
+      <path d="M56 124 L144 72 M56 124 L100 100 M100 100 L144 124"/>
+      <path d="M144 72 L144 124 M56 124 L144 124 M100 100 L100 148"/>
+    </g>
+    <!-- vertex nodes -->
+    <g fill="#0A84FF" stroke="none">
+      <circle cx="100" cy="48" r="2.2"/>
+      <circle cx="144" cy="72" r="2.2"/>
+      <circle cx="56" cy="72" r="2.2"/>
+      <circle cx="100" cy="148" r="2.2"/>
+      <circle cx="100" cy="96" r="1.8"/>
+    </g>
+    <g fill="#8E8E93">
+      <circle cx="100" cy="100" r="1.6"/>
+      <circle cx="144" cy="124" r="1.6"/>
+      <circle cx="56" cy="124" r="1.6"/>
+    </g>
+  </g>
+
+  <!-- dimension line: bottom edge -->
+  <g stroke="#0A84FF" stroke-width="0.8">
+    <path d="M56 160 H144" />
+    <path d="M56 156V164 M144 156V164"/>
+  </g>
+  <text x="100" y="157" font-family="'SF Mono', Menlo, monospace" font-size="6" fill="#0A84FF" text-anchor="middle" letter-spacing="1">40.00</text>
+
+  <!-- leader label -->
+  <g stroke="#8E8E93" stroke-width="0.7" fill="none">
+    <path d="M122 60 L152 44 H172"/>
+    <circle cx="122" cy="60" r="1.4" fill="#8E8E93" stroke="none"/>
+  </g>
+  <text x="150" y="41" font-family="'SF Mono', Menlo, monospace" font-size="5.5" fill="#8E8E93" letter-spacing="0.5">ISO-3V</text>
+
+  <!-- title block -->
+  <g>
+    <line x1="16" y1="182" x2="184" y2="182" stroke="#8E8E93" stroke-opacity="0.4" stroke-width="0.7"/>
+    <text x="16" y="174" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="7" fill="#FFFFFF" letter-spacing="2">CUBE — AXONOMETRIC</text>
+    <text x="16" y="191" font-family="'SF Mono', Menlo, monospace" font-size="5" fill="#8E8E93" letter-spacing="1">DWG NO. 74-119 · SCALE 1:1 · REV A</text>
+    <circle cx="176" cy="172" r="5" fill="none" stroke="#0A84FF" stroke-width="0.8"/>
+    <path d="M173 172 L176 175 L179 169" stroke="#0A84FF" stroke-width="0.9" fill="none"/>
+  </g>
+</svg>

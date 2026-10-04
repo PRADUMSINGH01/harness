@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" role="img" aria-label="Terminal window">
+<path d="M18 0 H1182 A18 18 0 0 1 1200 18 V682 A18 18 0 0 1 1182 700 H18 A18 18 0 0 1 0 682 V18 A18 18 0 0 1 18 0Z" style="fill:var(--term-bg,#0E1014)"/>
+<path d="M0 18 A18 18 0 0 1 18 0 H1182 A18 18 0 0 1 1200 18 V56 H0Z" style="fill:var(--ui-chrome,#1D1F26)"/>
+<circle cx="32" cy="28" r="9" style="fill:#FF5F57"/><circle cx="62" cy="28" r="9" style="fill:#FEBC2E"/><circle cx="92" cy="28" r="9" style="fill:#28C840"/>
+<text x="600" y="37" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:20px;font-weight:500;fill:var(--muted,#8B8F98)">zsh</text>
+<text id="line-1" x="40" y="130" text-anchor="start" style="font-family:var(--font-mono,'JetBrains Mono',ui-monospace,monospace);font-size:30px;font-weight:500;fill:var(--ink,#F5F3EE)">$ npm run build</text>
+<text id="line-2" x="40" y="186" text-anchor="start" style="font-family:var(--font-mono,'JetBrains Mono',ui-monospace,monospace);font-size:30px;font-weight:400;fill:var(--muted,#8B8F98)">&gt; compiling 128 modules</text>
+<text id="line-3" x="40" y="242" text-anchor="start" style="font-family:var(--font-mono,'JetBrains Mono',ui-monospace,monospace);font-size:30px;font-weight:500;fill:var(--accent-3,#18C29C)">✓ built in 1.2s</text>
+<text id="line-4" x="40" y="298" text-anchor="start" style="font-family:var(--font-mono,'JetBrains Mono',ui-monospace,monospace);font-size:30px;font-weight:500;fill:var(--ink,#F5F3EE)">$</text>
+<rect id="caret" x="66" y="274" width="16" height="32" style="fill:var(--ink,#F5F3EE)"/>
+</svg>

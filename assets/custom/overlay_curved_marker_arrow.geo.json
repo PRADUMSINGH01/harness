@@ -1,0 +1,29 @@
+{
+  "id": "custom_overlay_curved_marker_arrow",
+  "name": "curved black and white hand drawn kinetic marker arrow for mobile shorts",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/custom/overlay_curved_marker_arrow.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M 118 40 L 156 52 L 140 88 L 128 70 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "overlay",
+    "generated-svg"
+  ]
+}

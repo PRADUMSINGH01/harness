@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wedgeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#ffd54a"/>
+      <stop offset="1" stop-color="#ff7a00"/>
+    </linearGradient>
+    <radialGradient id="flashGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="0.4" stop-color="#ffe97a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ff9800" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="slashGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#ffcf3d" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ambient burst halo -->
+  <circle cx="120" cy="120" r="105" fill="url(#flashGrad)"/>
+
+  <!-- radiating speed lines -->
+  <g stroke="#ffffff" stroke-linecap="round" filter="url(#glow)">
+    <line x1="18" y1="120" x2="62" y2="120" stroke-width="5"/>
+    <line x1="178" y1="120" x2="222" y2="120" stroke-width="5"/>
+    <line x1="120" y1="18" x2="120" y2="62" stroke-width="5"/>
+    <line x1="120" y1="178" x2="120" y2="222" stroke-width="5"/>
+    <line x1="43" y1="43" x2="73" y2="73" stroke-width="4"/>
+    <line x1="167" y1="167" x2="197" y2="197" stroke-width="4"/>
+    <line x1="197" y1="43" x2="167" y2="73" stroke-width="4"/>
+    <line x1="73" y1="167" x2="43" y2="197" stroke-width="4"/>
+    <!-- secondary thin ticks -->
+    <line x1="26" y1="76" x2="52" y2="88" stroke-width="2.5"/>
+    <line x1="188" y1="152" x2="214" y2="164" stroke-width="2.5"/>
+    <line x1="76" y1="26" x2="88" y2="52" stroke-width="2.5"/>
+    <line x1="152" y1="188" x2="164" y2="214" stroke-width="2.5"/>
+    <line x1="164" y1="26" x2="152" y2="52" stroke-width="2.5"/>
+    <line x1="88" y1="188" x2="76" y2="214" stroke-width="2.5"/>
+    <line x1="214" y1="76" x2="188" y2="88" stroke-width="2.5"/>
+    <line x1="52" y1="152" x2="26" y2="164" stroke-width="2.5"/>
+  </g>
+
+  <!-- central angular burst shard -->
+  <g filter="url(#glow)">
+    <polygon points="120,34 150,96 214,108 158,140 172,206 120,162 68,206 82,140 26,108 90,96"
+             fill="url(#wedgeGrad)"/>
+  </g>
+
+  <!-- slam slash wedge across center -->
+  <g>
+    <polygon points="34,206 92,150 208,34 150,90" fill="#1a1a2e"/>
+    <polygon points="34,206 92,150 208,34" fill="url(#slashGrad)"/>
+    <!-- slash highlight edge -->
+    <polygon points="92,150 208,34 216,42 100,158" fill="#ffffff"/>
+  </g>
+
+  <!-- impact core -->
+  <circle cx="120" cy="120" r="14" fill="#ffffff" filter="url(#glow)"/>
+  <circle cx="120" cy="120" r="7" fill="#ff7a00"/>
+</svg>

@@ -1,0 +1,34 @@
+{
+  "id": "generated_digital-secure-data-vault-4",
+  "name": "digital secure data vault",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/digital-secure-data-vault-4.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M156 48 v-8 a4 4 0 0 1 -4 -4 h-8"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "digital",
+    "secure",
+    "data",
+    "vault",
+    "hero",
+    "illustration",
+    "generated-svg"
+  ]
+}

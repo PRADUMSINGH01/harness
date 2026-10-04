@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" role="img" aria-label="Checklist">
+<rect id="box-1" x="10" y="40" width="72" height="72" rx="18" style="fill:var(--accent-3,#18C29C)"/>
+<path id="check-1" class="draw" pathLength="1" d="M28 77 L42 91 L66 62" style="fill:none;stroke:#fff;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 1.05;stroke-dashoffset:0"/>
+<text id="item-1" x="116" y="90" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:38px;font-weight:600;fill:var(--ink,#F5F3EE)">Capture the site</text>
+<rect id="box-2" x="10" y="160" width="72" height="72" rx="18" style="fill:var(--accent-3,#18C29C)"/>
+<path id="check-2" class="draw" pathLength="1" d="M28 197 L42 211 L66 182" style="fill:none;stroke:#fff;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 1.05;stroke-dashoffset:0"/>
+<text id="item-2" x="116" y="210" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:38px;font-weight:600;fill:var(--ink,#F5F3EE)">Build the film</text>
+<rect id="box-3" x="10" y="280" width="72" height="72" rx="18" style="fill:var(--accent-3,#18C29C)"/>
+<path id="check-3" class="draw" pathLength="1" d="M28 317 L42 331 L66 302" style="fill:none;stroke:#fff;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 1.05;stroke-dashoffset:0"/>
+<text id="item-3" x="116" y="330" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:38px;font-weight:600;fill:var(--ink,#F5F3EE)">Ship the render</text>
+</svg>

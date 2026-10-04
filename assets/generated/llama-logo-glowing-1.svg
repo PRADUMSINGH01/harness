@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glowBlue" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.45"/>
+      <stop offset="55%" stop-color="#0A84FF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="llamaFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#8E8E93" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="glassEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#0A84FF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="bigGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ambient glow -->
+  <circle cx="100" cy="100" r="88" fill="url(#glowBlue)"/>
+
+  <!-- dark glass card -->
+  <g>
+    <rect x="18" y="18" width="164" height="164" rx="38" fill="#0A0A0A" fill-opacity="0.82"/>
+    <rect x="18" y="18" width="164" height="164" rx="38" fill="none" stroke="url(#glassEdge)" stroke-width="1.5"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.8">
+    <path d="M30 44 V34 Q30 30 34 30 H44"/>
+    <path d="M156 30 H166 Q170 30 170 34 V44"/>
+    <path d="M170 156 V166 Q170 170 166 170 H156"/>
+    <path d="M44 170 H34 Q30 170 30 166 V156"/>
+  </g>
+
+  <!-- llama head silhouette -->
+  <g filter="url(#bigGlow)">
+    <path fill="url(#llamaFill)" d="M84 148 L84 120 C84 112 80 106 74 100 C68 94 66 86 68 76 C70 66 78 58 88 56 C92 46 100 40 110 40 C122 40 132 50 132 62 L132 74 L146 88 C150 92 148 98 142 98 L132 98 L132 118 C132 122 128 124 124 122 L114 116 L114 148 Z"/>
+  </g>
+  <!-- eye -->
+  <circle cx="104" cy="66" r="4.5" fill="#0A0A0A"/>
+  <circle cx="105.5" cy="64.5" r="1.5" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- luminous accent sweep -->
+  <path d="M68 78 C70 66 78 58 88 56" fill="none" stroke="#0A84FF" stroke-width="2.5" stroke-linecap="round" filter="url(#softGlow)" opacity="0.95"/>
+  <path d="M132 74 L146 88" fill="none" stroke="#0A84FF" stroke-width="2.5" stroke-linecap="round" filter="url(#softGlow)" opacity="0.95"/>
+
+  <!-- sparkline ticks -->
+  <g stroke="#8E8E93" stroke-width="1" opacity="0.5">
+    <line x1="52" y1="168" x2="60" y2="168"/>
+    <line x1="66" y1="168" x2="72" y2="168"/>
+    <line x1="78" y1="168" x2="82" y2="168"/>
+  </g>
+  <g fill="#0A84FF">
+    <circle cx="150" cy="52" r="2" opacity="0.9"/>
+    <circle cx="158" cy="44" r="1.4" opacity="0.6"/>
+  </g>
+
+  <!-- crosshair -->
+  <g stroke="#8E8E93" stroke-width="1" opacity="0.35">
+    <line x1="100" y1="22" x2="100" y2="28"/>
+    <line x1="100" y1="172" x2="100" y2="178"/>
+    <line x1="22" y1="100" x2="28" y2="100"/>
+    <line x1="172" y1="100" x2="178" y2="100"/>
+  </g>
+</svg>

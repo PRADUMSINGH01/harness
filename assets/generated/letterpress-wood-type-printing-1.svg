@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1C1F26"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8E8E93" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0.4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="drop" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- ambient glow -->
+  <circle cx="100" cy="100" r="85" fill="url(#glow)"/>
+
+  <!-- wood block body -->
+  <g filter="url(#drop)">
+    <rect x="34" y="34" width="132" height="132" rx="8" fill="url(#glass)" stroke="url(#rim)" stroke-width="2"/>
+    <rect x="44" y="44" width="112" height="112" rx="4" fill="#0A0A0A" stroke="#8E8E93" stroke-opacity="0.35" stroke-width="1"/>
+  </g>
+
+  <!-- wood grain ticks -->
+  <g stroke="#8E8E93" stroke-opacity="0.18" stroke-width="1">
+    <line x1="48" y1="54" x2="152" y2="54"/>
+    <line x1="48" y1="148" x2="152" y2="148"/>
+  </g>
+
+  <!-- carved (reversed) slab-serif R -->
+  <path fill="#FFFFFF" filter="url(#soft)" opacity="0.95" d="M62 138 V62 H110 Q124 62 124 78 Q124 90 112 93 Q126 96 126 112 V138 H110 V114 Q110 106 100 106 H78 V138 Z M78 74 V92 H98 Q104 92 104 83 Q104 74 98 74 Z"/>
+
+  <!-- mirrored slab-serif A (letterpress reversed look) -->
+  <g opacity="0.92">
+    <path fill="#FFFFFF" d="M132 138 L150 62 H164 L182 138 H168 L164.5 122 H149.5 L146 138 Z M152 108 H161.5 L156.75 84 Z"/>
+  </g>
+
+  <!-- blue accent underline -->
+  <rect x="62" y="146" width="120" height="3" rx="1.5" fill="#0A84FF" filter="url(#soft)"/>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M20 32 V20 H32"/>
+    <path d="M168 20 H180 V32"/>
+    <path d="M180 168 V180 H168"/>
+    <path d="M32 180 H20 V168"/>
+  </g>
+
+  <!-- technical marks -->
+  <g stroke="#8E8E93" stroke-width="1" opacity="0.5">
+    <line x1="100" y1="14" x2="100" y2="20"/>
+    <line x1="100" y1="180" x2="100" y2="186"/>
+    <line x1="14" y1="100" x2="20" y2="100"/>
+    <line x1="180" y1="100" x2="186" y2="100"/>
+  </g>
+  <text x="100" y="196" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="7" fill="#8E8E93" letter-spacing="2">LETTERPRESS · WOOD TYPE</text>
+</svg>

@@ -1,0 +1,35 @@
+{
+  "id": "generated_glowing-twilight-human-brain-1",
+  "name": "glowing twilight human brain with neurotransmitter nodes and chemical flood streams",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/glowing-twilight-human-brain-1.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M100 26 C 64 24 40 46 38 74 C 30 84 28 100 34 112 C 30 126 36 142 50 150 C 54 166 70 176 88 172 C 96 180 108 180 116 172 C 134 176 150 166 152 150 C 166 142 172 126 166 112 C 172 100 170 84 162 74 C 160 46 136 24 100 26 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "glowing",
+    "twilight",
+    "human",
+    "brain",
+    "neurotransmitter",
+    "nodes",
+    "illustration",
+    "generated-svg"
+  ]
+}

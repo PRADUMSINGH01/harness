@@ -1,0 +1,35 @@
+{
+  "id": "custom_quantum_processor_chip",
+  "name": "Quantum Processor Chip HUD",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/custom/quantum_processor_chip.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 240 240",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 240,
+      "height": 240
+    },
+    "closed_svg_path": "M50 62 v-12 h12 M190 50 h-12 M190 178 v12 h-12 M50 178 v12 h12"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "quantum",
+    "processor",
+    "chip",
+    "hud",
+    "neon",
+    "cyber",
+    "hud",
+    "generated-svg"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "generated_giant-red-589-000-1",
+  "name": "giant red $589,000,000,000 market loss number with shatter cracks",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/giant-red-589-000-1.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M0 -3.5 V3.5 M-3.5 0.5 L0 4 L3.5 0.5"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "giant",
+    "red",
+    "589",
+    "000",
+    "000",
+    "000",
+    "illustration",
+    "generated-svg"
+  ]
+}

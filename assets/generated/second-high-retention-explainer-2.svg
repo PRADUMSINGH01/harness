@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.14"/>
+      <stop offset="45%" stop-color="#0A0A0A" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="diskGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#0A84FF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="holeCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="82%" stop-color="#000000"/>
+      <stop offset="100%" stop-color="#0A84FF" stop-opacity="0.35"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3.2"/>
+    </filter>
+  </defs>
+
+  <!-- deep space backdrop -->
+  <circle cx="100" cy="100" r="100" fill="url(#bgGlow)"/>
+  <g fill="#FFFFFF">
+    <circle cx="22" cy="34" r="0.7" opacity="0.7"/><circle cx="176" cy="48" r="0.6" opacity="0.55"/>
+    <circle cx="160" cy="18" r="0.8" opacity="0.6"/><circle cx="38" cy="152" r="0.7" opacity="0.5"/>
+    <circle cx="184" cy="140" r="0.6" opacity="0.65"/><circle cx="60" cy="12" r="0.5" opacity="0.45"/>
+    <circle cx="118" cy="188" r="0.6" opacity="0.5"/><circle cx="10" cy="96" r="0.6" opacity="0.55"/>
+    <circle cx="150" cy="176" r="0.5" opacity="0.4"/><circle cx="82" cy="8" r="0.6" opacity="0.5"/>
+  </g>
+
+  <!-- gravitational lensing rings -->
+  <g fill="none" filter="url(#glow)">
+    <circle cx="100" cy="100" r="74" stroke="#0A84FF" stroke-opacity="0.18" stroke-width="0.6"/>
+    <circle cx="100" cy="100" r="60" stroke="#0A84FF" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="10 4"/>
+    <circle cx="100" cy="100" r="49" stroke="#0A84FF" stroke-opacity="0.55" stroke-width="1.4"/>
+    <circle cx="100" cy="100" r="42" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="1.8"/>
+    <circle cx="100" cy="100" r="36" stroke="#0A84FF" stroke-opacity="0.9" stroke-width="2.2"/>
+  </g>
+  <!-- photon ring bloom -->
+  <circle cx="100" cy="100" r="36" fill="none" stroke="#0A84FF" stroke-width="5" opacity="0.35" filter="url(#softGlow)"/>
+
+  <!-- accretion disk arcs (elliptical, tilted) -->
+  <g transform="rotate(-16 100 100)" fill="none" filter="url(#glow)">
+    <ellipse cx="100" cy="100" rx="66" ry="16" stroke="url(#diskGrad)" stroke-width="4" stroke-linecap="round" opacity="0.9" stroke-dasharray="120 200"/>
+    <ellipse cx="100" cy="100" rx="78" ry="20" stroke="#0A84FF" stroke-width="1.6" stroke-linecap="round" opacity="0.55" stroke-dasharray="70 260"/>
+    <ellipse cx="100" cy="100" rx="56" ry="13" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" opacity="0.6" stroke-dasharray="90 180"/>
+  </g>
+
+  <!-- event horizon core -->
+  <circle cx="100" cy="100" r="30" fill="url(#holeCore)"/>
+  <circle cx="100" cy="100" r="30" fill="none" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="0.5"/>
+
+  <!-- crosshair micro-details -->
+  <g stroke="#8E8E93" stroke-opacity="0.5" stroke-width="0.5">
+    <line x1="100" y1="20" x2="100" y2="26"/>
+    <line x1="100" y1="174" x2="100" y2="180"/>
+    <line x1="20" y1="100" x2="26" y2="100"/>
+    <line x1="174" y1="100" x2="180" y2="100"/>
+  </g>
+
+  <!-- glass panel callout: top-right -->
+  <g>
+    <rect x="128" y="26" width="62" height="30" rx="6" fill="#0A0A0A" fill-opacity="0.72" stroke="#0A84FF" stroke-opacity="0.35" stroke-width="0.6"/>
+    <circle cx="136" cy="34" r="1.4" fill="#0A84FF"/>
+    <text x="141" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="6.5" fill="#FFFFFF" font-weight="600">EVENT HORIZON</text>
+    <text x="136" y="50" font-family="ui-monospace, 'SF Mono', monospace" font-size="9" fill="#0A84FF" font-weight="700">r = 2GM/c²</text>
+  </g>
+
+  <!-- callout: photon sphere, left -->
+  <g>
+    <rect x="8" y="118" width="60" height="30" rx="6" fill="#0A0A0A" fill-opacity="0.72" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="0.6"/>
+    <circle cx="16" cy="126" r="1.4" fill="#FFFFFF"/>
+    <text x="21" y="128" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="6.5" fill="#FFFFFF" font-weight="600">PHOTON SPHERE</text>
+    <text x="16" y="142" font-family="ui-monospace, 'SF Mono', monospace" font-size="9" fill="#FFFFFF" font-weight="700">1.5 rs</text>
+    <line x1="66" y1="130" x2="68" y2="120" stroke="#8E8E93" stroke-width="0.5" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- callout: escape velocity, bottom-right -->
+  <g>
+    <rect x="126" y="148" width="64" height="30" rx="6" fill="#0A0A0A" fill-opacity="0.72" stroke="#0A84FF" stroke-opacity="0.35" stroke-width="0.6"/>
+    <circle cx="134" cy="156" r="1.4" fill="#0A84FF"/>
+    <text x="139" y="158" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="6.5" fill="#FFFFFF" font-weight="600">ESCAPE VELOCITY</text>
+    <text x="134" y="172" font-family="ui-monospace, 'SF Mono', monospace" font-size="9" fill="#0A84FF" font-weight="700">v = c</text>
+  </g>
+
+  <!-- leader line: horizon to event horizon panel -->
+  <line x1="126" y1="88" x2="122" y2="60" stroke="#0A84FF" stroke-opacity="0.5" stroke-width="0.5"/>
+  <circle cx="126" cy="88" r="1.2" fill="#0A84FF"/>
+
+  <!-- title -->
+  <text x="14" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" fill="#FFFFFF" letter-spacing="1.5" font-weight="700">BLACK HOLE</text>
+  <line x1="14" y1="35" x2="66" y2="35" stroke="#0A84FF" stroke-width="1"/>
+  <text x="14" y="44" font-family="ui-monospace, 'SF Mono', monospace" font-size="5" fill="#8E8E93" letter-spacing="0.8">GRAVITATIONAL LENSING · SCALE 1:10⁹</text>
+
+  <!-- corner brackets -->
+  <g stroke="#8E8E93" stroke-opacity="0.5" stroke-width="0.8" fill="none">
+    <path d="M6 6 h8 M6 6 v8"/>
+    <path d="M194 6 h-8 M194 6 v8"/>
+    <path d="M6 194 h8 M6 194 v-8"/>
+    <path d="M194 194 h-8 M194 194 v-8"/>
+  </g>
+</svg>

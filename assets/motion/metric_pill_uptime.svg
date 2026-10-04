@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glassFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1F17" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#052E22" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="innerGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#10B981" flood-opacity="0.25"/>
+    </filter>
+    <filter id="iconGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#10B981" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+
+  <!-- Pill body -->
+  <rect x="2" y="2" width="296" height="96" rx="26" fill="url(#glassFill)" stroke="url(#borderGrad)" stroke-width="2" filter="url(#innerGlow)"/>
+  <!-- Subtle inner highlight line -->
+  <rect x="5" y="5" width="290" height="42" rx="22" fill="#FFFFFF" opacity="0.04"/>
+
+  <!-- Shield-check icon -->
+  <g filter="url(#iconGlow)">
+    <path d="M50 26 L64 31 C64 43 58 52 50 56 C42 52 36 43 36 31 Z" fill="none" stroke="#10B981" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M44 41 L48.5 45.5 L57 36.5" fill="none" stroke="#34D399" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Label -->
+  <text x="82" y="46" font-family="Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="4" fill="#FFFFFF" opacity="0.75">UPTIME</text>
+
+  <!-- Value -->
+  <text x="80" y="76" font-family="Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="800" fill="#10B981">99.99%</text>
+</svg>

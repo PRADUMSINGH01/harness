@@ -1,0 +1,35 @@
+{
+  "id": "generated_perfectly-solved-3x3-cube-5",
+  "name": "perfectly solved 3x3 cube in isometric view",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/perfectly-solved-3x3-cube-5.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M100 84 L172 84 L172 152 L100 152 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "perfectly",
+    "solved",
+    "3x3",
+    "cube",
+    "isometric",
+    "view",
+    "illustration",
+    "generated-svg"
+  ]
+}

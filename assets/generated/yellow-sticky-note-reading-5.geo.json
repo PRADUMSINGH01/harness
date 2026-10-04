@@ -1,0 +1,35 @@
+{
+  "id": "generated_yellow-sticky-note-reading-5",
+  "name": "yellow sticky note reading COGNITIVE DEBT with handwritten marker font",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/yellow-sticky-note-reading-5.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M42 38\n             C 70 34, 130 34, 156 38\n             C 160 66, 160 130, 156 160\n             C 156 166, 152 170, 146 170\n             L 58 170\n             C 50 170, 42 162, 42 154\n             Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "yellow",
+    "sticky",
+    "note",
+    "reading",
+    "cognitive",
+    "debt",
+    "illustration",
+    "generated-svg"
+  ]
+}

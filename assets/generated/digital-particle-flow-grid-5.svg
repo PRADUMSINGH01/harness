@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glowBg" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#12141a"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0A84FF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#0A84FF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="200" height="200" rx="12" fill="url(#glowBg)"/>
+
+  <!-- faint grid -->
+  <g stroke="#8E8E93" stroke-opacity="0.10" stroke-width="0.5">
+    <path d="M20 10V190 M40 10V190 M60 10V190 M80 10V190 M100 10V190 M120 10V190 M140 10V190 M160 10V190 M180 10V190"/>
+    <path d="M10 20H190 M10 40H190 M10 60H190 M10 80H190 M10 100H190 M10 120H190 M10 140H190 M10 160H190 M10 180H190"/>
+  </g>
+
+  <!-- flow curves -->
+  <g fill="none" stroke-linecap="round" filter="url(#glow)">
+    <path d="M15 55 C 60 45, 90 75, 185 60" stroke="url(#flow)" stroke-width="1.4" opacity="0.85"/>
+    <path d="M15 85 C 60 95, 100 65, 185 90" stroke="url(#flow)" stroke-width="1.8"/>
+    <path d="M15 115 C 70 125, 110 105, 185 118" stroke="url(#flow)" stroke-width="1.2" opacity="0.7"/>
+    <path d="M15 148 C 60 140, 120 165, 185 150" stroke="url(#flow)" stroke-width="1.0" opacity="0.55"/>
+  </g>
+
+  <!-- particles on curves -->
+  <g filter="url(#glow)">
+    <g fill="#FFFFFF">
+      <circle cx="38" cy="52" r="1.8"/>
+      <circle cx="95" cy="66" r="2.2"/>
+      <circle cx="150" cy="59" r="1.6"/>
+      <circle cx="55" cy="93" r="1.7"/>
+      <circle cx="120" cy="76" r="2.0"/>
+      <circle cx="168" cy="96" r="1.5"/>
+      <circle cx="70" cy="121" r="1.8"/>
+      <circle cx="140" cy="114" r="1.6"/>
+      <circle cx="52" cy="143" r="1.5"/>
+      <circle cx="128" cy="156" r="1.7"/>
+    </g>
+    <g fill="#0A84FF">
+      <circle cx="66" cy="49" r="2.4"/>
+      <circle cx="130" cy="72" r="1.9"/>
+      <circle cx="82" cy="86" r="2.6"/>
+      <circle cx="155" cy="88" r="2.1"/>
+      <circle cx="100" cy="118" r="2.2"/>
+      <circle cx="175" cy="119" r="1.8"/>
+      <circle cx="90" cy="152" r="2.0"/>
+      <circle cx="160" cy="153" r="1.7"/>
+    </g>
+  </g>
+
+  <!-- blurred halo accents -->
+  <g fill="#0A84FF" opacity="0.25" filter="url(#softGlow)">
+    <circle cx="100" cy="85" r="10"/>
+    <circle cx="160" cy="119" r="7"/>
+  </g>
+
+  <!-- crosshair accent -->
+  <g stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="0.7">
+    <line x1="100" y1="96" x2="100" y2="104"/>
+    <line x1="96" y1="100" x2="104" y2="100"/>
+  </g>
+  <circle cx="100" cy="100" r="4.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="0.7"/>
+
+  <!-- corner brackets -->
+  <g stroke="#8E8E93" stroke-opacity="0.6" stroke-width="1.2" fill="none">
+    <path d="M14 24V14H24"/>
+    <path d="M176 14H186V24"/>
+    <path d="M186 176V186H176"/>
+    <path d="M24 186H14V176"/>
+  </g>
+
+  <!-- tick marks -->
+  <g stroke="#0A84FF" stroke-opacity="0.5" stroke-width="0.8">
+    <line x1="100" y1="6" x2="100" y2="10"/>
+    <line x1="100" y1="190" x2="100" y2="194"/>
+    <line x1="6" y1="100" x2="10" y2="100"/>
+    <line x1="190" y1="100" x2="194" y2="100"/>
+  </g>
+</svg>

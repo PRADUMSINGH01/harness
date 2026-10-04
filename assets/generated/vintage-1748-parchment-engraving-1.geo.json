@@ -1,0 +1,35 @@
+{
+  "id": "generated_vintage-1748-parchment-engraving-1",
+  "name": "vintage 1748 parchment engraving texture with quill pen and ink well, Ben Franklin era",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/vintage-1748-parchment-engraving-1.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M122 162 L122 98 Q122 92 124 88 L126 88 Q128 92 128 98 L128 162 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "vintage",
+    "1748",
+    "parchment",
+    "engraving",
+    "texture",
+    "quill",
+    "illustration",
+    "generated-svg"
+  ]
+}

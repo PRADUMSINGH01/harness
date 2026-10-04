@@ -1,0 +1,35 @@
+{
+  "id": "generated_2025-calendar-icon-slash-4",
+  "name": "2025 calendar icon with slash mark",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/2025-calendar-icon-slash-4.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M158 92 v-8 h-8"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "2025",
+    "calendar",
+    "icon",
+    "slash",
+    "mark",
+    "badge",
+    "illustration",
+    "generated-svg"
+  ]
+}

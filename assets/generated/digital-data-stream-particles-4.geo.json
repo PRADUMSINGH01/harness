@@ -1,0 +1,34 @@
+{
+  "id": "generated_digital-data-stream-particles-4",
+  "name": "digital data stream particles",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/digital-data-stream-particles-4.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M0 30h4M0 70h4M0 130h4M0 170h4M196 30h4M196 70h4M196 130h4M196 170h4"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "digital",
+    "data",
+    "stream",
+    "particles",
+    "overlay",
+    "illustration",
+    "generated-svg"
+  ]
+}

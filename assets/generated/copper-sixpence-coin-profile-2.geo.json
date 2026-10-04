@@ -1,0 +1,35 @@
+{
+  "id": "generated_copper-sixpence-coin-profile-2",
+  "name": "copper sixpence coin with profile portrait and 'VI' engraving",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/copper-sixpence-coin-profile-2.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M108 52\n             C 92 50, 80 60, 78 74\n             C 77 80, 73 84, 71 89\n             C 70 91.5, 72 93, 74 93.5\n             C 73.5 96, 73.5 98, 74.5 100\n             C 73.5 101, 73.5 103, 74.8 104\n             C 74 106, 74.5 108, 77 109\n             C 76.5 113, 78 117, 82 118\n             L 82 130\n             C 82 136, 86 140, 93 140\n             L 106 140\n             L 106 62 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "copper",
+    "sixpence",
+    "coin",
+    "profile",
+    "portrait",
+    "engraving",
+    "icon",
+    "generated-svg"
+  ]
+}

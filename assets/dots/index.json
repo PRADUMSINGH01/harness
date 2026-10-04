@@ -1,0 +1,231 @@
+{
+  "catalog": "chatgpt-dots",
+  "version": "2.0.0",
+  "items": [
+    {
+      "id": "chatgpt_official_web_ui",
+      "name": "Authentic ChatGPT Web App UI Screenshot",
+      "type": "image",
+      "src": "assets/dots/chatgpt_official_web_ui.jpg",
+      "format": "jpg",
+      "tags": ["chatgpt", "web", "ui", "screenshot", "dark-mode", "gpt-4o", "official"],
+      "description": "Authentic high-resolution direct screenshot of the ChatGPT web interface in dark mode, showing the left sidebar ('Dots Agent Architecture', 'Market Analysis Q3'), top 'ChatGPT 4o' selector, 'What can I help with today?', suggestion chips, and message prompt bar."
+    },
+    {
+      "id": "chatgpt_dots_desktop_widget",
+      "name": "OpenAI Dots Desktop Autonomous Agent HUD",
+      "type": "image",
+      "src": "assets/dots/chatgpt_dots_desktop_widget.jpg",
+      "format": "jpg",
+      "tags": ["dots", "desktop", "hud", "agent", "macos", "triage", "proactive", "slack", "github", "stripe"],
+      "description": "Photorealistic desktop HUD capture of the floating OpenAI Dots agent card with live triaging logs (Slack, GitHub, Stripe, Linear) and central glowing green neural orb."
+    },
+    {
+      "id": "chatgpt_voice_dots_mode",
+      "name": "ChatGPT Advanced Voice Mode Mobile Screen",
+      "type": "image",
+      "src": "assets/dots/chatgpt_voice_dots_mode.jpg",
+      "format": "jpg",
+      "tags": ["voice", "orb", "mobile", "ios", "vertical", "9:16", "advanced-voice", "dots"],
+      "description": "9:16 vertical smartphone screen capture of ChatGPT Advanced Voice Mode featuring the luminous blue fluid wave orb, 'Listening... Dots Agent Active', and mobile action controls."
+    },
+    {
+      "id": "chatgpt_dots_app_ui",
+      "name": "ChatGPT Desktop Software App UI Capture (Dots Dashboard)",
+      "type": "image",
+      "src": "assets/dots/chatgpt_dots_app_ui.jpg",
+      "format": "jpg",
+      "tags": ["chatgpt", "dots", "ui", "screenshot", "software", "dashboard", "chief-of-staff"],
+      "description": "Authentic desktop software screenshot of ChatGPT showing Dot-01 Chief of Staff dashboard, cloud compute status, connected apps (Slack, GitHub, Stripe, Teams), and live telemetry."
+    },
+    {
+      "id": "chatgpt_dots_orb",
+      "name": "Photorealistic 3D OpenAI Dots Agent Orb",
+      "type": "image",
+      "src": "assets/dots/chatgpt_dots_orb.jpg",
+      "format": "jpg",
+      "tags": ["orb", "3d", "render", "dots", "neural-core", "glowing", "hologram"],
+      "description": "Photorealistic 3D render of the OpenAI Dots frosted glass sphere with volumetric emerald and violet glow, orbital particle tracks, and microscopic circuit traces."
+    },
+    {
+      "id": "openai_dots_agent_core",
+      "name": "OpenAI Holographic Neural Core",
+      "type": "image",
+      "src": "assets/dots/openai_dots_agent_core.jpg",
+      "format": "jpg",
+      "tags": ["core", "ai", "cloud", "neural", "dots"],
+      "description": "Deep space high-definition render of the holographic agent core for OpenAI autonomous systems."
+    },
+    {
+      "id": "openai_official_logo",
+      "name": "Official OpenAI Spiral Vector Logo (Brand Emerald)",
+      "type": "svg",
+      "src": "assets/dots/openai_official_logo.svg",
+      "format": "svg",
+      "tags": ["openai", "logo", "spiral", "brand", "emerald", "official"],
+      "description": "Mathematically exact official vector logo of OpenAI (6 interlocking spirals and center hexagon) in brand emerald (#10A37F), transparent background."
+    },
+    {
+      "id": "openai_logo_white",
+      "name": "Official OpenAI Spiral Vector Logo (Monochrome White)",
+      "type": "svg",
+      "src": "assets/dots/openai_logo_white.svg",
+      "format": "svg",
+      "tags": ["openai", "logo", "white", "monochrome", "official"],
+      "description": "Mathematically exact official vector logo of OpenAI in crisp monochrome white (#FFFFFF), transparent background for dark UI."
+    },
+    {
+      "id": "chatgpt_sparkle_logo",
+      "name": "Official ChatGPT AI Sparkle Vector Mark",
+      "type": "svg",
+      "src": "assets/dots/chatgpt_sparkle_logo.svg",
+      "format": "svg",
+      "tags": ["chatgpt", "sparkle", "star", "brand", "icon", "official"],
+      "description": "Official 4-point AI sparkle vector mark in signature OpenAI emerald (#10A37F) from Phosphor brand collection."
+    },
+    {
+      "id": "github_official_logo",
+      "name": "Official GitHub Invertocat Vector Logo",
+      "type": "svg",
+      "src": "assets/dots/github_official_logo.svg",
+      "format": "svg",
+      "tags": ["github", "integration", "code", "git", "logo", "official"],
+      "description": "Official GitHub Invertocat vector logo from Simple Icons brand assets in white (#FFFFFF), transparent background."
+    },
+    {
+      "id": "slack_official_logo",
+      "name": "Official Slack 4-Color Octothorpe Vector Logo",
+      "type": "svg",
+      "src": "assets/dots/slack_official_logo.svg",
+      "format": "svg",
+      "tags": ["slack", "integration", "saas", "logo", "apps", "official"],
+      "description": "Official 4-color Slack hashtag vector logo (#36C5F0 Blue, #2EB67D Green, #ECB22E Yellow, #E01E5A Aubergine Red) without background box."
+    },
+    {
+      "id": "stripe_official_logo",
+      "name": "Official Stripe Vector Logo",
+      "type": "svg",
+      "src": "assets/dots/stripe_official_logo.svg",
+      "format": "svg",
+      "tags": ["stripe", "finance", "billing", "logo", "apps", "official"],
+      "description": "Official Stripe S-mark vector logo from Simple Icons in signature brand blurple (#635BFF), transparent background."
+    },
+    {
+      "id": "linear_official_logo",
+      "name": "Official Linear Issue Tracker Vector Logo",
+      "type": "svg",
+      "src": "assets/dots/linear_official_logo.svg",
+      "format": "svg",
+      "tags": ["linear", "issues", "project", "logo", "apps", "official"],
+      "description": "Official Linear issue tracker vector polygon emblem from Simple Icons in indigo (#5E6AD2)."
+    },
+    {
+      "id": "notion_official_logo",
+      "name": "Official Notion Vector Logo",
+      "type": "svg",
+      "src": "assets/dots/notion_official_logo.svg",
+      "format": "svg",
+      "tags": ["notion", "docs", "workspace", "logo", "apps", "official"],
+      "description": "Official Notion 'N' cube vector logo from Simple Icons in white (#FFFFFF), transparent background."
+    },
+    {
+      "id": "google_drive_official_logo",
+      "name": "Official Google Drive 3-Color Vector Logo",
+      "type": "svg",
+      "src": "assets/dots/google_drive_official_logo.svg",
+      "format": "svg",
+      "tags": ["google", "drive", "workspace", "cloud", "logo", "official"],
+      "description": "Official Google Drive 3-color isometric ribbon vector (#FFBA00 Yellow, #0066DA Blue, #00AC47 Green) from Simple Icons."
+    },
+    {
+      "id": "google_docs_official_logo",
+      "name": "Official Google Docs Vector Logo",
+      "type": "svg",
+      "src": "assets/dots/google_docs_official_logo.svg",
+      "format": "svg",
+      "tags": ["google", "docs", "document", "logo", "official"],
+      "description": "Official Google Docs dog-eared document sheet vector in Google Blue (#4285F4) from Simple Icons."
+    },
+    {
+      "id": "google_workspace_logo",
+      "name": "Official Google 4-Color 'G' Vector Logo",
+      "type": "svg",
+      "src": "assets/dots/google_workspace_logo.svg",
+      "format": "svg",
+      "tags": ["google", "workspace", "g", "logo", "official"],
+      "description": "Official 4-color Google 'G' vector logo (#FFC107, #FF3D00, #4CAF50, #1976D2) from Flat Color Icons."
+    },
+    {
+      "id": "microsoft_teams_official_logo",
+      "name": "Official Microsoft Teams Vector Logo",
+      "type": "svg",
+      "src": "assets/dots/microsoft_teams_official_logo.svg",
+      "format": "svg",
+      "tags": ["microsoft", "teams", "chat", "logo", "apps", "official"],
+      "description": "Official Microsoft Teams vector logo in signature purple (#5B5FC7) from Bootstrap Icons."
+    },
+    {
+      "id": "vscode_official_logo",
+      "name": "Official Visual Studio Code Vector Logo",
+      "type": "svg",
+      "src": "assets/dots/vscode_official_logo.svg",
+      "format": "svg",
+      "tags": ["vscode", "code", "ide", "logo", "official"],
+      "description": "Official Visual Studio Code ribbon vector logo in VS Blue (#007ACC) from VS Code Icons."
+    },
+    {
+      "id": "anthropic_claude_official_logo",
+      "name": "Official Anthropic Claude Vector Logo",
+      "type": "svg",
+      "src": "assets/dots/anthropic_claude_official_logo.svg",
+      "format": "svg",
+      "tags": ["anthropic", "claude", "ai", "logo", "official"],
+      "description": "Official Anthropic Claude vector logo in terracotta (#CC785C) from Simple Icons."
+    },
+    {
+      "id": "dots_agent_badge",
+      "name": "OpenAI Dots 24/7 Autonomous Status Badge",
+      "type": "svg",
+      "src": "assets/dots/dots_agent_badge.svg",
+      "format": "svg",
+      "tags": ["dots", "badge", "status", "autonomous", "radar", "online"],
+      "description": "High-tech status badge featuring a pulsing green radar dot, 'ONLINE · 24/7 AUTONOMOUS', and cloud indicator."
+    },
+    {
+      "id": "chatgpt_desktop_chrome",
+      "name": "macOS ChatGPT Desktop App Window Header Chrome",
+      "type": "svg",
+      "src": "assets/dots/chatgpt_desktop_chrome.svg",
+      "format": "svg",
+      "tags": ["macos", "window", "chrome", "header", "gpt-6", "traffic-lights"],
+      "description": "Realistic macOS window header with red/yellow/green traffic lights, sidebar toggle, model selector pill 'GPT-6 Astra', and app actions."
+    },
+    {
+      "id": "chatgpt_proactive_card",
+      "name": "ChatGPT Proactive Autonomous Action Card",
+      "type": "svg",
+      "src": "assets/dots/chatgpt_proactive_card.svg",
+      "format": "svg",
+      "tags": ["chat", "bubble", "proactive", "card", "github", "diff", "action-buttons"],
+      "description": "Interactive proactive notification card from Dot-01 reporting GitHub issue resolution and offering 'Approve & Open PR' action buttons."
+    },
+    {
+      "id": "cloud_compute_node",
+      "name": "Dedicated Cloud PC Server Node Status HUD",
+      "type": "svg",
+      "src": "assets/dots/cloud_compute_node.svg",
+      "format": "svg",
+      "tags": ["cloud", "server", "telemetry", "hud", "metrics", "cpu", "memory"],
+      "description": "Cloud server node status card displaying live CPU load (12%), Memory allocation (48GB), Latency (14ms), and 4,000+ SaaS apps connected."
+    },
+    {
+      "id": "gpt6_astra_badge",
+      "name": "GPT-6 Astra Model Telemetry Chip",
+      "type": "svg",
+      "src": "assets/dots/gpt6_astra_badge.svg",
+      "format": "svg",
+      "tags": ["gpt6", "astra", "model", "chip", "reasoning"],
+      "description": "Violet telemetry chip badge designating GPT-6 Astra reasoning core."
+    }
+  ]
+}

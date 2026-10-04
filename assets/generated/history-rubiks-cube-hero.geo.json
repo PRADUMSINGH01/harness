@@ -1,0 +1,35 @@
+{
+  "id": "generated_history-rubiks-cube-hero",
+  "name": "A 24-second explainer about the history of the Rubik's Cube. — hero illustration of the core subject",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/history-rubiks-cube-hero.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M55 42 L100 16 L145 42 L100 68 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "second",
+    "explainer",
+    "about",
+    "history",
+    "rubik",
+    "cube",
+    "illustration",
+    "generated-svg"
+  ]
+}

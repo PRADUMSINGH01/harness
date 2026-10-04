@@ -1,0 +1,35 @@
+{
+  "id": "generated_wall-street-ticker-tape",
+  "name": "Wall Street ticker tape strip with scrolling stock symbols and prices",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/wall-street-ticker-tape.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M44 176 l6 -5 l5 3 l6 -6 l6 4 l6 -3"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "wall",
+    "street",
+    "ticker",
+    "tape",
+    "strip",
+    "scrolling",
+    "icon",
+    "generated-svg"
+  ]
+}

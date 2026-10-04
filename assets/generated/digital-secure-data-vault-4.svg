@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111318"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.03"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="blueBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5EBBFF"/>
+      <stop offset="1" stop-color="#0A84FF"/>
+    </linearGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="blurBig" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <clipPath id="vaultClip">
+      <rect x="44" y="36" width="112" height="128" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <rect width="200" height="200" rx="24" fill="url(#bgGrad)"/>
+
+  <!-- ambient glow -->
+  <circle cx="100" cy="100" r="62" fill="url(#blueGlow)" filter="url(#blurBig)"/>
+
+  <!-- data streams (background) -->
+  <g font-family="'SF Mono','Menlo',monospace" font-size="5" fill="#8E8E93" opacity="0.35">
+    <text x="12" y="40">01001</text>
+    <text x="12" y="52">11010</text>
+    <text x="12" y="64">01101</text>
+    <text x="168" y="130" text-anchor="start" opacity="0">.</text>
+    <text x="164" y="128">10011</text>
+    <text x="164" y="140">01010</text>
+    <text x="164" y="152">10110</text>
+    <text x="12" y="150">1011</text>
+    <text x="12" y="162">0110</text>
+  </g>
+
+  <!-- vault body: glass card -->
+  <g filter="url(#softGlow)">
+    <rect x="44" y="36" width="112" height="128" rx="12" fill="url(#glassGrad)" stroke="#FFFFFF" stroke-opacity="0.18"/>
+  </g>
+  <rect x="44" y="36" width="112" height="128" rx="12" fill="none" stroke="#0A84FF" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.9">
+    <path d="M44 48 v-8 a4 4 0 0 1 4 -4 h8"/>
+    <path d="M156 48 v-8 a4 4 0 0 1 -4 -4 h-8"/>
+    <path d="M44 152 v8 a4 4 0 0 0 4 4 h8"/>
+    <path d="M156 152 v8 a4 4 0 0 0 -4 4 h-8"/>
+  </g>
+
+  <!-- vault door dial -->
+  <circle cx="100" cy="92" r="38" fill="none" stroke="#8E8E93" stroke-opacity="0.3" stroke-width="1.5"/>
+  <circle cx="100" cy="92" r="30" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="1"/>
+  <g clip-path="url(#vaultClip)">
+    <circle cx="100" cy="92" r="30" fill="none" stroke="url(#blueBar)" stroke-width="3" stroke-linecap="round" stroke-dasharray="141 188" transform="rotate(-90 100 92)"/>
+  </g>
+  <g stroke="#8E8E93" stroke-width="1" opacity="0.6">
+    <line x1="100" y1="58" x2="100" y2="63"/>
+    <line x1="134" y1="92" x2="129" y2="92"/>
+    <line x1="100" y1="126" x2="100" y2="121"/>
+    <line x1="66" y1="92" x2="71" y2="92"/>
+  </g>
+
+  <!-- lock shackle + body -->
+  <path d="M92 92 v-6 a8 8 0 0 1 16 0 v6" fill="none" stroke="#0A84FF" stroke-width="4" stroke-linecap="round"/>
+  <rect x="88" y="92" width="24" height="18" rx="5" fill="url(#blueBar)" filter="url(#softGlow)"/>
+  <circle cx="100" cy="100" r="2.6" fill="#FFFFFF"/>
+
+  <!-- access bar / progress -->
+  <rect x="64" y="140" width="72" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.08"/>
+  <rect x="64" y="140" width="52" height="8" rx="4" fill="url(#blueBar)"/>
+  <g font-family="'SF Mono','Menlo',monospace" font-size="6" fill="#8E8E93">
+    <text x="100" y="158" text-anchor="middle" letter-spacing="2">AES-256 SECURE</text>
+  </g>
+
+  <!-- status dot -->
+  <circle cx="148" cy="46" r="3" fill="#0A84FF" filter="url(#softGlow)"/>
+  <g stroke="#0A84FF" stroke-opacity="0.4" stroke-width="0.5">
+    <line x1="44" y1="92" x2="36" y2="92"/>
+    <line x1="156" y1="92" x2="164" y2="92"/>
+  </g>
+</svg>

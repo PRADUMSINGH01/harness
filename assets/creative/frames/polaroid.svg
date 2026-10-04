@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" width="600" height="720" role="img" aria-label="Instant photo frame">
+<path fill-rule="evenodd" d="M0 0 H600 V720 H0Z M40 40 V560 H560 V40Z" style="fill:var(--polaroid,#FBFAF7)"/>
+<text id="caption" x="300" y="650" text-anchor="middle" style="font-family:var(--font-hand,'Comic Relief','Comic Sans MS',cursive);font-size:46px;font-weight:500;fill:#2B2B2B">launch day</text>
+</svg>

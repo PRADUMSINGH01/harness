@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" role="img" aria-label="Vertical bar chart">
+<path d="M80 150 H1170" style="stroke:var(--ui-line,#2C2F38);stroke-width:2;stroke-dasharray:6 10"/><path d="M80 300 H1170" style="stroke:var(--ui-line,#2C2F38);stroke-width:2;stroke-dasharray:6 10"/><path d="M80 450 H1170" style="stroke:var(--ui-line,#2C2F38);stroke-width:2;stroke-dasharray:6 10"/><path d="M80 600 H1170" style="stroke:var(--muted,#8B8F98);stroke-width:3"/>
+<rect id="bar-1" class="bar" x="110" y="394.79999999999995" width="110" height="205.20000000000002" rx="12" style="fill:var(--accent-2,#7B61FF);transform-box:fill-box;transform-origin:bottom"/>
+<text id="val-1" x="165" y="372.8" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:30px;font-weight:700;fill:var(--ink,#F5F3EE)">38</text>
+<text id="cat-1" x="165" y="650" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:26px;font-weight:500;fill:var(--muted,#8B8F98)">Jan</text>
+<rect id="bar-2" class="bar" x="285" y="319.2" width="110" height="280.8" rx="12" style="fill:var(--accent-2,#7B61FF);transform-box:fill-box;transform-origin:bottom"/>
+<text id="val-2" x="340" y="297.2" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:30px;font-weight:700;fill:var(--ink,#F5F3EE)">52</text>
+<text id="cat-2" x="340" y="650" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:26px;font-weight:500;fill:var(--muted,#8B8F98)">Feb</text>
+<rect id="bar-3" class="bar" x="460" y="346.2" width="110" height="253.8" rx="12" style="fill:var(--accent-2,#7B61FF);transform-box:fill-box;transform-origin:bottom"/>
+<text id="val-3" x="515" y="324.2" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:30px;font-weight:700;fill:var(--ink,#F5F3EE)">47</text>
+<text id="cat-3" x="515" y="650" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:26px;font-weight:500;fill:var(--muted,#8B8F98)">Mar</text>
+<rect id="bar-4" class="bar" x="635" y="243.59999999999997" width="110" height="356.40000000000003" rx="12" style="fill:var(--accent-2,#7B61FF);transform-box:fill-box;transform-origin:bottom"/>
+<text id="val-4" x="690" y="221.6" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:30px;font-weight:700;fill:var(--ink,#F5F3EE)">66</text>
+<text id="cat-4" x="690" y="650" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:26px;font-weight:500;fill:var(--muted,#8B8F98)">Apr</text>
+<rect id="bar-5" class="bar" x="810" y="200.39999999999998" width="110" height="399.6" rx="12" style="fill:var(--accent-2,#7B61FF);transform-box:fill-box;transform-origin:bottom"/>
+<text id="val-5" x="865" y="178.4" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:30px;font-weight:700;fill:var(--ink,#F5F3EE)">74</text>
+<text id="cat-5" x="865" y="650" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:26px;font-weight:500;fill:var(--muted,#8B8F98)">May</text>
+<rect id="bar-6" class="bar" x="985" y="103.19999999999999" width="110" height="496.8" rx="12" style="fill:var(--accent,#FF5A36);transform-box:fill-box;transform-origin:bottom"/>
+<text id="val-6" x="1040" y="81.2" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:30px;font-weight:700;fill:var(--ink,#F5F3EE)">92</text>
+<text id="cat-6" x="1040" y="650" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:26px;font-weight:500;fill:var(--muted,#8B8F98)">Jun</text>
+</svg>

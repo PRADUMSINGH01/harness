@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 380" width="440" height="380" role="img" aria-label="Context menu">
+<defs><filter id="cx-moc-context-menu-sh" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="16"/></filter></defs>
+<rect x="20" y="24" width="400" height="340" rx="22" style="fill:#000;opacity:0.4;filter:url(#cx-moc-context-menu-sh)"/>
+<rect x="10" y="10" width="420" height="356" rx="22" style="fill:var(--ui-panel,#1E2027);stroke:var(--ui-line,#2C2F38);stroke-width:2"/>
+<rect id="hover" x="22" y="90" width="396" height="62" rx="14" style="fill:var(--accent,#FF5A36)"/>
+<text id="item-1" x="48" y="72" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:28px;font-weight:500;fill:var(--ink,#F5F3EE)">Duplicate</text>
+<text id="item-2" x="48" y="138" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:28px;font-weight:500;fill:#fff">Export as MP4</text>
+<text id="item-3" x="48" y="204" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:28px;font-weight:500;fill:var(--ink,#F5F3EE)">Share link</text>
+<text id="item-4" x="48" y="270" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:28px;font-weight:500;fill:var(--ink,#F5F3EE)">Rename</text>
+<text id="item-5" x="48" y="336" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:28px;font-weight:500;fill:var(--accent,#FF5A36)">Delete</text>
+<path d="M30 296 H410" style="stroke:var(--ui-line,#2C2F38);stroke-width:2"/>
+</svg>

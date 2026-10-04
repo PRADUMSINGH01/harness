@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>hf-harness</title>
+    <!-- Official HyperFrames player, pinned to the vendored version: plays compositions with no render. -->
+    <!-- The explicit dist path: the bare package URL serves a minified copy whose relative chunk imports 404. -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@hyperframes/player@0.8.114/dist/hyperframes-player.js"></script>
+    <style>
+      :root {
+        --bg: #f7f7f5; --panel: #ffffff; --ink: #1b1d21; --muted: #6b7079; --line: #e3e4e8;
+        --accent: #2457d6; --good: #1f8a4c; --bad: #c2362f; --warn: #a86a00;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root { --bg: #111317; --panel: #1a1d22; --ink: #e8e9ec; --muted: #9aa0aa; --line: #2b2f36; --accent: #7aa2ff; --good: #4cc27f; --bad: #ff6b62; --warn: #e0a83a; }
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.45 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+      header { padding: 14px 20px; border-bottom: 1px solid var(--line); display: flex; gap: 12px; align-items: baseline; }
+      header h1 { font-size: 16px; margin: 0; }
+      header span { color: var(--muted); }
+      main { display: grid; grid-template-columns: 320px 1fr; min-height: calc(100vh - 50px); }
+      @media (max-width: 860px) { main { grid-template-columns: 1fr; } }
+      aside { border-right: 1px solid var(--line); padding: 16px; overflow: auto; }
+      section { padding: 16px 20px; overflow: auto; }
+      h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 18px 0 8px; }
+      .run { padding: 10px; border: 1px solid var(--line); border-radius: 8px; margin-bottom: 8px; background: var(--panel); cursor: pointer; }
+      .run.active { border-color: var(--accent); }
+      .run b { display: block; font-weight: 600; overflow-wrap: anywhere; }
+      .pill { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+      .pill.good { color: var(--good); border-color: var(--good); }
+      .pill.bad { color: var(--bad); border-color: var(--bad); }
+      .pill.warn { color: var(--warn); border-color: var(--warn); }
+      form { display: grid; gap: 8px; }
+      input, select, textarea, button { font: inherit; color: inherit; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; width: 100%; }
+      button { background: var(--accent); color: #fff; border: 0; cursor: pointer; font-weight: 600; }
+      .row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+      .variants { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+      .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+      .card.winner { border: 2px solid var(--good); }
+      .card img { width: 100%; display: block; background: #000; aspect-ratio: 16 / 9; object-fit: contain; }
+      .player-slot, hyperframes-player { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+      .card .body { padding: 10px 12px; }
+      .card .seed { color: var(--muted); font-size: 12px; margin-top: 6px; }
+      .compare img { width: 100%; border-radius: 8px; border: 1px solid var(--line); margin-bottom: 10px; }
+      .assets { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
+      .asset { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px; font-size: 13px; overflow: hidden; }
+      .asset.picked { border-color: var(--good); }
+      .asset b { display: block; margin-top: 6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .asset code { font-size: 11px; overflow-wrap: anywhere; }
+      .asset .thumb { height: 100px; display: grid; place-items: center; border-radius: 6px; background: repeating-conic-gradient(var(--line) 0 25%, transparent 0 50%) 50% / 16px 16px; }
+      .asset .thumb img { max-width: 100%; max-height: 100px; object-fit: contain; }
+      .asset .thumb span { color: var(--muted); text-transform: uppercase; font-size: 12px; letter-spacing: .06em; }
+      #upload { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+      table { border-collapse: collapse; width: 100%; background: var(--panel); }
+      td, th { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+      #events { font: 12px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 10px; max-height: 320px; overflow: auto; white-space: pre-wrap; }
+      .empty { color: var(--muted); padding: 40px 0; }
+      .err { color: var(--bad); }
+      .linkbtn { background: none; color: var(--accent); border: 0; padding: 0; width: auto; font-weight: 500; cursor: pointer; margin-right: 10px; }
+      #trace { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; max-height: 70vh; overflow: auto; }
+      #trace .head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; position: sticky; top: -12px; background: var(--panel); padding: 4px 0 8px; border-bottom: 1px solid var(--line); }
+      #trace .live { color: var(--warn); font-size: 12px; }
+      .turn { margin-top: 14px; font-weight: 600; font-size: 13px; }
+      .think { color: var(--muted); font-style: italic; white-space: pre-wrap; border-left: 3px solid var(--line); padding: 2px 10px; margin: 6px 0; font-size: 13px; }
+      .say { white-space: pre-wrap; margin: 6px 0; padding: 6px 10px; border-left: 3px solid var(--accent); }
+      .call { font: 12.5px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; margin: 6px 0 2px; color: var(--accent); }
+      .meta { color: var(--muted); font-size: 12px; margin: 4px 0; }
+      .bad-line { color: var(--bad); font-size: 13px; margin: 4px 0; }
+      details { margin: 2px 0 6px; }
+      summary { cursor: pointer; color: var(--muted); font-size: 12px; }
+      details pre { font: 12px/1.45 ui-monospace, SFMono-Regular, Consolas, monospace; white-space: pre-wrap; overflow-wrap: anywhere; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 8px; max-height: 360px; overflow: auto; margin: 4px 0; }
+    </style>
+  </head>
+  <body>
+    <header><h1>hf-harness</h1><span id="health">checking…</span></header>
+    <main>
+      <aside>
+        <h2>New run</h2>
+        <form id="create">
+          <select name="genre" id="genre"></select>
+          <textarea name="message" rows="2" placeholder="Message: the one thing it must communicate" required></textarea>
+          <input name="subject" placeholder="Subject (optional)" />
+          <input name="url" placeholder="Product URL (product launch)" />
+          <div class="row">
+            <input name="length" placeholder="Length, e.g. 45s" />
+            <select name="aspect"><option>1920x1080</option><option>1080x1920</option><option>1080x1080</option></select>
+          </div>
+          <div class="row">
+            <input name="n" type="number" min="1" max="8" placeholder="Variants" />
+            <input name="judges" type="number" min="1" max="5" placeholder="Judges (2)" />
+          </div>
+          <div class="row">
+            <select name="builder" id="builder" title="builder"></select>
+            <select name="judge" id="judge" title="judge"></select>
+          </div>
+          <div class="row">
+            <input name="builderModel" placeholder="Builder model (default)" />
+            <input name="judgeModel" placeholder="Judge model (default)" />
+          </div>
+          <input name="assets" id="run-assets" placeholder="Assets: library ids, comma-separated" title="Required assets staged into every variant. Pick them in the asset browser." />
+          <input name="logos" placeholder="Official logos: brands, e.g. stripe, notion" title="Fetched as official marks (never redrawn) and required in the film" />
+          <button>Start run</button>
+          <button type="button" class="linkbtn" id="open-assets">Browse assets (logos, photos, textures…)</button>
+          <div id="create-error" class="err"></div>
+        </form>
+        <h2>Runs</h2>
+        <div id="runs"></div>
+      </aside>
+      <section id="detail"><div class="empty">Select or start a run.</div></section>
+    </main>
+    <script>
+      const $ = (s) => document.querySelector(s);
+      const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+      let current = null;
+      let source = null;
+
+      async function getJson(url, opts) {
+        const r = await fetch(url, { cache: "no-store", ...opts });
+        const body = await r.json();
+        if (!r.ok) throw new Error(body.error ?? r.statusText);
+        return body;
+      }
+
+      // Render the page right away; /health probes Chrome through the CLI and can take seconds.
+      async function boot() {
+        const genres = await getJson("/genres");
+        $("#genre").innerHTML = genres.map((g) => `<option value="${g.id}">${esc(g.label)} (${g.defaultVariants} variants)</option>`).join("");
+        loadHealth();
+        await loadRuns();
+        const fromHash = location.hash.slice(1);
+        if (fromHash === "assets") showAssets();
+        else if (fromHash) select(fromHash);
+      }
+
+      async function loadHealth() {
+        try {
+          const health = await getJson("/health");
+          $("#health").textContent = `hyperframes ${health.hyperframes.version} · chrome ${health.chrome ? "ok" : "missing"} · ${health.render}`;
+          const opt = (role, drivers) => Object.entries(drivers).map(([id, c]) => `<option value="${id}" ${c.ok ? "" : "disabled"} title="${esc(c.reason ?? "")}">${role}: ${id}${c.ok ? "" : " (not configured)"}</option>`).join("");
+          $("#builder").innerHTML = opt("build", health.builders);
+          $("#judge").innerHTML = opt("judge", health.judges);
+          const firstOk = (drivers, prefer) => prefer.find((id) => drivers[id]?.ok);
+          const b = firstOk(health.builders, [health.defaults?.builder, "zai", "gemini", "dashscope", "openai", "claude-agent", "external"]);
+          const j = firstOk(health.judges, [health.defaults?.judge, "gemini", "zai", "dashscope", "openai", "claude-agent", "external"]);
+          if (b) $("#builder").value = b;
+          if (j) $("#judge").value = j;
+        } catch (e) {
+          $("#health").textContent = `health check failed: ${e.message}`;
+        }
+      }
+
+      async function loadRuns() {
+        const runs = await getJson("/runs");
+        $("#runs").innerHTML = runs.length
+          ? runs.map((r) => `<div class="run ${r.id === current ? "active" : ""}" data-id="${r.id}"><b>${esc(r.message)}</b><span class="pill ${pillFor(r.status)}">${r.status}</span> <span class="pill">${r.genre}</span></div>`).join("")
+          : `<div class="empty">No runs yet.</div>`;
+        for (const el of document.querySelectorAll(".run")) el.onclick = () => select(el.dataset.id);
+      }
+
+      function pillFor(status) {
+        if (["decided", "gated"].includes(status)) return "good";
+        if (["failed"].includes(status)) return "bad";
+        if (status.startsWith("waiting")) return "warn";
+        return "";
+      }
+
+      async function select(id) {
+        current = id;
+        location.hash = id;
+        await render();
+        loadRuns();
+        source?.close();
+        source = new EventSource(`/runs/${id}/events`);
+        source.onmessage = () => {};
+        let pending = null;
+        const onEvent = (e) => {
+          const ev = JSON.parse(e.data);
+          const box = $("#events");
+          // The agent log panel shows agent detail; keep the event box to milestones.
+          if (box && !["agent.progress", "agent.request", "agent.result", "agent.turn", "agent.thinking", "judge.progress", "judge.request"].includes(ev.type)) {
+            box.textContent += `${ev.ts.slice(11, 19)} ${ev.variant ?? "  "} ${ev.type}: ${ev.message}\n`;
+            box.scrollTop = box.scrollHeight;
+          }
+          if (ev.type !== "variant.log" && ev.type !== "variant.gate" && !ev.type.startsWith("agent.") && !ev.type.startsWith("judge.progress")) {
+            clearTimeout(pending);
+            pending = setTimeout(() => { render(true); loadRuns(); }, 400);
+          }
+        };
+        for (const t of ["run.created", "run.decided", "run.failed", "run.resumed", "variant.initialized", "variant.waiting", "variant.building", "variant.built", "variant.gating", "variant.gate", "variant.gated", "variant.repair", "variant.failed", "variant.log", "compare.done", "compare.failed", "judge.waiting", "judge.started", "judge.scorecards", "judge.rejected", "judge.failed", "judge.log", "capture.started", "capture.done", "capture.failed", "render.started", "render.done", "render.failed", "agent.say", "agent.tool", "agent.retry", "agent.compacted", "agent.end", "judge.say", "judge.thinking", "judge.retry", "judge.end", "judge.turn"]) {
+          source.addEventListener(t, onEvent);
+        }
+      }
+
+      async function render(keepEvents) {
+        const run = await getJson(`/runs/${current}`);
+        const prevEvents = keepEvents ? $("#events")?.textContent : "";
+        // Keep live players across re-renders so playback isn't reset by every event.
+        const players = new Map([...document.querySelectorAll("hyperframes-player")].map((p) => [p.getAttribute("src"), p]));
+        const file = (dir, rel) => `/files/${run.id}/${dir.replace(/\\/g, "/").split(`/${run.id}/`)[1]}/${rel}`;
+        const ranking = run.decision?.ranking ?? [];
+        const rankRow = (r, i) => `<tr><td>${i + 1}</td><td>${r.variant} (${r.label})</td><td>${r.final ?? "–"}</td><td>${r.technical}</td><td>${r.judge ?? "–"}${r.judgeSpread != null ? ` ±${r.judgeSpread}` : ""}</td><td>${r.vetoed ? `<span class="pill bad">vetoed</span>` : ""} ${esc(r.reasons.join("; "))}</td></tr>`;
+        $("#detail").innerHTML = `
+          <h2>${esc(run.genre)} · ${esc(run.status)}</h2>
+          <div style="font-size:18px;font-weight:600">${esc(run.brief.message)}</div>
+          <div class="seed">${esc(run.id)} · builder ${run.drivers.builder} · judge ${run.drivers.judge} ×${run.drivers.judges}${run.error ? ` · <span class="err">${esc(run.error)}</span>` : ""}</div>
+          <div class="seed">${spendLine(run)}
+            ${run.paused ? `<span class="pill warn">paused: ${esc(run.paused)}</span> <button class="linkbtn" data-run-action="resume">Resume</button>` : ""}
+            ${!run.paused && !["decided", "failed"].includes(run.status) ? `<button class="linkbtn" data-run-action="pause">Pause (stops paid builds)</button>` : ""}
+            ${!["decided", "failed"].includes(run.status) ? `<button class="linkbtn" data-run-action="cancel">Cancel run</button>` : ""}
+          </div>
+          ${ranking.length ? `<h2>Decision</h2><table><tr><th>#</th><th>Variant</th><th>Final</th><th>Technical</th><th>Judge</th><th></th></tr>${ranking.map(rankRow).join("")}</table>` : ""}
+          <h2>Variants</h2>
+          <div class="variants">${run.variants
+            .map((v) => {
+              const s = v.gate;
+              const status = s ? (s.hardFail ? `<span class="pill bad">hard fail</span>` : `<span class="pill good">technical ${s.technical}</span>`) : "";
+              const playable = ["gated", "built", "repairing"].includes(v.status) || (v.status === "failed" && s);
+              return `<div class="card ${run.decision?.winner === v.id ? "winner" : ""}">
+                ${playable ? `<div class="player-slot" data-src="/play/${run.id}/${v.id}/"></div>` : s?.contactSheet ? `<img loading="lazy" src="${file(v.dir, s.contactSheet)}?t=${encodeURIComponent(s.at)}" alt="contact sheet ${v.id}" />` : ""}
+                <div class="body"><b>${v.id} (${v.label})</b> <span class="pill ${pillFor(v.status)}">${v.status}</span> ${status}
+                ${v.error ? `<div class="err">${esc(v.error)}</div>` : ""}
+                ${v.usage ? `<div class="seed">spent: ${kfmt(v.usage.prompt)} in / ${kfmt(v.usage.completion)} out tokens · ${v.usage.minutes} min · ${v.usage.builds} build${v.usage.builds === 1 ? "" : "s"}</div>` : ""}
+                <div class="seed">${Object.entries(v.seed.values).map(([k, x]) => `${esc(k)}: ${esc(x)}`).join("<br>")}</div>
+                <div class="seed">
+                  ${s?.contactSheet ? `<a href="${file(v.dir, s.contactSheet)}?t=${encodeURIComponent(s.at)}" target="_blank">proof frames</a> ·` : ""}
+                  <button class="linkbtn" data-trace="/runs/${run.id}/variants/${v.id}/agent-log" data-title="${v.id} (${v.label}) agent log">Agent log</button>
+                  <a href="/runs/${run.id}/variants/${v.id}/agent-log?format=md" target="_blank">.md</a> ·
+                  <a href="/runs/${run.id}/variants/${v.id}/packet" target="_blank">packet</a>
+                </div>
+                </div></div>`;
+            })
+            .join("")}</div>
+          ${run.compare?.sheets?.length ? `<h2>Side by side</h2><div class="compare">${run.compare.sheets.map((c) => `<div class="seed">t=${c.at}s</div><img loading="lazy" src="/files/${run.id}/compare/${c.path.replace(/\\/g, "/").split("/").pop()}" alt="compare at ${c.at}s" />`).join("")}</div>` : ""}
+          ${run.status === "waiting-judges" ? `<p><a href="/runs/${run.id}/judge-packet?judge=j1" target="_blank">judge packet</a> · POST scorecards to <code>/runs/${run.id}/scorecards</code></p>` : ""}
+          ${["judging", "waiting-judges", "decided"].includes(run.status) && run.drivers.judge !== "external"
+            ? `<h2>Judges</h2><div class="seed">${Array.from({ length: run.drivers.judges }, (_, i) => `j${i + 1}`)
+                .map((j) => `<button class="linkbtn" data-trace="/runs/${run.id}/judge-log/${j}" data-title="judge ${j} log">${j} log</button>`)
+                .join("")}</div>`
+            : ""}
+          <div id="trace-slot"></div>
+          <h2>Events</h2><div id="events"></div>`;
+        if (prevEvents) $("#events").textContent = prevEvents;
+        for (const slot of document.querySelectorAll(".player-slot")) {
+          let p = players.get(slot.dataset.src);
+          if (!p) {
+            p = document.createElement("hyperframes-player");
+            p.setAttribute("src", slot.dataset.src);
+            p.setAttribute("controls", "");
+            p.setAttribute("muted", "");
+          }
+          slot.appendChild(p);
+        }
+        for (const b of document.querySelectorAll("[data-trace]")) b.onclick = () => openTrace(b.dataset.trace, b.dataset.title);
+        for (const b of document.querySelectorAll("[data-run-action]")) {
+          b.onclick = async () => {
+            const action = b.dataset.runAction;
+            if (action === "cancel" && !confirm("Cancel this run? In-flight builds stop and it cannot be resumed.")) return;
+            await getJson(`/runs/${run.id}/${action}`, { method: "POST" });
+            render(true);
+            loadRuns();
+          };
+        }
+        if (traceState) mountTrace();
+      }
+
+      // ---- agent log viewer: polls the full JSON trace incrementally while open ----
+      let traceState = null;
+      const kfmt = (n) => (n >= 1e6 ? `${(n / 1e6).toFixed(2)}M` : n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n));
+      function spendLine(run) {
+        const us = run.variants.map((v) => v.usage).filter(Boolean);
+        if (!us.length) return "";
+        const sum = (k) => us.reduce((a, u) => a + u[k], 0);
+        return `builders spent ${kfmt(sum("prompt"))} input / ${kfmt(sum("completion"))} output tokens over ${Math.round(sum("minutes") * 10) / 10} build-minutes · `;
+      }
+      function describeCall(name, a) {
+        if (!a || typeof a !== "object") return `${name} (unparseable arguments)`;
+        if (name === "write_file") return `write_file ${a.path} (${kfmt(String(a.content ?? "").length)} chars)`;
+        if (name === "edit_file") return `edit_file ${a.path}`;
+        if (name === "run_command") return `$ ${a.command}`;
+        if (name === "finish") return `finish`;
+        return `${name} ${a.path ?? ""}`;
+      }
+      function renderEntry(e) {
+        switch (e.kind) {
+          case "request": return `<div class="turn">Turn ${e.turn}</div><div class="meta">sent ${e.messages} messages, ${kfmt(e.contextChars)} chars of context</div>`;
+          case "thinking": return `<div class="think">${esc(e.text.trim())}</div>`;
+          case "say": return `<div class="say">${esc(e.text.trim())}</div>`;
+          case "tool_call": {
+            const body = typeof e.args === "string" ? e.args : JSON.stringify(e.args, null, 2);
+            return `<div class="call">→ ${esc(describeCall(e.name, e.args))}</div><details><summary>arguments (${kfmt(body.length)} chars)</summary><pre>${esc(body)}</pre></details>`;
+          }
+          case "tool_result": return `<details><summary>← ${esc(e.name)} result (${kfmt(e.output.length)} chars, ${e.ms} ms)</summary><pre>${esc(e.output)}</pre></details>`;
+          case "turn_done": return `<div class="meta">turn ${e.turn}: ${(e.ms / 1000).toFixed(1)}s · ${kfmt(e.usage.prompt)} in / ${kfmt(e.usage.completion)} out${e.usage.reasoning != null ? ` (${kfmt(e.usage.reasoning)} thinking)` : ""}</div>`;
+          case "retry": return `<div class="bad-line">model call failed (attempt ${e.attempt}): ${esc(e.error)}</div>`;
+          case "compacted": return `<div class="meta">context compacted: ${e.elided} old outputs elided</div>`;
+          case "end": return `<div class="turn">${esc(e.status.toUpperCase())} after ${e.turn} turns · ${kfmt(e.usage.prompt)} in / ${kfmt(e.usage.completion)} out</div><div class="say">${esc(e.summary)}</div>`;
+          default: return "";
+        }
+      }
+      function openTrace(url, title) {
+        if (traceState) clearInterval(traceState.timer);
+        traceState = { url, title, html: "", since: 0, live: "", timer: null };
+        mountTrace();
+        pollTrace();
+        traceState.timer = setInterval(pollTrace, 2500);
+      }
+      function mountTrace() {
+        const slot = $("#trace-slot");
+        if (!slot || !traceState) return;
+        slot.innerHTML = `<h2>${esc(traceState.title)}</h2><div id="trace"><div class="head"><span class="live" id="trace-live">${esc(traceState.live)}</span><button class="linkbtn" id="trace-close">close</button></div><div id="trace-body">${traceState.html}</div></div>`;
+        $("#trace-close").onclick = () => {
+          clearInterval(traceState.timer);
+          traceState = null;
+          slot.innerHTML = "";
+        };
+      }
+      async function pollTrace() {
+        const st = traceState;
+        if (!st) return;
+        try {
+          const r = await fetch(`${st.url}?since=${st.since}`, { cache: "no-store" });
+          if (!r.ok) {
+            st.live = r.status === 404 ? "no log yet" : `error ${r.status}`;
+          } else {
+            const { total, entries } = await r.json();
+            st.since = total;
+            for (const e of entries) {
+              if (e.kind === "progress") st.live = `turn ${e.turn}: model working ${Math.round(e.elapsedMs / 1000)}s · thinking ${kfmt(e.reasoningChars)} · writing ${kfmt(e.contentChars + e.toolArgChars)} chars`;
+              else {
+                st.html += renderEntry(e);
+                if (e.kind === "turn_done") st.live = "";
+                if (e.kind === "request") st.live = `turn ${e.turn}: waiting for the model…`;
+                if (e.kind === "end") st.live = "finished";
+              }
+            }
+          }
+          if (traceState !== st) return;
+          const box = $("#trace");
+          const atBottom = box && box.scrollTop + box.clientHeight >= box.scrollHeight - 40;
+          $("#trace-live") && ($("#trace-live").textContent = st.live);
+          if (entriesChanged(st)) $("#trace-body").innerHTML = st.html;
+          if (box && atBottom) box.scrollTop = box.scrollHeight;
+        } catch {}
+      }
+      function entriesChanged(st) {
+        const changed = st.rendered !== st.html.length;
+        st.rendered = st.html.length;
+        return changed;
+      }
+
+      $("#create").onsubmit = async (e) => {
+        e.preventDefault();
+        const f = new FormData(e.target);
+        const v = (k) => (f.get(k) || "").toString().trim() || undefined;
+        $("#create-error").textContent = "";
+        try {
+          const run = await getJson("/runs", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({
+              genre: v("genre"),
+              n: v("n") ? Number(v("n")) : undefined,
+              judges: v("judges") ? Number(v("judges")) : undefined,
+              builder: v("builder"),
+              judge: v("judge"),
+              builderModel: v("builderModel"),
+              judgeModel: v("judgeModel"),
+              brief: {
+                message: v("message"),
+                subject: v("subject"),
+                url: v("url"),
+                length: v("length"),
+                aspect: v("aspect"),
+                assets: list(v("assets")),
+                logos: list(v("logos")),
+              },
+            }),
+          });
+          await loadRuns();
+          select(run.id);
+        } catch (err) {
+          $("#create-error").textContent = err.message;
+        }
+      };
+
+      // A link or address-bar edit that only changes #run-id doesn't reload the page.
+      const list = (s) => (s ? s.split(",").map((x) => x.trim()).filter(Boolean) : undefined);
+
+      // ---- asset browser ----
+      const PREVIEWABLE = new Set(["png", "jpg", "webp", "gif", "svg"]);
+      let assetQuery = { q: "", kind: "" };
+      async function showAssets() {
+        current = null;
+        if (traceState) {
+          clearInterval(traceState.timer);
+          traceState = null;
+        }
+        source?.close();
+        loadRuns();
+        $("#detail").innerHTML = `
+          <h2>Asset library</h2>
+          <div class="seed" id="asset-counts">loading…</div>
+          <div class="row" style="margin:10px 0">
+            <input id="asset-q" placeholder="Search: stripe logo, paper texture, loader…" value="${esc(assetQuery.q)}" />
+            <select id="asset-kind"><option value="">all kinds</option>${["logo", "photo", "screenshot", "illustration", "icon", "texture", "lottie", "video", "audio", "font", "background", "overlay", "shape", "doodle", "mockup", "chart", "title", "matte", "frame"].map((k) => `<option ${assetQuery.kind === k ? "selected" : ""}>${k}</option>`).join("")}</select>
+          </div>
+          <div class="assets" id="asset-grid"></div>
+          <h2>Upload your own</h2>
+          <form id="upload" class="row" style="align-items:end">
+            <input type="file" name="file" required />
+            <input name="name" placeholder="Name, e.g. Acme logo" />
+            <select name="kind"><option value="">kind: auto</option>${["logo", "photo", "screenshot", "illustration", "icon", "texture", "lottie", "video", "audio", "font", "background", "overlay", "shape", "doodle", "mockup", "chart", "title", "matte", "frame"].map((k) => `<option>${k}</option>`).join("")}</select>
+            <input name="brand" placeholder="Brand (for logos)" />
+            <input name="tags" placeholder="Tags, comma-separated" />
+            <input name="description" placeholder="Description" />
+            <button>Upload to harness/assets/custom</button>
+            <div id="upload-msg" class="seed"></div>
+          </form>`;
+        let t = null;
+        $("#asset-q").oninput = (e) => {
+          assetQuery.q = e.target.value;
+          clearTimeout(t);
+          t = setTimeout(loadAssetGrid, 250);
+        };
+        $("#asset-kind").onchange = (e) => {
+          assetQuery.kind = e.target.value;
+          loadAssetGrid();
+        };
+        $("#upload").onsubmit = uploadAsset;
+        loadAssetGrid();
+      }
+      async function loadAssetGrid() {
+        const params = new URLSearchParams({ q: assetQuery.q, kind: assetQuery.kind, limit: "120" });
+        const data = await getJson(`/assets?${params}`);
+        $("#asset-counts").textContent = `${data.total} assets in harness/assets · ` + Object.entries(data.counts).map(([k, n]) => `${n} ${k}`).join(" · ");
+        const picked = new Set(list($("#run-assets").value) ?? []);
+        $("#asset-grid").innerHTML = data.items.length
+          ? data.items
+              .map(
+                (a) => `<div class="asset ${picked.has(a.id) ? "picked" : ""}">
+                  <div class="thumb">${PREVIEWABLE.has(a.format) ? `<img loading="lazy" src="${a.url}" alt="">` : `<span>${esc(a.kind)}</span>`}</div>
+                  <b title="${esc(a.description ?? "")}">${esc(a.name)}</b>
+                  <div class="seed">${esc(a.kind)}${a.brand ? ` · ${esc(a.brand)}` : ""} · ${a.width ? `${Math.round(a.width)}×${Math.round(a.height)}` : "?"}${a.durationSec ? ` · ${a.durationSec}s` : ""}</div>
+                  <div class="seed"><code>${esc(a.id)}</code></div>
+                  <button type="button" class="linkbtn" data-pick="${esc(a.id)}">${picked.has(a.id) ? "✓ in run" : "+ add to run"}</button>
+                </div>`,
+              )
+              .join("")
+          : `<div class="empty">No assets match. For a brand's logo, type the brand in "Official logos" instead.</div>`;
+        for (const b of document.querySelectorAll("[data-pick]")) {
+          b.onclick = () => {
+            const ids = new Set(list($("#run-assets").value) ?? []);
+            ids.has(b.dataset.pick) ? ids.delete(b.dataset.pick) : ids.add(b.dataset.pick);
+            $("#run-assets").value = [...ids].join(", ");
+            loadAssetGrid();
+          };
+        }
+      }
+      async function uploadAsset(e) {
+        e.preventDefault();
+        const f = new FormData(e.target);
+        const file = f.get("file");
+        if (!file || !file.size) return;
+        $("#upload-msg").textContent = "uploading…";
+        const dataBase64 = await new Promise((ok) => {
+          const r = new FileReader();
+          r.onload = () => ok(String(r.result).split(",")[1]);
+          r.readAsDataURL(file);
+        });
+        try {
+          const a = await getJson("/assets", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({
+              filename: file.name,
+              dataBase64,
+              name: f.get("name") || undefined,
+              kind: f.get("kind") || undefined,
+              brand: f.get("brand") || undefined,
+              tags: list(String(f.get("tags") || "")),
+              description: f.get("description") || undefined,
+            }),
+          });
+          $("#upload-msg").textContent = `added ${a.id}`;
+          assetQuery = { q: a.id, kind: "" };
+          $("#asset-q").value = a.id;
+          loadAssetGrid();
+        } catch (err) {
+          $("#upload-msg").textContent = err.message;
+        }
+      }
+      $("#open-assets").onclick = () => (location.hash = "assets");
+
+      window.addEventListener("hashchange", () => {
+        const id = location.hash.slice(1);
+        if (id === "assets") return showAssets();
+        if (id && id !== current) {
+          if (traceState) {
+            clearInterval(traceState.timer);
+            traceState = null;
+          }
+          select(id);
+        }
+      });
+
+      boot().catch((e) => ($("#health").textContent = e.message));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Film burn">
+<defs><filter id="cx-ove-film-burn-b" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="90"/></filter><radialGradient id="cx-ove-film-burn-g" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:#FFFFFF;stop-opacity:1"/><stop offset="0.25" style="stop-color:#FFE2A8;stop-opacity:0.95"/><stop offset="0.6" style="stop-color:#FF7A1A;stop-opacity:0.7"/><stop offset="1" style="stop-color:#B3170C;stop-opacity:0"/></radialGradient></defs>
+<g style="filter:url(#cx-ove-film-burn-b)"><ellipse cx="1700" cy="900" rx="780" ry="560" style="fill:url(#cx-ove-film-burn-g)"/><ellipse cx="1900" cy="1060" rx="300" ry="240" style="fill:#FFFFFF"/></g>
+</svg>

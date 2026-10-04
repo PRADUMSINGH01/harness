@@ -1,0 +1,33 @@
+{
+  "id": "generated_llama-logo-glowing-1",
+  "name": "llama 3 logo glowing",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/llama-logo-glowing-1.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M84 148 L84 120 C84 112 80 106 74 100 C68 94 66 86 68 76 C70 66 78 58 88 56 C92 46 100 40 110 40 C122 40 132 50 132 62 L132 74 L146 88 C150 92 148 98 142 98 L132 98 L132 118 C132 122 128 124 124 122 L114 116 L114 148 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "llama",
+    "logo",
+    "glowing",
+    "icon",
+    "icon",
+    "generated-svg"
+  ]
+}

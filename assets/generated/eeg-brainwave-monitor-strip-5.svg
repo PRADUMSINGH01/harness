@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16181F"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="waveFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A84FF"/>
+      <stop offset="0.55" stop-color="#0A84FF"/>
+      <stop offset="0.8" stop-color="#5A6472"/>
+      <stop offset="1" stop-color="#8E8E93"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-60%" width="180%" height="220%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <clipPath id="screenClip">
+      <rect x="16" y="52" width="168" height="86" rx="8"/>
+    </clipPath>
+  </defs>
+
+  <!-- glass card -->
+  <rect x="8" y="8" width="184" height="184" rx="16" fill="url(#glass)" filter="url(#softShadow)"/>
+  <rect x="8.5" y="8.5" width="183" height="183" rx="15.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <rect x="9.5" y="9.5" width="181" height="181" rx="14.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.04"/>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-opacity="0.7" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <path d="M18 26 V20 Q18 18 20 18 H26"/>
+    <path d="M174 18 H180 Q182 18 182 20 V26"/>
+    <path d="M18 174 V180 Q18 182 20 182 H26"/>
+    <path d="M174 182 H180 Q182 182 182 180 V174"/>
+  </g>
+
+  <!-- header -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    <circle cx="26" cy="36" r="3.5" fill="#F43F5E"/>
+    <circle cx="26" cy="36" r="6.5" fill="none" stroke="#F43F5E" stroke-opacity="0.4"/>
+    <text x="38" y="40" fill="#FFFFFF" font-size="9" font-weight="600" letter-spacing="2.5">EEG · LEAD II</text>
+    <text x="174" y="40" fill="#8E8E93" font-size="7.5" text-anchor="end" letter-spacing="1.5">25 mm/s</text>
+  </g>
+
+  <!-- screen -->
+  <rect x="16" y="52" width="168" height="86" rx="8" fill="#0A0A0A" stroke="#FFFFFF" stroke-opacity="0.07"/>
+
+  <!-- grid -->
+  <g clip-path="url(#screenClip)" stroke="#8E8E93" stroke-opacity="0.13" stroke-width="0.5">
+    <path d="M16 65 H184 M16 78 H184 M16 95 H184 M16 112 H184 M16 125 H184"/>
+    <path d="M34 52 V138 M52 52 V138 M70 52 V138 M88 52 V138 M106 52 V138 M124 52 V138 M142 52 V138 M160 52 V138"/>
+  </g>
+  <line x1="16" y1="95" x2="184" y2="95" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="0.8"/>
+
+  <!-- collapsing waveform: strong peaks -> small -> flatline -->
+  <g clip-path="url(#screenClip)">
+    <g filter="url(#glow)">
+      <path d="M16 95 L20 95 L23 90 L26 99 L29 82 L32 108 L35 76 L38 114 L41 72 L44 118 L47 78 L50 110 L53 88 L56 101 L59 84 L62 104 L65 90 L68 99 L71 91 L74 98 L77 92 L80 97 L83 93 L86 96 L89 94 L92 95.5 L95 94.8 L98 95.2 L101 95 L105 95 L112 95 L119 95 L126 95 L133 95 L140 95 L147 95 L154 95 L161 95 L168 95 L175 95 L182 95 L184 95"
+        fill="none" stroke="url(#waveFade)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+    <!-- fading ghost of former activity -->
+    <path d="M16 95 L20 95 L23 88 L26 102 L29 78 L32 112 L35 72 L38 118 L41 68 L44 122 L47 74 L50 113 L53 85 L56 104 L59 81 L62 108 L65 88 L68 102 L71 90 L74 100 L77 91 L80 99 L83 92 L86 98 L89 93 L92 96.5 L95 94.2 L98 95.5 L101 95"
+      fill="none" stroke="#0A84FF" stroke-opacity="0.18" stroke-width="3.2" stroke-linejoin="round" filter="url(#glow)"/>
+    <!-- sweep cursor -->
+    <line x1="105" y1="56" x2="105" y2="134" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1"/>
+    <circle cx="105" cy="95" r="2.2" fill="#FFFFFF"/>
+  </g>
+
+  <!-- screen label -->
+  <text x="24" y="64" fill="#8E8E93" font-size="6" font-family="ui-monospace, Menlo, monospace" letter-spacing="1.5" opacity="0.85">CEREBRAL ACTIVITY</text>
+
+  <!-- footer stats -->
+  <g font-family="ui-monospace, Menlo, monospace">
+    <text x="16" y="162" fill="#FFFFFF" font-size="15" font-weight="700">2</text>
+    <text x="16" y="172" fill="#8E8E93" font-size="6.5" letter-spacing="1">µV AMP</text>
+    <text x="70" y="162" fill="#0A84FF" font-size="15" font-weight="700">0.4</text>
+    <text x="70" y="172" fill="#8E8E93" font-size="6.5" letter-spacing="1">Hz DOMINANT</text>
+    <text x="130" y="162" fill="#8E8E93" font-size="15" font-weight="700">FLAT</text>
+    <text x="130" y="172" fill="#8E8E93" font-size="6.5" letter-spacing="1">MORPHOLOGY</text>
+  </g>
+
+  <!-- collapse arrow micro-detail -->
+  <g stroke="#8E8E93" stroke-opacity="0.6" stroke-width="1" fill="none" stroke-linecap="round">
+    <path d="M178 166 L178 176 M174.5 172.5 L178 176 L181.5 172.5"/>
+  </g>
+</svg>

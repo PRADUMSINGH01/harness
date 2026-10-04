@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A0A0A"/>
+      <stop offset="1" stop-color="#111318"/>
+    </linearGradient>
+    <radialGradient id="glowBlue" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="trailFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="blurHeavy" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" fill="url(#bgGrad)"/>
+  <rect x="1" y="1" width="198" height="198" fill="none" stroke="#8E8E93" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- faint background column ticks -->
+  <g stroke="#8E8E93" stroke-opacity="0.08" stroke-width="0.5">
+    <line x1="28.75" y1="6" x2="28.75" y2="194"/>
+    <line x1="57.5" y1="6" x2="57.5" y2="194"/>
+    <line x1="86.25" y1="6" x2="86.25" y2="194"/>
+    <line x1="115" y1="6" x2="115" y2="194"/>
+    <line x1="143.75" y1="6" x2="143.75" y2="194"/>
+    <line x1="172.5" y1="6" x2="172.5" y2="194"/>
+  </g>
+
+  <!-- blurred glow underlays -->
+  <g filter="url(#blurHeavy)" font-family="'SF Mono', Menlo, Consolas, monospace" font-size="11" text-anchor="middle">
+    <text x="28.75" y="30" fill="#0A84FF">1</text>
+    <text x="86.25" y="70" fill="#0A84FF">0</text>
+    <text x="143.75" y="52" fill="#0A84FF">1</text>
+    <text x="172.5" y="120" fill="#0A84FF">0</text>
+  </g>
+
+  <!-- binary rain columns -->
+  <g font-family="'SF Mono', Menlo, Consolas, monospace" font-size="11" text-anchor="middle">
+    <!-- col 1 -->
+    <g opacity="0.25" fill="#FFFFFF">
+      <text x="28.75" y="18">0</text><text x="28.75" y="40">1</text>
+    </g>
+    <g fill="#8E8E93" opacity="0.7">
+      <text x="28.75" y="52">0</text><text x="28.75" y="64">1</text><text x="28.75" y="76">0</text><text x="28.75" y="88">1</text><text x="28.75" y="100">1</text>
+    </g>
+    <text x="28.75" y="112" fill="#FFFFFF" filter="url(#softGlow)">0</text>
+    <circle cx="28.75" cy="112" r="14" fill="url(#glowBlue)"/>
+    <text x="28.75" y="112" fill="#0A84FF" font-weight="600" filter="url(#softGlow)">1</text>
+
+    <!-- col 2 -->
+    <g opacity="0.25" fill="#FFFFFF">
+      <text x="57.5" y="34">1</text><text x="57.5" y="58">0</text><text x="57.5" y="82">1</text>
+    </g>
+    <g fill="#8E8E93" opacity="0.7">
+      <text x="57.5" y="106">0</text><text x="57.5" y="118">1</text><text x="57.5" y="130">0</text>
+    </g>
+    <circle cx="57.5" cy="142" r="12" fill="url(#glowBlue)"/>
+    <text x="57.5" y="142" fill="#0A84FF" font-weight="600" filter="url(#softGlow)">0</text>
+
+    <!-- col 3 -->
+    <g opacity="0.2" fill="#FFFFFF">
+      <text x="86.25" y="16">1</text><text x="86.25" y="38">0</text><text x="86.25" y="60">0</text><text x="86.25" y="82">1</text>
+    </g>
+    <g fill="#8E8E93" opacity="0.7">
+      <text x="86.25" y="104">0</text><text x="86.25" y="116">1</text>
+    </g>
+    <circle cx="86.25" cy="128" r="14" fill="url(#glowBlue)"/>
+    <text x="86.25" y="128" fill="#0A84FF" font-weight="600" filter="url(#softGlow)">1</text>
+    <text x="86.25" y="170" fill="#8E8E93" opacity="0.5">0</text><text x="86.25" y="182" fill="#8E8E93" opacity="0.35">1</text>
+
+    <!-- col 4 -->
+    <g opacity="0.25" fill="#FFFFFF">
+      <text x="115" y="24">0</text><text x="115" y="48">1</text><text x="115" y="72">1</text>
+    </g>
+    <g fill="#8E8E93" opacity="0.7">
+      <text x="115" y="96">0</text><text x="115" y="108">1</text><text x="115" y="120">0</text><text x="115" y="132">1</text>
+    </g>
+    <circle cx="115" cy="146" r="11" fill="url(#glowBlue)"/>
+    <text x="115" y="146" fill="#0A84FF" font-weight="600" filter="url(#softGlow)">0</text>
+
+    <!-- col 5 -->
+    <g opacity="0.2" fill="#FFFFFF">
+      <text x="143.75" y="14">0</text><text x="143.75" y="30">1</text><text x="143.75" y="62">1</text><text x="143.75" y="84">0</text>
+    </g>
+    <g fill="#8E8E93" opacity="0.7">
+      <text x="143.75" y="106">1</text><text x="143.75" y="118">0</text>
+    </g>
+    <circle cx="143.75" cy="130" r="13" fill="url(#glowBlue)"/>
+    <text x="143.75" y="130" fill="#0A84FF" font-weight="600" filter="url(#softGlow)">1</text>
+
+    <!-- col 6 -->
+    <g opacity="0.25" fill="#FFFFFF">
+      <text x="172.5" y="42">0</text><text x="172.5" y="66">1</text>
+    </g>
+    <g fill="#8E8E93" opacity="0.7">
+      <text x="172.5" y="90">1</text><text x="172.5" y="102">0</text><text x="172.5" y="114">1</text>
+    </g>
+    <circle cx="172.5" cy="128" r="12" fill="url(#glowBlue)"/>
+    <text x="172.5" y="128" fill="#0A84FF" font-weight="600" filter="url(#softGlow)">0</text>
+  </g>
+
+  <!-- dark glass overlay panel -->
+  <g>
+    <rect x="66" y="78" width="68" height="44" rx="8" fill="url(#glassGrad)" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="0.75"/>
+    <rect x="66" y="78" width="68" height="12" rx="6" fill="#FFFFFF" opacity="0.08"/>
+    <g font-family="'SF Mono', Menlo, Consolas, monospace" font-size="9" text-anchor="middle">
+      <text x="100" y="98" fill="#0A84FF" letter-spacing="2">01101</text>
+      <text x="100" y="112" fill="#FFFFFF" opacity="0.85" letter-spacing="2">10010</text>
+    </g>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M8 18 V8 H18"/>
+    <path d="M182 8 H192 V18"/>
+    <path d="M192 182 V192 H182"/>
+    <path d="M18 192 H8 V182"/>
+  </g>
+
+  <!-- technical ticks -->
+  <g stroke="#8E8E93" stroke-width="0.75" opacity="0.4">
+    <line x1="100" y1="3" x2="100" y2="8"/>
+    <line x1="100" y1="192" x2="100" y2="197"/>
+    <line x1="3" y1="100" x2="8" y2="100"/>
+    <line x1="192" y1="100" x2="197" y2="100"/>
+  </g>
+</svg>

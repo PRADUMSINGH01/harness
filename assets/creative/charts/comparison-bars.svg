@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520" role="img" aria-label="Before and after bars">
+<text id="before-label" x="0" y="70" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:34px;font-weight:600;fill:var(--muted,#8B8F98)">Before</text>
+<rect id="before" x="0" y="100" width="900" height="110" rx="20" style="fill:var(--ui-line,#3A3E48);transform-box:fill-box;transform-origin:left"/>
+<text id="before-value" x="30" y="172" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:40px;font-weight:800;fill:var(--ink,#F5F3EE)">3 days</text>
+<text id="after-label" x="0" y="320" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:34px;font-weight:600;fill:var(--ink,#F5F3EE)">After</text>
+<rect id="after" x="0" y="350" width="160" height="110" rx="20" style="fill:var(--accent,#FF5A36);transform-box:fill-box;transform-origin:left"/>
+<text id="after-value" x="190" y="422" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:40px;font-weight:800;fill:var(--accent,#FF5A36)">10 min</text>
+</svg>

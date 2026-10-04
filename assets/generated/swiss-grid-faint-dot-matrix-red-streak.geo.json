@@ -1,0 +1,35 @@
+{
+  "id": "generated_swiss-grid-faint-dot-matrix-red-streak",
+  "name": "swiss grid faint dot matrix with red ticker tape streak texture",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/swiss-grid-faint-dot-matrix-red-streak.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M10 20 Q 100 6 190 20 L190 10 Q 100 -2 10 10 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "swiss",
+    "grid",
+    "faint",
+    "dot",
+    "matrix",
+    "red",
+    "illustration",
+    "generated-svg"
+  ]
+}

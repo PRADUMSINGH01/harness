@@ -1,0 +1,35 @@
+{
+  "id": "generated_vintage-1970s-student-student-4",
+  "name": "vintage 1970s student student silhouette",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/vintage-1970s-student-student-4.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M100 30 C126 30 142 48 142 72 C142 80 138 84 134 84 C136 74 132 62 126 58 C128 68 126 74 122 78 C124 68 120 58 114 54 C116 62 114 70 110 74 C110 64 106 56 100 54 C94 56 90 64 90 74 C86 70 84 62 86 54 C80 58 76 68 78 78 C74 74 72 68 74 58 C68 62 64 74 66 84 C62 84 58 80 58 72 C58 48 74 30 100 30 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "vintage",
+    "1970s",
+    "student",
+    "student",
+    "silhouette",
+    "icon",
+    "icon",
+    "generated-svg"
+  ]
+}

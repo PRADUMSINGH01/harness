@@ -1,0 +1,35 @@
+{
+  "id": "generated_rhythmic-motion-blur-particle-5",
+  "name": "rhythmic motion blur particle streaks",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/rhythmic-motion-blur-particle-5.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M24 128 C64 108, 132 100, 182 110"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "rhythmic",
+    "motion",
+    "blur",
+    "particle",
+    "streaks",
+    "overlay",
+    "illustration",
+    "generated-svg"
+  ]
+}

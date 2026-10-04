@@ -1,0 +1,30 @@
+{
+  "id": "prop_settle_out",
+  "name": "Settle Out",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/motion/prop_settle_out.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 240 240",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 240,
+      "height": 240
+    },
+    "closed_svg_path": "M202 194 L194 194 M202 194 L202 186"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "storyboard-prop",
+    "settle-out",
+    "motion"
+  ]
+}

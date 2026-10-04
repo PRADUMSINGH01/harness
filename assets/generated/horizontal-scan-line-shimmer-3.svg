@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#0A84FF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bandFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="ticketClip">
+      <path d="M30 60 H170 V104 H150 A10 10 0 0 0 150 124 H170 V140 H30 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- scan lines background -->
+  <g opacity="0.35">
+    <rect x="0" y="0" width="200" height="2" fill="#0A84FF" opacity="0.25"/>
+    <rect x="0" y="198" width="200" height="2" fill="#0A84FF" opacity="0.25"/>
+  </g>
+
+  <!-- ticket body -->
+  <g filter="url(#glow)">
+    <path d="M30 60 H170 V104 H150 A10 10 0 0 0 150 124 H170 V140 H30 Z"
+          fill="url(#glass)" stroke="#8E8E93" stroke-width="1.2"/>
+  </g>
+
+  <!-- perforation ticks along notch edge -->
+  <g stroke="#8E8E93" stroke-width="1" opacity="0.7">
+    <line x1="150" y1="104" x2="158" y2="104"/>
+    <line x1="150" y1="124" x2="158" y2="124"/>
+  </g>
+
+  <!-- ticket content details -->
+  <g clip-path="url(#ticketClip)">
+    <!-- stub divider dashes -->
+    <g stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2 4" opacity="0.35">
+      <line x1="30" y1="70" x2="170" y2="70"/>
+    </g>
+    <rect x="40" y="78" width="52" height="5" rx="2.5" fill="#FFFFFF" opacity="0.55"/>
+    <rect x="40" y="88" width="34" height="4" rx="2" fill="#FFFFFF" opacity="0.3"/>
+    <rect x="40" y="126" width="44" height="4" rx="2" fill="#FFFFFF" opacity="0.3"/>
+    <g stroke="#0A84FF" stroke-width="1.4" opacity="0.9">
+      <line x1="128" y1="78" x2="128" y2="126"/>
+      <line x1="134" y1="78" x2="134" y2="126"/>
+      <line x1="140" y1="78" x2="140" y2="126"/>
+    </g>
+
+    <!-- horizontal scan-line stack -->
+    <g stroke="#FFFFFF" opacity="0.5" stroke-width="0.7">
+      <line x1="30" y1="96" x2="170" y2="96"/>
+      <line x1="30" y1="98.5" x2="170" y2="98.5" opacity="0.3"/>
+      <line x1="30" y1="101" x2="170" y2="101" opacity="0.15"/>
+      <line x1="30" y1="130" x2="170" y2="130"/>
+      <line x1="30" y1="132.5" x2="170" y2="132.5" opacity="0.3"/>
+      <line x1="30" y1="135" x2="170" y2="135" opacity="0.15"/>
+    </g>
+
+    <!-- moving shimmer band -->
+    <g>
+      <rect x="-60" y="112" width="60" height="5" fill="url(#bandFade)" filter="url(#glow)">
+        <animate attributeName="x" values="-60;170" dur="2.4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="-60" y="106" width="60" height="17" fill="url(#shimmer)" opacity="0.35">
+        <animate attributeName="x" values="-60;170" dur="2.4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-width="1.5" fill="none" opacity="0.9">
+    <path d="M20 52 V44 H28"/>
+    <path d="M172 44 H180 V52"/>
+    <path d="M180 148 V156 H172"/>
+    <path d="M28 156 H20 V148"/>
+  </g>
+
+  <!-- technical ticks -->
+  <g stroke="#8E8E93" stroke-width="1" opacity="0.6">
+    <line x1="30" y1="150" x2="30" y2="156"/>
+    <line x1="100" y1="150" x2="100" y2="153"/>
+    <line x1="170" y1="150" x2="170" y2="156"/>
+  </g>
+</svg>

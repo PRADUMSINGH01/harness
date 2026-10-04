@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101216"/>
+      <stop offset="0.55" stop-color="#0A0A0A"/>
+      <stop offset="1" stop-color="#15130B"/>
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#B8860B"/>
+      <stop offset="0.5" stop-color="#FFD60A"/>
+      <stop offset="1" stop-color="#FFB340"/>
+    </linearGradient>
+    <linearGradient id="bandFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFD60A" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FFD60A" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowCore" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFD60A" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FFD60A" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <clipPath id="chartClip">
+      <rect x="26" y="30" width="148" height="140" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <!-- background glass card -->
+  <rect x="0" y="0" width="200" height="200" rx="18" fill="url(#bg)"/>
+  <rect x="1" y="1" width="198" height="198" rx="17" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1"/>
+  <rect x="26" y="30" width="148" height="140" rx="10" fill="#FFFFFF" fill-opacity="0.03" stroke="#8E8E93" stroke-opacity="0.25" stroke-width="0.75"/>
+
+  <!-- grid -->
+  <g stroke="#8E8E93" stroke-opacity="0.16" stroke-width="0.5">
+    <line x1="41" y1="30" x2="41" y2="170"/>
+    <line x1="66" y1="30" x2="66" y2="170"/>
+    <line x1="91" y1="30" x2="91" y2="170"/>
+    <line x1="116" y1="30" x2="116" y2="170"/>
+    <line x1="141" y1="30" x2="141" y2="170"/>
+    <line x1="166" y1="30" x2="166" y2="170"/>
+    <line x1="26" y1="50" x2="174" y2="50"/>
+    <line x1="26" y1="75" x2="174" y2="75"/>
+    <line x1="26" y1="100" x2="174" y2="100"/>
+    <line x1="26" y1="125" x2="174" y2="125"/>
+    <line x1="26" y1="150" x2="174" y2="150"/>
+  </g>
+
+  <!-- collapsing connectivity bands (concentric arcs converging to node) -->
+  <g clip-path="url(#chartClip)" fill="none">
+    <g filter="url(#softGlow)" opacity="0.7">
+      <circle cx="60" cy="52" r="30" stroke="url(#bandFade)" stroke-width="2.5"/>
+      <circle cx="60" cy="52" r="20" stroke="url(#bandFade)" stroke-width="2"/>
+      <circle cx="60" cy="52" r="11" stroke="url(#bandFade)" stroke-width="1.5"/>
+    </g>
+    <circle cx="60" cy="52" r="30" stroke="#FFD60A" stroke-opacity="0.45" stroke-width="1.2"/>
+    <circle cx="60" cy="52" r="20" stroke="#FFD60A" stroke-opacity="0.6" stroke-width="1"/>
+    <circle cx="60" cy="52" r="11" stroke="#FFD60A" stroke-opacity="0.8" stroke-width="0.9"/>
+    <circle cx="60" cy="52" r="3.2" fill="#FFD60A" filter="url(#glow)"/>
+    <!-- secondary node with fading bands -->
+    <circle cx="146" cy="42" r="16" stroke="#0A84FF" stroke-opacity="0.5" stroke-width="1"/>
+    <circle cx="146" cy="42" r="8.5" stroke="#0A84FF" stroke-opacity="0.7" stroke-width="0.8"/>
+    <circle cx="146" cy="42" r="2.4" fill="#0A84FF" filter="url(#glow)"/>
+    <!-- connectivity link -->
+    <path d="M60 52 Q103 24 146 42" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="0.8" stroke-dasharray="3 3"/>
+  </g>
+
+  <!-- EEG waveform traces -->
+  <g clip-path="url(#chartClip)">
+    <!-- trace 1: primary gold -->
+    <path d="M26 108 L34 108 L37 96 L40 120 L43 100 L47 108 L53 108 L56 84 L58 132 L61 106 L66 108 L72 108 L75 92 L78 122 L82 108 L88 108 L92 78 L94 138 L97 104 L102 108 L110 108 L113 94 L116 120 L119 102 L124 108 L130 108 L133 86 L136 128 L139 106 L145 108 L152 108 L155 95 L158 118 L161 104 L166 108 L174 108"
+          fill="none" stroke="#FFD60A" stroke-opacity="0.28" stroke-width="3.5" filter="url(#softGlow)"/>
+    <path d="M26 108 L34 108 L37 96 L40 120 L43 100 L47 108 L53 108 L56 84 L58 132 L61 106 L66 108 L72 108 L75 92 L78 122 L82 108 L88 108 L92 78 L94 138 L97 104 L102 108 L110 108 L113 94 L116 120 L119 102 L124 108 L130 108 L133 86 L136 128 L139 106 L145 108 L152 108 L155 95 L158 118 L161 104 L166 108 L174 108"
+          fill="none" stroke="url(#goldStroke)" stroke-width="1.6" stroke-linejoin="round" filter="url(#glow)"/>
+    <!-- trace 2: dimmer white -->
+    <path d="M26 128 L36 128 L39 120 L42 136 L46 126 L52 128 L58 128 L61 116 L64 140 L68 126 L74 128 L84 128 L88 112 L91 144 L95 124 L102 128 L114 128 L117 118 L120 136 L124 126 L132 128 L142 128 L145 114 L148 142 L152 124 L160 128 L174 128"
+          fill="none" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="1"/>
+    <!-- trace 3: blue -->
+    <path d="M26 90 L38 90 L41 84 L44 96 L50 90 L58 90 L61 80 L64 100 L68 90 L78 90 L82 78 L85 102 L89 90 L100 90 L112 90 L115 82 L118 98 L122 90 L134 90 L148 90 L151 83 L154 97 L158 90 L174 90"
+          fill="none" stroke="#0A84FF" stroke-opacity="0.7" stroke-width="1"/>
+  </g>
+
+  <!-- hotspot marker -->
+  <circle cx="93" cy="78" r="9" fill="url(#glowCore)"/>
+  <circle cx="93" cy="78" r="1.8" fill="#FFFFFF"/>
+
+  <!-- corner brackets -->
+  <g stroke="#FFD60A" stroke-opacity="0.7" stroke-width="1.2" fill="none">
+    <path d="M20 44 L20 36 L28 36"/>
+    <path d="M180 44 L180 36 L172 36"/>
+    <path d="M20 156 L20 164 L28 164"/>
+    <path d="M180 156 L180 164 L172 164"/>
+  </g>
+
+  <!-- ticks & labels -->
+  <g fill="#8E8E93" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="5.5">
+    <text x="26" y="180">CH1</text>
+    <text x="86" y="180">CH2</text>
+    <text x="152" y="180">CH3</text>
+    <text x="176" y="185" text-anchor="end" fill="#FFD60A" fill-opacity="0.8">100 µV</text>
+    <text x="26" y="25" fill="#FFFFFF" fill-opacity="0.7">EEG · 256 Hz</text>
+    <text x="174" y="25" text-anchor="end" fill="#0A84FF" fill-opacity="0.9">SYNC ▮▮▯</text>
+  </g>
+  <g stroke="#8E8E93" stroke-opacity="0.5" stroke-width="0.7">
+    <line x1="30" y1="171" x2="30" y2="174"/>
+    <line x1="80" y1="171" x2="80" y2="174"/>
+    <line x1="130" y1="171" x2="130" y2="174"/>
+    <line x1="170" y1="171" x2="170" y2="174"/>
+  </g>
+</svg>

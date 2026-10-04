@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 84" width="100%" height="100%">
+  <defs>
+    <linearGradient id="break-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E11D48"/>
+      <stop offset="100%" stop-color="#BE123C"/>
+    </linearGradient>
+    <filter id="red-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base Container -->
+  <rect x="2" y="2" width="596" height="80" rx="16" fill="#0C0D12" fill-opacity="0.94" stroke="#E11D48" stroke-width="1.8" stroke-opacity="0.6"/>
+
+  <!-- Left Alert Badge -->
+  <path d="M12 12 H170 L152 72 H12 Z" fill="url(#break-grad)" filter="url(#red-glow)"/>
+
+  <!-- Pulsing Strobe Beacon Dot -->
+  <circle cx="34" cy="42" r="7" fill="#FFFFFF"/>
+  <circle cx="34" cy="42" r="11" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.6"/>
+
+  <!-- Badge Text -->
+  <text x="56" y="47" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="16" letter-spacing="2">BREAKING</text>
+
+  <!-- Main Headline Banner Text -->
+  <text x="185" y="48" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="18" letter-spacing="1">CRITICAL INTEL UPDATE</text>
+
+  <!-- Chevrons on right -->
+  <path d="M530 32 L544 42 L530 52" fill="none" stroke="#E11D48" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M548 32 L562 42 L548 52" fill="none" stroke="#E11D48" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  <path d="M566 32 L580 42 L566 52" fill="none" stroke="#E11D48" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+</svg>

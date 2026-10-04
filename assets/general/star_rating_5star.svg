@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="100%" height="100%">
+  <defs>
+    <linearGradient id="star-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="100%" stop-color="#EAB308"/>
+    </linearGradient>
+    <g id="single-star">
+      <polygon fill="url(#star-grad)" points="25,2 32,18 49,18 35,29 40,46 25,36 10,46 15,29 1,18 18,18"/>
+    </g>
+  </defs>
+
+  <use href="#single-star" x="5" y="6"/>
+  <use href="#single-star" x="60" y="6"/>
+  <use href="#single-star" x="115" y="6"/>
+  <use href="#single-star" x="170" y="6"/>
+  <use href="#single-star" x="225" y="6"/>
+</svg>

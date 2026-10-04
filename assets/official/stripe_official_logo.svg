@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="stripeBlurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#635BFF"/>
+      <stop offset="100%" stop-color="#7A73FF"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 'stripe' wordmark: stroke-built geometric lowercase letterforms -->
+  <g fill="none" stroke="#635BFF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)">
+
+    <!-- s : x 20-44 -->
+    <path d="M43 91 C37 82, 23 83, 22 92 C21 100, 43 100, 43 109 C43 118, 27 120, 21 111"/>
+
+    <!-- t : stem x=56, crossbar y=90 -->
+    <path d="M48 90 H65"/>
+    <path d="M57 76 V109 C57 116, 61 119, 66 117"/>
+
+    <!-- r : stem x=77, shoulder -->
+    <path d="M77 84 V118"/>
+    <path d="M77 101 C77 89, 87 83, 94 91"/>
+
+    <!-- i : dot + stem x=107 -->
+    <circle cx="107" cy="74" r="5.5" fill="#635BFF" stroke="none"/>
+    <path d="M107 84 V118"/>
+
+    <!-- p : stem x=127, bowl -->
+    <path d="M127 76 V118"/>
+    <path d="M127 90 C127 84, 150 82, 150 100 C150 118, 127 120, 127 113"/>
+
+    <!-- e : crossbar + open terminal -->
+    <path d="M141 101 H171"/>
+    <path d="M171 101 C171 89, 142 87, 141 102 C140 116, 161 123, 171 112"/>
+  </g>
+
+  <!-- subtle highlight pass for depth (very low opacity, keeps crisp core) -->
+  <g fill="none" stroke="url(#stripeBlurple)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">
+    <path d="M43 91 C37 82, 23 83, 22 92 C21 100, 43 100, 43 109 C43 118, 27 120, 21 111"/>
+    <path d="M48 90 H65"/>
+    <path d="M57 76 V109 C57 116, 61 119, 66 117"/>
+    <path d="M77 84 V118"/>
+    <path d="M77 101 C77 89, 87 83, 94 91"/>
+    <path d="M127 76 V118"/>
+    <path d="M127 90 C127 84, 150 82, 150 100 C150 118, 127 120, 127 113"/>
+    <path d="M141 101 H171"/>
+    <path d="M171 101 C171 89, 142 87, 141 102 C140 116, 161 123, 171 112"/>
+  </g>
+</svg>

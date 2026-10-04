@@ -1,0 +1,31 @@
+{
+  "id": "stripe_official_logo",
+  "name": "Stripe Official Logo Mark",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/official/stripe_official_logo.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M43 91 C37 82, 23 83, 22 92 C21 100, 43 100, 43 109 C43 118, 27 120, 21 111"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "fintech",
+    "payments",
+    "brand",
+    "wordmark"
+  ]
+}

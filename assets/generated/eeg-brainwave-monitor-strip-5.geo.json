@@ -1,0 +1,35 @@
+{
+  "id": "generated_eeg-brainwave-monitor-strip-5",
+  "name": "EEG brainwave monitor strip with peaks collapsing to flatline",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/eeg-brainwave-monitor-strip-5.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M16 95 L20 95 L23 90 L26 99 L29 82 L32 108 L35 76 L38 114 L41 72 L44 118 L47 78 L50 110 L53 88 L56 101 L59 84 L62 104 L65 90 L68 99 L71 91 L74 98 L77 92 L80 97 L83 93 L86 96 L89 94 L92 95.5 L95 94.8 L98 95.2 L101 95 L105 95 L112 95 L119 95 L126 95 L133 95 L140 95 L147 95 L154 95 L161 95 L168 95 L175 95 L182 95 L184 95"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "eeg",
+    "brainwave",
+    "monitor",
+    "strip",
+    "peaks",
+    "collapsing",
+    "chart",
+    "generated-svg"
+  ]
+}

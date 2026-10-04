@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <!-- Vertical crease gradient -->
+    <linearGradient id="v-crease-left" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="90%" stop-color="#000000" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.18" />
+    </linearGradient>
+    <linearGradient id="v-crease-right" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.22" />
+      <stop offset="10%" stop-color="#FFFFFF" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Horizontal crease gradient -->
+    <linearGradient id="h-crease-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="90%" stop-color="#000000" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.16" />
+    </linearGradient>
+    <linearGradient id="h-crease-bot" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.20" />
+      <stop offset="10%" stop-color="#FFFFFF" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Vertical Fold (spine at x=540) -->
+  <rect x="510" y="0" width="30" height="1920" fill="url(#v-crease-left)" />
+  <rect x="540" y="0" width="30" height="1920" fill="url(#v-crease-right)" />
+
+  <!-- Horizontal Fold 1 (at y=640) -->
+  <rect x="0" y="615" width="1080" height="25" fill="url(#h-crease-top)" />
+  <rect x="0" y="640" width="1080" height="25" fill="url(#h-crease-bot)" />
+
+  <!-- Horizontal Fold 2 (at y=1280) -->
+  <rect x="0" y="1255" width="1080" height="25" fill="url(#h-crease-top)" />
+  <rect x="0" y="1280" width="1080" height="25" fill="url(#h-crease-bot)" />
+
+  <!-- Soft vignette around document perimeter -->
+  <rect x="0" y="0" width="1080" height="1920" fill="none" stroke="rgba(20,15,10,0.06)" stroke-width="12" />
+</svg>

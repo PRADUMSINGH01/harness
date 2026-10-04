@@ -1,0 +1,35 @@
+{
+  "id": "generated_airline-cabin-seat-map-4",
+  "name": "airline cabin seat-map grid with rows of seats top view",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/airline-cabin-seat-map-4.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M100 30 C 66 30, 56 46, 56 72 L56 176 C 56 190, 70 194, 100 194 C 130 194, 144 190, 144 176 L144 72 C 144 46, 134 30, 100 30 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "airline",
+    "cabin",
+    "seat",
+    "map",
+    "grid",
+    "rows",
+    "chart",
+    "generated-svg"
+  ]
+}

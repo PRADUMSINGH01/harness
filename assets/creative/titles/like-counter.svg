@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 150" width="380" height="150" role="img" aria-label="Like counter">
+<rect x="5" y="5" width="370" height="140" rx="70" style="fill:var(--ui-panel,#16181D)"/>
+<path id="heart" d="M96 116 c-30 -24 -50 -40 -50 -62 a25 25 0 0 1 50 -10 a25 25 0 0 1 50 10 c0 22 -20 38 -50 62z" style="fill:var(--accent,#FF5A36)"/>
+<text id="count" x="176" y="96" text-anchor="start" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:50px;font-weight:800;fill:var(--ink,#F5F3EE)">12.4K</text>
+</svg>

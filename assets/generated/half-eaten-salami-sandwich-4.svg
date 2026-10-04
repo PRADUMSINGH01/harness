@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bread" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C9A227" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#A67C1E" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#7A5A14" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="crumb" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3E3C0" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#D9C79A" stop-opacity="0.9"/>
+    </linearGradient>
+    <radialGradient id="salami" cx="0.4" cy="0.35" r="0.9">
+      <stop offset="0" stop-color="#E45A6B"/>
+      <stop offset="1" stop-color="#9E2B3C"/>
+    </radialGradient>
+    <linearGradient id="tray" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1C1F26"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="glassEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#8E8E93" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- tray shadow -->
+  <ellipse cx="100" cy="172" rx="72" ry="9" fill="#000" opacity="0.6" filter="url(#soft)"/>
+
+  <!-- forensic tray: rounded rect, dark glass -->
+  <g>
+    <rect x="22" y="112" width="156" height="58" rx="9" fill="url(#tray)" stroke="url(#glassEdge)" stroke-width="1.4"/>
+    <rect x="22" y="112" width="156" height="12" rx="6" fill="#FFFFFF" opacity="0.06"/>
+    <!-- grid ticks -->
+    <g stroke="#8E8E93" stroke-width="0.6" opacity="0.5">
+      <line x1="36" y1="164" x2="36" y2="167"/>
+      <line x1="64" y1="164" x2="64" y2="167"/>
+      <line x1="92" y1="164" x2="92" y2="167"/>
+      <line x1="120" y1="164" x2="120" y2="167"/>
+      <line x1="148" y1="164" x2="148" y2="167"/>
+      <line x1="30" y1="142" x2="27" y2="142"/>
+      <line x1="170" y1="142" x2="173" y2="142"/>
+    </g>
+    <!-- corner brackets -->
+    <g stroke="#0A84FF" stroke-width="1.6" fill="none" filter="url(#glow)">
+      <path d="M22 122 v-6 a4 4 0 0 1 4 -4 h6"/>
+      <path d="M168 112 h6 a4 4 0 0 1 4 4 v6"/>
+      <path d="M178 160 v6 a4 4 0 0 1 -4 4 h-6"/>
+      <path d="M32 170 h-6 a4 4 0 0 1 -4 -4 v-6"/>
+    </g>
+    <!-- barcode evidence strip -->
+    <g fill="#8E8E93" opacity="0.8">
+      <rect x="150" y="160" width="1.5" height="6"/>
+      <rect x="153" y="160" width="1" height="6"/>
+      <rect x="156" y="160" width="2" height="6"/>
+      <rect x="160" y="160" width="1" height="6"/>
+      <rect x="163" y="160" width="1.5" height="6"/>
+    </g>
+  </g>
+
+  <!-- sandwich: side/three-quarter view, right portion bitten off -->
+  <g>
+    <!-- bottom bread slab -->
+    <path d="M46 128 Q44 120 54 119 L128 117 Q140 117 141 126 L142 134 Q142 139 133 139 L52 141 Q45 141 46 128 Z"
+          fill="url(#bread)" stroke="#5E4410" stroke-width="1"/>
+    <!-- salami layers with bite scallops on right -->
+    <g stroke="#6E1626" stroke-width="0.8">
+      <path d="M48 124 Q80 118 126 117 L126 117 Q134 116 134 122 L134 127 Q134 131 127 131 L52 132 Z" fill="url(#salami)"/>
+      <path d="M50 130 Q85 124 128 122 L129 122 Q137 121 137 128 L137 133 Q137 137 129 137 L53 138 Z" fill="url(#salami)"/>
+    </g>
+    <!-- fat speckles -->
+    <g fill="#FFFFFF" opacity="0.75">
+      <circle cx="62" cy="125" r="1.1"/><circle cx="78" cy="122" r="0.9"/><circle cx="95" cy="125" r="1.2"/>
+      <circle cx="112" cy="122" r="0.9"/><circle cx="70" cy="131" r="1"/><circle cx="92" cy="131" r="1.1"/>
+      <circle cx="108" cy="131" r="0.8"/><circle cx="120" cy="125" r="0.9"/><circle cx="84" cy="128" r="0.7"/>
+    </g>
+    <!-- bite crescents taken from right edge of top bread -->
+    <!-- top bread slab -->
+    <path d="M46 116 Q44 108 54 107 L120 105 Q134 105 136 112 Q138 117 133 119 L52 128 Q45 128 46 116 Z"
+          fill="url(#bread)" stroke="#5E4410" stroke-width="1"/>
+    <!-- crumb cross-section where bitten (right end of top bread) -->
+    <path d="M120 105 Q134 105 136 112 Q138 117 133 119 Q126 116 122 112 Q119 108 120 105 Z"
+          fill="url(#crumb)" stroke="#C9A227" stroke-width="0.6"/>
+    <!-- bite scallops cut into top crust right edge -->
+    <g fill="#0A0A0A">
+      <circle cx="127" cy="108" r="4"/>
+      <circle cx="133" cy="113" r="3.6"/>
+      <circle cx="124" cy="115" r="3.2"/>
+    </g>
+    <!-- crust highlight -->
+    <path d="M50 109 Q80 105 118 104" stroke="#F3E3C0" stroke-width="1.2" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <!-- crumbs falling onto tray -->
+    <g fill="#D9C79A">
+      <circle cx="150" cy="140" r="1.2"/>
+      <circle cx="156" cy="146" r="0.9"/>
+      <circle cx="147" cy="150" r="0.8"/>
+    </g>
+  </g>
+
+  <!-- evidence tag -->
+  <g transform="rotate(-8 60 74)">
+    <rect x="42" y="64" width="40" height="18" rx="3" fill="#0A0A0A" stroke="#0A84FF" stroke-width="1.2" filter="url(#glow)"/>
+    <circle cx="47" cy="73" r="1.8" fill="none" stroke="#0A84FF" stroke-width="1"/>
+    <text x="53" y="77" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace" font-size="7.5" fill="#FFFFFF" letter-spacing="1">EV-042</text>
+  </g>
+
+  <!-- top-left corner ticks -->
+  <g stroke="#8E8E93" stroke-width="1" opacity="0.7">
+    <line x1="14" y1="18" x2="26" y2="18"/>
+    <line x1="14" y1="18" x2="14" y2="30"/>
+  </g>
+  <g stroke="#0A84FF" stroke-width="1" opacity="0.9">
+    <line x1="186" y1="26" x2="174" y2="26"/>
+    <line x1="186" y1="26" x2="186" y2="38"/>
+  </g>
+
+  <!-- forensic label -->
+  <text x="100" y="34" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="7" fill="#8E8E93" letter-spacing="2.5">EVIDENCE // FOOD SAMPLE</text>
+  <line x1="62" y1="40" x2="138" y2="40" stroke="#0A84FF" stroke-width="0.6" opacity="0.6"/>
+</svg>

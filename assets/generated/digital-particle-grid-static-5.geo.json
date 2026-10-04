@@ -1,0 +1,34 @@
+{
+  "id": "generated_digital-particle-grid-static-5",
+  "name": "digital particle grid static",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/digital-particle-grid-static-5.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M52 62L86 48M86 48L122 66M122 66L150 54M52 62L70 100M86 48L70 100M70 100L104 92M104 92L122 66M104 92L138 112M138 112L150 54M70 100L58 138M58 138L96 148M96 148L104 92M96 148L138 112M138 112L146 146M122 66L104 92"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "digital",
+    "particle",
+    "grid",
+    "static",
+    "overlay",
+    "illustration",
+    "generated-svg"
+  ]
+}

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16181f"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="0.2" cy="0" r="1.2">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.07"/>
+      <stop offset="0.6" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="stampInk">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6"/>
+    </filter>
+  </defs>
+
+  <!-- Card body -->
+  <g filter="url(#shadow)">
+    <rect x="16" y="24" width="168" height="152" rx="12" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1"/>
+    <rect x="16" y="24" width="168" height="152" rx="12" fill="url(#sheen)"/>
+  </g>
+
+  <!-- Corner brackets -->
+  <g stroke="#0A84FF" stroke-width="1.5" fill="none" opacity="0.9">
+    <path d="M16 36 v-6 a6 6 0 0 1 6-6 h6"/>
+    <path d="M184 36 v-6 a6 6 0 0 0 -6-6 h-6"/>
+    <path d="M16 164 v6 a6 6 0 0 0 6 6 h6"/>
+    <path d="M184 164 v6 a6 6 0 0 1 -6 6 h-6"/>
+  </g>
+
+  <!-- Header -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    <text x="34" y="58" fill="#FFFFFF" font-size="17" font-weight="700" letter-spacing="0.5">MIT MEDIA LAB</text>
+    <text x="34" y="72" fill="#8E8E93" font-size="7.5" letter-spacing="2.4" font-family="SFMono-Regular, Menlo, monospace">DOSSIER · CONFIDENTIAL</text>
+  </g>
+  <rect x="34" y="80" width="132" height="1.6" fill="url(#blue)" filter="url(#glow)"/>
+
+  <!-- Dossier fields -->
+  <g font-family="SFMono-Regular, Menlo, Consolas, monospace">
+    <text x="34" y="100" fill="#8E8E93" font-size="7">REF</text>
+    <text x="60" y="100" fill="#FFFFFF" font-size="7">ML-2085-X17</text>
+    <text x="34" y="116" fill="#8E8E93" font-size="7">DATE</text>
+    <text x="60" y="116" fill="#FFFFFF" font-size="7">2025.06.14</text>
+    <text x="34" y="132" fill="#8E8E93" font-size="7">DEPT</text>
+    <text x="60" y="132" fill="#FFFFFF" font-size="7">RESEARCH AFFAIRS</text>
+  </g>
+  <!-- dot matrix detail -->
+  <g fill="#0A84FF" opacity="0.7">
+    <circle cx="168" cy="100" r="1.1"/><circle cx="174" cy="100" r="1.1"/><circle cx="180" cy="100" r="1.1"/>
+  </g>
+
+  <!-- barcode strip -->
+  <g fill="#8E8E93" opacity="0.85" transform="translate(34,146)">
+    <rect width="1.4" height="12"/><rect x="2.6" width="0.8" height="12"/><rect x="4.4" width="2" height="12"/><rect x="7.4" width="1" height="12"/><rect x="9.4" width="0.7" height="12"/><rect x="11.4" width="1.6" height="12"/><rect x="14" width="0.8" height="12"/><rect x="16.2" width="1.2" height="12"/><rect x="18.6" width="0.7" height="12"/><rect x="20.4" width="2" height="12"/><rect x="23.4" width="1" height="12"/>
+  </g>
+
+  <!-- Red stamp seal -->
+  <g transform="translate(142,130) rotate(-12)" filter="url(#stampInk)">
+    <circle r="26" fill="none" stroke="#F43F5E" stroke-width="2.4" opacity="0.95"/>
+    <circle r="20.5" fill="none" stroke="#F43F5E" stroke-width="1" opacity="0.8"/>
+    <g font-family="SFMono-Regular, Menlo, Consolas, monospace" fill="#F43F5E" text-anchor="middle">
+      <text y="-6" font-size="8.5" font-weight="700" letter-spacing="1">APPROVED</text>
+      <text y="3" font-size="4.5" letter-spacing="1.4">· MEDIA LAB ·</text>
+      <text y="13" font-size="6" font-weight="700">2025</text>
+    </g>
+  </g>
+  <!-- stamp glow -->
+  <circle cx="142" cy="130" r="26" fill="#F43F5E" opacity="0.07" filter="url(#glow)"/>
+
+  <!-- coordinate ticks -->
+  <g stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="1">
+    <line x1="100" y1="18" x2="100" y2="22"/>
+    <line x1="60" y1="18" x2="60" y2="21"/>
+    <line x1="140" y1="18" x2="140" y2="21"/>
+    <line x1="10" y1="100" x2="14" y2="100"/>
+    <line x1="186" y1="100" x2="190" y2="100"/>
+  </g>
+</svg>

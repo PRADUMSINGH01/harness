@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Center spotlight">
+<defs><radialGradient id="cx-bac-spotlight-g" cx="50%" cy="45%" r="70%"><stop offset="0" style="stop-color:var(--spot,#3A3D46);stop-opacity:1"/><stop offset="0.45" style="stop-color:var(--surface,#111216);stop-opacity:1"/><stop offset="1" style="stop-color:var(--void,#050506);stop-opacity:1"/></radialGradient></defs>
+<rect width="1920" height="1080" style="fill:url(#cx-bac-spotlight-g)"/>
+</svg>

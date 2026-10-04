@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101216"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="blueFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.03"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="200" height="200" fill="url(#bgGrad)"/>
+
+  <!-- header -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+    <rect x="14" y="12" width="172" height="22" rx="5" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+    <circle cx="25" cy="23" r="3" fill="#0A84FF" filter="url(#glow)"/>
+    <text x="33" y="26.5" font-size="8" fill="#FFFFFF" font-weight="600" letter-spacing="0.5">LIVE ANALYTICS</text>
+    <text x="178" y="26.5" font-size="6.5" fill="#8E8E93" text-anchor="end">● ONLINE</text>
+
+    <!-- ticker cards row -->
+    <g>
+      <rect x="14" y="42" width="53" height="30" rx="5" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <text x="20" y="53" font-size="5.5" fill="#8E8E93" letter-spacing="0.5">REVENUE</text>
+      <text x="20" y="66" font-size="11" fill="#FFFFFF" font-weight="700">$48.2K</text>
+      <text x="61" y="66" font-size="6" fill="#0A84FF" text-anchor="end" font-weight="600">▲ 8.4%</text>
+
+      <rect x="73.5" y="42" width="53" height="30" rx="5" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <text x="79.5" y="53" font-size="5.5" fill="#8E8E93" letter-spacing="0.5">USERS</text>
+      <text x="79.5" y="66" font-size="11" fill="#FFFFFF" font-weight="700">12,904</text>
+      <text x="120.5" y="66" font-size="6" fill="#0A84FF" text-anchor="end" font-weight="600">▲ 3.1%</text>
+
+      <rect x="133" y="42" width="53" height="30" rx="5" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <text x="139" y="53" font-size="5.5" fill="#8E8E93" letter-spacing="0.5">CHURN</text>
+      <text x="139" y="66" font-size="11" fill="#FFFFFF" font-weight="700">1.8%</text>
+      <text x="180" y="66" font-size="6" fill="#8E8E93" text-anchor="end" font-weight="600">▼ 0.4%</text>
+    </g>
+
+    <!-- main line chart -->
+    <rect x="14" y="78" width="118" height="70" rx="5" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+    <text x="20" y="88" font-size="5.5" fill="#8E8E93" letter-spacing="0.5">TRAFFIC — 24H</text>
+    <g stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="0.5">
+      <line x1="20" y1="98" x2="126" y2="98"/>
+      <line x1="20" y1="112" x2="126" y2="112"/>
+      <line x1="20" y1="126" x2="126" y2="126"/>
+      <line x1="20" y1="140" x2="126" y2="140"/>
+    </g>
+    <path d="M20 132 C30 128,34 118,42 120 C50 122,54 106,62 110 C70 114,74 100,82 96 C90 92,94 112,102 108 C110 104,116 90,126 86 L126 140 L20 140 Z" fill="url(#blueFade)"/>
+    <path d="M20 132 C30 128,34 118,42 120 C50 122,54 106,62 110 C70 114,74 100,82 96 C90 92,94 112,102 108 C110 104,116 90,126 86" fill="none" stroke="#0A84FF" stroke-width="1.4" filter="url(#glow)" stroke-linecap="round"/>
+    <circle cx="126" cy="86" r="2.2" fill="#0A84FF" filter="url(#glow)"/>
+    <circle cx="126" cy="86" r="4" fill="none" stroke="#0A84FF" stroke-opacity="0.35"/>
+
+    <!-- side bar chart -->
+    <rect x="138" y="78" width="48" height="70" rx="5" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+    <text x="143" y="88" font-size="5.5" fill="#8E8E93" letter-spacing="0.5">REGIONS</text>
+    <g fill="#0A84FF">
+      <rect x="144" y="126" width="6" height="14" rx="1.5" opacity="0.9"/>
+      <rect x="154" y="116" width="6" height="24" rx="1.5" opacity="0.7"/>
+      <rect x="164" y="104" width="6" height="36" rx="1.5"/>
+      <rect x="174" y="120" width="6" height="20" rx="1.5" opacity="0.5"/>
+    </g>
+    <line x1="143" y1="140.5" x2="181" y2="140.5" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="0.5"/>
+
+    <!-- bottom ticker bar -->
+    <rect x="14" y="154" width="172" height="32" rx="5" fill="url(#glass)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+    <text x="22" y="167" font-size="5.5" fill="#8E8E93" letter-spacing="0.5">SESSIONS</text>
+    <text x="22" y="179" font-size="9" fill="#FFFFFF" font-weight="700">96,341</text>
+    <line x1="66" y1="160" x2="66" y2="180" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="74" y="167" font-size="5.5" fill="#8E8E93" letter-spacing="0.5">AVG TIME</text>
+    <text x="74" y="179" font-size="9" fill="#FFFFFF" font-weight="700">4m 32s</text>
+    <line x1="114" y1="160" x2="114" y2="180" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="122" y="167" font-size="5.5" fill="#8E8E93" letter-spacing="0.5">CONVERSION</text>
+    <text x="122" y="179" font-size="9" fill="#0A84FF" font-weight="700" filter="url(#glow)">6.72%</text>
+
+    <!-- sparkline accent -->
+    <path d="M158 176 L163 171 L168 174 L173 165 L178 168 L182 162" fill="none" stroke="#0A84FF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <circle cx="182" cy="162" r="1.4" fill="#0A84FF" filter="url(#glow)"/>
+
+    <!-- corner brackets -->
+    <g stroke="#0A84FF" stroke-opacity="0.5" stroke-width="1" fill="none">
+      <path d="M6 6 h8 M6 6 v8"/>
+      <path d="M186 194 h8 M194 194 v-8"/>
+    </g>
+  </g>
+</svg>

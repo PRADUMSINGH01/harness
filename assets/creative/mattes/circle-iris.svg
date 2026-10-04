@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Circle iris">
+<circle id="circle" cx="960" cy="540" r="1110" style="fill:var(--accent,#FF5A36);transform-origin:960px 540px"/>
+</svg>

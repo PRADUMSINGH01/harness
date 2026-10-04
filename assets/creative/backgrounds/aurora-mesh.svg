@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Aurora gradient mesh">
+<defs><filter id="cx-bac-aurora-mesh-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="140"/></filter></defs>
+<rect width="1920" height="1080" style="fill:var(--surface,#111216)"/>
+<g style="filter:url(#cx-bac-aurora-mesh-blur)">
+  <ellipse cx="420" cy="300" rx="560" ry="360" style="fill:var(--accent-2,#7B61FF);opacity:0.55"/>
+  <ellipse cx="1500" cy="260" rx="520" ry="320" style="fill:var(--accent,#FF5A36);opacity:0.45"/>
+  <ellipse cx="1180" cy="880" rx="640" ry="300" style="fill:var(--accent-3,#18C29C);opacity:0.35"/>
+  <ellipse cx="300" cy="960" rx="420" ry="240" style="fill:var(--accent,#FF5A36);opacity:0.25"/>
+</g>
+</svg>

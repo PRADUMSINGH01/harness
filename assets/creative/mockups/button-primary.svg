@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 130" width="440" height="130" role="img" aria-label="Primary button">
+<defs><filter id="cx-moc-button-primary-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter></defs>
+<rect x="30" y="34" width="380" height="80" rx="40" style="fill:var(--accent,#FF5A36);opacity:0.45;filter:url(#cx-moc-button-primary-glow)"/>
+<rect x="10" y="10" width="420" height="104" rx="52" style="fill:var(--accent,#FF5A36)"/>
+<text id="label" x="190" y="74" text-anchor="middle" style="font-family:var(--font,Inter,system-ui,sans-serif);font-size:34px;font-weight:700;fill:#fff">Get started</text>
+<path id="arrow" d="M330 62 H368 M352 46 L368 62 L352 78" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round"/>
+</svg>

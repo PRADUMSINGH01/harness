@@ -1,0 +1,35 @@
+{
+  "id": "generated_engraved-18th-century-portrait-2",
+  "name": "engraved 18th-century portrait plate of Benjamin Franklin with hatch-line etching style",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/engraved-18th-century-portrait-2.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M70 88 C66 74 74 60 88 55 M76 84 C74 70 82 58 94 54 M84 80 C84 66 92 56 102 54 M94 78 C96 66 104 58 112 58 M106 76 C110 66 118 62 126 62 M116 74 C122 66 130 64 134 68 M68 96 C60 92 56 84 58 76 M138 82 C144 86 146 94 144 100 M58 104 C52 112 52 122 56 130 M146 112 C150 120 149 128 145 133 M62 118 C58 126 60 134 66 139 M142 122 C144 129 140 136 134 139"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "engraved",
+    "18th",
+    "century",
+    "portrait",
+    "plate",
+    "benjamin",
+    "icon",
+    "generated-svg"
+  ]
+}

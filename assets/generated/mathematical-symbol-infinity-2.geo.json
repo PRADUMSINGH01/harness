@@ -1,0 +1,33 @@
+{
+  "id": "generated_mathematical-symbol-infinity-2",
+  "name": "mathematical symbol infinity",
+  "type": "svg_vector",
+  "asset": {
+    "src": "assets/generated/mathematical-symbol-infinity-2.svg",
+    "format": "svg"
+  },
+  "geometry": {
+    "coordinate_system": "pixels",
+    "viewBox": "0 0 200 200",
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 200,
+      "height": 200
+    },
+    "closed_svg_path": "M100 100 C 118 76, 148 76, 156 100 C 148 124, 118 124, 100 100 C 82 76, 52 76, 44 100 C 52 124, 82 124, 100 100 Z"
+  },
+  "animation": {
+    "recommended_entrance": "spring_pop",
+    "suggested_ease": "back.out(1.6)",
+    "duration_seconds": 0.6
+  },
+  "tags": [
+    "mathematical",
+    "symbol",
+    "infinity",
+    "badge",
+    "illustration",
+    "generated-svg"
+  ]
+}

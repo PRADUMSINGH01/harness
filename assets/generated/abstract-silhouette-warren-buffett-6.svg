@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glassBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16181D"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="faceGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#C7CBD1"/>
+    </linearGradient>
+    <linearGradient id="suitGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2B2F36"/>
+      <stop offset="1" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0.2"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.35" r="0.65">
+      <stop offset="0" stop-color="#0A84FF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#0A84FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="cardClip">
+      <rect x="8" y="8" width="184" height="184" rx="26"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#cardClip)">
+    <rect x="8" y="8" width="184" height="184" rx="26" fill="url(#glassBg)"/>
+    <rect x="8" y="8" width="184" height="184" rx="26" fill="url(#glow)"/>
+
+    <!-- suit / shoulders -->
+    <path d="M100 128 C82 128 60 138 52 154 L48 192 L152 192 L148 154 C140 138 118 128 100 128 Z" fill="url(#suitGrad)"/>
+    <!-- shirt V -->
+    <path d="M92 130 L100 146 L108 130 L100 132 Z" fill="#E8EAED"/>
+    <path d="M90 129 L100 150 L110 129 L106 127 L100 138 L94 127 Z" fill="#0A84FF" opacity="0.85" filter="url(#softGlow)"/>
+
+    <!-- hair tufts -->
+    <path d="M58 78 C50 84 46 98 48 112 C52 104 56 96 62 92 Z" fill="#8E8E93"/>
+    <path d="M142 78 C150 84 154 98 152 112 C148 104 144 96 138 92 Z" fill="#8E8E93"/>
+
+    <!-- head silhouette -->
+    <path d="M100 40 C80 40 70 56 70 76 C70 86 72 96 77 104 C83 114 90 124 100 126 C110 124 117 114 123 104 C128 96 130 86 130 76 C130 56 120 40 100 40 Z" fill="url(#faceGrad)"/>
+
+    <!-- subtle face contour shading -->
+    <path d="M100 40 C80 40 70 56 70 76 C70 84 71 92 74 99 C74 78 84 66 100 66 Z" fill="#0A0A0A" opacity="0.06"/>
+
+    <!-- glasses -->
+    <g stroke="#0A0A0A" stroke-width="3.2" fill="none" stroke-linecap="round">
+      <rect x="74" y="78" width="22" height="17" rx="7"/>
+      <rect x="104" y="78" width="22" height="17" rx="7"/>
+      <line x1="96" y1="84" x2="104" y2="84"/>
+      <line x1="74" y1="83" x2="66" y2="80"/>
+      <line x1="126" y1="83" x2="134" y2="80"/>
+    </g>
+
+    <!-- nose + smile hints -->
+    <path d="M100 96 L97 104 Q100 106 103 104" fill="none" stroke="#8E8E93" stroke-width="2" stroke-linecap="round"/>
+    <path d="M88 113 Q100 122 112 113" fill="none" stroke="#8E8E93" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- accent underline + ticks -->
+    <rect x="76" y="172" width="48" height="3.4" rx="1.7" fill="url(#accentGrad)"/>
+    <g stroke="#8E8E93" stroke-width="1.4" stroke-linecap="round" opacity="0.8">
+      <line x1="132" y1="172" x2="132" y2="175.4"/>
+      <line x1="138" y1="172" x2="138" y2="175.4"/>
+      <line x1="144" y1="172" x2="144" y2="175.4"/>
+    </g>
+  </g>
+
+  <!-- dark glass border -->
+  <rect x="8" y="8" width="184" height="184" rx="26" fill="none" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="1.4"/>
+  <!-- corner brackets -->
+  <g stroke="#0A84FF" stroke-width="2.4" stroke-linecap="round" fill="none" opacity="0.9">
+    <path d="M18 30 L18 18 L30 18"/>
+    <path d="M170 18 L182 18 L182 30"/>
+    <path d="M182 170 L182 182 L170 182"/>
+    <path d="M30 182 L18 182 L18 170"/>
+  </g>
+</svg>
